@@ -1,4 +1,19 @@
+---
+---
+// Custom initial variables
+$azulatto: #009FC7;
+$naranjitto: #E37826;
+
+// Custom colors
+$secondary: $naranjitto;
+$secondary-invert: white;
+
 // Override Bulma defaults
-$primary: #009FC7;
+$primary: $azulatto;
+
+$custom-colors: (
+    "secondary":($secondary, $secondary-invert),
+);
+
 // Import Main CSS file from theme
 @import "main";
