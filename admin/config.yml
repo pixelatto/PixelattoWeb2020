@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: JaviCepa/PixelattoWeb2020
+  repo: pixelatto/PixelattoWeb2020
   branch: master
   site_domain: pixelatto.com
 
