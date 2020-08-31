@@ -1,0 +1,62 @@
+backend:
+  name: github
+  repo: JaviCepa/PixelattoWeb2020
+  branch: master
+  site_domain: pixelatto.com
+
+media_folder: "/static/images/upload"
+public_folder: "/images/uploads"
+site_url: https://pixelatto.com
+logo_url: https://pixelatto.com/img/brand/logo.svg
+locale: 'es'
+
+collections:
+  - name: "products"
+    label: "Productos"
+    folder: "_products"
+    preview_path: /{{slug}}
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "product"}
+      - {label: "Título (H1)", name: "title", widget: "string"}
+      - {label: "Subtítulo (H2)", name: "subtitle", widget: "string"}
+      - label: "Imagen"
+        name: "image"
+        widget: "image"
+        media_library:
+            config:
+                max_file_size: 512000
+      - label: "Imagen Cabecera"
+        name: "hero_image"
+        widget: "image"
+        media_library:
+            config:
+                max_file_size: 512000
+      - {label: "Código", name: "product_code", widget: "string"}
+      - {label: "Precio", name: "price", widget: "string"}
+      - label: "Categoría"
+        name: "tags"
+        widget: "select"
+        options: ["Games", "Software"]
+      - {label: "Descripción", name: "body", widget: "markdown"}
+  - name: "team"
+    label: "Equipo"
+    folder: "_team"
+    create: true
+    slug: "team/{{slug}}"
+    identifier_field: name
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "member"}
+      - {label: "Nombre", name: "title", widget: "string"}
+      - {label: "Cargo", name: "subtitle", widget: "string"}
+      - {label: "Cita", name: "quote", widget: "string"}
+      - {label: "Bio", name: "body", widget: "text"}
+      - {label: "Teléfono", name: "telephone", widget: "string"}
+      - {label: "Twitter", name: "twitter", widget: "string"}
+      - label: "Avatar"
+        name: "image"
+        widget: "image"
+        media_library:
+            config:
+                max_file_size: 512000
