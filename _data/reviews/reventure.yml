@@ -1,0 +1,14 @@
+- name: John Doe
+  rating: 5
+  title: 11/10, can't stop playing
+  date: 01/01/2019
+  avatar: https://bulma.io/images/placeholders/128x128.png
+  description: >
+    You really need to play reventure.
+    I've recommended it to all my friends.
+- name: Jane Doe
+  rating: 6
+  title: Nice, really liked this
+  date: 02/02/2019
+  description: >
+    I'm addicted. Please, send help.
