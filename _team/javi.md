@@ -1,11 +1,9 @@
 ---
 layout: member
 title: Javi Cepa
-subtitle: Design Director & CEO
-quote: You can't change the wind but you can adjust your sails
+subtitle: Game Designer & CEO
+quote: One more pixel to the right...
 telephone: +34 618 887 993
 twitter: JaviCepa
-image: 
+image: /img/avatars/Javi.svg
 ---
-
-It's-a me! Javi!

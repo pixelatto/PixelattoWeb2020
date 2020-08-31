@@ -3,7 +3,6 @@ title: Card Creator
 subtitle: Build your own card games
 description: Start making card games now!
 hero_image: /img/hero-img.jpg
-product_code: card-creator
 layout: product
 image: https://via.placeholder.com/640x480
 price: $39.99

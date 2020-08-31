@@ -3,7 +3,6 @@ title: Reventure
 subtitle: A quest with 100 different endings
 description: Choose your adventure, for real.
 hero_image: /img/hero-img.jpg
-product_code: reventure
 layout: product
 image: https://via.placeholder.com/640x480
 price: $7.99

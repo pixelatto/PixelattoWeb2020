@@ -5,8 +5,10 @@ permalink: /team/
 hide_hero: true
 ---
 
-<div class="section">
+<div class="columns is-multiline is-desktop" style="display: flex; flex-direction: row; align-items: stretch; align-content: stretch;">
     {% for member in site.team %}
-        {% include team-member-card.html %}
+    <div class="column is-half-desktop is-one-third-widescreen">
+        {% include member-card.html %}
+    </div>
     {% endfor %}
 </div>

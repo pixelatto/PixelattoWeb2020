@@ -1,0 +1,30 @@
+
+<div class="card box" style="height: 100%;">
+    <div class="card-image">
+    </div>
+    <div class="card-content">
+        <div class="media">
+            <div class="media-left">
+                <figure class="image is-48x48">
+                    <img src="{{ member.image }}" alt="Image">
+                </figure>
+            </div>
+            <div class="media-content">
+                <p class="title is-6">{{ member.title }}</p>
+                <p class="subtitle is-6">{{ member.subtitle }}</p>
+                {% if member.twitter %}
+                    <p class="subtitle is-6"></p>
+                        <a href="https://twitter.com/{{ member.twitter }}">
+                            @{{ member.twitter }}
+                        </a>
+                    </p>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="content">
+            <blockquote>{{ member.quote }}</blockquote>
+            {{ member.content }}
+        </div>
+    </div>
+</div>
