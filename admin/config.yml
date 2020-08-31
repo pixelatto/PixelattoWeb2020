@@ -2,7 +2,7 @@ backend:
   name: github
   repo: pixelatto/PixelattoWeb2020
   branch: master
-  site_domain: pixelatto.com
+  site_domain: pixelatto.netlify.app
 
 media_folder: "/static/images/upload"
 public_folder: "/images/uploads"
