@@ -1,6 +1,23 @@
 ---
-layout: page
+layout: empty
 title: Pixelatto
 subtitle: Creative games and tools
+container_type: is-fluid
 hero_height: is-small
+hide_hero: true
 ---
+<div class="columns is-desktop is-gapless">
+    {% for product in site.products %}
+    <div class="column">
+        {% capture product_title %}
+        {{ product.title }}
+        {% endcapture %}
+        {% capture product_subtitle %}
+        {{ product.subtitle }}
+        {% endcapture %}
+        <a href="{{ product.url }}">
+            {% include custom-hero.html title=product_title subtitle=product_subtitle %}
+        </a>
+    </div>
+    {% endfor %}
+</div>

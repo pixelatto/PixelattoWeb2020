@@ -5,6 +5,8 @@ permalink: /team/
 hide_hero: true
 ---
 
-{%- for member in site.team -%}
-    {% include team-member-card.html %}
-{%- endfor -%}
+<div class="section">
+    {% for member in site.team %}
+        {% include team-member-card.html %}
+    {% endfor %}
+</div>

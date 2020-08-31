@@ -1,6 +1,6 @@
 ---
 title: Reventure
-subtitle: 100 different endings
+subtitle: A quest with 100 different endings
 description: Choose your adventure, for real.
 hero_image: /img/hero-img.jpg
 product_code: reventure

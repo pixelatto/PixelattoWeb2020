@@ -1,0 +1,12 @@
+---
+layout: page
+title: Products
+permalink: /products/
+hide_hero: true
+---
+
+<div class="section">
+    {% for product in site.products %}
+        {% include product-card.html %}
+    {% endfor %}
+</div>

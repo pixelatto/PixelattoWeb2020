@@ -1,7 +1,13 @@
-- name: Page 1
-  link: /page-1/
+- name: Team
+  link: /team/
+- name: Products
+  link: /products/
 - name: Blog
   link: /blog/
   dropdown: 
-    - name: Page 2
-      link: /page-2/
+    - name: Categories
+      link: /categories/
+    - name: Devlog
+      link: /devlog/
+- name: About
+  link: /about/

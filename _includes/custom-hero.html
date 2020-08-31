@@ -1,0 +1,16 @@
+<section
+    class="hero {% if include.hero_height %} {{ include.hero_height }} {% else %} is-medium {% endif %} is-bold is-primary"
+    {% if include.hero_image %}
+    style="background: url('{{ include.hero_image }}') no-repeat center center; {% if include.hero_image_contain %} background-size: contain; {% else %} background-size: cover; {% endif %}"
+    {% endif %}>
+    <div class="hero-body {% if include.hero_darken %} hero-darken {% endif %}">
+        <div class="container">
+            <h1 class="title is-2">{{ include.title }}</h1>
+            <p class="subtitle is-3">{{ include.subtitle }}</p>
+            {% if include.hero_link %}
+            <a href="{{ include.hero_link | relative_url }}"
+                class="button is-info is-large">{{ include.hero_link_text }}</a>
+            {% endif %}
+        </div>
+    </div>
+</section>
