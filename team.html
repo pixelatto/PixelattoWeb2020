@@ -1,0 +1,10 @@
+---
+layout: page
+title: Team
+permalink: /team/
+hide_hero: true
+---
+
+{%- for member in site.team -%}
+    {% include team-member-card.html %}
+{%- endfor -%}
