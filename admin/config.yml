@@ -6,8 +6,8 @@ backend:
 
 media_folder: "/static/images/upload"
 public_folder: "/images/uploads"
-site_url: https://pixelatto.com
-logo_url: https://pixelatto.com/img/brand/logo.svg
+site_url: https://pixelatto.netlify.app
+logo_url: /img/brand/logo.svg
 locale: 'es'
 
 collections:
