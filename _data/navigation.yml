@@ -1,5 +1,3 @@
-- name: Team
-  link: /team/
 - name: Products
   link: /products/
 - name: Blog
@@ -9,5 +7,7 @@
       link: /categories/
     - name: Devlog
       link: /devlog/
+- name: Team
+  link: /team/
 - name: About
   link: /about/
