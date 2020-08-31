@@ -16,6 +16,7 @@ features:
       icon: fa-fighter-jet
 rating: 5
 permalink: /reventure/
+header_mode: games
 ---
 
 Reventure is a nonlinear...

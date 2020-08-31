@@ -16,6 +16,7 @@ features:
       icon: fa-fighter-jet
 rating: 5
 permalink: /card-creator/
+header_mode: apps
 ---
 
 Card Creator is a...
