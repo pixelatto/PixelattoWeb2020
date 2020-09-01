@@ -7,20 +7,22 @@ hero_height: is-small
 hide_hero: true
 featured: Reventure
 ---
-<div class="columns is-desktop is-gapless">
+
+<section class="hero is-medium">
     {% for product in site.products %}
-        {% if page.featured == product.title %}
-        <div class="column">
-            {% capture product_title %}
-            {{ product.title }}
-            {% endcapture %}
-            {% capture product_subtitle %}
-            {{ product.subtitle }}
-            {% endcapture %}
-            <a href="{{ product.url }}">
-                {% include custom-hero.html title=product_title subtitle=product_subtitle %}
-            </a>
+        <div style="background: url('{{ product.image }}-hero.jpg') no-repeat center center; background-size: cover; background-position: center;">
+            <div class="hero-body">
+                <div class="container-is-fluid">
+                    <h1 class="title is-3 has-text-white">
+                        <a href="{{ product.url }}"></a>
+                            {{ product.title }}
+                        </a>
+                    </h1>
+                    <h2 class="subtitle is-5 has-text-white">
+                        {{ product.subtitle }}
+                    </h2>
+                </div>
+            </div>
         </div>
-        {% endif %}
-    {% endfor %}
-</div>
+        {% endfor %}
+</section>

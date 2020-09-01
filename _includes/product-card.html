@@ -1,28 +1,27 @@
-
-<div class="card box" style="height: 100%;">
-    <div class="card-image">
-    </div>
-    <div class="card-content">
-        <div class="media">
-            <div class="media-left">
-                <figure class="image is-48x48">
-                    <img src="http://bulma.io/images/placeholders/96x96.png" alt="Image">
-                </figure>
+<a href="{{ product.url }}">
+    <div class="card" style="height: 100%;">
+        <div class="card-image">
+            <figure class="image is-16by9">
+                <img src="{{ product.image }}-640-360.jpg" alt="{{ product.title }}">
+            </figure>
+        </div>
+        <div class="card-content">
+            <div class="media">
+                <div class="media-content">
+                    <p class="title is-4">{{ product.title }}</p>
+                    <p class="subtitle is-6">{{ product.subtitle }}</p>
+                    <p class="subtitle is-6">{{ product.description }}</p>
+                </div>
             </div>
-            <div class="media-content">
-                <p class="title is-4">{{ product.title }} - <span
-                        class="subtitle is-6">{{ product.subtitle }}</span> </p>
-                <p class="subtitle is-6">{{ product.description }}</p>
+
+            <div class="content">
+                <ul>
+                    {% for feature in product.features %}
+                    <li>{{ feature.label }}</li>
+                    {%- endfor -%}
+                </ul>
+                {{ member.content }}
             </div>
         </div>
-
-        <div class="content">
-            <ul>
-            {% for feature in product.features %}
-                <li>{{ feature.label }}</li>
-            {%- endfor -%}
-            </ul>
-            {{ member.content }}
-        </div>
     </div>
-</div>
+</a>
