@@ -1,5 +1,6 @@
 ---
 title: Reventure
+type: game
 subtitle: The only quest with 100 different endings
 description: Choose your adventure, for real.
 layout: product
@@ -14,7 +15,6 @@ features:
       icon: fa-fighter-jet
 rating: 5
 permalink: /reventure/
-header_mode: games
 ---
 
 Reventure is a nonlinear...

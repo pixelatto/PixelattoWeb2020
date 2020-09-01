@@ -1,5 +1,6 @@
 ---
 title: Card Creator
+type: app
 subtitle: The ultimate tool to create your own card games
 description: Start making card games now!
 layout: product
@@ -14,7 +15,6 @@ features:
       icon: fa-fighter-jet
 rating: 5
 permalink: /card-creator/
-header_mode: apps
 ---
 
 Card Creator is a...

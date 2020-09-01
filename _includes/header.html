@@ -43,7 +43,7 @@
         fader.setAttribute('class', 'fade-out');
     });
 </script>
-{% if page.header_mode == "games" or page.header_mode == "apps" %}
+{% if page.type == "game" or page.type == "app" %}
 <style>
     #logo-sec,
     #logo-main {
@@ -53,9 +53,9 @@
 {% endif %}
 
 <nav class="navbar is-fixed-top
-{% if page.header_mode == "games" %}
+{% if page.type == "game" %}
     is-secondary
-{% elsif page.header_mode == "apps" %}
+{% elsif page.type == "app" %}
     is-primary
 {% else %}
     is-white
