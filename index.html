@@ -8,21 +8,55 @@ hide_hero: true
 featured: Reventure
 ---
 
-<section class="hero is-medium">
-    {% for product in site.products %}
-        <div style="background: url('{{ product.image }}-hero.jpg') no-repeat center center; background-size: cover; background-position: center;">
-            <div class="hero-body">
-                <div class="container-is-fluid">
+<div style="position: relative;">
+    <div class="level is-mobile"
+        style="position: absolute; z-index: 1; left:5px; right: 5px; top: 50%; transform: translateY(-50%); pointer-events: none;">
+        <div class="level-left">
+            <button class="level-item button is-rounded siema-prev" style="pointer-events: all;">
+                <i class="fa fa-angle-left"></i>
+            </button>
+        </div>
+        <div class="level-right">
+            <button class="level-item button is-rounded siema-next" style="pointer-events: all;">
+                <i class="fa fa-angle-right"></i>
+            </button>
+        </div>
+    </div>
+    <style>
+        .hero-align-bottom {
+            padding-left: 60px;
+            padding-right: 60px;
+        }
+
+        @media screen and (min-width: 769px) {
+            .hero-align-bottom {
+                padding-bottom: 2rem;
+                padding-top: 16rem;
+            }
+        }
+
+        @media screen and (max-width: 769px) {
+            .hero-align-bottom {
+                padding-bottom: 4rem;
+                padding-top: 4rem;
+            }
+        }
+    </style>
+    <div class="siema">
+        {% for product in site.products %}
+        <div class="hero is-medium"
+            style="background: url('{{ product.image }}-hero.jpg') no-repeat center center; background-size: cover; background-position: center;">
+            <div class="hero-align-bottom">
+                <a href="{{ product.url }}" style="color: white;">
                     <h1 class="title is-3 has-text-white">
-                        <a href="{{ product.url }}"></a>
-                            {{ product.title }}
-                        </a>
+                        {{ product.title }}
                     </h1>
                     <h2 class="subtitle is-5 has-text-white">
                         {{ product.subtitle }}
                     </h2>
-                </div>
+                </a>
             </div>
         </div>
         {% endfor %}
-</section>
+    </div>
+</div>

@@ -1,6 +1,6 @@
 ---
 title: Reventure
-subtitle: A quest with 100 different endings
+subtitle: The only quest with 100 different endings
 description: Choose your adventure, for real.
 layout: product
 image: /img/product/reventure

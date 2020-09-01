@@ -1,10 +1,9 @@
 ---
 title: Card Creator
-subtitle: Build your own card games
+subtitle: The ultimate tool to create your own card games
 description: Start making card games now!
-hero_image: /img/product/card-creator-hero.jpg
 layout: product
-image: https://via.placeholder.com/640x480
+image: /img/product/card-creator
 price: $39.99
 features:
     - label: Create any type of card
