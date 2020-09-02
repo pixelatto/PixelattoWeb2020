@@ -1,6 +1,6 @@
 /* Center vertically */
 .is-vertically-centered {
-    position: relative;
+    position: absolute;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -96,7 +96,7 @@
 
 .is-right:after {
     left: 0;
-    top: 50%;
+    top: 20px;
     border-right-color: #b5bec1;
     border-left: 0;
     border-top: 0;
