@@ -1,3 +1,9 @@
+/* Pretty blockquotes */
+blockquote:before {
+    
+}
+
+
 /* Center vertically */
 .is-vertically-centered {
     position: absolute;
@@ -84,7 +90,7 @@
     height: 0;
 }
 
-.is-top:after {
+.bubble-is-top:after {
     bottom: 0;
     left: 50%;
     border-top-color: #b5bec1;
@@ -94,7 +100,7 @@
     margin-bottom: -18px;
 }
 
-.is-right:after {
+.bubble-is-right:after {
     left: 0;
     top: 20px;
     border-right-color: #b5bec1;
@@ -104,7 +110,7 @@
     margin-left: -18px;
 }
 
-.is-bottom:after {
+.bubble-is-bottom:after {
     top: 0;
     left: 50%;
     border: 18px solid transparent;
@@ -114,7 +120,7 @@
     margin-top: -18px;
 }
 
-.is-left:after {
+.bubble-is-left:after {
     right: 0;
     top: 50%;
     border: 18px solid transparent;

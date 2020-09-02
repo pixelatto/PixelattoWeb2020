@@ -21,11 +21,24 @@
                 <p class="has-text-centered has-text-info">@{{member.twitter}}</p>
             </a>
         </div>
-        <div class="column speech-bubble is-right" style="display: table; min-height: 50px; margin: 20px 0; padding: 10px;">
+        <div class="column speech-bubble bubble-is-right"
+            style="display: table; min-height: 50px; margin: 20px 0; padding: 10px;">
             <div style="display: table-cell; vertical-align: middle;">
-                <p class="" style="position: relative;">"{{ member.quote }}"</p>
+                <blockquote style="position: relative;">"{{ member.quote }}"</blockquote>
             </div>
         </div>
+    </div>
+
+    <div class="mb-3">
+        <span class="tag is-dark-grey is-small">
+            #One
+        </span>
+        <span class="tag is-dark-grey is-small">
+            #Two
+        </span>
+        <span class="tag is-dark-grey is-small">
+            #Three
+        </span>
     </div>
 
     {% if member.content.size > 5 %}
@@ -33,4 +46,5 @@
         {{ member.content }}
     </div>
     {% endif %}
+
 </div>
