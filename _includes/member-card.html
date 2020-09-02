@@ -4,13 +4,9 @@
     {% if member.twitter_override %}{{ member.twitter_override }}{% else %}https://twitter.com/{{ member.twitter }}{% endif %}
     {% endcapture %}
 
-    <div class="level">
-        <div class="level-left">
-            <p><span class="title is-4">{{ member.title }}</span></p>
-        </div>
-        <div class="level-right">
-            <p class="subtitle is-6">{{ member.subtitle }}</p>
-        </div>
+    <div>
+        <p><span class="title is-4">{{ member.title }}</span></p>
+        <p class="subtitle is-6">{{ member.subtitle }}</p>
     </div>
     <div class="columns is-mobile" style="margin: 0;">
         <div class="column">
@@ -18,27 +14,23 @@
                 <figure class="image is-64x64" style="margin: auto;">
                     <img src="{{ member.image }}" alt="Image">
                 </figure>
-                <p class="has-text-centered has-text-info">@{{member.twitter}}</p>
+                <p class="has-text-centered has-text-info"><b>@{{member.twitter}}</b></p>
             </a>
         </div>
-        <div class="column speech-bubble bubble-is-right"
-            style="display: table; min-height: 50px; margin: 20px 0; padding: 10px;">
+        <div class="column team-speech-bubble"
+            style="display: table; min-height: 100px;">
             <div style="display: table-cell; vertical-align: middle;">
                 <blockquote style="position: relative;">"{{ member.quote }}"</blockquote>
             </div>
         </div>
     </div>
 
-    <div class="mb-3">
+    <div class="mb-3 mt-1" style="text-align: center;">
+        {% for hashtag in member.hashtags %}
         <span class="tag is-dark-grey is-small">
-            #One
+            #{{ hashtag }}
         </span>
-        <span class="tag is-dark-grey is-small">
-            #Two
-        </span>
-        <span class="tag is-dark-grey is-small">
-            #Three
-        </span>
+        {% endfor %}
     </div>
 
     {% if member.content.size > 5 %}

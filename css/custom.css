@@ -62,16 +62,15 @@ blockquote:before {
     animation-name: fade-in;
 }
 
-/* Speech bubbles */
+/* Team speech bubbles */
 
-.speech-bubble {
+.team-speech-bubble {
     position: relative;
     background: #b5bec1;
     border-radius: .4em;
 }
 
-
-.speech-bubble:before {
+.team-speech-bubble:before {
     content: '';
     position: absolute;
     top: 3px;
@@ -82,51 +81,18 @@ blockquote:before {
     border-radius: 3px;
 }
 
-.speech-bubble:after {
+.team-speech-bubble:after {
     content: '';
     position: absolute;
     border: 18px solid transparent;
     width: 0;
     height: 0;
-}
-
-.bubble-is-top:after {
-    bottom: 0;
-    left: 50%;
-    border-top-color: #b5bec1;
-    border-bottom: 0;
-    border-left: 0;
-    margin-left: -9px;
-    margin-bottom: -18px;
-}
-
-.bubble-is-right:after {
+    /* Arrow tip settings */
     left: 0;
-    top: 20px;
+    top: 40px;
     border-right-color: #b5bec1;
     border-left: 0;
     border-top: 0;
     margin-top: 0px;
-    margin-left: -18px;
-}
-
-.bubble-is-bottom:after {
-    top: 0;
-    left: 50%;
-    border: 18px solid transparent;
-    border-bottom-color: #b5bec1;
-    border-top: 0;
-    margin-left: -18px;
-    margin-top: -18px;
-}
-
-.bubble-is-left:after {
-    right: 0;
-    top: 50%;
-    border: 18px solid transparent;
-    border-left-color: #b5bec1;
-    border-right: 0;
-    border-bottom: 0;
-    margin-top: -9px;
-    margin-right: -18px;
+    margin-left: -17px;
 }
