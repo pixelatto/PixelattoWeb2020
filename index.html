@@ -45,7 +45,7 @@ featured: Reventure
     <div class="siema">
         {% for product in site.products %}
         <div class="hero is-medium"
-            style="background: url('{{ product.image }}-hero.jpg') no-repeat center center; background-size: cover; background-position: center;">
+            style="background: url('/img/product/{{ product.code }}-hero.jpg') no-repeat center center; background-size: cover; background-position: center;">
             <div class="hero-align-bottom">
                 <a href="{{ product.url }}" style="color: white;">
                     <h1 class="title is-3 has-text-white">
