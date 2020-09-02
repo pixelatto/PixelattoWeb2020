@@ -1,7 +1,7 @@
 ---
 layout: member
 title: Antonio Berrocal
-subtitle: Artist
+subtitle: Art
 quote: Let me draw a little sketch...
 telephone: 
 twitter: ABerrocal

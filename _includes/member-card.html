@@ -1,28 +1,37 @@
-<div class="card box" style="height: 100%;">
-    <div class="card-image">
-    </div>
-    <div class="card-content">
-        <div class="media">
-            <div class="media-left">
-                <figure class="image is-64x64">
-                    <img src="{{ member.image }}" alt="Image">
-                </figure>
+<div class="card box has-rounded-corners" style="height: 100%; padding: 30px;">
+    <div>
+        {% capture twitter_link %}
+        {% if member.twitter_override %}{{ member.twitter_override }}{% else %}https://twitter.com/{{ member.twitter }}{% endif %}
+        {% endcapture %}
+
+        <div class="level mx-5">
+            <div class="level-left  my-0">
+                <p><span class="title is-4">{{ member.title }}</span></p>
             </div>
-            <div class="media-content">
-                <p class="title is-6">{{ member.title }}</p>
+            <div class="level-right my-0">
                 <p class="subtitle is-6">{{ member.subtitle }}</p>
-                <p class="subtitle is-6">
-                    <a href="{% if member.twitter_override %}{{ member.twitter_override }}{% else %}https://twitter.com/{{ member.twitter }}{% endif %}"
-                        target="_blank">
-                        @{{ member.twitter }}
-                    </a>
-                </p>
             </div>
         </div>
+        <div class="columns is-mobile">
+            <div class="column">
+                <a href="{{ twitter_link }}">
+                    <figure class="image is-96x96" style="margin: auto;">
+                        <img src="{{ member.image }}" alt="Image">
+                    </figure>
+                    <p class="has-text-centered">@{{member.twitter}}</p>
+                </a>
+            </div>
+            <div class="column speech-bubble is-right" style="height: 100px; margin-right: 2.25em;">
+                <p class="is-vertically-centered">"{{ member.quote }}"</p>
+            </div>
+        </div>
+    </div>
 
-        <div class="content">
-            <blockquote>{{ member.quote }}</blockquote>
+    {% if member.content.size > 5 %}
+    <div class="card-content">
+        <div class="content has-text-justified">
             {{ member.content }}
         </div>
     </div>
+    {% endif %}
 </div>

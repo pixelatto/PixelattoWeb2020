@@ -1,7 +1,7 @@
 ---
 layout: member
 title: Alberto Martín
-subtitle: Programmer
+subtitle: Code
 quote: Needs more tweens
 telephone: 
 twitter: Slantar

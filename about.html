@@ -1,23 +1,19 @@
 ---
-layout: page
+layout: empty
 title: About
 hide_hero: true
 permalink: /about/
 ---
 
-
 <body>
     <section class="section">
         <div class="container">
-            <div class="heading">
-                <h1 class="title">Our team</h1>
-                <h2 class="subtitle">Our team</h2>
-            </div>
-
-            <div class="columns is-multiline is-desktop"
+            <h1 class="title is-3">Our team</h1>
+            <h2 class="subtitle is-5 mb-6">Master pixel crafters</h2>
+            <div class="columns is-multiline is-desktop is-centered"
                 style="display: flex; flex-direction: row; align-items: stretch; align-content: stretch;">
                 {% for member in site.team %}
-                <div class="column is-half-desktop is-one-third-widescreen">
+                <div class="column is-full-mobile is-full is-half-desktop is-half-widescreen is-one-third-fullhd">
                     {% include member-card.html %}
                 </div>
                 {% endfor %}
@@ -26,10 +22,8 @@ permalink: /about/
     </section>
     <section class="section">
         <div class="container">
-            <div class="heading">
-                <h1 class="title">The road so far...</h1>
-                <h2 class="subtitle">Our history</h2>
-            </div>
+            <h1 class="title is-3">The road so far</h1>
+            <h2 class="subtitle is-5 mb-6">Our history</h2>
             <div class="timeline is-centered">
                 <header class="timeline-header">
                     <span class="tag is-medium is-primary">Today</span>
