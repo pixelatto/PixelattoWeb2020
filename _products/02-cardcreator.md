@@ -1,20 +1,21 @@
 ---
 title: Card Creator
+code: card-creator
+permalink: /card-creator/
 type: app
 subtitle: The ultimate tool to create your own card games
 description: Start making card games now!
 layout: product
-image: /img/product/card-creator
+video: liMw3yfeTdo
 price: $39.99
 features:
     - label: Create any type of card
-      icon: fa-location-arrow
+      icon: fa-pencil-ruler
     - label: Export to Tabletop Simulator in one click
-      icon: fa-grin-stars
-    - label: Print and play!
-      icon: fa-fighter-jet
+      icon: fa-dice-d6
+    - label: Print and play in 1 click
+      icon: fa-print
 rating: 5
-permalink: /card-creator/
 ---
 
 Card Creator is a...

@@ -1,20 +1,21 @@
 ---
 title: Reventure
+code: reventure
+permalink: /reventure/
 type: game
 subtitle: The only quest with one hundred different endings
 description: Choose your adventure, for real.
 layout: product
-image: /img/product/reventure
+video: aY7EVPVZk2g
 price: $7.99
 features:
     - label: 100 different endings
-      icon: fa-location-arrow
+      icon: fa-flag
     - label: +50 unlockable characters
-      icon: fa-grin-stars
+      icon: fa-user-friends
     - label: Twitch integration
-      icon: fa-fighter-jet
+      icon: fa-video
 rating: 5
-permalink: /reventure/
 ---
 
 Reventure is a nonlinear...
