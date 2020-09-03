@@ -1,10 +1,5 @@
-- name: Products
-  link: /products/
-  dropdown: 
-    - name: Reventure
-      link: /reventure/
-    - name: Card Creator
-      link: /card-creator/
+- name: About
+  link: /about/
 - name: Blog
   link: /blog/
   dropdown: 
@@ -12,9 +7,12 @@
       link: /categories/
     - name: Devlog
       link: /devlog/
-- name: About
-  link: /about/
+- name: Products
+  link: /products/
+  dropdown: 
+    - name: Reventure
+      link: /reventure/
+    - name: Card Creator
+      link: /card-creator/
 - name: Store
   link: /store/
-- name: Press
-  link: /press/
