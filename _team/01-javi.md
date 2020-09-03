@@ -2,7 +2,7 @@
 layout: member
 title: Javi Cepa
 subtitle: Director
-quote: One more pixel to the right...
+quote: Just one more pixel to the right...
 telephone: +34 618 887 993
 twitter: JaviCepa
 image: /img/avatars/Javi.svg
@@ -13,14 +13,21 @@ Javi founded Pixelatto in 2014 as a one man company and since then has worked hi
 
 **Special Moves:**
 
-&emsp;<i class="fas fa-arrow-down"></i>
+<div class="has-text-left">
+
+<i class="fas fa-arrow-down"></i>
 <i class="fas fa-arrow-down" style="transform: rotateZ(-45deg);"></i>
 <i class="fas fa-arrow-down" style="transform: rotateZ(-90deg);"></i>
 <i class="fas fa-arrow-down" style="transform: rotateZ(-135deg);"></i>
-+🅰: &emsp;Throw Notion Card
++🅰: &emsp;Send to Notion
 
-&emsp;<i class="fas fa-arrow-right"></i>
+</div>
+<div class="has-text-left">
+
+<i class="fas fa-arrow-right"></i>
 <i class="fas fa-arrow-left"></i>
 <i class="fas fa-arrow-right"></i>
 <i class="fas fa-arrow-left"></i>
 +🅱: &emsp;Unfinish Project
+
+</div>

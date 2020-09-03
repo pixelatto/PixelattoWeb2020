@@ -9,18 +9,25 @@ image: /img/avatars/Juan.svg
 hashtags: [HackerMan, PragmaticSama, Ju]
 ---
 
-Juan joined Pixelatto in 2016. He knows every programming language ever made and is an outstanding game developer (and security expert!).
+Juan knows his way around every programming language ever made and has root access to your computer, but don't worry: he won't do anything evil as long as you keep buying our stuff.
 
 **Special Moves:**
 
-&emsp;<i class="fas fa-arrow-down" style="transform: rotateZ(-45deg);"></i>
+<div class="has-text-left">
+
+<i class="fas fa-arrow-down" style="transform: rotateZ(-45deg);"></i>
 <i class="fas fa-arrow-down" style="transform: rotateZ(-225deg);"></i>
 <i class="fas fa-arrow-down" style="transform: rotateZ(-135deg);"></i>
 <i class="fas fa-arrow-down" style="transform: rotateZ(-315deg);"></i>
 +🅰: &emsp;Reset Password
 
-&emsp;<i class="fas fa-arrow-up"></i>
+</div>
+<div class="has-text-left">
+
+<i class="fas fa-arrow-up"></i>
 <i class="fas fa-arrow-up"></i>
 <i class="fas fa-arrow-up"></i>
 <i class="fas fa-arrow-up"></i>
 +🅱: &emsp;Upgrade Code
+
+</div>

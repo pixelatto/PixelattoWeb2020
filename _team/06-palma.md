@@ -13,14 +13,18 @@ Palma also joined Pixelatto in mid 2020. She's a living archive of anime referen
 
 **Special Moves:**
 
-&emsp;<i class="fas fa-arrow-left" style="transform: rotateZ(-45deg);"></i>
-<i class="fas fa-arrow-up" style="transform: rotateZ(-45deg);"></i>
-<i class="fas fa-arrow-right" style="transform: rotateZ(-45deg);"></i>
-<i class="fas fa-arrow-down" style="transform: rotateZ(-45deg);"></i>
-+🅰: &emsp;Outlining Jutsu
+<div class="has-text-left">
+    <i class="fas fa-arrow-left" style="transform: rotateZ(-45deg);"></i>
+    <i class="fas fa-arrow-up" style="transform: rotateZ(-45deg);"></i>
+    <i class="fas fa-arrow-right" style="transform: rotateZ(-45deg);"></i>
+    <i class="fas fa-arrow-down" style="transform: rotateZ(-45deg);"></i>
+    +🅰: &emsp;Outlining Jutsu
+</div>
 
-&emsp;<i class="fas fa-arrow-left"></i>
-<i class="fas fa-arrow-right"></i>
-<i class="fas fa-arrow-up"></i>
-<i class="fas fa-arrow-down"></i>
-+🅱: &emsp;Prismatic Shading
+<div class="has-text-left">
+    <i class="fas fa-arrow-left"></i>
+    <i class="fas fa-arrow-right"></i>
+    <i class="fas fa-arrow-up"></i>
+    <i class="fas fa-arrow-down"></i>
+    +🅱: &emsp;Unreal Shading
+</div>

@@ -14,14 +14,18 @@ Antonio has just joined Pixelatto in mid 2020. He's a drawing master, waiting to
 
 **Special Moves:**
 
-&emsp;<i class="fas fa-arrow-down" style="transform: rotateZ(-45deg);"></i>
-<i class="fas fa-arrow-down" style="transform: rotateZ(0);"></i>
-<i class="fas fa-arrow-down" style="transform: rotateZ(45deg);"></i>
-<i class="fas fa-arrow-down" style="transform: rotateZ(0);"></i>
-+🅰: &emsp;Mindblowing Sketch
+<div class="has-text-left">
+    <i class="fas fa-arrow-down" style="transform: rotateZ(-45deg);"></i>
+    <i class="fas fa-arrow-down" style="transform: rotateZ(0);"></i>
+    <i class="fas fa-arrow-down" style="transform: rotateZ(45deg);"></i>
+    <i class="fas fa-arrow-down" style="transform: rotateZ(0);"></i>
+    +🅰: &emsp;Killer Concept
+</div>
 
-&emsp;<i class="fas fa-arrow-left"></i>
-<i class="fas fa-arrow-left" style="transform: rotateZ(45deg);"></i>
-<i class="fas fa-arrow-right" style="transform: rotateZ(-45deg);"></i>
-<i class="fas fa-arrow-right"></i>
-+🅱: &emsp;Unreal Landscape
+<div class="has-text-left">
+    <i class="fas fa-arrow-left"></i>
+    <i class="fas fa-arrow-left" style="transform: rotateZ(45deg);"></i>
+    <i class="fas fa-arrow-right" style="transform: rotateZ(-45deg);"></i>
+    <i class="fas fa-arrow-right"></i>
+    +🅱: &emsp;Sketch Storm
+</div>

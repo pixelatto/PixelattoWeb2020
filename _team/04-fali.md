@@ -13,14 +13,18 @@ Fali joined Pixelatto in early 2020. Yes, good things also happened in 2020. He 
 
 **Special Moves:**
 
-&emsp;<i class="fas fa-arrow-down" style="transform: rotateZ(-0deg);"></i>
-<i class="fas fa-arrow-down" style="transform: rotateZ(-90deg);"></i>
-<i class="fas fa-arrow-down" style="transform: rotateZ(-180deg);"></i>
-<i class="fas fa-arrow-down" style="transform: rotateZ(-270deg);"></i>
-+🅰: &emsp;Vanish Paperwork
+<div class="has-text-left">
+    <i class="fas fa-arrow-down" style="transform: rotateZ(-0deg);"></i>
+    <i class="fas fa-arrow-down" style="transform: rotateZ(-90deg);"></i>
+    <i class="fas fa-arrow-down" style="transform: rotateZ(-180deg);"></i>
+    <i class="fas fa-arrow-down" style="transform: rotateZ(-270deg);"></i>
+    +🅰: &emsp;Vanish Papers
+</div>
 
-&emsp;<i class="fas fa-arrow-left"></i>
-<i class="fas fa-arrow-left"></i>
-<i class="fas fa-arrow-right"></i>
-<i class="fas fa-arrow-right"></i>
-+🅱: &emsp;Snooze Emails
+<div class="has-text-left">
+    <i class="fas fa-arrow-left"></i>
+    <i class="fas fa-arrow-left"></i>
+    <i class="fas fa-arrow-right"></i>
+    <i class="fas fa-arrow-right"></i>
+    +🅱: &emsp;Snooze Emails
+</div>
