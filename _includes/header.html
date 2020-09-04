@@ -1,48 +1,4 @@
-<svg id="fader"></svg>
-<script>
-    fadeInPage();
-
-    function fadeInPage() {
-        if (!window.AnimationEvent) {
-            return;
-        }
-        var fader = document.getElementById('fader');
-        fader.classList.add('fade-out');
-    }
-    document.addEventListener('DOMContentLoaded', function () {
-        if (!window.AnimationEvent) {
-            return;
-        }
-        var anchors = document.getElementsByTagName('a');
-        for (var idx = 0; idx < anchors.length; idx += 1) {
-            if (anchors[idx].hostname !== window.location.hostname ||
-                anchors[idx].pathname === window.location.pathname) {
-                continue;
-            }
-            anchors[idx].addEventListener('click', function (event) {
-                var fader = document.getElementById('fader'),
-                    anchor = event.currentTarget;
-
-                var listener = function () {
-                    window.location = anchor.href;
-                    fader.removeEventListener('animationend', listener);
-                };
-                fader.addEventListener('animationend', listener);
-
-                event.preventDefault();
-                fader.classList.add('fade-in');
-            });
-        }
-    });
-    window.addEventListener('pageshow', function (event) {
-        if (!event.persisted) {
-            return;
-        }
-        var fader = document.getElementById('fader');
-        fader.removeAttribute('class', 'fade-in');
-        fader.setAttribute('class', 'fade-out');
-    });
-</script>
+{% include fader.html %}
 {% if page.type == "game" or page.type == "app" %}
 <style>
     #logo-sec,
@@ -52,15 +8,31 @@
 </style>
 {% endif %}
 
-<nav class="navbar is-fixed-top has-box-shadow
-{% if page.type == "game" %}
-    is-secondary
+{% capture main_color %}
+{% if page.theme_color %}
+#{{page.theme_color}}
+{% elsif page.type == "game" %}
+#e37826
 {% elsif page.type == "app" %}
-    is-primary
-{% else %}
-    is-white
+#009fc7
+{% else %}{% endif %}
+{% endcapture %}
+
+{% if main_color.size > 3 %}
+<style>
+    .navbar-link {
+        background-color: {{main_color}} !important;
+        color: #ffffff !important;
+    }
+    .navbar.is-primary .navbar-dropdown a.navbar-item.is-active {
+        background-color: {{main_color}} !important;
+        color: #ffffff !important;
+    }
+</style>
 {% endif %}
-">
+
+<nav class="navbar is-fixed-top has-box-shadow
+{% if page.theme_text %}{{page.theme_text}}{% endif %}" style="background: {{main_color}};">
     <div class="container">
         <div class="navbar-brand">
             <a href="{{ site.baseurl }}/" class="navbar-item">

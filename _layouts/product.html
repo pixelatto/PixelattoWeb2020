@@ -3,22 +3,14 @@ layout: empty
 hide_hero: true
 ---
 
-{% capture main_color %}
-{% if page.type == "game" %}
-#e37826
-{% elsif page.type == "app" %}
-#009fc7
-{% endif %}
-{% endcapture %}
-
 <div class="container">
-    <div class="section pt-3">
+    <div class=" pt-3">
 
         <img src="/img/product/{{page.code}}-logo.svg" style="display: block; margin: auto; height: 30vw; max-height: 200px;" />
 
-        <div class="columns is-multiline is-vcentered" style="border-radius: 300px 0px 50px 0px; background: {{main_color}}; padding: 20px; color: white; margin: 20px;">
+        <div class="columns is-multiline is-vcentered" style="border-radius: 40px 0px 40px 0px; padding: 3vw; margin: 20px;">
             <div class="column is-6">
-                <figure class="image is-16by9" style="border-radius: 30px 0px 30px 0px; overflow: hidden; box-shadow: #ffffff 0 0 0px 4px;">
+                <figure class="image is-16by9" style="border-radius: 30px 0px 30px 0px; overflow: hidden;">
                     {% if page.video %}
                     <iframe class="has-ratio" width="640" height="360"
                         src="https://www.youtube.com/embed/{{ page.video }}?rel=0" frameborder="0"
@@ -30,9 +22,9 @@ hide_hero: true
                 </figure>
             </div>
 
-            <div class="column is-6">
+            <div class="column is-6 has-text-right">
                 <p class="title is-3 py-4" style="display: none;">{{ page.title }}</p>
-                <p class="subtitle is-3 has-text-white py-4">{{ page.subtitle }}</p>
+                <p class="subtitle is-3 pl-2 py-4">{{ page.subtitle }}</p>
                 <p class="title is-4 has-text-right">{{ page.price }}</p>
                 {% if page.product_code %}
                 <p class="subtitle is-5 has-text-right">{{ page.product_code }}</p>
@@ -42,6 +34,8 @@ hide_hero: true
                 <div class="content pl-5">
                     {% for feature in page.features %}
                     <p>
+                        <span>{{ feature.label }}</span>
+                        
                         <span class="icon">
                             {% if feature.icon %}
                             <i class="fas {{ feature.icon }}"></i>
@@ -49,10 +43,11 @@ hide_hero: true
                             <i class="fas fa-circle fa-xs"></i>
                             {% endif %}
                         </span>
-                        <span>{{ feature.label }}</span></p>
+                    </p>
                     {% endfor %}
                 </div>
                 {% endif %}
+                <a href="#" class="button is-white is-medium"></a>
             </div>
         </div>
     </div>

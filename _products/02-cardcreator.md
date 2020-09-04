@@ -14,6 +14,8 @@ features:
       icon: fa-dice-d6
     - label: Print and play in 1 click
       icon: fa-print
+      
+theme_text: is-primary
 ---
 
 Card Creator is a...

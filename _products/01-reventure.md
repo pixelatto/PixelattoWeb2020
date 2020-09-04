@@ -14,6 +14,8 @@ features:
       icon: fa-user-friends
     - label: Laugh your ass off
       icon: fa-grin-tears
+      
+theme_text: is-primary
 ---
 
 Reventure is a nonlinear...
