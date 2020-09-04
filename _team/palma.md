@@ -1,13 +1,13 @@
 ---
 layout: member
 title: Palma Sánchez
-team-id: "007"
 subtitle: Artist
 quote: 色は私の武器です!
 telephone: 
 twitter: Kokishi_
 image: /img/avatars/Palma.svg
 hashtags: [PaintSensei, Otaku, Colorful]
+order: 7
 ---
 
 Palma is a walking repository of board games, videogames and anime references. She can also paint colours outside of the visible spectrum.

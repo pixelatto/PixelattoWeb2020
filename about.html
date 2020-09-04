@@ -10,16 +10,18 @@ permalink: /about/
         <div class="container content">
             <h1 class="title is-3">About the Pixelattos</h1>
             <h2 class="subtitle is-5">Learn more about these legendary creatures!</h2>
-            <p>Most people think that the first Pixelatto dated early 2019 or so, since it's mostly know for Reventure.
+            <p>Most people think that the first Pixelatto dated early 2019 or so, since they're mostly know for
+                Reventure, but the fact is that there's fossil evidence of living specimens back at 2014.</p>
+            <p>Contract work is not as popular as making own videogames, but for these organisms it somehow enabled
+                their survival and adaptation to the environment.</p>
+            <p>Most races of game developer die out of starvation in the first years, these pixele-y creatures managed
+                to evolve and learn through
+                the mystic arts of extremely-low-budgets and extremely-hard-work to become the creatures we know and
+                love today.
             </p>
-            <p>But there's fossil evidence deep in the web dating the first specimens back at 2014.</p>
-            <p>Contract work is not as popular as making your own IP videogames, but in the case of these organisms it
-                seems to have enabled their survival and adaptation to the environment.</p>
-            <p>While similar beasts died out of starvation, these pixele-y creatures managed to evolve and learn through
-                the mystic arts of extremely-low-budgets and extremely-hard-work and become the creatures we know today.
-            </p>
-            <p>Most individuals are 6 pixels high and extremely skillful at making videogames.</p>
-
+            <p>Most individuals are 6 pixels high and extremely skillful at making videogames, but the type of skill
+                varies widely.</p>
+            <p>The Pixelattopedia is a compilation of all currently known subjects.</p>
         </div>
     </section>
     <section class="section">
@@ -28,10 +30,16 @@ permalink: /about/
             <h2 class="subtitle is-5 mb-6">Known individuals</h2>
             <div class="columns is-multiline is-desktop is-centered"
                 style="display: flex; flex-direction: row; align-items: stretch; align-content: stretch;">
-                {% for member in site.team %}
-                <div class="column is-full-mobile is-half is-half-desktop is-half-widescreen is-one-third-fullhd">
-                    {% include member-card.html %}
-                </div>
+
+                {% assign members = site.team | sort:"order" %}
+
+                {% for member in members %}
+                    {% if member.hidden %}
+                {% else %}
+                    <div class="column is-full-mobile is-half is-half-desktop is-half-widescreen is-one-third-fullhd">
+                        {% include member-card.html %}
+                    </div>
+                {% endif %}
                 {% endfor %}
             </div>
         </div>

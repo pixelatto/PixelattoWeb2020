@@ -1,13 +1,13 @@
 ---
 layout: member
 title: Juan Delgado
-team-id: "003"
 subtitle: Coder
 quote: You're doing it wrong
 telephone: 
 twitter: JuDelCo
 image: /img/avatars/Juan.svg
 hashtags: [HackerMan, PragmaticSama, Ju]
+order: 3
 ---
 
 Juan knows every programming language ever made and has root access to your computer. He won't do anything evil as long as you keep buying our stuff.

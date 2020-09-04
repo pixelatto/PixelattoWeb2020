@@ -7,7 +7,6 @@ subtitle: The ultimate tool to create your own card games
 description: Start making card games now!
 layout: product
 video: liMw3yfeTdo
-price: $39.99
 features:
     - label: Create any type of card
       icon: fa-pencil-ruler
@@ -15,7 +14,6 @@ features:
       icon: fa-dice-d6
     - label: Print and play in 1 click
       icon: fa-print
-rating: 5
 ---
 
 Card Creator is a...

@@ -1,5 +1,18 @@
 ---
 hide_hero: true
-layout: head-only
+layout: no-navigation
 ---
-{% include member-card.html title=page.title subtitle=page.subtitle twitter=page.twitter content=page.content %}
+
+<div class="container">
+    <div class="columns">
+        <div class="column"></div>
+        <div class="column is-6">
+            {% for member in site.team %}
+            {% if member.title == page.title %}
+            {% include member-card.html %}
+            {% endif %}
+            {% endfor %}
+        </div>
+        <div class="column"></div>
+    </div>
+</div>

@@ -1,7 +1,6 @@
 ---
 layout: member
 title: Antonio Berrocal
-team-id: "006"
 subtitle: Artist
 quote: Let me draw a little sketch...
 telephone: 
@@ -9,6 +8,7 @@ twitter: ABerrocal
 twitter_override: http://aberrocal.blogspot.com/
 image: /img/avatars/Antonio.svg
 hashtags: [Drawtastic, PezTomiller, Cartooner]
+order: 6
 ---
 
 Antonio is a drawing master, waiting to share with you all the art he's creating. We won't allow him though, since that info is CLASSIFIED.

@@ -31,9 +31,11 @@ hide_hero: true
                 {% if page.rating %}
                 {% include rating.html rating=page.rating %}
                 {% endif %}
+                
+                <br/>
 
                 {% if page.features %}
-                <div class="content">
+                <div class="content pl-5">
                     {% for feature in page.features %}
                     <p>
                         <span class="icon">
