@@ -1,7 +1,5 @@
 /* Pretty blockquotes */
-blockquote:before {
-    
-}
+blockquote:before {}
 
 
 /* Center vertically */
@@ -9,6 +7,12 @@ blockquote:before {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+}
+
+/* Drop shadows*/
+
+.has-box-shadow {
+    box-shadow: #00000080 0 0 5px 0;
 }
 
 /* Rounded corners */

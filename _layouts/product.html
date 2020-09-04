@@ -3,12 +3,20 @@ layout: empty
 hide_hero: true
 ---
 
+{% capture main_color %}
+    {% if page.type == 'game' %}
+        #e37826
+    {% elsif page.type == 'app' %}
+        #009fc7
+    {% endif %}
+{% endcapture %}
+
+
 <div class="container">
     <div class="section">
-        <div class="columns is-multiline is-vcentered">
-
-            <div class="column is-6">
-                <figure class="image is-16by9" style="border-radius: 30px 30px 0px 30px; overflow: hidden;">
+        <div class="columns is-multiline is-vcentered has-box-shadow" style="background: {{ main_color }}; border-radius: 40px; color: white;">
+            <div class="column is-6" style="border-radius: 40px; background: {{ main_color }};">
+                <figure class="image is-16by9" style="border-radius: 30px 30px 30px 30px; overflow: hidden;">
                     {% if page.video %}
                     <iframe class="has-ratio" width="640" height="360"
                         src="https://www.youtube.com/embed/{{ page.video }}?rel=0" frameborder="0"
@@ -21,8 +29,8 @@ hide_hero: true
             </div>
 
             <div class="column is-6">
-                <p class="title is-3">{{ page.title }}</p>
-                <p class="subtitle is-3">{{ page.subtitle }}</p>
+                <p class="title is-3 pl-5 has-text-white">{{ page.title }}</p>
+                <p class="subtitle is-3 pl-5 has-text-white">{{ page.subtitle }}</p>
                 <p class="title is-4 has-text-right">{{ page.price }}</p>
                 {% if page.product_code %}
                 <p class="subtitle is-5 has-text-right">{{ page.product_code }}</p>
@@ -31,8 +39,8 @@ hide_hero: true
                 {% if page.rating %}
                 {% include rating.html rating=page.rating %}
                 {% endif %}
-                
-                <br/>
+
+                <br />
 
                 {% if page.features %}
                 <div class="content pl-5">
@@ -50,7 +58,12 @@ hide_hero: true
                 </div>
                 {% endif %}
             </div>
-
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="section">
+        <div class="columns is-multiline is-vcentered">
             <div class="column is-12">
                 <p class="title is-4">Description</p>
                 <div class="content">
