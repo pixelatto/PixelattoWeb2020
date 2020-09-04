@@ -3,7 +3,7 @@ title: Card Creator
 code: card-creator
 permalink: /card-creator/
 type: app
-subtitle: The ultimate tool to create your own card games
+subtitle: The ultimate tool to create card games
 description: Start making card games now!
 layout: product
 video: liMw3yfeTdo
