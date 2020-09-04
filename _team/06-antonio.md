@@ -1,6 +1,7 @@
 ---
 layout: member
 title: Antonio Berrocal
+team-id: "006"
 subtitle: Artist
 quote: Let me draw a little sketch...
 telephone: 
@@ -10,7 +11,7 @@ image: /img/avatars/Antonio.svg
 hashtags: [Drawtastic, PezTomiller, Cartooner]
 ---
 
-Antonio has just joined Pixelatto in mid 2020. He's a drawing master, waiting to show you all the art he's creating. We are not allowing him though, since our next project is CLASSIFIED.
+Antonio is a drawing master, waiting to share with you all the art he's creating. We won't allow him though, since that info is CLASSIFIED.
 
 **Special Moves:**
 

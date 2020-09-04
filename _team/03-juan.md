@@ -1,6 +1,7 @@
 ---
 layout: member
 title: Juan Delgado
+team-id: "003"
 subtitle: Coder
 quote: You're doing it wrong
 telephone: 
@@ -9,7 +10,7 @@ image: /img/avatars/Juan.svg
 hashtags: [HackerMan, PragmaticSama, Ju]
 ---
 
-Juan knows his way around every programming language ever made and has root access to your computer, but don't worry: he won't do anything evil as long as you keep buying our stuff.
+Juan knows every programming language ever made and has root access to your computer. He won't do anything evil as long as you keep buying our stuff.
 
 **Special Moves:**
 

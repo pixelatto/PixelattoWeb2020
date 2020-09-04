@@ -1,6 +1,7 @@
 ---
 layout: member
 title: Javi Cepa
+team-id: "001"
 subtitle: Director
 quote: Just one more pixel to the right...
 telephone: +34 618 887 993
@@ -9,7 +10,7 @@ image: /img/avatars/Javi.svg
 hashtags: [Multitasker, FinalBoss, LateOwl]
 ---
 
-Javi founded Pixelatto in 2014 as a one man company and since then has worked his ass to make it stand as a handsome independent game studio.
+Javi has worked his ass since the beggining of Pixelatto to build a handsome independent game studio out of sweat, big pixels and passion.
 
 **Special Moves:**
 

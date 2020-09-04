@@ -1,6 +1,7 @@
 ---
 layout: member
 title: Palma Sánchez
+team-id: "007"
 subtitle: Artist
 quote: 色は私の武器です!
 telephone: 
@@ -9,7 +10,7 @@ image: /img/avatars/Palma.svg
 hashtags: [PaintSensei, Otaku, Colorful]
 ---
 
-Palma also joined Pixelatto in mid 2020. She's a living archive of anime references and can see and paint colors even outside of the visible spectrum.
+Palma is a walking repository of board games, videogames and anime references. She can also paint colours outside of the visible spectrum.
 
 **Special Moves:**
 

@@ -1,6 +1,7 @@
 ---
 layout: member
 title: Alberto Martín
+team-id: "004"
 subtitle: Coder
 quote: Needs more tweens
 telephone:
@@ -9,8 +10,7 @@ image: /img/avatars/Alberto.svg
 hashtags: [BurgerDeveloper, Tweener, CleanCoder]
 ---
 
-Alberto joined Pixelatto in 2019. He's always ready for testing, patching and deploying. If you see a bug in our games
-it means he's on leave that day.
+Alberto is always ready for testing, patching and deploying. If you see a bug in our games it means he's on leave that day. He's also a native GIF speaker.
 
 **Special Moves:**
 

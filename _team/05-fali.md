@@ -1,15 +1,16 @@
 ---
 layout: member
 title: Fali Ronda
+team-id: "005"
 subtitle: Producer
-quote: I'm on it!
+quote: I'm already on it!
 telephone: 
 twitter: FaliRonda
 image: /img/avatars/Fali.svg
 hashtags: [AsapMan, WildCard, NotionGuru]
 ---
 
-Fali joined Pixelatto in early 2020. Yes, good things also happened in 2020. He manages like a pro the chaos that is our little studio so everyone else don't find any obstacles.
+Fali is always ready to tackle the chaos that permanently lives in our little studio. Accounting, programming, marketing... If it ends with "-ing", Fali can do it.
 
 **Special Moves:**
 
