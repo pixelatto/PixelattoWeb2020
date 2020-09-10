@@ -70,4 +70,6 @@ collections:
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
       - {label: "Nombre", name: "title", widget: "string"}
+      - {label: "Fecha", name: "date", widget: "datetime", required: false}
       - {label: "Contenido", name: "body", widget: "markdown", required: false}
+      - {label: "Categorías", name: "categories", widget: "string"}
