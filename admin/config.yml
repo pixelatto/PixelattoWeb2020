@@ -60,10 +60,9 @@ collections:
         media_library:
             config:
                 max_file_size: 512000
-  - name: "posts"
-    label: "Posts"
-    folder: "_posts"
-    preview_path: /{{slug}}
+  - name: "blog"
+    label: "Blog"
+    folder: "_posts/"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     identifier_field: name
