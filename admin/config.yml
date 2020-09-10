@@ -63,8 +63,9 @@ collections:
   - name: "posts"
     label: "Posts"
     folder: "_posts"
+    preview_path: /{{slug}}
     create: true
-    slug: "posts/{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     identifier_field: name
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
