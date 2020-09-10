@@ -60,3 +60,13 @@ collections:
         media_library:
             config:
                 max_file_size: 512000
+  - name: "posts"
+    label: "Posts"
+    folder: "_posts"
+    create: true
+    slug: "post/{{slug}}"
+    identifier_field: post
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Nombre", name: "title", widget: "string"}
+      - {label: "Contenido", name: "body", widget: "markdown", required: false}
