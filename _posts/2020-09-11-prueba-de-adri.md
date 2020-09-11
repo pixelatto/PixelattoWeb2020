@@ -14,7 +14,7 @@ In order to create your cards, first you need to create blueprints for those car
 
 When you create a new card set, a prompt will allow you to create a new blueprint or use an existent one.
 
-![h](/images/uploads/bp_1.png "h")
+![Prueba](/images/uploads/bp_1.jpg "Prueba")
 
 You can also edit an existing one by going to the blueprint preview image in the cardset:
 
