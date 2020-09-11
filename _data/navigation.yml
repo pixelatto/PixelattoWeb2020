@@ -2,11 +2,11 @@
   link: /about/
 - name: Blog
   link: /blog/
-  dropdown: 
-    - name: Categories
-      link: /categories/
-    - name: Devlog
-      link: /devlog/
+  # dropdown: 
+  #   - name: Categories
+  #     link: /categories/
+  #   - name: Devlog
+  #     link: /devlog/
 - name: Products
   link: /products/
   dropdown: 
@@ -14,5 +14,5 @@
       link: /reventure/
     - name: Card Creator
       link: /card-creator/
-- name: Store
-  link: /store/
+# - name: Store
+#   link: /store/
