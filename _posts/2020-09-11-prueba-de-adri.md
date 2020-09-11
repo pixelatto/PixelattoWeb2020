@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blueprints
-date: ""
+date: 2020-09-11T10:00:30.274Z
 categories: Guides
 ---
 
