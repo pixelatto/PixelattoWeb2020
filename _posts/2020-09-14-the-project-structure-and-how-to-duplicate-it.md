@@ -4,13 +4,7 @@ title: The project structure and how to duplicate it
 date: 2020-09-14T10:02:55.638Z
 categories: Guides
 ---
-# The project structure and how to duplicate it
-
 Learn about the different elements of a project structure and how to duplicate projects properly
-
-- - -
-
-# Index
 
 # Project Structure
 
