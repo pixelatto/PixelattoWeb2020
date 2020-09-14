@@ -8,48 +8,47 @@ categories: Guides
 
 Learn how to manage your card sets, edit your card collection and more.
 
----
+- - -
 
 # Create and Edit Cards
 
 For this tutorial we'll create a very basic Blueprint and create some cards using it. Open Card Creator and follow these steps:
 
-1) Create a new project
+1. Create a new project
 
-[https://steamuserimages-a.akamaihd.net/ugc/858355151797328408/9E557835B69D3F98FC5087144B8CA5989ADDFA3E/](https://steamuserimages-a.akamaihd.net/ugc/858355151797328408/9E557835B69D3F98FC5087144B8CA5989ADDFA3E/)
+   ![New](/img/upload/1.png)
+2. Add a new Card Set
 
-2) Add a new Card Set
+![](/img/upload/2.png)
 
-[https://steamuserimages-a.akamaihd.net/ugc/858355151797329776/0F200EAB3FD7DAC4C07E5E08D58770467A492F9D/](https://steamuserimages-a.akamaihd.net/ugc/858355151797329776/0F200EAB3FD7DAC4C07E5E08D58770467A492F9D/)
+3. Create a new blueprint
 
-3) Create a new blueprint
+![](/img/upload/3.png)
 
-[https://steamuserimages-a.akamaihd.net/ugc/858355151797330603/A433051B6A596AE6238B40FBB7E750E8EDC0D98E/](https://steamuserimages-a.akamaihd.net/ugc/858355151797330603/A433051B6A596AE6238B40FBB7E750E8EDC0D98E/)
+4. Assign the bottom field as "Icon" type and save the blueprint. If you need more help creating blueprints you can check the guide Blueprint.
 
-4) Assign the bottom field as "Icon" type and save the blueprint. If you need more help creating blueprints you can check [t](http://steamcommunity.com/sharedfiles/filedetails/?id=1128470780)he guide [Blueprints](https://www.notion.so/Blueprints-d6b9d64c0c714d279a6578e0c0a5e1b3).
+![](/img/upload/4.gif)
 
-[https://steamuserimages-a.akamaihd.net/ugc/858355151797341573/EC8BB49FF83EDCDF9C30D7173C670856F3858442/](https://steamuserimages-a.akamaihd.net/ugc/858355151797341573/EC8BB49FF83EDCDF9C30D7173C670856F3858442/)
+5. Add some cards using the "Add card" button.
 
-5) Add some cards using the "Add card" button.
+![](/img/upload/5.gif)
 
-[https://steamuserimages-a.akamaihd.net/ugc/858355151797353425/CD68F08247208E4F80C859EFCC5967891FB48E87/](https://steamuserimages-a.akamaihd.net/ugc/858355151797353425/CD68F08247208E4F80C859EFCC5967891FB48E87/)
+6. Click on a card and then on any of the fields to assign values.
 
-6) Click on a card and then on any of the fields to assign values.
+![](/img/upload/6.gif)
 
-[https://steamuserimages-a.akamaihd.net/ugc/858355151797474302/7F5DCA08959402B20AFA61D901CF81E094C2374D/](https://steamuserimages-a.akamaihd.net/ugc/858355151797474302/7F5DCA08959402B20AFA61D901CF81E094C2374D/)
+7. Click on the "Save" button on the top right of the screen to save your project.
 
-7) Click on the "Save" button on the top right of the screen to save your project.
-
-[https://steamuserimages-a.akamaihd.net/ugc/858355151797480688/A55B11D5B56D88CD1DF30EB3E297270B9C75DF01/](https://steamuserimages-a.akamaihd.net/ugc/858355151797480688/A55B11D5B56D88CD1DF30EB3E297270B9C75DF01/)
+![](/img/upload/7.png)
 
 ### **Extra tips**
 
-- You can specify the amount of each card you want using the input boxes below each card.
-- You can reorder your cards via drag & drop.
-- The save icon will be highlighted whenever you have unsaved changes.
-- You can define and use custom variables and inline icons, see the video below
+* You can specify the amount of each card you want using the input boxes below each card.
+* You can reorder your cards via drag & drop.
+* The save icon will be highlighted whenever you have unsaved changes.
+* You can define and use custom variables and inline icons, see the video below
 
-[https://i.imgur.com/xyBXPfS.mp4](https://i.imgur.com/xyBXPfS.mp4)
+<https://i.imgur.com/xyBXPfS.mp4>
 
 # Card Panels
 
@@ -73,8 +72,8 @@ These fields also support rich formating for effects like bold, italic, colors a
 
 These panels are used to display images in JPG or PNG format. The URI field supports:
 
-- Local paths, e.g: C:\MyImages\MyCardGame\Player.png
-- Online URLs, e.g.: [https://www.gstatic.com/webp/gallery3/1.sm.png](https://steamcommunity.com/linkfilter/?url=https://www.gstatic.com/webp/gallery3/1.sm.png))
+* Local paths, e.g: C:\MyImages\MyCardGame\Player.png
+* Online URLs, e.g.: [https://www.gstatic.com/webp/gallery3/1.sm.png](https://steamcommunity.com/linkfilter/?url=https://www.gstatic.com/webp/gallery3/1.sm.png))
 
 You can also tint you image using the tint field. Using this field without assigning an URI will result in a flat-coloured panel.
 
@@ -98,13 +97,15 @@ You can have different card sets sharing the same blueprint or use different one
 
 To create a new card set:
 
-1) Create a new Card Set using the "Add Card Set" button
+1. Create a new Card Set using the "Add Card Set" button
 
-[https://steamuserimages-a.akamaihd.net/ugc/858355151797329776/0F200EAB3FD7DAC4C07E5E08D58770467A492F9D/](https://steamuserimages-a.akamaihd.net/ugc/858355151797329776/0F200EAB3FD7DAC4C07E5E08D58770467A492F9D/)
 
-2) The "Assign blueprint" window will be displayed so you can assign a blueprint to you new card set.
 
-[https://steamuserimages-a.akamaihd.net/ugc/868489617101608792/9143D22665F9A71749E07D551492FA74215A4D6F/](https://steamuserimages-a.akamaihd.net/ugc/868489617101608792/9143D22665F9A71749E07D551492FA74215A4D6F/)
+![](/img/upload/8.png)
+
+2. The "Assign blueprint" window will be displayed so you can assign a blueprint to you new card set.
+
+![](/img/upload/9.png)
 
 You have 3 ways of creating a blueprint from this screen:
 
@@ -114,11 +115,11 @@ B) Link the new card set to an already existing blueprint by clicking on the blu
 
 C) Create a unlinked copy of an existing blueprint so you can modify it independently by right clicking on a blueprint and then on "duplicate".
 
-3) Your new Card Set is created! Depending on wich option did you use, you'll be taken to the blueprint edit or collection screen. Either way, you'll find your new card set back in the collection editor.
+3. Your new Card Set is created! Depending on wich option did you use, you'll be taken to the blueprint edit or collection screen. Either way, you'll find your new card set back in the collection editor.
 
-[https://steamuserimages-a.akamaihd.net/ugc/858355151797506285/1A81379CCF0FCE90E9FCA887CEAE9ECA2D8080DC/](https://steamuserimages-a.akamaihd.net/ugc/858355151797506285/1A81379CCF0FCE90E9FCA887CEAE9ECA2D8080DC/)
+![](/img/upload/10.gif)
 
 ### **Extra tips**
 
-- You can rename your card sets by clicking on their name.
-- You can reorder and remove Card Sets via the upper right dropdown menu on each card set.
+* You can rename your card sets by clicking on their name.
+* You can reorder and remove Card Sets via the upper right dropdown menu on each card set.
