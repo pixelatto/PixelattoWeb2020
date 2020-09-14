@@ -8,7 +8,7 @@ categories: Guides
 
 Learn about the different elements of a project structure and how to duplicate projects properly
 
----
+- - -
 
 # Index
 
@@ -16,7 +16,7 @@ Learn about the different elements of a project structure and how to duplicate p
 
 When you create a new project in Card Creator, it will create several folders and files inside your project folder:
 
-![The%20project%20structure%20and%20how%20to%20duplicate%20it%2046d5258bc7454b8f9069cfe2695e392a/Untitled.png](The%20project%20structure%20and%20how%20to%20duplicate%20it%2046d5258bc7454b8f9069cfe2695e392a/Untitled.png)
+![The%20project%20structure%20and%20how%20to%20duplicate%20it%2046d5258bc7454b8f9069cfe2695e392a/Untitled.png](/img/upload/untitled.png)
 
 Let's talk about these elements.
 
@@ -28,7 +28,7 @@ This file **is not the project**. Card Creator uses this file as an "anchor" to 
 
 This folder content will be like the following picture:
 
-![The%20project%20structure%20and%20how%20to%20duplicate%20it%2046d5258bc7454b8f9069cfe2695e392a/Untitled%201.png](The%20project%20structure%20and%20how%20to%20duplicate%20it%2046d5258bc7454b8f9069cfe2695e392a/Untitled%201.png)
+![The%20project%20structure%20and%20how%20to%20duplicate%20it%2046d5258bc7454b8f9069cfe2695e392a/Untitled%201.png](/img/upload/untitled-1-.png)
 
 Here you can organize your icons and images, by creating folders inside the icon_gallery, image and images_inlines ones, in order to use them inside Card Creator.
 
@@ -36,13 +36,13 @@ Here you can organize your icons and images, by creating folders inside the icon
 
 Card Creator creates periodically backups every five minutes of your work inside this folder. You can learn more about how to restore them by following the [How to restore your projects using backups](https://www.notion.so/How-to-restore-your-projects-using-backups-31f42a2c1ebc4b429883a0b7b6a8e415)  guide.
 
-![The%20project%20structure%20and%20how%20to%20duplicate%20it%2046d5258bc7454b8f9069cfe2695e392a/Untitled%202.png](The%20project%20structure%20and%20how%20to%20duplicate%20it%2046d5258bc7454b8f9069cfe2695e392a/Untitled%202.png)
+![The%20project%20structure%20and%20how%20to%20duplicate%20it%2046d5258bc7454b8f9069cfe2695e392a/Untitled%202.png](/img/upload/untitled-2-.png)
 
 ## Data
 
 Here are located **really important json files**, as those are the ones that define your blueprints, cardsets, variables, etc. This files are the ones copied by card Creator during the backup process.
 
-![The%20project%20structure%20and%20how%20to%20duplicate%20it%2046d5258bc7454b8f9069cfe2695e392a/Untitled%203.png](The%20project%20structure%20and%20how%20to%20duplicate%20it%2046d5258bc7454b8f9069cfe2695e392a/Untitled%203.png)
+![The%20project%20structure%20and%20how%20to%20duplicate%20it%2046d5258bc7454b8f9069cfe2695e392a/Untitled%203.png](/img/upload/untitled-3-.png)
 
 ## Output
 
