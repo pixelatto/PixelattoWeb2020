@@ -73,7 +73,7 @@ These fields also support rich formating for effects like bold, italic, colors a
 These panels are used to display images in JPG or PNG format. The URI field supports:
 
 * Local paths, e.g: C:\MyImages\MyCardGame\Player.png
-* Online URLs, e.g.: [https://www.gstatic.com/webp/gallery3/1.sm.png](https://steamcommunity.com/linkfilter/?url=https://www.gstatic.com/webp/gallery3/1.sm.png))
+* Online URLs, e.g.: [https://www.gstatic.com/webp/gallery3/1.sm.png](https://steamcommunity.com/linkfilter/?url=https://www.gstatic.com/webp/gallery3/1.sm.png)
 
 You can also tint you image using the tint field. Using this field without assigning an URI will result in a flat-coloured panel.
 
