@@ -4,8 +4,8 @@ backend:
   branch: master
   site_domain: pixelatto.netlify.app
 
-media_folder: "/static/images/upload"
-public_folder: "/images/uploads"
+media_folder: "/img/upload"
+public_folder: "/img/upload"
 site_url: https://pixelatto.netlify.app
 logo_url: /img/brand/logo.svg
 locale: 'es'

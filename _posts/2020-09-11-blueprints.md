@@ -14,11 +14,11 @@ In order to create your cards, first you need to create blueprints for those car
 
 When you create a new card set, a prompt will allow you to create a new blueprint or use an existent one.
 
-![Prueba](/images/uploads/bp_1.jpg "Prueba")
+![Prueba](/img/upload/bp_1.jpg "Prueba")
 
 You can also edit an existing one by going to the blueprint preview image in the cardset:
 
-![Prueba](/images/uploads/bp_2.png "Prueba")
+![Prueba](/img/upload/bp_2.png "Prueba")
 
 Once you are in blueprint mode, you can rename it by clicking on it's name in the top bar.
 
@@ -26,7 +26,7 @@ Once you are in blueprint mode, you can rename it by clicking on it's name in th
 
 First, set your card dimensions (you can change it again later). The card dimension tool will appear **on mouse hover**:
 
-![Prueba](/images/uploads/bp_3.png "Prueba")
+![Prueba](/img/upload/bp_3.png "Prueba")
 
 ## Layers
 
@@ -36,7 +36,7 @@ You can add, remove, rename and sort layers using the toolbar at the right. Swit
 
 You can also set the margin of the layer with respect to the edge of the card, and the spacing between panels per layer.
 
-![Prueba](/images/uploads/bp_4.png "Prueba")
+![Prueba](/img/upload/bp_4.png "Prueba")
 
 ## Panels
 
@@ -46,11 +46,11 @@ Select the layer you want to edit. Then you can manage your panels:
 * Resize by moving the separator between two panels.
 * Delete by right-click the separator between two panels.
 
-![Prueba](/images/uploads/bp_5.png "Prueba")
+![Prueba](/img/upload/bp_5.png "Prueba")
 
 You can enable a grid to snap your panels to the grid divisions:
 
-![Prueba](/images/uploads/bp_6.png "Prueba")
+![Prueba](/img/upload/bp_6.png "Prueba")
 
 Select a panel by clicking on it. Then you can:
 
@@ -60,7 +60,7 @@ Select a panel by clicking on it. Then you can:
 * Set the panel data
 * Set the panel material (bottom left icon, see below for the effects)
 
-![Prueba](/images/uploads/bp_7.png "Prueba")
+![Prueba](/img/upload/bp_7.png "Prueba")
 
 There are 4 types of panels:
 
@@ -72,7 +72,7 @@ There are 4 types of panels:
 
 Each panel type have different data that can be customized.
 
-![Prueba](/images/uploads/bp_8.png "Prueba")
+![Prueba](/img/upload/bp_8.png "Prueba")
 
 For the panel material, there are different types, they allow to prototype faster the look of your cards without creating custom images for the panels.
 
@@ -81,6 +81,6 @@ For the panel material, there are different types, they allow to prototype faste
 * Raised
 * Rounded
 
-![Prueba](/images/uploads/bp_9.png "Prueba")
+![Prueba](/img/upload/bp_9.png "Prueba")
 
 That's all! You can now create cards based on your blueprint design. To do so, take a look on the   Collection guide!
