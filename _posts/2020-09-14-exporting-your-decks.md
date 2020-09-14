@@ -6,10 +6,6 @@ categories: Guides
 ---
 Learn how to export your cards into different media and applications
 
-- - -
-
-**Index**
-
 # Basic Exporting
 
 In this toturial we'll learn the basics of exporting in Card Creator. Open the application and follow these steps:
