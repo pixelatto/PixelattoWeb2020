@@ -4,8 +4,6 @@ title: Collections
 date: 2020-09-14T09:49:45.950Z
 categories: Guides
 ---
-# Collections
-
 Learn how to manage your card sets, edit your card collection and more.
 
 - - -
@@ -98,8 +96,6 @@ You can have different card sets sharing the same blueprint or use different one
 To create a new card set:
 
 1. Create a new Card Set using the "Add Card Set" button
-
-
 
 ![](/img/upload/8.png)
 
