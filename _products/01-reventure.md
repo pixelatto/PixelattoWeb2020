@@ -11,9 +11,9 @@ features:
     - label: Explore a huge nonlinear world
       icon: fa-globe
     - label: Find +50 unlockable characters
-      icon: fa-grin-tears
+      icon: fa-user-friends
     - label: Laugh your ass off
-      icon: fa-user-tears
+      icon: fa-grin-tears
       
 theme_text: is-primary
 
