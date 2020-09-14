@@ -62,6 +62,35 @@ hide_hero: true
                 </div>
             </div>
 
+            <div class="column is-12">
+                <!-- Start Carousel -->
+                <div id="carousel-demo" class="carousel">
+                    {% assign cont = 1 %}
+                    {% for image in page.gallery.images %}
+                        <div class="item-{{ cont }}">
+                            <img src="{{ page.gallery.imagefolder }}{{ image.name }}" onclick="openModal();currentSlide({{ cont }})">
+                        </div>
+                        {% assign cont = cont | plus:1 %}
+                    {% endfor %}
+                </div>
+                <!-- End Carousel -->
+            </div>
+
+            <!-- Start lightbox modal -->
+                <div class="modal" id="myModal" onclick="ClickOpenedModal(event)">
+                    <div class="modal-content is-vcentered">
+                        {% for image in page.gallery.images %}
+                            <div class="item-slide">
+                                <img src="{{ page.gallery.imagefolder }}{{ image.name }}">
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <button onclick="closeModal()" class="modal-close is-large" aria-label="close"></button>
+                </div>
+            <!-- End lightbox modal -->
+
             {% if site.data.reviews[page.code] %}
             <div class="column is-12">
                 <p class="title is-4">Reviews</p>

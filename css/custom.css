@@ -100,3 +100,7 @@ blockquote:before {}
     margin-top: 0px;
     margin-left: -17px;
 }
+
+:focus {
+    outline: none;
+}
