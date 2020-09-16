@@ -20,13 +20,13 @@ categories: PatchNotes
 * Fix CSV parser when EOF is just after a quoted field.
 * Fix legacy project XML deserializer.
 
-![](https://steamcdn-a.akamaihd.net/steamcommunity/public/images/clans/28448748/e9cfb3fe5f09876abb8ee4b8957bac40818c7096.png)
+![](/img/upload/a1.png)
 
-
+![](/img/upload/a2.png)
 
 \
 \
-![](https://steamcdn-a.akamaihd.net/steamcommunity/public/images/clans/28448748/c1b8d2fdb5959ce92645b3e772aebccfec8b2b8c.png)\
+\
 \
 \
 📌 If you have feedback or want to report an issue, please join to our **[Discord server](https://steamcommunity.com/linkfilter/?url=http://discord.gg/pixelatto)** 💬\
