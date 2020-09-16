@@ -1,7 +1,7 @@
 ---
 layout: post
 title: New Update (2.14.13) - [Beta branch]
-date: 2020-09-16T11:19:51.951Z
+date: 2020-09-01T11:19:51.951Z
 categories: PatchNotes
 ---
 
