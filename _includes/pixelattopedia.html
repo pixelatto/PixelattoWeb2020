@@ -1,0 +1,14 @@
+<div class="columns is-multiline is-desktop is-centered"
+    style="display: flex; flex-direction: row; align-items: stretch; align-content: stretch;">
+
+    {% assign members = site.team | sort:"order" %}
+
+    {% for member in members %}
+        {% if member.hidden %}
+    {% else %}
+        <div class="column is-full-mobile is-half is-half-desktop is-half-widescreen is-one-third-fullhd">
+            {% include member-card.html %}
+        </div>
+    {% endif %}
+    {% endfor %}
+</div>
