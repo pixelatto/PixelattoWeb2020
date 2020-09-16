@@ -13,8 +13,10 @@ We wanted our **logo** to look more friendly, and to show our two biggest goals 
 
  Additionally, we added some orange to the logo. Check it out!
 
-![](/img/upload/pixelatto_rebranding_animacion-2-1-.gif)
+![](/img/upload/gif-high-res.gif)
 
-On the other hand, our **website** has changed in order to be able to **contain a lot of new stuff**! We will be posting here info about all our new projects, guides for the existing ones, and tons of content. 
+On the other hand, our **website** has changed in order to be able to **contain a lot of new stuff**! 
+
+We will be posting here info about all our new projects, guides for the existing ones, and tons of content. 
 
 Stay tuned!
