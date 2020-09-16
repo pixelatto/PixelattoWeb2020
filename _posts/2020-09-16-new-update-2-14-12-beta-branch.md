@@ -4,9 +4,7 @@ title: New Update (2.14.12) - [Beta branch]
 date: 2020-08-20T11:26:11.325Z
 categories: PatchNotes
 ---
-
-
-✨ New Features
+**✨ New Features**
 
 * Add new recent projects menu in start screen.
 * Add new restore project from backup menu (context menu in collection screen).
