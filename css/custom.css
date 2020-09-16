@@ -104,3 +104,12 @@ blockquote:before {}
 :focus {
     outline: none;
 }
+
+.slider-container img {
+    display: block;
+    margin: auto;
+}
+
+.carousel img {
+    cursor: pointer;
+}

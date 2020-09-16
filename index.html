@@ -11,20 +11,22 @@ has_carousel: false
 
 <div style="position: relative;">
     <div class="siema">
-        {% for product in site.products %}
-        <a href="{{ product.url }}" style="color: white;">
-            <div class="hero is-medium"
-                style="background: url('/img/product/{{ product.code }}-hero.jpg') no-repeat center center; background-size: cover; background-position: center;">
-                <div class="hero-align-bottom">
-                    <h1 class="title is-3 has-text-white">
-                        {{ product.title }}
-                    </h1>
-                    <h2 class="subtitle is-5 has-text-white">
-                        {{ product.subtitle }}
-                    </h2>
+        {% assign products = site.data.products %}
+        {% for product_hash in products %}
+            {% assign product_data = product_hash[1] %}
+            <a href="/{{ product_data.code }}/" style="color: white;">
+                <div class="hero is-medium"
+                    style="background: url('/img/product/{{ product_data.code }}-hero.jpg') no-repeat center center; background-size: cover; background-position: center;">
+                    <div class="hero-align-bottom">
+                        <h1 class="title is-3 has-text-white">
+                            {{ product_data.title }}
+                        </h1>
+                        <h2 class="subtitle is-5 has-text-white">
+                            {{ product_data.subtitle }}
+                        </h2>
+                    </div>
                 </div>
-            </div>
-        </a>
+            </a>
         {% endfor %}
     </div>
     <style>

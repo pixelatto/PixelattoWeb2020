@@ -1,9 +1,14 @@
-function openModal() {
-  document.getElementById('myModal').style.display = "block";
+var currentModal;
+var currentId;
+
+function openModal(id) {
+  currentModal = document.getElementById(id);
+  currentId = id + "-slide";
+  currentModal.style.display = "block";
 }
 
 function closeModal() {
-  document.getElementById('myModal').style.display = "none";
+  currentModal.style.display = "none";
 }
 
 var slideIndex = 1;
@@ -18,15 +23,17 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("item-slide");
-  var captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
+  if (currentId != null && currentId != "") {
+    var i;
+    var slides = document.getElementsByClassName(currentId);
+    var captionText = document.getElementById("caption");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex-1].style.display = "block";
   }
-  slides[slideIndex-1].style.display = "block";
 }
 
 function ClickOpenedModal(e){

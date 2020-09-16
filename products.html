@@ -9,7 +9,8 @@ hide_hero: true
     <div class="section">
         <div class="columns is-multiline is-desktop"
             style="display: flex; flex-direction: row; align-items: stretch; align-content: stretch;">
-            {% for product in site.products %}
+            {% for product_hash in site.data.products %}
+            {% assign product = product_hash[1] %}
             <div class="column is-full-mobile is-half is-half-desktop">
                 {% include product-card.html %}
             </div>

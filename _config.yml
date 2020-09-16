@@ -20,12 +20,13 @@ paginate_path: "/blog/page:num"
 collections:
   products:
     output: true
-    layout: product
     image: https://via.placeholder.com/800x600
     show_sidebar: false
   team:
     output: true
   posts:
+    output: true
+  presskit:
     output: true
 
 # Exclude from processing.

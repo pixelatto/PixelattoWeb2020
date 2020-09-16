@@ -1,0 +1,76 @@
+order: "2"
+
+name: Reventure
+code: reventure
+type: game
+
+subtitle: The award-winning non-linear adventure with 100+ endings!
+description: Choose your adventure, for real.
+
+long_description: |
+  Take the role of Tim and travel through the kingdom and rescue the princess. Or not.
+
+  In Reventure you make the choices: forget about your mission, betray your allies, kill any NPC... It's all in your hand
+  
+  You actions will have consequences though, leading to one of the 100 different endings.
+
+video: aY7EVPVZk2g
+
+features:
+    - label: Explore a huge nonlinear world
+      icon: fa-globe
+    - label: Find +50 unlockable characters
+      icon: fa-user-friends
+    - label: Laugh your ass off
+      icon: fa-grin-tears
+
+gallery:
+      id: reventure-gallery
+      imagefolder: /img/product/reventure/
+      images:
+          - name: reventure_gif1.gif
+            text: Reventure image 1
+          - name: reventure_gif2.gif
+            text: Reventure image 2
+          - name: reventure_gif3.gif
+            text: Reventure image 3 
+          - name: reventure_gif4.gif
+            text: Reventure image 4
+          - name: reventure_img01.png
+            text: Reventure image 5
+          - name: reventure_img02.png
+            text: Reventure image 6
+          - name: reventure_img03.png
+            text: Reventure image 7
+          - name: reventure_img04.png
+            text: Reventure image 8
+          - name: reventure_img05.png
+            text: Reventure image 9
+          - name: reventure_img06.png
+            text: Reventure image 10
+          - name: reventure_img07.png
+            text: Reventure image 11
+          - name: reventure_img08.png
+            text: Reventure image 12
+          - name: reventure_img09.png
+            text: Reventure image 13
+          - name: reventure_img10.png
+            text: Reventure image 14
+
+presskit:
+    factsheet:  
+        developer: Pixelatto, Based in Málaga, Spain
+        release_date: 04/06/2019 PC, 8/10/2019 Nintendo Switch
+    additional_info:
+        languages: English, Spanish, Chinese, German, Japanese, French, Korean, Polish, Portuguese, Turkish, Russian, Italian
+        stores:
+    features:
+        - text: Reventure left Early Access with 100% positive reviews from more than 100 reviewers.
+        - text: It features a dynamic story system in a "groundhog day" fashion, but with persistent effects.
+        - text: A Twitch integration enables users on a streamer's chat to take control of the hero's dialogs (PC only).
+        - text: The world stays almost the same, being the player the one that changes after every run.
+        - text: If a character dies, it is for good. A new character will take over and the story will progress.
+        - text: The original sound track (available here) features more than 15 original themes.
+        - text: Under that innocent, pixelated, look hides an indie beast with more than 10 hours of content.
+    widget:
+    reviews:

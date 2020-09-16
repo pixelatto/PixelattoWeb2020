@@ -8,10 +8,14 @@
         <p><span class="title is-4">{{ member.title }}</span></p>
         <p class="subtitle is-6">{{ member.subtitle }}</p>
     </div>
-    <div class="columns is-mobile" style="margin: 0;">
+    <div class="columns is-mobile is-vcentered" style="margin: 0;">
         <div class="column">
             <a href="{{ twitter_link }}">
+                {% unless page.short_version == true %}
+                <figure class="image is-128x128" style="margin: auto;">
+                {% else %}
                 <figure class="image is-64x64" style="margin: auto;">
+                {% endunless %}
                     <img src="{{ member.image }}" alt="Image">
                 </figure>
                 <p class="has-text-centered has-text-info"><b>@{{member.twitter}}</b></p>
@@ -25,18 +29,20 @@
         </div>
     </div>
 
-    <div class="mb-3 mt-1" style="text-align: center;">
-        {% for hashtag in member.hashtags %}
-        <span class="tag is-dark-grey is-small">
-            #{{ hashtag }}
-        </span>
-        {% endfor %}
-    </div>
+    {% unless page.short_version == true %}
+        <div class="mb-3 mt-1" style="text-align: center;">
+            {% for hashtag in member.hashtags %}
+            <span class="tag is-dark-grey is-small">
+                #{{ hashtag }}
+            </span>
+            {% endfor %}
+        </div>
 
-    {% if member.content.size > 5 %}
-    <div class="content has-text-justified">
-        {{ member.content }}
-    </div>
-    {% endif %}
+        {% if member.content.size > 5 %}
+        <div class="content has-text-justified">
+            {{ member.content }}
+        </div>
+        {% endif %}
+    {% endunless %}
 
 </div>
