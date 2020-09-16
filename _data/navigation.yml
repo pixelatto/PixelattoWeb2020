@@ -1,12 +1,3 @@
-- name: About
-  link: /about/
-- name: Blog
-  link: /blog/
-  # dropdown: 
-  #   - name: Categories
-  #     link: /categories/
-  #   - name: Devlog
-  #     link: /devlog/
 - name: Products
   link: /products/
   dropdown: 
@@ -14,5 +5,16 @@
       link: /reventure/
     - name: Card Creator
       link: /card-creator/
+- name: Blog
+  link: /blog/
+  # dropdown: 
+  #   - name: Categories
+  #     link: /categories/
+  #   - name: Devlog
+  #     link: /devlog/
+- name: About
+  link: /about/
+- name: Presskit
+  link: /presskit/
 # - name: Store
 #   link: /store/
