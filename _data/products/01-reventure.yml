@@ -73,4 +73,14 @@ presskit:
         - text: The original sound track (available here) features more than 15 original themes.
         - text: Under that innocent, pixelated, look hides an indie beast with more than 10 hours of content.
     widget:
-    reviews:
+    media_reviews:
+        - text: Reventure, from Pixelatto, is one of the indie surprises this summer. A very fun game with a great sense of humor. Never dying a hundred times was so rewarding. - IGN Spain
+        - text: Dying had never been so satisfying. Reventure triumphs for its originality and humor, and it does nothing more and nothing less than a hundred times. - Meristation
+        - text: Eventually repetition can start to set in and at this point I recommend quitting while you’re ahead. But at its measly asking price, a few hours of hilarious antics make Reventure a no-brainer of an impulse buy. - The Indie Game Website 
+        - text: Reventure is a masterpiece of design. With its sharp satirical humour, its tight controls, and its endless inventiveness, Reventure actively invites players to engage with it again and again and again. This isn’t just a love letter to adventure games, it’s a great adventure in its own right, transcending the expectations of the genre to offer a fantastic, multi-faceted experience that satisfies in every regard. - GameCritics
+    player_reviews:
+        - text: Great game. Think Stanley's Parable and Undertale meets side-scrolling adventure. This game will make you smile while you're playing it, more than once. Cheeky sense of humor.
+        - text: "...I was expecting a \"silly\" game, just a funny parody. But, the game is so much more than that: It has its own identity, not only is the great sense of humor, but also the excellent mechanics and gameplay. You can notice how everything is done with a lot of thought and care..."
+        - text: I had a blast exploring and figuring out this game. as of now I've only got a little over half the endings. There's still so much to do! If you like exploring and laughs, you can't go wrong here.
+        - text: I've barely scratched the surface on this hidden gem, and every "ending" I've seen has put a smile on my face. Don't let the visuals and controls fool you, it's impressive how much thought was put into this game, HIGHLY recommend!!!
+        - text: Don't be fooled by this game. Externally is dressed as a parody but at his core is a choose your own adventure game with a lot of well written humor. When you start uncovering the myriad of different endings that the developers has hidden in the game you see the incredible amount of work and love that have been put into it. The game encourages you to experiment and try different approaches to uncover his secrets, giving you that aha! moment followed by a laugh when you see the results. 

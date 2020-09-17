@@ -47,7 +47,7 @@
     <br>
     <div class="container content">
         <h2 class="subtitle is-8">Images</h2>
-        <span class="ml-5">Download all images <a href="/download/{{ product.code }}-images.rar" download="/download/{{ product.code }}-images.rar">here</a></span>
+        <button class="button {% if product.type == 'game' %}is-secondary{% else %}is-primary{% endif %}" onclick="window.open('/download/{{ product.code }}-presskit.zip')">Download</button>
         <div class="column is-12">
             <!-- Start Carousel -->
             <div id="product-carousel" class="carousel">
@@ -77,4 +77,26 @@
             </div>
         <!-- End lightbox modal -->
     </div>
+    {% if presskit.media_reviews %}
+    <br>
+    <div class="container content">
+        <h2 class="subtitle is-8">Media reviews</h2>
+        <ul>
+            {% for review in presskit.media_reviews %}
+                <li>{{ review.text }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+    {% if presskit.player_reviews %}
+    <br>
+    <div class="container content">
+        <h2 class="subtitle is-8">Player reviews</h2>
+        <ul>
+            {% for review in presskit.player_reviews %}
+                <li>{{ review.text }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
 </section>
