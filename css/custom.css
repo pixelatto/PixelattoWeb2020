@@ -110,12 +110,16 @@ blockquote:before {}
     margin: auto;
 }
 
+.carousel {
+    overflow: hidden;
+}
+
 .carousel img {
     cursor: pointer;
 }
 
-.carousel {
-    overflow: hidden;
+.carousel .slider-pagination {
+    display: none;
 }
 
 .vignette-shadow-box {
