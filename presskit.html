@@ -25,12 +25,22 @@ short_version: true
                 <h2 class="subtitle is-5 has-text-weight-bold">Download resources</h2>
                 <div class="columns is-multiline">
                     <div class="column is-3 has-text-centered">
-                        <button class="button" onclick="window.open('/download/pixelatto-presskit.zip')">Pixelatto</button>
+                        <button class="button" onclick="window.open('/download/pixelatto-presskit.zip')">
+                            <span class="icon">
+                                <i class="fas fa-cloud-download-alt"></i>
+                            </span>
+                            <span>Pixelatto</span>
+                        </button>
                     </div>
                     {% for product_hash in products %}
                     {% assign product = product_hash[1] %}
                     <div class="column is-3 has-text-centered">
-                        <button class="button {% if product.type == 'game' %}is-secondary{% else %}is-primary{% endif %}" onclick="window.open('/download/{{ product.code }}-presskit.zip')">{{ product.name }}</button>
+                        <button class="button {% if product.type == 'game' %}is-secondary{% else %}is-primary{% endif %}" onclick="window.open('/download/{{ product.code }}-presskit.zip')">
+                            <span class="icon">
+                                <i class="fas fa-cloud-download-alt"></i>
+                            </span>
+                            <span>{{ product.name }}</span>
+                        </button>
                     </div>
                     {% endfor %}
                 </div>
@@ -62,6 +72,7 @@ short_version: true
     <br>
     <div class="container">
         <h2 class="subtitle has-text-weight-bold">Logos & icons</h2>
+        <span>Download all the resources <a onclick="window.open('/download/pixelatto-presskit.zip', 'Download');" target="_blank">here</a></span>
         <div class="column is-12">
             <!-- Start Carousel -->
             <div id="presskit-carousel" class="carousel">

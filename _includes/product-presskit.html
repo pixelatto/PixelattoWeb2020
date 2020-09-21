@@ -47,7 +47,7 @@
     <br>
     <div class="container content">
         <h2 class="subtitle is-8">Images</h2>
-        <button class="button {% if product.type == 'game' %}is-secondary{% else %}is-primary{% endif %}" onclick="window.open('/download/{{ product.code }}-presskit.zip')">Download</button>
+        <span>Download all the resources <a onclick="window.open('/download/{{ product.code }}-presskit.zip', 'Download');" target="_blank" class="has-text-{% if product.type == 'game' %}secondary{% else %}primary{% endif %}">here</a></span>
         <div class="column is-12">
             <!-- Start Carousel -->
             <div id="product-carousel" class="carousel">
