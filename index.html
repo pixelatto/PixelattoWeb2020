@@ -12,7 +12,6 @@ has_carousel: false
 <div style="position: relative;">
     <div class="siema">
         {% assign products = site.data.products | sort %}
-        {{ products | inspect }}
         {% for product_hash in products %}
             {% assign product = product_hash[1] %}
             <a href="/{{ product.code }}/" style="color: white;">
