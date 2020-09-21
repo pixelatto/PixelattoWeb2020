@@ -5,10 +5,16 @@
 
     {% for member in members %}
         {% if member.hidden %}
-    {% else %}
-        <div class="column is-full-mobile is-half is-half-desktop is-half-widescreen is-one-third-fullhd">
-            {% include member-card.html %}
-        </div>
-    {% endif %}
+        {% else %}
+            {% unless page.short_version == true %}
+                <div class="column is-full-mobile is-half is-half-desktop is-half-widescreen is-one-third-fullhd">
+                    {% include member-card.html %}
+                </div>
+            {% else %}
+                <div class="column is-2">
+                    {% include member-card-presskit.html %}
+                </div>
+            {% endunless %}
+        {% endif %}
     {% endfor %}
 </div>
