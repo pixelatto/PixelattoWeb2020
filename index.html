@@ -20,9 +20,9 @@ has_carousel: false
                 <div class="hero-align-bottom">
                     <div
                         class="index-product has-background-{% if product.type == 'game' %}secondary{% else %}primary{% endif %}">
-                        <h1 class="title is-1 has-text-white" style="font-size:3vw;">{{ product.name }}
+                        <h1 class="title is-1 has-text-white">{{ product.name }}
                         </h1>
-                        <h2 class="subtitle is-5 has-text-white" style="font-size:1.2vw;">{{ product.subtitle }}
+                        <h2 class="subtitle is-5 has-text-white">{{ product.subtitle }}
                         </h2>
                     </div>
                 </div>
@@ -31,7 +31,6 @@ has_carousel: false
         {% endfor %}
     </div>
     <style>
-  
         .index-product {
             width: 100%;
             padding: 1.5rem;
@@ -41,6 +40,14 @@ has_carousel: false
         .hero-align-bottom {
             padding-left: 60px;
             padding-right: 60px;
+        }
+
+        .index-product .title {
+            font-size: 3vw;
+        }
+
+        .index-product .subtitle {
+            font-size: 1.2vw;
         }
 
         /* PC SCREEN */
