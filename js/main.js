@@ -9,3 +9,9 @@ bulmaCarousel.attach('#presskit-carousel', {
     slidesToShow: 3,
     infinite: true
 });
+
+bulmaCarousel.attach('#testimonials-carousel', {
+    slidesToScroll: 3,
+    slidesToShow: 3,
+    infinite: true
+});
