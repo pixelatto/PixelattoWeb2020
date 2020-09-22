@@ -122,10 +122,6 @@ blockquote:before {}
     display: none;
 }
 
-.vignette-shadow-box {
-    box-shadow: inset 0 -30px 110px rgba(255, 255, 255, 0.527);
-}
-
 .twitter-tweet.twitter-tweet-rendered {
     padding: 0 10px;
 }
