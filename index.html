@@ -13,42 +13,57 @@ has_carousel: false
     <div class="siema">
         {% assign products = site.data.products | sort %}
         {% for product_hash in products %}
-            {% assign product = product_hash[1] %}
-            <a href="/{{ product.code }}/" style="color: white;">
-                <div class="hero vignette-shadow-box is-medium"
-                    style="background: url('/img/product/{{ product.code }}-hero.jpg') no-repeat center center; background-size: cover; background-position: center;">
-                    <div class="hero-align-bottom">
-                        <div class="has-background-{% if product.type == 'game' %}secondary{% else %}primary{% endif %}" style="width: 50%; padding: 1.5rem; border-radius: 30px 0px 30px 0px;">
-                            <h1 class="title is-1 has-text-white">
-                                {{ product.name }}
-                            </h1>
-                            <h2 class="subtitle is-5 has-text-white">
-                                {{ product.subtitle }}
-                            </h2>
-                        </div>
+        {% assign product = product_hash[1] %}
+        <a href="/{{ product.code }}/" style="color: white;">
+            <div class="hero is-medium"
+                style="background: url('/img/product/{{ product.code }}-hero.jpg') no-repeat center center; background-size: cover; background-position: center;">
+                <div class="hero-align-bottom">
+                    <div
+                        class="index-product has-background-{% if product.type == 'game' %}secondary{% else %}primary{% endif %}">
+                        <h1 class="title is-1 has-text-white" style="font-size:3vw;">{{ product.name }}
+                        </h1>
+                        <h2 class="subtitle is-5 has-text-white" style="font-size:1.2vw;">{{ product.subtitle }}
+                        </h2>
                     </div>
                 </div>
-            </a>
+            </div>
+        </a>
         {% endfor %}
     </div>
     <style>
+  
+        .index-product {
+            width: 100%;
+            padding: 1.5rem;
+            border-radius: 30px 30px 00px 30px;
+        }
+
         .hero-align-bottom {
             padding-left: 60px;
             padding-right: 60px;
         }
 
         @media screen and (min-width: 769px) {
+
             .hero-align-bottom {
-                padding-bottom: 2rem;
+                padding-bottom: 1rem;
                 padding-top: 35rem;
             }
         }
 
         @media screen and (max-width: 769px) {
-            .hero-align-bottom {
-                padding-bottom: 3rem;
-                padding-top: 5rem;
+
+            .index-product {
+                padding: 1.1rem;
+                width: 100%;
             }
+
+            .hero-align-bottom {
+                padding-left: 3rem;
+                padding-bottom: 1rem;
+                padding-top: 15rem;
+            }
+
         }
     </style>
 </div>
