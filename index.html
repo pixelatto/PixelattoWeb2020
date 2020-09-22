@@ -16,13 +16,13 @@ has_carousel: false
         {% assign product = product_hash[1] %}
         <a href="/{{ product.code }}/" style="color: white;">
             <div class="hero is-medium"
-                style="background: url('/img/product/{{ product.code }}-hero.jpg') no-repeat center center; background-size: cover; background-position: center;">
+                style="background: url('/img/product/{{ product.code }}-hero.jpg') no-repeat center center; background-size: cover; background-position: 0%;">
                 <div class="hero-align-bottom">
                     <div
                         class="index-product has-background-{% if product.type == 'game' %}secondary{% else %}primary{% endif %}">
-                        <h1 class="title is-1 has-text-white">{{ product.name }}
+                        <h1 class="title is-size-2-desktop is-size-5-mobile has-text-white">{{ product.name }}
                         </h1>
-                        <h2 class="subtitle is-5 has-text-white">{{ product.subtitle }}
+                        <h2 class="subtitle is-size-5-desktop is-size-7-mobile has-text-white">{{ product.subtitle }}
                         </h2>
                     </div>
                 </div>
@@ -31,6 +31,10 @@ has_carousel: false
         {% endfor %}
     </div>
     <style>
+        .hero {
+            height: 80vh;
+        }
+
         .index-product {
             width: 100%;
             padding: 1.5rem;
@@ -40,23 +44,13 @@ has_carousel: false
         .hero-align-bottom {
             padding-left: 60px;
             padding-right: 60px;
-        }
-
-        .index-product .title {
-            font-size: 3vw;
-        }
-
-        .index-product .subtitle {
-            font-size: 1.2vw;
+            position: relative;
+            top: 60vh;
         }
 
         /* PC SCREEN */
         @media screen and (min-width: 769px) {
 
-            .hero-align-bottom {
-                padding-bottom: 1rem;
-                padding-top: 28rem;
-            }
         }
 
         /* MOBILE SCREEN */
@@ -66,21 +60,6 @@ has_carousel: false
                 padding: 1.1rem;
                 width: 100%;
             }
-
-            .index-product .title {
-                font-size: 4vw;
-            }
-
-            .index-product .subtitle {
-                font-size: 2.2vw;
-            }
-
-            .hero-align-bottom {
-                padding-left: 3rem;
-                padding-bottom: 1rem;
-                padding-top: 15rem;
-            }
-
         }
     </style>
 </div>
