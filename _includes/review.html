@@ -1,26 +1,13 @@
 <div class="review" style="">
     <div class="review-inner has-rounded-corners">
         <div style="height: 59px;">
-            <p style="padding: 15px 10px;"><span class="title is-5">IGN</span></p>
+            <p style="padding: 15px 10px;"><span class="title is-5">{{ testimonial.author }}</span></p>
         </div>
         <div class="columns is-mobile is-vcentered" style="margin: 0;">
             <div class="text-wrapper content column">
                 <p>
-                    Nos lo hemos pasado muy bien con el final de Reventure! gracias a @JaviCepa y @Pixelatto por el
-                    juego y
-                    esperamos ver el siguiente! ;D
+                    "{{ testimonial.text }}"
                 </p>
-            </div>
-        </div>
-        <div class="columns is-mobile is-vcentered" style="margin: 0;">
-            <div class="column" style="padding: 0;">
-                <img class="has-rounded-corners" src="https://pbs.twimg.com/media/EgI20DlXkAYsYCe?format=jpg&name=small"
-                    style="margin-top: 10px;">
-            </div>
-        </div>
-        <div class="columns is-mobile is-vcentered" style="margin: 10px 0 0 0;">
-            <div class="text-wrapper date column">
-                <p>12:21 AM · Aug 24, 2020</p>
             </div>
         </div>
     </div>
@@ -29,7 +16,6 @@
 <style>
     .review {
         padding: 0 10px;
-        height: 442px;
     }
 
     .review .review-inner {

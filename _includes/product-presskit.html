@@ -2,7 +2,8 @@
 
 <section class="section">
     <div class="container content">
-        <img src="/img/product/{{ product.code }}-logo.svg" style="display: block; margin: auto; height: 30vw; max-height: 200px;" />
+        <img src="/img/product/{{ product.code }}-logo.svg"
+            style="display: block; margin: auto; height: 30vw; max-height: 200px;" />
     </div>
     <br>
     <div class="container content">
@@ -16,8 +17,8 @@
     <div class="container content">
         <h2 class="subtitle is-8">Additional info</h2>
         {% if presskit.additional_info.languages %}
-            <span class="ml-5 has-text-weight-bold">Languages</span>
-            <p class="ml-5">{{ presskit.additional_info.languages }}</p>
+        <span class="ml-5 has-text-weight-bold">Languages</span>
+        <p class="ml-5">{{ presskit.additional_info.languages }}</p>
         {% endif %}
         <p class="ml-5"><span class="has-text-weight-bold">Stores: </span></p>
         {% for store in presskit.additional_info.stores %}
@@ -28,7 +29,7 @@
         <h2 class="subtitle is-8">Features</h2>
         <ul>
             {% for feature in presskit.features %}
-                <li>{{ feature.text }}</li>
+            <li>{{ feature.text }}</li>
             {% endfor %}
         </ul>
     </div>
@@ -47,82 +48,56 @@
     <br>
     <div class="container content">
         <h2 class="subtitle is-8">Images</h2>
-        <span>Download all the resources <a onclick="window.open('/download/{{ product.code }}-presskit.zip', 'Download');" target="_blank" class="has-text-{% if product.type == 'game' %}secondary{% else %}primary{% endif %}">here</a></span>
+        <span>Download all the resources <a
+                onclick="window.open('/download/{{ product.code }}-presskit.zip', 'Download');" target="_blank"
+                class="has-text-{% if product.type == 'game' %}secondary{% else %}primary{% endif %}">here</a></span>
         <div class="column is-12">
             <!-- Start Carousel -->
             <div id="product-carousel" class="carousel">
                 {% assign cont = 1 %}
                 {% for image in product.gallery.images %}
-                    <div class="item-{{ cont }}">
-                        <img src="{{ product.gallery.imagefolder }}{{ image.name }}" onclick="openModal('{{ product.code }}-presskit-modal');currentSlide({{ cont }})">
-                    </div>
-                    {% assign cont = cont | plus:1 %}
+                <div class="item-{{ cont }}">
+                    <img src="{{ product.gallery.imagefolder }}{{ image.name }}"
+                        onclick="openModal('{{ product.code }}-presskit-modal');currentSlide({{ cont }})">
+                </div>
+                {% assign cont = cont | plus:1 %}
                 {% endfor %}
             </div>
             <!-- End Carousel -->
         </div>
 
         <!-- Start lightbox modal -->
-            <div class="modal" id="{{ product.code }}-presskit-modal" onclick="ClickOpenedModal(event)">
-                <div class="modal-content is-vcentered">
-                    {% for image in product.gallery.images %}
-                        <div class="item-slide {{ product.code }}-presskit-modal-slide">
-                            <img src="{{ product.gallery.imagefolder }}{{ image.name }}">
-                        </div>
-                    {% endfor %}
+        <div class="modal" id="{{ product.code }}-presskit-modal" onclick="ClickOpenedModal(event)">
+            <div class="modal-content is-vcentered">
+                {% for image in product.gallery.images %}
+                <div class="item-slide {{ product.code }}-presskit-modal-slide">
+                    <img src="{{ product.gallery.imagefolder }}{{ image.name }}">
                 </div>
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            <button onclick="closeModal()" class="modal-close is-large" aria-label="close"></button>
+                {% endfor %}
             </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <button onclick="closeModal()" class="modal-close is-large" aria-label="close"></button>
+        </div>
         <!-- End lightbox modal -->
     </div>
-    {% if presskit.media_reviews %}
-    <br>
     <div class="container content">
-        <h2 class="subtitle is-8">Media reviews</h2>
-        <ul>
-            {% for review in presskit.media_reviews %}
-                <li>{{ review.text }}</li>
-            {% endfor %}
-        </ul>
-    </div>
-    {% endif %}
-    {% if presskit.player_reviews %}
-    <br>
-    <div class="container content">
-        <h2 class="subtitle is-8">Player reviews</h2>
-        <ul>
-            {% for review in presskit.player_reviews %}
-                <li>{{ review.text }}</li>
-            {% endfor %}
-        </ul>
-    </div>
-    {% endif %}
-
-    <div class="column is-12">
-        <div id="testimonials-carousel" class="carousel">
-            <div class="item-1">
-                <blockquote class="twitter-tweet"><p lang="es" dir="ltr">Nos lo hemos pasado muy bien con el final de Reventure! gracias a <a href="https://twitter.com/JaviCepa?ref_src=twsrc%5Etfw">@JaviCepa</a> y <a href="https://twitter.com/Pixelatto?ref_src=twsrc%5Etfw">@Pixelatto</a> por el juego y esperamos ver el siguiente! ;D <a href="https://t.co/HDdrm9FftJ">pic.twitter.com/HDdrm9FftJ</a></p>&mdash; AlfaNMC (@AlfaNMC) <a href="https://twitter.com/AlfaNMC/status/1297660213214851073?ref_src=twsrc%5Etfw">August 23, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <h2 class="subtitle is-8">Testimonials</h2>
+        <div class="column is-12">
+            <div id="testimonials-carousel" class="carousel">
+                {% assign cont = 1 %}
+                {% for testimonial in presskit.testimonials %}
+                <div class="item-{{ cont }}">
+                    {% if testimonial.script %}
+                    {{ testimonial.script }}
+                    {% else %}
+                    {% include review.html %}
+                    {% endif%}
+                </div>
+                {% assign cont = cont | plus:1 %}
+                {% endfor %}
             </div>
-            <div class="item-2">
-                <blockquote class="twitter-tweet"><p lang="es" dir="ltr">Nos lo hemos pasado muy bien con el final de Reventure! gracias a <a href="https://twitter.com/JaviCepa?ref_src=twsrc%5Etfw">@JaviCepa</a> y <a href="https://twitter.com/Pixelatto?ref_src=twsrc%5Etfw">@Pixelatto</a> por el juego y esperamos ver el siguiente! ;D <a href="https://t.co/HDdrm9FftJ">pic.twitter.com/HDdrm9FftJ</a></p>&mdash; AlfaNMC (@AlfaNMC) <a href="https://twitter.com/AlfaNMC/status/1297660213214851073?ref_src=twsrc%5Etfw">August 23, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            </div>
-            <div class="item-3">
-                <blockquote class="twitter-tweet"><p lang="es" dir="ltr">Nos lo hemos pasado muy bien con el final de Reventure! gracias a <a href="https://twitter.com/JaviCepa?ref_src=twsrc%5Etfw">@JaviCepa</a> y <a href="https://twitter.com/Pixelatto?ref_src=twsrc%5Etfw">@Pixelatto</a> por el juego y esperamos ver el siguiente! ;D <a href="https://t.co/HDdrm9FftJ">pic.twitter.com/HDdrm9FftJ</a></p>&mdash; AlfaNMC (@AlfaNMC) <a href="https://twitter.com/AlfaNMC/status/1297660213214851073?ref_src=twsrc%5Etfw">August 23, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            </div>
-            <div class="item-4">
-                <blockquote class="twitter-tweet"><p lang="es" dir="ltr">Nos lo hemos pasado muy bien con el final de Reventure! gracias a <a href="https://twitter.com/JaviCepa?ref_src=twsrc%5Etfw">@JaviCepa</a> y <a href="https://twitter.com/Pixelatto?ref_src=twsrc%5Etfw">@Pixelatto</a> por el juego y esperamos ver el siguiente! ;D <a href="https://t.co/HDdrm9FftJ">pic.twitter.com/HDdrm9FftJ</a></p>&mdash; AlfaNMC (@AlfaNMC) <a href="https://twitter.com/AlfaNMC/status/1297660213214851073?ref_src=twsrc%5Etfw">August 23, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            </div>
-            <div class="item-5">
-                <blockquote class="twitter-tweet"><p lang="es" dir="ltr">Nos lo hemos pasado muy bien con el final de Reventure! gracias a <a href="https://twitter.com/JaviCepa?ref_src=twsrc%5Etfw">@JaviCepa</a> y <a href="https://twitter.com/Pixelatto?ref_src=twsrc%5Etfw">@Pixelatto</a> por el juego y esperamos ver el siguiente! ;D <a href="https://t.co/HDdrm9FftJ">pic.twitter.com/HDdrm9FftJ</a></p>&mdash; AlfaNMC (@AlfaNMC) <a href="https://twitter.com/AlfaNMC/status/1297660213214851073?ref_src=twsrc%5Etfw">August 23, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            </div>
-            <div class="item-6">
-                <blockquote class="twitter-tweet"><p lang="es" dir="ltr">Nos lo hemos pasado muy bien con el final de Reventure! gracias a <a href="https://twitter.com/JaviCepa?ref_src=twsrc%5Etfw">@JaviCepa</a> y <a href="https://twitter.com/Pixelatto?ref_src=twsrc%5Etfw">@Pixelatto</a> por el juego y esperamos ver el siguiente! ;D <a href="https://t.co/HDdrm9FftJ">pic.twitter.com/HDdrm9FftJ</a></p>&mdash; AlfaNMC (@AlfaNMC) <a href="https://twitter.com/AlfaNMC/status/1297660213214851073?ref_src=twsrc%5Etfw">August 23, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            </div>
-            <div class="item-7">
-                {% include review.html %}
-            </div>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
     </div>
 </section>

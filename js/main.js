@@ -11,7 +11,7 @@ bulmaCarousel.attach('#presskit-carousel', {
 });
 
 bulmaCarousel.attach('#testimonials-carousel', {
-    slidesToScroll: 3,
-    slidesToShow: 3,
+    slidesToScroll: 4,
+    slidesToShow: 4,
     infinite: true
 });
