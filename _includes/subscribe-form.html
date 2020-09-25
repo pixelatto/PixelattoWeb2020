@@ -1,12 +1,18 @@
-<div class="hero is-medium has-background-primary is-vcentered" style="background: url('/img/subscribe-hero.jpg') no-repeat center center; background-size: cover; background-position: 0%;">
-    <form class="is-vertically-centered" style="position: relative;" action="{{site.data.subscribe.subscribe_action}}" method="post" name="mc-embedded-subscribe-form"
-        target="_blank">
+<div class="hero is-medium has-background-primary is-vcentered"
+    style="background: url('/img/subscribe-hero.jpg') no-repeat center center; background-size: cover; background-position: 0%;">
+    <form class="is-vertically-centered" style="position: relative;" action="{{site.data.subscribe.subscribe_action}}"
+        method="post" name="mc-embedded-subscribe-form" target="_blank">
         <div class="has-text-centered">
-            <h2 class="title has-text-secondary has-background-primary-light has-text-weight-semibold is-1">{{site.data.subscribe.main_message}}</h2>
-            <h3 class="subtitle has-text-secondary has-text-weight-semibold is-4">{{site.data.subscribe.last_message}}</h3>
+            <div class="has-background-white" style="padding: 1.5rem 0;margin-bottom: 1.5rem;">
+                <h2 class="title has-text-secondary has-text-weight-semibold is-1">{{site.data.subscribe.main_message}}
+                </h2>
+                <h3 class="subtitle has-text-secondary has-text-weight-semibold is-5">
+                    {{site.data.subscribe.last_message}}</h3>
+            </div>
             <div class="field is-grouped has-addons has-addons-centered">
                 <div class="control has-icons-left">
-                    <input style="border-radius: 30px 30px 30px 30px;" class="input is-medium" type="email" placeholder="your-email@what.ever" value="">
+                    <input style="border-radius: 30px 30px 30px 30px;" class="input is-medium" type="email"
+                        placeholder="your-email@what.ever" value="">
                     <span class="icon is-small is-left">
                         <i class="fas fa-envelope"></i>
                     </span>
@@ -16,8 +22,9 @@
                         value="">
                 </div>
                 <div class="control ">
-                    <input style="border-radius: 30px 30px 30px 30px;" class="input has-text-weight-semibold is-medium has-background-white has-text-secondary" type="submit" name="subscribe"
-                        value="{{ site.data.subscribe.button_subscribe_text}}">
+                    <input style="border-radius: 30px 30px 30px 30px;"
+                        class="input has-text-weight-semibold is-medium has-background-white has-text-secondary"
+                        type="submit" name="subscribe" value="{{ site.data.subscribe.button_subscribe_text}}">
                 </div>
             </div>
         </div>
