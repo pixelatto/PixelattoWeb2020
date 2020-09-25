@@ -11,7 +11,7 @@ short_version: true
 {% assign products = site.data.products %}
 {% assign presskit = site.data.presskit %}
 
-<section class="section presskit">
+<section class="section">
     <div class="container">
         <h1 class="title is-3">Pixelatto presskit</h1>
         <div class="columns is-multiline">
@@ -24,7 +24,7 @@ short_version: true
             <div class="column is-6">
                 <h2 class="subtitle is-5 has-text-weight-bold">Download Press Resources</h2>
                 <div class="columns is-multiline">
-                    <div class="column is-3 has-text-centered">
+                    <div class="column is-full-mobile is-one-half is-one-third-desktop is-one-quarter-widescreen is-one-quarter-fullhd has-text-centered" >
                         <button class="button" onclick="window.open('/download/pixelatto-presskit.zip')">
                             <span class="icon">
                                 <i class="fas fa-cloud-download-alt"></i>
@@ -34,10 +34,8 @@ short_version: true
                     </div>
                     {% for product_hash in products %}
                     {% assign product = product_hash[1] %}
-                    <div class="column is-3 has-text-centered">
-                        <button
-                            class="button {% if product.type == 'game' %}is-secondary{% else %}is-primary{% endif %}"
-                            onclick="window.open('/download/{{ product.code }}-presskit.zip')">
+                    <div class="column is-full-mobile is-one-half is-one-third-desktop is-one-quarter-widescreen is-one-quarter-fullhd has-text-centered">
+                        <button class="button {% if product.type == 'game' %}is-secondary{% else %}is-primary{% endif %}" onclick="window.open('/download/{{ product.code }}-presskit.zip')">
                             <span class="icon">
                                 <i class="fas fa-cloud-download-alt"></i>
                             </span>
@@ -61,8 +59,7 @@ short_version: true
                     <div class="card" style="height: 100%;">
                         <div class="card-image">
                             <figure class="image is-16by9">
-                                <img src="/img/product/{{ product.code }}-logo.svg" alt="{{ product.title }}"
-                                    style="margin: auto; padding: 1.5rem;">
+                                <img src="/img/product/{{ product.code }}-logo.svg" alt="{{ product.title }}" style="margin: auto; padding: 1.5rem;">
                             </figure>
                         </div>
                     </div>
@@ -74,35 +71,30 @@ short_version: true
     <br>
     <br>
     <div class="container">
-        <h2 class="subtitle has-text-weight-bold">Brand Resources</h2>
-        <span>Download all brand resources <a onclick="window.open('/download/pixelatto-presskit.zip', 'Download');"
-                target="_blank">here</a></span>
-
-        <div class="columns is-multiline gallery">
-            {% assign cont = 1 %}
-            {% for image in presskit.gallery.images %}
-            <div class="column is-one-quarter-desktop is-half-tablet">
-                <div class="card">
-                    <div class="card-image">
-                        <figure class="image is-3by2">
-                            <img src="{{ presskit.gallery.imagefolder }}{{ image.name }}" alt=""
-                                onclick="openModal('pixelatto-presskit-modal');currentSlide({{ cont }})">
-                        </figure>
+        <h2 class="subtitle has-text-weight-bold">Logos & icons</h2>
+        <span>Download all the resources <a onclick="window.open('/download/pixelatto-presskit.zip', 'Download');" target="_blank">here</a></span>
+        <div class="column is-12">
+            <!-- Start Carousel -->
+            <div id="presskit-carousel" class="carousel">
+                {% assign cont = 1 %}
+                {% for image in presskit.gallery.images %}
+                    <div class="item-{{ cont }}">
+                        <img src="{{ presskit.gallery.imagefolder }}{{ image.name }}" onclick="openModal('pixelatto-presskit-modal');currentSlide({{ cont }})" style="max-height:  100px;">
                     </div>
-                </div>
+                    {% assign cont = cont | plus:1 %}
+                {% endfor %}
             </div>
-            {% assign cont = cont | plus:1 %}
-            {% endfor %}
+            <!-- End Carousel -->
         </div>
 
-        <div class="column is-12" style="padding: 0;">
+        <div class="column is-12">
             <!-- Start lightbox modal -->
             <div class="modal" id="pixelatto-presskit-modal" onclick="ClickOpenedModal(event)">
                 <div class="modal-content is-vcentered">
                     {% for image in presskit.gallery.images %}
-                    <div class="item-slide pixelatto-presskit-modal-slide">
-                        <img src="{{ presskit.gallery.imagefolder }}{{ image.name }}">
-                    </div>
+                        <div class="item-slide pixelatto-presskit-modal-slide">
+                            <img src="{{ presskit.gallery.imagefolder }}{{ image.name }}">
+                        </div>
                     {% endfor %}
                 </div>
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -122,9 +114,3 @@ short_version: true
         {% include pixelattopedia.html %}
     </div>
 </section>
-
-<style>
-    .presskit .card-image {
-        padding: 1.5rem;
-    }
-</style>
