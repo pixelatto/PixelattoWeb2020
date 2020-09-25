@@ -10,26 +10,27 @@ has_carousel: false
 ---
 
 <div style="position: relative;">
-    <div class="siema">
-        {% assign products = site.data.products | sort %}
-        {% for product_hash in products %}
-        {% assign product = product_hash[1] %}
-        <a href="/{{ product.code }}/" style="color: white;">
-            <div class="hero is-medium"
-                style="background: url('/img/product/{{ product.code }}-hero.jpg') no-repeat center center; background-size: cover; background-position: 0%;">
-                <div class="hero-align-bottom">
-                    <div
-                        class="index-product has-background-{% if product.type == 'game' %}secondary{% else %}primary{% endif %}">
-                        <h1 class="title is-size-2-desktop is-size-5-mobile has-text-white">{{ product.name }}
-                        </h1>
-                        <h2 class="subtitle is-size-5-desktop is-size-7-mobile has-text-white">{{ product.subtitle }}
-                        </h2>
-                    </div>
+    {% assign products = site.data.products | sort %}
+    {% for product_hash in products %}
+    {% assign product = product_hash[1] %}
+    <a href="/{{ product.code }}/" style="color: white;">
+        <div class="hero is-medium"
+            style="background: url('/img/product/{{ product.code }}-hero.jpg') no-repeat center center; background-size: cover; background-position: 0%;">
+            <div class="hero-align-bottom">
+                <div
+                    class="index-product has-background-{% if product.type == 'game' %}secondary{% else %}primary{% endif %}">
+                    <h1 class="title is-size-2-desktop is-size-5-mobile has-text-white">{{ product.name }}
+                    </h1>
+                    <h2 class="subtitle is-size-5-desktop is-size-7-mobile has-text-white">{{ product.subtitle }}
+                    </h2>
                 </div>
             </div>
-        </a>
-        {% endfor %}
-    </div>
+        </div>
+    </a>
+    {% endfor %}
+
+    {% include subscribe-form.html %}
+
     <style>
         .hero {
             height: 50vh;
