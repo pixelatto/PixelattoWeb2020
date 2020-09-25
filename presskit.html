@@ -24,7 +24,7 @@ short_version: true
             <div class="column is-6">
                 <h2 class="subtitle is-5 has-text-weight-bold">Download Press Resources</h2>
                 <div class="columns is-multiline">
-                    <div class="column is-3 has-text-centered">
+                    <div class="column is-full-mobile is-one-half is-one-third-desktop is-one-quarter-widescreen is-one-quarter-fullhd has-text-centered" >
                         <button class="button" onclick="window.open('/download/pixelatto-presskit.zip')">
                             <span class="icon">
                                 <i class="fas fa-cloud-download-alt"></i>
@@ -34,7 +34,7 @@ short_version: true
                     </div>
                     {% for product_hash in products %}
                     {% assign product = product_hash[1] %}
-                    <div class="column is-3 has-text-centered">
+                    <div class="column is-full-mobile is-one-half is-one-third-desktop is-one-quarter-widescreen is-one-quarter-fullhd has-text-centered">
                         <button class="button {% if product.type == 'game' %}is-secondary{% else %}is-primary{% endif %}" onclick="window.open('/download/{{ product.code }}-presskit.zip')">
                             <span class="icon">
                                 <i class="fas fa-cloud-download-alt"></i>
