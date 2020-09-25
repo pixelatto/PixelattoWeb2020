@@ -1,14 +1,14 @@
 <div class="box has-rounded-corners" style="height: 100%; padding: 30px;display: flex;flex-flow: column;">
 
     {% capture twitter_link %}
-        {% if member.twitter_override %}{{ member.twitter_override }}{% else %}https://twitter.com/{{ member.twitter }}{% endif %}
+    {% if member.twitter_override %}{{ member.twitter_override }}{% else %}https://twitter.com/{{ member.twitter }}{% endif %}
     {% endcapture %}
 
-    <div style="flex: 1;">
+    <div style="flex: 1; margin:0;">
         <p><span class="title is-5">{{ member.title }}</span></p>
         <p class="subtitle is-6">{{ member.subtitle }}</p>
     </div>
-    <div class="is-mobile is-vcentered" style="margin: 0;flex: 1;">
+    <div class="is-mobile is-vcentered " style="margin: 0;flex: 1;">
         <div class="column">
             <a href="{{ twitter_link }}">
                 <figure class="image is-64x64" style="margin: auto;">
