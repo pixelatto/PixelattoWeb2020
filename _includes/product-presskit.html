@@ -1,32 +1,21 @@
 {% assign presskit = product.presskit %}
 
 <section class="section presskit">
-    <div class="container content">
-        <img src="/img/product/{{ product.code }}-logo.svg"
-            style="display: block; margin: auto; height: 30vw; max-height: 200px;" />
-    </div>
-    <br>
     <div class="container">
         <div class="columns">
-            <div class="column is-half">
-                <div class="content">
-                    <h2 class="subtitle is-8">Factsheet</h2>
-                    <span class="ml-5 has-text-weight-bold">Developer</span>
-                    <p class="ml-5">{{ presskit.factsheet.developer }}</p>
-                    <span class="ml-5 has-text-weight-bold">Release date</span>
-                    <p class="ml-5">{{ presskit.factsheet.release_date }}</p>
-                </div>
+            <div class="column is-full is-vcentered">
+                <img src="/img/product/{{ product.code }}-logo.svg"
+                    style="display: block; margin: auto; height: 30vw; max-height: 200px;" />
             </div>
-            <div class="column is-half">
+        </div>
+        <div class="columns">
+            <div class="column is-full">
                 <div class="content">
-                    <h2 class="subtitle is-8">Additional info</h2>
-                    {% if presskit.additional_info.languages %}
-                    <span class="ml-5 has-text-weight-bold">Languages</span>
-                    <p class="ml-5">{{ presskit.additional_info.languages }}</p>
-                    {% endif %}
-                    <p class="ml-5"><span class="has-text-weight-bold">Stores: </span></p>
-                    {% for store in presskit.additional_info.stores %}
-                    {% endfor %}
+                    <h2 class="subtitle is-8">Information</h2>
+                    <span class="ml-5 has-text-weight-bold">Pitch</span>
+                    <p class="ml-5">{{ product.subtitle }}</p>
+                    <span class="ml-5 has-text-weight-bold">Description</span>
+                    <p class="ml-5">{{ product.long_description | newline_to_br }}</p>
                 </div>
             </div>
         </div>
@@ -44,7 +33,8 @@
             <div class="tile is-parent">
                 <div class="tile is-parent">
                     <div class="tile is-child">
-                        <figure class="image is-16by9" style="border-radius: 30px 0px 30px 0px; overflow: hidden; height: 100%;">
+                        <figure class="image is-16by9"
+                            style="border-radius: 30px 0px 30px 0px; overflow: hidden; height: 100%;">
                             <iframe class="has-ratio" width="640" height="360"
                                 src="https://www.youtube.com/embed/{{ product.video }}?rel=0" frameborder="0"
                                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -127,23 +117,6 @@
         <!-- End lightbox modal -->
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <br>
     <div class="container content">
         <h2 class="subtitle is-8">Features</h2>
@@ -153,9 +126,9 @@
             {% endfor %}
         </ul>
     </div>
-    <br>
+    <!-- <br>
     <div class="container content">
-        <h2 class="subtitle is-8">Testimonials</h2>
+        <h2 class="subtitle is-8">Awards</h2>
         <div class="column is-12">
             <div id="testimonials-carousel" class="carousel">
                 {% assign cont = 1 %}
@@ -171,6 +144,52 @@
                 {% endfor %}
             </div>
             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+    </div> -->
+    <br>
+    <div class="container content">
+        <div class="column is-full">
+            <h2 class="subtitle is-8">Testimonials</h2>
+            <div id="testimonials-carousel" class="carousel">
+                {% assign cont = 1 %}
+                {% for testimonial in presskit.testimonials %}
+                <div class="item-{{ cont }}">
+                    {% if testimonial.script %}
+                    {{ testimonial.script }}
+                    {% else %}
+                    {% include review.html %}
+                    {% endif%}
+                </div>
+                {% assign cont = cont | plus:1 %}
+                {% endfor %}
+            </div>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="columns">
+            <div class="column is-half">
+                <div class="content">
+                    <h2 class="subtitle is-8">Factsheet</h2>
+                    <span class="ml-5 has-text-weight-bold">Developer</span>
+                    <p class="ml-5">{{ presskit.factsheet.developer }}</p>
+                    <span class="ml-5 has-text-weight-bold">Release date</span>
+                    <p class="ml-5">{{ presskit.factsheet.release_date }}</p>
+                </div>
+            </div>
+            <div class="column is-half">
+                <div class="content">
+                    <h2 class="subtitle is-8">Additional info</h2>
+                    {% if presskit.additional_info.languages %}
+                    <span class="ml-5 has-text-weight-bold">Languages</span>
+                    <p class="ml-5">{{ presskit.additional_info.languages }}</p>
+                    {% endif %}
+                    <p class="ml-5"><span class="has-text-weight-bold">Stores </span></p>
+                    {% for store in presskit.additional_info.stores %}
+                    {% endfor %}
+                </div>
+            </div>
         </div>
     </div>
 </section>

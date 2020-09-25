@@ -1,63 +1,64 @@
-<br>
-<br>
-<div class="container">
-    <div class=" pt-3">
+<div class="section">
+    <div class="container">
+        <div class=" pt-3">
 
-        <img src="/img/product/{{product.code}}-logo.svg" style="display: block; margin: auto; height: 30vw; max-height: 200px;" />
+            <img src="/img/product/{{product.code}}-logo.svg"
+                style="display: block; margin: auto; height: 30vw; max-height: 200px;" />
 
-        <div class="columns is-multiline is-vcentered " style="border-radius: 40px 0px 40px 0px; padding: 3vw; margin: 20px; margin-top: 0;">
-            
-            <div class="column is-12 has-text-centered ">
-                <p class="title is-3 py-4" style="display: none;">{{ product.title }}</p>
-                <p class="subtitle is-3 pl-2 py-4">{{ product.subtitle }}</p>
-            </div>
+            <div class="columns is-multiline is-vcentered "
+                style="border-radius: 40px 0px 40px 0px; padding: 3vw; margin: 20px; margin-top: 0;">
 
-            <div class="column is-8">
-                <figure class="image is-16by9" style="border-radius: 30px 0px 30px 0px; overflow: hidden;">
-                    {% if product.video %}
-                    <iframe class="has-ratio" width="640" height="360"
-                        src="https://www.youtube.com/embed/{{ product.video }}?rel=0" frameborder="0"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                    </iframe>
-                    {% else %}
-                    <img src="/img/product/{{ product.code }}-640-360.jpg" />
-                    {% endif %}
-                </figure>
-            </div>
-
-            <div class="column is-4 has-text-right">
-                
-                <p class="title is-4 has-text-right">{{ product.price }}</p>
-                {% if product.product_code %}
-                <p class="subtitle is-5 has-text-right">{{ product.product_code }}</p>
-                {% endif %}
-
-                {% if product.features %}
-                <div class="content pl-5">
-                    {% for feature in product.features %}
-                    <p>
-                        <span>{{ feature.label }}</span>
-                        
-                        <span class="icon">
-                            {% if feature.icon %}
-                            <i class="fas {{ feature.icon }}"></i>
-                            {% else %}
-                            <i class="fas fa-circle fa-xs"></i>
-                            {% endif %}
-                        </span>
-                    </p>
-                    {% endfor %}
+                <div class="column is-12 has-text-centered ">
+                    <p class="title is-3 py-4" style="display: none;">{{ product.title }}</p>
+                    <p class="subtitle is-3 pl-2 py-4">{{ product.subtitle }}</p>
                 </div>
-                {% endif %}
-                <a href="#" class="button is-white is-medium"></a>
-            </div>
 
-            
+                <div class="column is-8">
+                    <figure class="image is-16by9" style="border-radius: 30px 0px 30px 0px; overflow: hidden;">
+                        {% if product.video %}
+                        <iframe class="has-ratio" width="640" height="360"
+                            src="https://www.youtube.com/embed/{{ product.video }}?rel=0" frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                        {% else %}
+                        <img src="/img/product/{{ product.code }}-640-360.jpg" />
+                        {% endif %}
+                    </figure>
+                </div>
+
+                <div class="column is-4 has-text-right">
+
+                    <p class="title is-4 has-text-right">{{ product.price }}</p>
+                    {% if product.product_code %}
+                    <p class="subtitle is-5 has-text-right">{{ product.product_code }}</p>
+                    {% endif %}
+
+                    {% if product.features %}
+                    <div class="content pl-5">
+                        {% for feature in product.features %}
+                        <p>
+                            <span>{{ feature.label }}</span>
+
+                            <span class="icon">
+                                {% if feature.icon %}
+                                <i class="fas {{ feature.icon }}"></i>
+                                {% else %}
+                                <i class="fas fa-circle fa-xs"></i>
+                                {% endif %}
+                            </span>
+                        </p>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                    <a href="#" class="button is-white is-medium"></a>
+                </div>
+
+
+            </div>
         </div>
     </div>
-</div>
-<div class="container">
-    <div class="section">
+    <div class="container">
         <div class="columns is-multiline is-vcentered has-text-justified">
             <div class="column is-12">
                 <p class="title is-4">Description</p>
@@ -71,28 +72,29 @@
                 <div id="product-carousel" class="carousel">
                     {% assign cont = 1 %}
                     {% for image in product.gallery.images %}
-                        <div class="item-{{ cont }}">
-                            <img src="{{ product.gallery.imagefolder }}{{ image.name }}" onclick="openModal('product-modal');currentSlide({{ cont }})">
-                        </div>
-                        {% assign cont = cont | plus:1 %}
+                    <div class="item-{{ cont }}">
+                        <img src="{{ product.gallery.imagefolder }}{{ image.name }}"
+                            onclick="openModal('product-modal');currentSlide({{ cont }})">
+                    </div>
+                    {% assign cont = cont | plus:1 %}
                     {% endfor %}
                 </div>
                 <!-- End Carousel -->
             </div>
 
             <!-- Start lightbox modal -->
-                <div id="product-modal" class="modal" onclick="ClickOpenedModal(event)">
-                    <div class="modal-content is-vcentered">
-                        {% for image in product.gallery.images %}
-                            <div class="item-slide product-modal-slide">
-                                <img src="{{ product.gallery.imagefolder }}{{ image.name }}">
-                            </div>
-                        {% endfor %}
+            <div id="product-modal" class="modal" onclick="ClickOpenedModal(event)">
+                <div class="modal-content is-vcentered">
+                    {% for image in product.gallery.images %}
+                    <div class="item-slide product-modal-slide">
+                        <img src="{{ product.gallery.imagefolder }}{{ image.name }}">
                     </div>
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                <button onclick="closeModal()" class="modal-close is-large" aria-label="close"></button>
+                    {% endfor %}
                 </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <button onclick="closeModal()" class="modal-close is-large" aria-label="close"></button>
+            </div>
             <!-- End lightbox modal -->
 
             {% if site.data.reviews[product.code] %}

@@ -9,9 +9,7 @@ description: Start making card games now!
 
 long_description: |
   Card Creator is a software tool that allows you to create all types of cards for your own games.
-
   Easy enough for amateurs to jump in and create their own designs to complement their games within minutes, but powerful and deep for professional game designers as well.
-
   Localized to up to 11 languages, and fully documented and supported by our team, Card Creator is just the tool you need to step up your game!
 
 video: liMw3yfeTdo
@@ -19,7 +17,7 @@ video: liMw3yfeTdo
 features:
     - label: Create any type of card
       icon: fa-pencil-ruler
-    - label: Export to Tabletop Simulator in one click
+    - label: Export to Tabletop Simulator
       icon: fa-dice-d6
     - label: Print and play in 1 click
       icon: fa-print
