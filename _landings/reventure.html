@@ -1,0 +1,167 @@
+---
+permalink: /reventure/
+
+code: reventure
+theme: dark
+button_color: "#b487b7"
+---
+
+<!doctype html>
+<html class="no-js" lang="en">
+
+{% include reventure-landing-head.html %}
+
+{% assign id_name = page.code %}
+{% assign product = site.data.landings[id_name] %}
+
+{% if page.theme contains "dark" %}
+     {% if product.landpage_background %}
+        <body style="color:white;text-shadow: black 3px 3px 6px;background-image: urL({{product.landpage_background}});">
+     {% else %}
+        <body style="color:white;text-shadow: black 3px 3px 6px;">
+     {%endif%}
+{% elsif page.theme contains "light" %}
+     {% if product.landpage_background %}
+     <body style="color:#636467;background-image: urL({{product.landpage_background}});">
+     {% else %}
+     <body style="color:#636467;">
+     {%endif%}
+{% endif %}
+
+
+    {% if page.theme contains "dark" %}
+    <div class="container" style="background: #00000077;">
+    {% elsif page.theme contains "light" %}
+    <div class="container" style="background: white;">
+    {% endif %}
+    <div id="header-logo"><img  src="{{product.logo}}" alt=""/></div>
+    <br>
+
+    <iframe id="trailer" width="720" height="400" src="{{ product.featured_video}}?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <br>
+
+    <br>
+
+    <!-- CALL TO ACTION -->
+    {% if product.stores %}
+        {% if page.button_color %}
+            {% assign color = page.button_color %}
+        {% else %}
+            {% assign color = site.data.settings.color_settings.button_color %}
+        {% endif %}
+    <div class="calltoaction">
+        <h2 class="calltoaction_title" style="color:{{color}}">Available now on</h2>
+        {% for store in product.stores %}
+
+        <div class="calltoaction_button">
+            <a style="background-color: {{color}};" class="shadowImage shadowImage_reactive pure-material-button-contained stores" href="{{ store[1] }}">
+                <img class="minilogo" src="/img/stores/{{ store[0] }}.png" />
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+
+    <h3 id="highlights">{{product.title}}</h3>
+
+    {% if product.description %}
+    <p>{{product.description}}</p>
+    {%endif%}
+
+    {% if product.features %}
+    <h3 id="highlights">Features</h3>
+
+    <ul>
+        {% for feature in product.features %}
+        <li>{{feature}}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    <br>
+
+    {% if product.media_reviews %}
+    <h3 id="mediareviews">Media Reviews</h3>
+
+    <blockquote>
+        {% for review in product.media_reviews %}
+        <p><em>"{{review.text}}"
+            <br>
+            <span style="float:right">- {{review.name}}</span>
+        </em></p>
+
+        <br>
+        {% endfor %}
+
+    </blockquote>
+
+    {% endif %}
+
+    {% if product.quotes %}
+    <h3 id="playerreviews">Player Reviews</h3>
+
+    <blockquote>
+        {% for quote in product.quotes %}
+            <p><em>"{{quote.description}}"</em></p>
+        {%endfor%}
+    </blockquote>
+    {% endif %}
+    <br>
+
+    <!-- Tweets  -->
+    {% include landing-tweets.html %}
+
+
+
+    <script sync src="https://platform.twitter.com/widgets.js"></script>
+
+    <script>
+
+        window.onload = (function(){
+
+            let tweets = document.getElementsByClassName("tweet_class")
+            for (let i = 0; i < tweets.length; i++){
+                let tweet = tweets[i];
+                let id = tweet.getAttribute("tweetID");
+
+                // Create Tweet
+                twttr.widgets.createTweet(
+                    id, tweet,
+                    {
+                        conversation : 'none',    // or all
+                        cards        : 'visible',  // or visible
+                        linkColor    : '#59BFD7', // default is blue
+                        theme        : '{{page.theme}}',    // or dark
+                        width     : '250', // Max Width
+                    }).then(function(){
+
+
+                });
+            }
+
+        });
+
+    </script>
+
+
+
+
+
+    <footer style="clear:left">
+        <hr />
+        <center>
+            <p>© Pixelatto - 2020</p>
+
+            <ul>
+                <li>
+                    <a href="/presskit/{{product.id_name}}/">Presskit</a>
+                </li>
+            </ul>
+        </center>
+    </footer>
+
+
+</div>
+     </body>
+</html>

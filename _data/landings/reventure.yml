@@ -1,0 +1,137 @@
+---
+calltoaction_message: Buy
+calltoaction_url: "https://store.steampowered.com/app/900270/Reventure/"
+featured_image: /img/product/reventure-logo.svg
+featured_video: "https://www.youtube.com/embed/EojVKCaHBA0"
+featured_video_jp: "https://www.youtube.com/embed/gVdHEEVgv9o"
+gifs:
+  ['/img/product/reventure/reventure_gif1.gif',
+   '/img/product/reventure/reventure_gif2.gif',
+   '/img/product/reventure/reventure_gif3.gif',
+   '/img/product/reventure/reventure_gif4.gif']
+images:
+    ['/img/product/reventure/reventure_img01.png',
+    '/img/product/reventure/reventure_img02.png',
+    '/img/product/reventure/reventure_img03.png',
+    '/img/product/reventure/reventure_img04.png',
+    '/img/product/reventure/reventure_img05.png',
+    '/img/product/reventure/reventure_img06.png',
+    '/img/product/reventure/reventure_img07.png',
+    '/img/product/reventure/reventure_img08.png',
+    '/img/product/reventure/reventure_img09.png',
+    '/img/product/reventure/reventure_img10.png']
+languages:
+  ["English",
+   "Spanish",
+   "Chinese",
+   "German",
+   "Japanese",
+   "French",
+   "Korean",
+   "Polish",
+   "Portuguese",
+   "Turkish",
+   "Russian",
+   "Italian"]
+logo: /img/product/reventure/logo_reventure.png
+logojp: /img/product/reventure/logo_reventure_jp.png
+platforms:
+    PC
+    Nintendo Switch
+release_date: "4/6/2019 PC 8/10/2019 Nintendo Switch"
+stores:
+    gog: "https://www.gog.com/game/reventure/"
+    steam: "https://store.steampowered.com/app/900270/Reventure/"
+    humble: "https://www.humblebundle.com/store/reventure"
+    switch: "https://www.nintendo.com/games/detail/reventure-switch/"
+    android: "https://play.google.com/store/apps/details?id=com.Pixelatto.Reventure&hl=es_419"
+    apple: "https://apps.apple.com/us/app/reventure/id1501817956"
+storesjp:
+      gog: "https://www.gog.com/game/reventure/"
+      steam: "https://store.steampowered.com/app/900270/Reventure/"
+      humble: "https://www.humblebundle.com/store/reventure"
+      switch: "https://ec.nintendo.com/JP/ja/titles/70010000027314"
+      android: "https://play.google.com/store/apps/details?id=com.Pixelatto.Reventure&hl=es_419"
+      apple: "https://apps.apple.com/us/app/reventure/id1501817956"
+subtitle: 'The award-winning non-linear adventure with 100+ endings!'
+description: |
+              Take the role of Tim and travel through the kingdom and rescue the princess. Or not.</br>
+              In Reventure you make the choices: forget about your mission, betray your allies, kill any NPC... It's all in your hand.</br>
+              You actions will have consequences though, leading to one of the 100 different endings.
+title: Reventure
+presskit: "active"
+id_name: 'reventure'
+tag: game
+hidden: false
+website: 'https://pixelatto.com/products/reventure'
+price: {currency: €, value: '4.99'}
+histories:
+  history: [
+  {text: 'The game starts out from the classic monomyth premise: "You are a hero, the princess is in danger, go rescue her!" but it quickly gets more complicated than that - until it completely diverges into something completely non-standard.'},
+  {text: 'The gameplay takes place in sort-lived runs. You start with a clear goal in mind, but the game throws at you some button, trap, treasure or enemy that will make you deviate from your path into a completely new situation. You''ll also discover something new on the process and end up your story with a feeling of "What if I had done THAT instead?".'},
+  {text: 'That feeling will drive your next goal, closing the loop over and over and wrapping up a surprisingly addictive experience.'},
+  {text: 'On the first runs, the game is all about exploration. When you start knowing your whereabouts, it smoothly transitions into a completionist experience, where you''d want to find each one of the 100 endings. As you approach the late game it transforms once again, this time into a puzzle platformer where you have to carefully plan your journey in order to discover the more exotic endings.'}]
+features: ['Reventure left Early Access with 100% positive reviews from more than 100 reviewers.', 'It features a dynamic story system in a "groundhog day" fashion, but with persistent effects.',
+            'A Twitch integration enables users on a streamer''s chat to take control of the hero''s dialogs (PC only).',
+            'The world stays almost the same, being the player the one that changes after every run.',
+            'If a character dies, it is for good. A new character will take over and the story will progress.',
+            'The original sound track (available here) features more than 15 original themes.',
+            'Under that innocent, pixelated, look hides an indie beast with more than 10 hours of content.']
+
+featuresjp: [
+{title: '100の異なるエンディング', text: "好きなことをしてください、あらゆる決断から新しいエンディングが生まれます。
+                                                                                                     真のエンディングは？　本当にそんなものがあるのでしょうか？
+                                                                                                     最善を尽くす以外の方法はありません…"},
+{title: 'たくさんのアハ体験', text: "プレイのたびに世界が変わるわけではありません。
+                                    実際には変わりますが、これは秘密です。"},
+{title: '多くのアンロック要素', text: "プレイアブルキャラクター、ヒント、コスチューム、画面の色まで！"},
+{title: 'たくさんの隠し要素とポップカルチャーのパロデ', text: "ここで明かすことはできません。楽しみを減らしてしまっては意味がありませんから。"},
+{title: '魔法', text: "こんな単純に見えるゲームですが、制作には多くの時間とお金がかかります。けれど、わずか数ドルで購入することができます。
+                             これって魔法みたいなものでしょう？"},
+{title: 'タイムトラベル、バトルロワイヤル、ミミック、永遠の死、ショットガン、採掘、アイテム収集、ベースビルディング、リーダーボード、ファーミング…', text: "すみません、風呂敷を広げ過ぎました…
+                                                                                                他には？"},
+{title: 'ユーモア', text: "ええ、もちろんそれもあります。
+                               色々な種類を用意しています。"}
+]
+trailers:
+  trailer: {name: 'Switch Launch Trailer', youtube: "/EojVKCaHBA0"}
+widgets:
+  steam: '900270'
+awards:
+  award: {description: '- IGN Spain', info: 'Reventure, from Pixelatto, is one of the indie surprises this summer. A very fun game with a great sense of humor. Never dying a hundred times was so rewarding.'}
+quotes: [
+  {description: 'Great game. Think Stanley''s Parable and Undertale meets side-scrolling adventure. This game will make you smile while you''re playing it, more than once. Cheeky sense of humor.'},
+  {description: '...I was expecting a "silly" game, just a funny parody. But, the game is so much more than that: It has its own identity, not only is the great sense of humor, but also the excellent mechanics and gameplay. You can notice how everything is done with a lot of thought and care...'},
+  {description: 'I had a blast exploring and figuring out this game. as of now I''ve only got a little over half the endings. There''s still so much to do! If you like exploring and laughs, you can''t go wrong here.'},
+  {description: 'I''ve barely scratched the surface on this hidden gem, and every "ending" I''ve seen has put a smile on my face. Don''t let the visuals and controls fool you, it''s impressive how much thought was put into this game, HIGHLY recommend!!!'},
+  {description: 'Don''t be fooled by this game. Externally is dressed as a parody but at his core is a choose your own adventure game with a lot of well written humor. When you start uncovering the myriad of different endings that the developers has hidden in the game you see the incredible amount of work and love that have been put into it. The game encourages you to experiment and try different approaches to uncover his secrets, giving you that aha! moment followed by a laugh when you see the results.'}]
+additionals:
+  additional: [
+    {description: 'The original concept was originated from a Ludum Dare game jam, where it scored 3rd place', link: ""},
+    {description: 'It''s the first commercial game of the Spanish indie studio Pixelatto', link: ""},
+    {description: 'The developers are inside the game. You can kill them if you don''t like something', link: ""}]
+credits: [
+  {person: 'Javier Cepa', role: Designer},
+  {person: 'Alberto Martin', role: Programmer}]
+contacts:
+  contact: [
+    {name: 'Javier Cepa', mail: javi@pixelatto.com},
+    {name: 'Alberto Martín', mail: alberto@pixelatto.com}]
+theme: "light"
+landpage: "true"
+landpage_background: "/img/product/reventure/reventureLarge.jpg"
+media_reviews: [
+  {name: 'IGN Spain', text: "Reventure, from Pixelatto, is one of the indie surprises this summer. A very fun game with a great sense of humor. Never dying a hundred times was so rewarding."},
+  {name: 'Meristation', text: "Dying had never been so satisfying. Reventure triumphs for its originality and humor, and it does nothing more and nothing less than a hundred times."},
+  {name: 'The Indie Game Website', text: "Eventually repetition can start to set in and at this point I recommend quitting while you’re ahead. But at its measly asking price, a few hours of hilarious antics make Reventure a no-brainer of an impulse buy."},
+  {name: 'GameCritics', text: "Reventure is a masterpiece of design. With its sharp satirical humour, its tight controls, and its endless inventiveness, Reventure actively invites players to engage with it again and again and again. This isn’t just a love letter to adventure games, it’s a great adventure in its own right, transcending the expectations of the genre to offer a fantastic, multi-faceted experience that satisfies in every regard."}
+]
+tweets:
+  ['1201990098423668736',
+   '1201047163393806341',
+   '1200276795381166080',
+   '1199445114432761859',
+   '1193169846361608193',
+   '1192895363784564744',
+   '1190407930698510336',
+  ]

@@ -28,6 +28,8 @@ collections:
     output: true
   presskit:
     output: true
+  landings:
+    output: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.

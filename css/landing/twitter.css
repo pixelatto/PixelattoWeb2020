@@ -1,0 +1,27 @@
+.tweet_class{
+    padding: 5px;
+    border-radius: 10px;
+    display: inline-block;
+    float: left;
+    max-height: 100%;
+    margin:0;
+}
+
+.twitter-tweet p{
+    text-shadow: none;
+}
+
+#tweet iframe {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+#relatedTweets{
+    clear: both;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.EmbeddedTweet{
+    background-color: #000000b0 !important;
+}

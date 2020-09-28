@@ -2,9 +2,9 @@
   link: /products/
   dropdown: 
     - name: Reventure
-      link: /reventure/
+      link: /products/reventure/
     - name: Card Creator
-      link: /card-creator/
+      link: /products/card-creator/
 # - name: Blog
 #   link: /blog/
   # dropdown: 

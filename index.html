@@ -13,7 +13,8 @@ has_carousel: false
     {% assign products = site.data.products | sort %}
     {% for product_hash in products %}
     {% assign product = product_hash[1] %}
-    <a href="/{{ product.code }}/" style="color: white;">
+    {% assign product_page = site.products | where_exp:"item","item.code == product.code" | first %}
+    <a href="{{ product_page.url }}" style="color: white;">
         <div class="hero is-medium"
             style="background: url('/img/product/{{ product.code }}-hero.jpg') no-repeat center center; background-size: cover; background-position: 0%;">
             <div class="hero-align-bottom">

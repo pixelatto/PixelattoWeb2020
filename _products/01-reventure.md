@@ -1,6 +1,8 @@
 ---
+code: reventure
+
 title: Reventure
-permalink: /reventure/
+permalink: /products/reventure/
 layout: empty
 
 theme_text: is-secondary

@@ -1,6 +1,8 @@
 ---
+code: card-creator
+
 title: Card Creator
-permalink: /card-creator/
+permalink: /products/card-creator/
 layout: empty
 
 theme_text: is-primary

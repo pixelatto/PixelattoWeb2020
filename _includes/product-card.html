@@ -1,4 +1,5 @@
-<a href="/{{ product.code }}/">
+{% assign product_page = site.products | where_exp:"item","item.code == product.code" | first %}
+<a href="{{ product_page.url }}">
     <div class="card" style="height: 100%;">
         <div class="card-image">
             <figure class="image is-16by9">

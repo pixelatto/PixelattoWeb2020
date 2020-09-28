@@ -1,0 +1,47 @@
+{% if product.tweets %}
+<div class="carousel-container">
+    {% for tweet in product.tweets %}
+    <blockquote class="tweet_class" id="tweet" tweetID="{{tweet}}"></blockquote>
+    {% endfor %}
+</div>
+{% endif %}
+
+<script sync src="https://platform.twitter.com/widgets.js"></script>
+
+<script>
+
+    window.onload = (function () {
+
+        let tweets = document.getElementsByClassName("tweet_class")
+        for (let i = 0; i < tweets.length; i++) {
+            let tweet = tweets[i];
+            let id = tweet.getAttribute("tweetID");
+
+            // Create Tweet
+            twttr.widgets.createTweet(
+                id, tweet,
+                {
+                    conversation: 'none',    // or all
+                    cards: 'visible',  // or visible
+                    linkColor: '#59BFD7', // default is blue
+                    theme: '{{page.theme}}',    // or dark
+                    width: '250', // Max Width
+                }).then(function () {
+
+
+                });
+        }
+
+    });
+
+
+    $('.carousel-container').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        adaptiveHeight: true,
+        dots: false,
+        lazyLoad: 'progressive'
+    });
+
+</script>
