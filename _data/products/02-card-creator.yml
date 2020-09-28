@@ -21,6 +21,10 @@ features:
       icon: fa-dice-d6
     - label: Print and play in 1 click
       icon: fa-print
+
+stores:
+    - image: steam
+      link: https://store.steampowered.com/app/523600/Card_Creator/
       
 gallery:
       id: cc-gallery

@@ -6,7 +6,7 @@
                 style="display: block; margin: auto; height: 30vw; max-height: 200px;" />
 
             <div class="columns is-multiline is-vcentered "
-                style="border-radius: 40px 0px 40px 0px; padding: 3vw; margin: 20px; margin-top: 0;">
+                style="border-radius: 40px 0px 40px 0px;margin: 20px; margin-top: 0;">
 
                 <div class="column is-12 has-text-centered ">
                     <p class="title is-3 py-4" style="display: none;">{{ product.title }}</p>
@@ -53,11 +53,17 @@
                     {% endif %}
                     <a href="#" class="button is-white is-medium"></a>
                 </div>
-
-
             </div>
         </div>
     </div>
+
+    <div class="container">
+        <p class="title is-2">Get it now!</p>
+        {% include store-buttons.html %}
+    </div>
+
+    <br>
+    <br>
     <div class="container">
         <div class="columns is-multiline is-vcentered has-text-justified">
             <div class="column is-12">

@@ -22,6 +22,20 @@ features:
     - label: Laugh your ass off
       icon: fa-grin-tears
 
+stores:
+    - image: gog
+      link: https://www.gog.com/game/reventure/
+    - image: steam
+      link: https://store.steampowered.com/app/900270/Reventure/
+    - image: humble
+      link: https://www.humblebundle.com/store/reventure
+    - image: switch
+      link: https://www.nintendo.com/games/detail/reventure-switch/
+    - image: android
+      link: https://play.google.com/store/apps/details?id=com.Pixelatto.Reventure&hl=es_419
+    - image: apple
+      link: https://apps.apple.com/us/app/reventure/id1501817956
+
 gallery:
       id: reventure-gallery
       imagefolder: /img/product/reventure/
