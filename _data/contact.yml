@@ -1,0 +1,4 @@
+form_action: ''
+confirmation_url: '/thanks/'
+email_subject: 'Contact form submission'
+send_button_text: 'Send!'
