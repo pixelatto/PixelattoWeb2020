@@ -1,4 +1,4 @@
-var currentModal;
+var currentModal = null;
 var currentId;
 
 function openModal(id) {
@@ -9,6 +9,7 @@ function openModal(id) {
 
 function closeModal() {
   currentModal.style.display = "none";
+  currentModal = null;
 }
 
 var slideIndex = 1;
@@ -27,38 +28,40 @@ function showSlides(n) {
     var i;
     var slides = document.getElementsByClassName(currentId);
     var captionText = document.getElementById("caption");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
     for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+      slides[i].style.display = "none";
     }
-    slides[slideIndex-1].style.display = "block";
+    slides[slideIndex - 1].style.display = "block";
   }
 }
 
-function ClickOpenedModal(e){
+function ClickOpenedModal(e) {
   var clickedElement = e.target;
-  if(clickedElement.tagName != "IMG" && clickedElement.tagName != "A")
+  if (clickedElement.tagName != "IMG" && clickedElement.tagName != "A")
     closeModal();
 }
 
-document.onkeydown = function(e) {
-  switch(e.key) {
-    case "Escape":
-      closeModal();
-    break;
-    
-    case "Left":
-    case "ArrowLeft":
-      plusSlides(-1);
-    break;
+document.onkeydown = function (e) {
+  if (currentModal != null) {
+    switch (e.key) {
+      case "Escape":
+        closeModal();
+        break;
 
-    case "Right":
-    case "ArrowRight":
-      plusSlides(1);
-    break;
+      case "Left":
+      case "ArrowLeft":
+        plusSlides(-1);
+        break;
 
-    default: return; // exit this handler for other keys
+      case "Right":
+      case "ArrowRight":
+        plusSlides(1);
+        break;
+
+      default: return; // exit this handler for other keys
+    }
+    e.preventDefault();
   }
-  e.preventDefault();
 }
