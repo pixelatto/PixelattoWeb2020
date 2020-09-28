@@ -7,5 +7,35 @@
         <h5 class="subtitle is-5 mb-6">Or use this form for getting support, reportsing bugs, sending CVs/portfolios... or just to say
             hi!</h5>
         {% include contact-form.html %}
+        <h5 class="subtitle is-5" style="margin-top: 1.5rem;">And don't forget to follow us on social media!</h5>
+        <div class="social-buttons columns is-centered">
+                {% for social in site.data.social %}
+                <div class="column is-1">
+                    <button class="button store-button is-secondary"
+                        onclick="window.open('{{ social.link }}', '_blank');">
+                        <span class="icon">
+                            <img class="has-text-secondary" src="/img/platforms/{{ social.image }}" style="margin: 0;">
+                        </span>
+                    </button>
+                </div>
+                {% endfor %}
+        </div>
     </div>
 </section>
+
+<style>
+    .social-buttons .tile {
+        min-width: 100px;
+    }
+    
+    .social-buttons button {
+        width: 100%;
+        height: auto;
+    }
+
+    .social-button .icon {
+        height: auto;
+        width: 100%;
+    }
+</style>
+
