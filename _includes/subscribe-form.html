@@ -1,29 +1,29 @@
-<div class="hero is-medium has-background-primary is-vcentered"
-    style="background: url('/img/subscribe-hero.jpg') no-repeat center center; background-size: cover; background-position: 0%;">
+<div class="hero is-medium has-background-primary is-vcentered is-full"
+    style="background: url('/img/subscribe-hero.jpg') no-repeat center center; background-size: cover;">
     <form class="is-vertically-centered" style="position: relative;" action="{{site.data.subscribe.subscribe_action}}"
         method="post" name="mc-embedded-subscribe-form" target="_blank">
         <div class="has-text-centered">
             <div class="has-background-white" style="padding: 1.5rem 0;margin-bottom: 1.5rem;">
-                <h2 class="title has-text-secondary has-text-weight-semibold is-1">{{site.data.subscribe.main_message}}
+                <h2 class="title has-text-secondary has-text-weight-semibold is-1 is-size-5-mobile">{{site.data.subscribe.main_message}}
                 </h2>
-                <h3 class="subtitle has-text-secondary has-text-weight-semibold is-5">
+                <h3 class="subtitle has-text-secondary has-text-weight-semibold is-5 is-size-7-mobile">
                     {{site.data.subscribe.last_message}}</h3>
             </div>
-            <div class="field is-grouped has-addons has-addons-centered">
+            <div class="field has-addons has-addons-centered">
                 <div class="control has-icons-left">
-                    <input class="input is-medium" type="email"
+                    <input class="input" type="email"
                         placeholder="your-email@what.ever" value="">
                     <span class="icon is-small is-left">
                         <i class="fas fa-envelope"></i>
                     </span>
                 </div>
-                <div style="display: none;" aria-hidden="true">
+                <!-- <div style="display: none;" aria-hidden="true">
                     <input class="input" type="text" name="b_fbef2685c895759c5406b0378_c51cb108de" tabindex="-1"
                         value="">
-                </div>
+                </div> -->
                 <div class="control ">
-                    <input class="input has-text-weight-semibold is-medium has-background-white has-text-secondary"
-                        type="submit" name="subscribe" value="{{ site.data.subscribe.button_subscribe_text}}">
+                    <input class="input has-text-weight-semibold has-background-white has-text-secondary"
+                        type="submit" name="subscribe" value="{{ site.data.subscribe.button_subscribe_text}}" style="cursor: pointer;">
                 </div>
             </div>
         </div>
