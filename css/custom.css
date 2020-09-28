@@ -147,3 +147,9 @@ blockquote:before {}
 .tile .is-child {
     padding: 0.75rem;
 }
+
+@media screen and (max-width: 1087px){ 
+    .navbar-menu {
+        background-color: transparent;
+    }
+}
