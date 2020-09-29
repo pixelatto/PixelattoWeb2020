@@ -1,8 +1,8 @@
-<div class="discord-message columns is-centered">
-    <div class="column is-one-third">
+<div class="discord-message columns is-centered ">
+    <div class="column is-centered is-one-fifth is-one-quarter-mobile is-one-quarter is-one-quarter-desktop is-one-quarter-widescreen is-one-quarter-fullhd">
         {% assign discord_data = site.data.social | where_exp:"item","item.name == 'discord'" | first %}
         <a href="{{ discord_data.link }}">
-            <figure class="image is-square has-background-secondary">
+            <figure class="image has-rounded-corners has-box-shadow is-square has-background-secondary ">
                 <img src="/img/platforms/{{ discord_data.image }}" />
             </figure>
         </a>
