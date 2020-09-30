@@ -17,3 +17,19 @@ $custom-colors: (
 
 // Import Main CSS file from theme
 @import "main";
+
+.navbar-link:hover{
+    color: $primary;
+}
+
+.navbar-link:not(.is-arrowless)::after{
+    border-color: $primary;
+}
+
+a.navbar-item:hover{
+    color: $primary;
+}
+
+a{
+    color: $primary;
+}
