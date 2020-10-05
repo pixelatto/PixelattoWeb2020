@@ -1,30 +1,22 @@
-<div class="store-buttons tile is-ancestor">
-    <div class="tile is-parent">
-        {% for store in product.stores %}
-        <div class="tile is-child is-1">
-            <button class="button store-button is-{% if product.type == 'game' %}secondary{% else %}primary{% endif %}"
+<div class="columns is-mobile ">
+    {% for store in product.stores %}
+    <div class="column control">
+        <button class="button store-button is-{% if product.type == 'game' %}secondary{% else %}primary{% endif %}"
                 onclick="window.open('{{ store.link }}', '_blank');">
                 <span class="icon">
                     <img class="has-text-secondary" src="/img/platforms/{{ store.image }}.png" style="margin: 0;">
                 </span>
             </button>
-        </div>
-        {% endfor %}
     </div>
-</div>
+    {% endfor %}
+  </div>
 
 <style>
-    .store-buttons .tile {
-        min-width: 100px;
-    }
-    
-    .store-buttons button {
-        width: 100%;
-        height: auto;
-    }
-
     .store-button .icon {
-        height: auto;
-        width: 100%;
+        min-block-size:10px;
+    }
+    .column{
+        padding:0.75rem;
+        flex-grow:0;
     }
 </style>
