@@ -15,3 +15,5 @@ bulmaCarousel.attach('#testimonials-carousel', {
     slidesToShow: 4,
     infinite: true
 });
+
+bulmaCollapsible.attach('.is-collapsible');
