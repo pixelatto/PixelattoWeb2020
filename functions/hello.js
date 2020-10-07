@@ -1,6 +1,8 @@
 exports.handler = function(event, context, callback)
 {
-    var response = "Connected (" + event.headers["user"] + event.headers["pass"] + "): " + event.body;
+    const {netlifyIdentity, netlifyUser} = context.clientContext;
+
+    var response = "Connected (" + event.headers["user"] + event.headers["pass"] + "): " + event.body + "|" + netlifyIdentity + "/" + netlifyUser;
 
     callback(
         null, {
