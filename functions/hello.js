@@ -1,8 +1,15 @@
 exports.handler = function(event, context, callback)
 {
-    const {netlifyIdentity, netlifyUser} = context.clientContext;
-
-    var response = "Connected (" + event.headers["user"] + event.headers["pass"] + "): " + event.body + "|" + netlifyIdentity + "/" + netlifyUser;
+    
+    var response = "";
+    if (event.headers["user"] == "javi" && event.headers["pass"] == "1234")
+    {
+        response = "Correct! Here's your Api key";
+    }
+    else
+    {
+        response = "Invalid user login!";
+    }
 
     callback(
         null, {
