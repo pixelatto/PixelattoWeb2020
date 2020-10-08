@@ -1,5 +1,5 @@
 <div class="hero is-medium is-vcentered is-full">
-    <form class="is-vertically-centered" style="position: relative;" action="{{site.data.subscribe.subscribe_action}}"
+    <form id="subscribe-form" action="{{site.data.subscribe.subscribe_action}}" class="is-vertically-centered" style="position: relative;"
         method="post" name="mc-embedded-subscribe-form" target="_blank">
         <div class="has-text-centered">
             <div class="has-background-white" style="padding: 1.5rem 0;margin-bottom: 1.5rem;">
@@ -9,20 +9,16 @@
                     {{site.data.subscribe.last_message}}</h3>
             </div>
             <div class="field has-addons has-addons-centered">
-                <div class="control has-icons-left">
-                    <input class="input" type="email"
-                        placeholder="your-email@what.ever" value="" required>
+                <div class="control has-icons-left contact-form__item">
+                    <input class="input contact-form__input" type="email"
+                        placeholder="your-email@what.ever" value="" name="EMAIL" required>
                     <span class="icon is-small is-left">
                         <i class="fas fa-envelope"></i>
                     </span>
                 </div>
-                <div style="display: none;" aria-hidden="true">
-                    <!-- <input class="input" type="text" name="b_fbef2685c895759c5406b0378_c51cb108de" tabindex="-1"
-                        value=""> -->
-                </div>
-                <div class="control">
+                <div class="control contact-form__item">
                     <input class="input has-text-weight-semibold has-background-primary has-text-white"
-                        type="submit" name="subscribe" value="{{ site.data.subscribe.button_subscribe_text}}" style="cursor: pointer;">
+                        type="submit" name="subscribe" value="{{ site.data.subscribe.button_subscribe_text}}" style="cursor: pointer;" onclick="submitAndRedirectToThanks();">
                 </div>
             </div>
         </div>

@@ -15,3 +15,8 @@ bulmaCarousel.attach('#testimonials-carousel', {
     slidesToShow: 4,
     infinite: true
 });
+
+function submitAndRedirectToThanks() {
+    document.getElementById("subscribe-form").submit();
+    window.location="/thanks/";
+}
