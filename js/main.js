@@ -20,3 +20,5 @@ function submitAndRedirectToThanks() {
     document.getElementById("subscribe-form").submit();
     window.location="/thanks/";
 }
+
+bulmaCollapsible.attach('.is-collapsible');
