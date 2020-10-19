@@ -5,6 +5,7 @@ exports.handler = function(event, context, callback)
     if (
         event.headers["user"] == "5e8756796a972807781bb1b2" && event.headers["pass"] == "ozeotropo" ||
         event.headers["user"] == "5e85aeb96a97283dfc3309aa" && event.headers["pass"] == "amongus" ||
+        event.headers["user"] == "5e821b9d6a9728636371961e" && event.headers["pass"] == "mercadona" ||
         false
         )
     {
