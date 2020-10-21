@@ -44,7 +44,7 @@ button_color: "#b487b7"
     <br>
 
     <!-- CALL TO ACTION -->
-    {% if product.stores %}
+    {% if product.external_stores %}
         {% if page.button_color %}
             {% assign color = page.button_color %}
         {% else %}
@@ -52,7 +52,7 @@ button_color: "#b487b7"
         {% endif %}
     <div class="calltoaction">
         <h2 class="calltoaction_title" style="color:{{color}}">Available now on</h2>
-        {% for store in product.stores %}
+        {% for store in product.external_stores %}
 
         <div class="calltoaction_button">
             <a style="background-color: {{color}};" class="shadowImage shadowImage_reactive pure-material-button-contained stores" href="{{ store[1] }}">

@@ -1,0 +1,57 @@
+---
+layout: empty
+title: Store
+hide_hero: true
+permalink: /store/
+short_version: true
+---
+
+{% assign products = site.data.products %}
+
+<section class="section store">
+    <div class="container">
+        <h1 class="title is-1">Gamedev tools!</h1>
+        <div class="columns is-multiline is-desktop"
+            style="display: flex; flex-direction: row; align-items: stretch; align-content: stretch;">
+            {% for product_hash in products %}
+            {% assign product = product_hash[1] %}
+            <div class="column is-full-mobile is-full is-full-desktop">
+                <div class="card">
+                    <div class="columns">
+                        <div class="column is-3">
+                            <figure class="image">
+                                <img src="/img/product/{{ product.code }}-logo.svg" alt="{{ product.title }}"
+                                    style="margin: auto; padding: 1.5rem;">
+                            </figure>
+                        </div>
+                        <div class="column is-5">
+                            <div class="is-vertically-centered" style="width: inherit;">
+                                <p class="title is-3">
+                                    {{ product.title}}
+                                </p>
+                                <p class="subtitle is-5">
+                                    {{ product.subtitle }}
+                                </p>
+                                <p>
+                                    4,99€ <a href="https://transactions.sendowl.com/products/78384823/448C554D/purchase"
+                                        rel="nofollow"><button class="button is-primary">Comprar!</button></a>
+                                    <script type="text/javascript"
+                                        src="https://transactions.sendowl.com/assets/sendowl.js"></script>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="column is-4">
+                            <iframe class="has-ratio" width="600" height="360"
+                                src="https://www.youtube.com/embed/{{ product.video }}?rel=0" frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
