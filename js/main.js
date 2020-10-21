@@ -4,12 +4,6 @@ bulmaCarousel.attach('#product-carousel', {
     infinite: true
 });
 
-bulmaCarousel.attach('#store-carousel', {
-    slidesToScroll: 2,
-    slidesToShow: 2,
-    infinite: true
-});
-
 bulmaCarousel.attach('#presskit-carousel', {
     slidesToScroll: 3,
     slidesToShow: 3,
