@@ -1,0 +1,36 @@
+<section class="section">
+    <div id="accordion_first">
+        
+        {% assign cont = 1 %}
+        {% for faq in product.faq %}
+        <article class="message">
+            <a href="#collapsible-message-accordion-{{cont}}" data-action="collapse"
+                class="columns message-header has-box-shadow has-background-{% if product.type == 'game' %}secondary{% else %}primary{% endif %} has-text-white">
+                <p>
+                    {{faq.question}}
+                    <span class="icon">
+                        <img src="/img/resources/Chicken.png">
+                    </span>
+                </p>
+            </a>
+            <div id="collapsible-message-accordion-{{cont}}" class="message-body is-collapsible"
+                data-parent="accordion_first">
+                <div class="message-body-content">
+                    {{faq.answer}}
+                </div>
+            </div>
+        </article>
+        {% assign cont = cont | plus:1 %}
+        {% endfor %}
+    
+        
+    </div> 
+</section>
+
+{% include subscribe-form.html %}
+
+<style>
+    .message a:not(.button):not(.tag):not(.dropdown-item) {
+        text-decoration: none;
+    }
+</style>

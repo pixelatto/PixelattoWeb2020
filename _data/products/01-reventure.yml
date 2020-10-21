@@ -36,6 +36,21 @@ stores:
     - image: apple
       link: https://apps.apple.com/us/app/reventure/id1501817956
 
+faq:
+    - question: Hola , esto es una prueba.
+      answer: Hola, esto es la respuestaz.
+    - question: Hola , esto es una prueba2.
+      answer: Hola, esto es la respuestax.
+    - question: Hola , esto es una prueba3.
+      answer: Hola, esto es la respuesta.
+    - question: Hola , esto es una prueba4.
+      answer: Hola, esto es la respuesta.
+    - question: Hola , esto es una prueba5.
+      answer: Hola, esto es la respuesta.
+    - question: Hola , esto es una prueba6.
+      answer: Hola, esto es la respuesta.
+      
+
 gallery:
       id: reventure-gallery
       imagefolder: /img/product/reventure/
