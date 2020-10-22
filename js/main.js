@@ -15,3 +15,20 @@ bulmaCarousel.attach('#testimonials-carousel', {
     slidesToShow: 4,
     infinite: true
 });
+
+$.ajax({
+    url: "https://www.sendowl.com/api/v1/products/78384823",
+    type: "GET",
+    crossDomain: true,
+    dataType: "json",
+    headers: {
+        "accept": "application/json",
+        "Authorization": "Basic ZTY3M2ZlN2U4YmYyMDFmOmM0OGYxNjJlZWViNTExMjY0OTRh"
+    },
+    success: function (response) {
+        console.log(response);
+    },
+    error: function (xhr, status) {
+        alert("error");
+    }
+});
