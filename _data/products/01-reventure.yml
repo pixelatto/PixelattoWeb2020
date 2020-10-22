@@ -4,6 +4,7 @@ name: Reventure
 code: reventure
 type: game
 
+title: Reventure
 subtitle: The award-winning non-linear adventure with 100+ endings!
 description: Choose your adventure, for real.
 
@@ -22,7 +23,7 @@ features:
     - label: Laugh your ass off
       icon: fa-grin-tears
 
-stores:
+external_stores:
     - image: gog
       link: https://www.gog.com/game/reventure/
     - image: steam

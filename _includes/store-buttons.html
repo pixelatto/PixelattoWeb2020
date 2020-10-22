@@ -1,5 +1,5 @@
 <div class="columns is-mobile ">
-    {% for store in product.stores %}
+    {% for store in product.external_stores %}
     <div class="column control">
         <button class="button store-button is-{% if product.type == 'game' %}secondary{% else %}primary{% endif %}"
                 onclick="window.open('{{ store.link }}', '_blank');">

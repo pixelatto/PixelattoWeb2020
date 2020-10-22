@@ -153,3 +153,7 @@ blockquote:before {}
         background-color: transparent;
     }
 }
+
+.modal-content {
+    overflow: initial;
+}

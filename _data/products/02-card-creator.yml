@@ -4,6 +4,7 @@ name: Card Creator
 code: card-creator
 type: app
 
+title: Card Creator
 subtitle: Card creation made easy, fast and fun
 description: Start making card games now!
 
@@ -22,7 +23,7 @@ features:
     - label: Print and play in 1 click
       icon: fa-print
 
-stores:
+external_stores:
     - image: steam
       link: https://store.steampowered.com/app/523600/Card_Creator/
       

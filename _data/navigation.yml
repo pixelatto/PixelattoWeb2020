@@ -13,8 +13,6 @@
   #   - name: Devlog
   #     link: /devlog/
 - name: About
-  link: /about/
 - name: Log in
   link: /login/
-# - name: Store
-#   link: /store/
+
