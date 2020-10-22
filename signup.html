@@ -1,22 +1,30 @@
 ---
 layout: empty
-title: Log in
+title: Sign up
 hide_hero: true
-permalink: /login/
+permalink: /signup/
 ---
 
 
 
 <div class="hero is-medium is-vcentered is-full">
-    <form id="login" class="is-vertically-centered"
-        style="position: relative;" method="post" name="mc-embedded-login" target="_blank">
+    <form id="signup" class="is-vertically-centered"
+        style="position: relative;" method="post" name="mc-embedded-signup" target="_blank">
         <div class="has-text-centered">
             <div class="has-background-white" style="padding: 1.5rem 0;margin-bottom: 1.5rem;">
                 <h2 class="title has-text-primary has-text-weight-semibold is-1 is-size-5-mobile">
-                   Log in your account
+                   Create an account
                 </h2>
+                <h3 class="subtitle has-text-secondary has-text-weight-semibold is-5 is-size-7-mobile">
+                    And get some or our games for free!
+                 </h3>
+                <div class="field has-addons has-addons-centered">
+                    <div class="control has-icons-left contact-form__item">
+                        <input class="input contact-form__input" type="text" placeholder="Nickname" value="" name="NICKNAME"
+                            required>
+                    </div>
+                </div>
                 
-
                 <div class="field has-addons has-addons-centered">
                     <div class="control has-icons-left contact-form__item">
                         <input class="input contact-form__input" type="email" placeholder="E-mail" value="" name="EMAIL"
@@ -38,15 +46,23 @@ permalink: /login/
                 </div>
 
                 <div class="field has-addons has-addons-centered">
+                    <div class="control has-icons-left contact-form__item">
+                        <input class="input contact-form__input" type="password" placeholder="Confirm your Password" value=""
+                            name="PASSWORD" required>
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-lock"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="field has-addons has-addons-centered">
                     <p class="control">
                         <button class="button is-success has-background-primary">
-                            Login
+                            Sign up!
                         </button>
                     </p>
                 </div>
-                <h3 class="subtitle has-text-primary has-text-weight-semibold is-5 is-size-7-mobile">
-                   <a href="/signup/">Or sign in to create a new one</a>
-                </h3>
+              
             </div>
         </div>
     </form>
