@@ -1,3 +1,6 @@
+const sendOwlKey = "e673fe7e8bf201f";
+const sendOwlSecret = "c48f162eeeb51126494a";
+
 bulmaCarousel.attach('#product-carousel', {
     slidesToScroll: 4,
     slidesToShow: 4,
