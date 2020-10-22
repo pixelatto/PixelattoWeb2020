@@ -1,0 +1,22 @@
+{% capture main_color %}
+{% if page.theme_color %}
+#{{page.theme_color}}
+{% elsif page.type == "game" %}
+#e37826
+{% elsif page.type == "app" %}
+#009fc7
+{% else %}{% endif %}
+{% endcapture %}
+
+{% if main_color.size > 3 %}
+<style>
+    .navbar-link {
+        background-color: {{main_color}} !important;
+        color: #ffffff !important;
+    }
+    .navbar.is-primary .navbar-dropdown a.navbar-item.is-active {
+        background-color: {{main_color}} !important;
+        color: #ffffff !important;
+    }
+</style>
+{% endif %}
