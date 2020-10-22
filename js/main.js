@@ -18,7 +18,7 @@ bulmaCarousel.attach('#testimonials-carousel', {
 
 function testAjax() {
     $.ajax({
-        url: "https://www.sendowl.com/api/v1/products/78384823",
+        url: "/api/",
         type: "GET",
         crossDomain: true,
         dataType: "json",
@@ -30,7 +30,7 @@ function testAjax() {
             console.log(response);
         },
         error: function (xhr, status) {
-            alert("error");
+            console.error("error");
         }
     });
 };
