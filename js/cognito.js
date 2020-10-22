@@ -55,6 +55,8 @@ function AWSCheckSession() {
             console.log(session);
         });
     }
+    
+    return user;
 }
 
 function AWSSingOut() {
