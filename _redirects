@@ -1,2 +1,3 @@
 /suscribe/          /subscribe/
 /suscribe           /subscribe/
+/api/*  https://www.sendowl.com/api/v1/products/:splat  200
