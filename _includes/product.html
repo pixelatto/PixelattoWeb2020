@@ -58,8 +58,15 @@
     </div>
 
     <div class="container">
-        <p class="title is-2">Get it now!</p>
-        {% include store-buttons.html %}
+        <a href="https://transactions.sendowl.com/products/78274278/42A4FD4D/purchase" rel="nofollow" id="buy-button" class="button is-large is-{% if product.type == 'game' %}secondary{% else %}primary{% endif %}">Get it now!</a>
+        <script type="text/javascript" src="https://transactions.sendowl.com/assets/sendowl.js" ></script>
+        <div style="display: inline-block;padding: 1rem;"> only for <span id="price"></span>€</div>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+        <h3 class="subtitle is-5">Get it also at</h3>
+        {% include external-store-buttons.html %}
     </div>
 
     <br>
@@ -117,3 +124,14 @@
 </div>
 
 {% include subscribe-form.html %}
+
+{% contentfor extra-js no-convert %}
+    <script>
+        var priceHTML = document.getElementById("price");
+        var buyButtonHTML = document.getElementById("buy-button");
+        getSendOwlProduct({{ product.sendowl_id }}).then((data) => {
+            priceHTML.textContent = data.product.price;
+            buyButtonHTML.href = data.product.instant_buy_url;
+        });
+    </script>
+{% endcontentfor %}

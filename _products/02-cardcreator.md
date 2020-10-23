@@ -9,8 +9,5 @@ theme_text: is-primary
 type: app
 ---
 
-{% capture product_data %}
-  {% assign product = site.data.products | where_exp:"item","item.code == 'card-creator'" | first %}
-{% endcapture %}
-
+{% assign product = site.data.products | where_exp:"item","item.code == 'card-creator'" | first %}
 {% include product.html content=product_info %}
