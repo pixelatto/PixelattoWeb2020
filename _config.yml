@@ -12,6 +12,7 @@ google_analytics: UA-51706081-1
 theme: bulma-clean-theme
 plugins:
   - jekyll-feed
+  - jekyll-contentblocks
 permalink: /:title/
 
 paginate: 5
