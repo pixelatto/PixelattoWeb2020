@@ -1,8 +1,8 @@
 // INIT
 
 var poolData = {
-    UserPoolId: 'us-west-2_LBbnuB8JF',
-    ClientId: '4l9tb5b4pj9u4ecd06ai50hji1'
+    UserPoolId: 'us-east-2_MO1Ox0wt4',
+    ClientId: '5h36lrs3874juf24cj0gapusur'
 };
 
 var userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData);
