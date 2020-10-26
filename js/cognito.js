@@ -1,8 +1,8 @@
 // INIT
 
 var poolData = {
-    UserPoolId: 'us-east-2_MO1Ox0wt4',
-    ClientId: '5h36lrs3874juf24cj0gapusur'
+    UserPoolId: 'us-east-2_OB6FVg8Bj',
+    ClientId: '16n6r53sf1pq4i30sbb2lukmq0'
 };
 
 var userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData);
@@ -41,7 +41,7 @@ function AWSLogin(username, password) {
         },
 
         onFailure: function (err) {
-            alert(err);
+            console.error(err);
         },
     });
 
@@ -59,9 +59,10 @@ function AWSCheckSession() {
     return user;
 }
 
-function AWSSingOut() {
+function AWSLogout() {
     const user = userPool.getCurrentUser();
     if (user) {
         user.signOut();
+        sessionStorage.setItem("pixelatto_session_token", null)
     }
 }
