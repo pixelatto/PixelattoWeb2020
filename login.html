@@ -8,28 +8,24 @@ permalink: /login/
 
 
 <div class="hero is-medium is-vcentered is-full">
-    <form id="login" class="is-vertically-centered"
-        style="position: relative;" method="post" name="mc-embedded-login" target="_blank">
+    <div class="is-vertically-centered"
+        style="position: relative;">
         <div class="has-text-centered">
             <div class="has-background-white" style="padding: 1.5rem 0;margin-bottom: 1.5rem;">
                 <h2 class="title has-text-primary has-text-weight-semibold is-1 is-size-5-mobile">
-                   Log in your account
+                   Log in to your account
                 </h2>
                 
 
                 <div class="field has-addons has-addons-centered">
                     <div class="control has-icons-left contact-form__item">
-                        <input class="input contact-form__input" type="email" placeholder="E-mail" value="" name="EMAIL"
-                            required>
-                        <span class="icon is-small is-left">
-                            <i class="fas fa-envelope"></i>
-                        </span>
+                        <input class="input contact-form__input" id="nick" type="text" placeholder="Nick/E-mail" value="">
                     </div>
                 </div>
 
                 <div class="field has-addons has-addons-centered">
                     <div class="control has-icons-left contact-form__item">
-                        <input class="input contact-form__input" type="password" placeholder="Password" value=""
+                        <input class="input contact-form__input" id="password" type="password" placeholder="Password" value=""
                             name="PASSWORD" required>
                         <span class="icon is-small is-left">
                             <i class="fas fa-lock"></i>
@@ -39,7 +35,7 @@ permalink: /login/
 
                 <div class="field has-addons has-addons-centered">
                     <p class="control">
-                        <button class="button is-success has-background-primary">
+                        <button class="button is-success has-background-primary" onclick="loginUser();">
                             Login
                         </button>
                     </p>
@@ -49,7 +45,7 @@ permalink: /login/
                 </h3>
             </div>
         </div>
-    </form>
+    </div>
 </div>
 
 
