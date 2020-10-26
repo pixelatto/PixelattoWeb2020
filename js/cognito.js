@@ -47,16 +47,22 @@ function AWSLogin(username, password) {
 
 }
 
+function AWSCheckLoggedUser() {
+    return userPool.getCurrentUser();
+}
+
 function AWSCheckSession() {
     const user = userPool.getCurrentUser();
     if (user) {
-        user.getSession((err, session) => {
-            if (err) console.error(err);
-            console.log(session);
+        return new Promise ((resolve, reject) => {
+            user.getSession((err, session) => {
+                if (err) reject(err);
+                resolve(session);
+            });
         });
+    } else {
+        return null;
     }
-    
-    return user;
 }
 
 function AWSLogout() {
