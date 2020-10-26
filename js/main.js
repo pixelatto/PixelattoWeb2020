@@ -25,3 +25,14 @@ function submitAndRedirectToThanks() {
 }
 
 bulmaCollapsible.attach('.is-collapsible');
+
+function loginUser(){
+    var username ="'" + document.getElementById("nick").value + "'";
+    var password ="'" + document.getElementById("password").value + "'";
+    var errordiv = document.getElementById("error");
+    
+
+    AWSLogin(username,password);
+    
+
+}
