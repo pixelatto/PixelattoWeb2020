@@ -9,5 +9,10 @@
     {% endunless %}
     
     {%- include footer-scripts.html -%}
+    
+    {% ifhascontent extra-js %}
+        {% contentblock extra-js no-convert %}
+    {% endifhascontent %}
+
   </body>
 </html>
