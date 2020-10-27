@@ -9,6 +9,7 @@
 <html>
   {% include head.html %}
   <body>
+    {% include loading-screen.html %}
     {% include header.html %}
     {% unless page.hide_hero %}
         {% include hero.html %}
@@ -42,5 +43,9 @@
     {% endunless %}
 
     {%- include footer-scripts.html -%}
+
+    {% ifhascontent extra-js %}
+        {% contentblock extra-js no-convert %}
+    {% endifhascontent %}
   </body>
 </html>
