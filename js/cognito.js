@@ -37,7 +37,8 @@ function AWSLogin(username, password) {
         onSuccess: function (result) {
             // var accessToken = result.getAccessToken().getJwtToken();
             /* Use the idToken for Logins Map when Federating User Pools with identity pools or when passing through an Authorization Header to an API Gateway Authorizer */
-            sessionStorage.setItem("pixelatto_session_token", result.accessToken.jwtToken)
+            sessionStorage.setItem("pixelatto_user_session", JSON.stringify(result.idToken.payload));
+            window.location = "/";
         },
 
         onFailure: function (err) {
@@ -47,21 +48,17 @@ function AWSLogin(username, password) {
 
 }
 
-function AWSCheckLoggedUser() {
+function AWSGetLoggedUser() {
     return userPool.getCurrentUser();
 }
 
-function AWSCheckSession() {
+function AWSGetSession() {
     const user = userPool.getCurrentUser();
     if (user) {
-        return new Promise ((resolve, reject) => {
-            user.getSession((err, session) => {
-                if (err) reject(err);
-                resolve(session);
-            });
+        user.getSession((err, session) => {
+            if (err) console.error(err);
+            sessionStorage.setItem("pixelatto_user_session", JSON.stringify(session.idToken.payload))
         });
-    } else {
-        return null;
     }
 }
 
@@ -69,6 +66,12 @@ function AWSLogout() {
     const user = userPool.getCurrentUser();
     if (user) {
         user.signOut();
-        sessionStorage.setItem("pixelatto_session_token", null)
+        sessionStorage.setItem("pixelatto_user_session", null);
+        location.reload();
     }
 }
+
+// Check and get user session data
+
+if (AWSGetLoggedUser() != null && sessionStorage.getItem("pixelatto_user_session") == null)
+    AWSGetSession();
