@@ -18,14 +18,16 @@ permalink: /login/
 
                 <div class="field has-addons has-addons-centered">
                     <div class="control has-icons-left contact-form__item">
-                        <input class="input contact-form__input" id="nick" type="text" placeholder="Nick/E-mail" value="">
+                        <input class="input contact-form__input" id="nick" type="text" placeholder="Nick/E-mail" value="" required>
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-users"></i>
+                        </span>
                     </div>
                 </div>
 
                 <div class="field has-addons has-addons-centered">
                     <div class="control has-icons-left contact-form__item">
-                        <input class="input contact-form__input" id="password" type="password" placeholder="Password" value=""
-                            name="PASSWORD" required>
+                        <input class="input contact-form__input" id="password" type="password" placeholder="Password" value="" name="PASSWORD" required>
                         <span class="icon is-small is-left">
                             <i class="fas fa-lock"></i>
                         </span>
@@ -35,7 +37,7 @@ permalink: /login/
                 <div class="field has-addons has-addons-centered">
                     <p class="control">
                         <button class="button is-success has-background-primary">
-                            Login
+                            Log in
                         </button>
                     </p>
                 </div>
@@ -52,3 +54,14 @@ permalink: /login/
         height: 80vh;
     }
 </style>
+
+{% contentfor extra-js no-convert %}
+    <script>
+        function sendHomeIfLogged(){
+            if(AWSGetLoggedUser()!=null){
+                window.location = "/";
+       }
+        }
+       window.onload = sendHomeIfLogged();
+    </script>
+{% endcontentfor %}
