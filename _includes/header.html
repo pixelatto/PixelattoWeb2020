@@ -65,7 +65,7 @@
                     </div>
                 </div>
                 {% else %}
-                <a href="{{ item.link | relative_url }}"
+                <a id="{{ item.name }}" href="{{ item.link | relative_url }}"
                     class="navbar-item {% if item.link == page.url %}is-active{% endif %}">{{ item.name }}</a>
                 {% endif %}
                 {% endfor %}
@@ -74,3 +74,19 @@
         </div>
     </div>
 </nav>
+
+{% contentfor extra-js no-convert %}
+    <script>
+        document.onreadystatechange = ()=>{
+            var userDropdownHTML = document.createElement('div');
+            userDropdownHTML.className = "navbar-item has-dropdown is-hoverable";
+            userDropdownHTML.innerHTML = '<a href="" class="navbar-link ">fali</a><div class="navbar-dropdown"><a href="/freegameslink" class="navbar-item ">Get free games!</a><a onclick="AWSLogout();" class="navbar-item ">Logout</a></div>'
+            
+            var loginHTML = document.getElementById('Log in');
+
+            if(AWSGetLoggedUser() != null && loginHTML != null){
+                loginHTML.parentNode.replaceChild(userDropdownHTML, loginHTML);
+            }
+        };
+    </script>
+{% endcontentfor %}

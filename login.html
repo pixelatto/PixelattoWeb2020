@@ -8,10 +8,9 @@ permalink: /login/
 
 
 <div class="hero is-medium is-vcentered is-full">
-    <div class="is-vertically-centered"
-        style="position: relative;">
+    <div class="is-vertically-centered" style="position: relative;">
         <div class="has-text-centered">
-            <div class="has-background-white" style="padding: 1.5rem 0;margin-bottom: 1.5rem;">
+            <form class="has-background-white" style="padding: 1.5rem 0;margin-bottom: 1.5rem;" onsubmit="event.preventDefault();loginUser(event);">
                 <h2 class="title has-text-primary has-text-weight-semibold is-1 is-size-5-mobile">
                    Log in to your account
                 </h2>
@@ -35,7 +34,7 @@ permalink: /login/
 
                 <div class="field has-addons has-addons-centered">
                     <p class="control">
-                        <button class="button is-success has-background-primary" onclick="loginUser();">
+                        <button class="button is-success has-background-primary">
                             Login
                         </button>
                     </p>
@@ -43,12 +42,10 @@ permalink: /login/
                 <h3 class="subtitle has-text-primary has-text-weight-semibold is-5 is-size-7-mobile">
                    <a href="/signup/">Or sign in to create a new one</a>
                 </h3>
-            </div>
+            </form>
         </div>
     </div>
 </div>
-
-
 
 <style>
     .hero {

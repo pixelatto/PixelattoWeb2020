@@ -1,6 +1,8 @@
 const sendOwlKey = "e673fe7e8bf201f";
 const sendOwlSecret = "c48f162eeeb51126494a";
 
+const loadingScreenHTML = document.getElementById("loading-screen");
+
 bulmaCarousel.attach('#product-carousel', {
     slidesToScroll: 4,
     slidesToShow: 4,
@@ -26,13 +28,11 @@ function submitAndRedirectToThanks() {
 
 bulmaCollapsible.attach('.is-collapsible');
 
-function loginUser(){
-    var username ="'" + document.getElementById("nick").value + "'";
-    var password ="'" + document.getElementById("password").value + "'";
+function loginUser(e){
+    var username = document.getElementById("nick").value;
+    var password = document.getElementById("password").value;
     var errordiv = document.getElementById("error");
-    
 
+    loadingScreenHTML.hidden = false;
     AWSLogin(username,password);
-    
-
 }
