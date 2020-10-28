@@ -1,0 +1,22 @@
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+    window.cookieconsent.initialise({
+        "palette": {
+            "popup": {
+                "background": "{{ main_color |  strip }}",
+                "text": "#ffffff"
+            },
+            "button": {
+                "background": "#59bfd7",
+                "text": "#ffffff"
+            }
+        },
+        "theme": "classic",
+        "content": {
+            "message": "This website uses UX cookies.",
+            "dismiss": "OK",
+            "link": "More Info",
+            "href": "/privacy/"
+        }
+    });
+</script>
