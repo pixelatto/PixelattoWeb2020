@@ -13,7 +13,16 @@ permalink: /thanks/
         <p class="subtitle is-5">We really appreciate your interest in our company.</p>
         <p class="subtitle is-5">As a little indie team trying to create amazing games and apps, your
             support to us is really awesome.</p>
-        <p class="subtitle is-5">In order to give you something to start, we are sending you some of our games for free!</p>
+        <div id="thank-you-registered" hidden>
+            <p class="subtitle is-5">In order to give you something to start, we are sending you some of our games for
+                free!</p>
+            <br>
+        </div>
+        <div id="thank-you-unregistered" hidden>
+            <p class="subtitle is-5"> 
+                <a href="/signup/">Register in our website </a>
+                 to be able to download your free games!</p>
+        </div>
         <br>
         <figure class="image is-128x128" style="margin: auto;">
             <img src="/img/resources/GiveLove.png">
@@ -24,12 +33,27 @@ permalink: /thanks/
 
 
 <style>
-  
-    @media screen and (min-width: 500px){
-  
-    .fullScreenArrangement {
-        padding: 20vh 0;
+    @media screen and (min-width: 500px) {
+
+        .fullScreenArrangement {
+            padding: 20vh 0;
         }
 
     }
 </style>
+
+{% contentfor extra-js no-convert %}
+<script>
+    const registered = document.getElementById("thank-you-registered");
+    const unregistered = document.getElementById("thank-you-unregistered");
+    function userIsLogged() {
+        if (AWSGetLoggedUser() != null) {
+            registered.hidden = false;
+        }
+        else {
+            unregistered.hidden = false;
+        }
+    }
+    window.onload = userIsLogged();
+</script>
+{% endcontentfor %}

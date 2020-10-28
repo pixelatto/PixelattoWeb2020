@@ -23,16 +23,37 @@ bulmaCarousel.attach('#testimonials-carousel', {
 
 function submitAndRedirectToThanks() {
     document.getElementById("subscribe-form").submit();
-    window.location="/thanks/";
+    window.location = "/thanks/";
 }
 
 bulmaCollapsible.attach('.is-collapsible');
 
-function loginUser(e){
+function loginUser(e) {
     var username = document.getElementById("nick").value;
     var password = document.getElementById("password").value;
-    var errordiv = document.getElementById("error");
 
     loadingScreenHTML.hidden = false;
-    AWSLogin(username,password);
+    AWSLogin(username, password);
+}
+
+function registerUser(e) {
+    var username = document.getElementById("nick").value;
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+    var password2 = document.getElementById("password2").value;
+    var suscribed = document.getElementById("suscribed").value;
+    if (username.length <3) {
+        alert('Your username should have at least 3 characheres')
+    }
+    else if (password != password2) {
+        alert('Passwords do not match');
+    }
+    else if (password.length < 6) {
+        alert('Your password should have at least 6 characters')
+    }
+    else {
+        AWSSignUp(username, email, password);
+         window.location = "/";
+    }
+
 }
