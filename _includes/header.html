@@ -77,32 +77,32 @@
 
 {% contentfor extra-js no-convert %}
     <script>
-        var userEmail = null;
-        if (AWSGetLoggedUser() != null) {
-            userSessionData = JSON.parse(sessionStorage.getItem("pixelatto_user_session"));
+        // var userEmail = null;
+        // if (AWSGetLoggedUser() != null) {
+        //     userSessionData = JSON.parse(sessionStorage.getItem("pixelatto_user_session"));
 
-            checkUserSuscribed(userSessionData.email).then((data)=>{
-                if(data.exact_matches.total_items > 0) {
-                    var getFreeGamesHTML = document.getElementById("free-games");
-                    getFreeGamesHTML.style = "";
-                    getFreeGamesHTML.onclick = ()=>{
-                        console.log(":D");
-                        // TODO añadir enlace de descarga de los juegos
-                    }
-                }
-            });
-        }
+        //     checkUserSuscribed(userSessionData.email).then((data)=>{
+        //         if(data.exact_matches.total_items > 0) {
+        //             var getFreeGamesHTML = document.getElementById("free-games");
+        //             getFreeGamesHTML.style = "";
+        //             getFreeGamesHTML.onclick = ()=>{
+        //                 console.log(":D");
+        //                 // TODO añadir enlace de descarga de los juegos
+        //             }
+        //         }
+        //     });
+        // }
 
-        document.onreadystatechange = ()=>{
-            var userDropdownHTML = document.createElement('div');
-            userDropdownHTML.className = "navbar-item has-dropdown is-hoverable";
-            userDropdownHTML.innerHTML = '<a href="" class="navbar-link ">fali</a><div class="navbar-dropdown"><a id="free-games" class="navbar-item has-text-white has-background-secondary" style="display:none;"><b>Get free games!</b></a><a onclick="AWSLogout();" class="navbar-item ">Logout</a></div>'
+        // document.onreadystatechange = ()=>{
+        //     var userDropdownHTML = document.createElement('div');
+        //     userDropdownHTML.className = "navbar-item has-dropdown is-hoverable";
+        //     userDropdownHTML.innerHTML = '<a href="" class="navbar-link ">fali</a><div class="navbar-dropdown"><a id="free-games" class="navbar-item has-text-white has-background-secondary" style="display:none;"><b>Get free games!</b></a><a onclick="AWSLogout();" class="navbar-item ">Logout</a></div>'
             
-            var loginHTML = document.getElementById('Log in');
+        //     var loginHTML = document.getElementById('Log in');
 
-            if(AWSGetLoggedUser() != null && loginHTML != null){
-                loginHTML.parentNode.replaceChild(userDropdownHTML, loginHTML);
-            }
-        };
+        //     if(AWSGetLoggedUser() != null && loginHTML != null){
+        //         loginHTML.parentNode.replaceChild(userDropdownHTML, loginHTML);
+        //     }
+        // };
     </script>
 {% endcontentfor %}

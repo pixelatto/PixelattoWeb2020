@@ -44,16 +44,16 @@ permalink: /thanks/
 
 {% contentfor extra-js no-convert %}
 <script>
-    const registered = document.getElementById("thank-you-registered");
-    const unregistered = document.getElementById("thank-you-unregistered");
-    function userIsLogged() {
-        if (AWSGetLoggedUser() != null) {
-            registered.hidden = false;
-        }
-        else {
-            unregistered.hidden = false;
-        }
-    }
-    window.onload = userIsLogged();
+    // const registered = document.getElementById("thank-you-registered");
+    // const unregistered = document.getElementById("thank-you-unregistered");
+    // function userIsLogged() {
+    //     if (AWSGetLoggedUser() != null) {
+    //         registered.hidden = false;
+    //     }
+    //     else {
+    //         unregistered.hidden = false;
+    //     }
+    // }
+    // window.onload = userIsLogged();
 </script>
 {% endcontentfor %}

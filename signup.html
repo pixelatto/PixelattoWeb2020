@@ -8,28 +8,30 @@ permalink: /signup/
 
 
 <div class="hero is-medium is-vcentered is-full">
-    <form id="signup" class="is-vertically-centered"
-        style="position: relative;" method="post" name="mc-embedded-signup" target="_blank" onsubmit="event.preventDefault();registerUser(event)">
+    <form id="signup" class="is-vertically-centered" style="position: relative;" method="post" name="mc-embedded-signup"
+        target="_blank" onsubmit="event.preventDefault();registerUser(event)">
         <div class="has-text-centered">
             <div class="has-background-white" style="padding: 1.5rem 0;margin-bottom: 1.5rem;">
                 <h2 class="title has-text-primary has-text-weight-semibold is-1 is-size-5-mobile">
-                   Create an account
+                    Create an account
                 </h2>
                 <h3 class="subtitle has-text-secondary has-text-weight-semibold is-5 is-size-7-mobile">
                     And subscribe to get games for free!
-                 </h3>
+                </h3>
                 <div class="field has-addons has-addons-centered">
                     <div class="control has-icons-left contact-form__item">
-                        <input class="input contact-form__input" type="text" id="nick" placeholder="Nickname" value="" name="NICKNAME" required>
+                        <input class="input contact-form__input" type="text" id="nick" placeholder="Nickname" value=""
+                            name="NICKNAME" required>
                         <span class="icon is-small is-left">
                             <i class="fas fa-users"></i>
                         </span>
                     </div>
                 </div>
-                
+
                 <div class="field has-addons has-addons-centered">
                     <div class="control has-icons-left contact-form__item">
-                        <input class="input contact-form__input" type="email" id="email" placeholder="E-mail" value="" name="EMAIL" required>
+                        <input class="input contact-form__input" type="email" id="email" placeholder="E-mail" value=""
+                            name="EMAIL" required>
                         <span class="icon is-small is-left">
                             <i class="fas fa-envelope"></i>
                         </span>
@@ -38,7 +40,8 @@ permalink: /signup/
 
                 <div class="field has-addons has-addons-centered">
                     <div class="control has-icons-left contact-form__item">
-                        <input class="input contact-form__input" type="password" id="password" placeholder="Password" value="" name="PASSWORD" required>
+                        <input class="input contact-form__input" type="password" id="password" placeholder="Password"
+                            value="" name="PASSWORD" required>
                         <span class="icon is-small is-left">
                             <i class="fas fa-lock"></i>
                         </span>
@@ -47,27 +50,28 @@ permalink: /signup/
 
                 <div class="field has-addons has-addons-centered">
                     <div class="control has-icons-left contact-form__item">
-                        <input class="input contact-form__input" type="password" id="password2" placeholder="Confirm your Password" value="" name="PASSWORD" required>
+                        <input class="input contact-form__input" type="password" id="password2"
+                            placeholder="Confirm your Password" value="" name="PASSWORD" required>
                         <span class="icon is-small is-left">
                             <i class="fas fa-check-double"></i>
                         </span>
                     </div>
                 </div>
-                
+
                 <label class="checkbox">
                     <input type="checkbox" id="suscribed">
                     I want to subscribe to the mailing list
-                  </label>
-                 
-                  <span style="display:block; height: 100;">
-                <div class="field has-addons has-addons-centered">
-                    <p class="control">
-                        <button class="button is-success has-background-primary">
-                            Sign up!
-                        </button>
-                    </p>
-                      </div>
-                    </span>
+                </label>
+
+                <span style="display:block; height: 100;">
+                    <div class="field has-addons has-addons-centered">
+                        <p class="control">
+                            <button class="button is-success has-background-primary">
+                                Sign up!
+                            </button>
+                        </p>
+                    </div>
+                </span>
             </div>
         </div>
     </form>
@@ -82,12 +86,13 @@ permalink: /signup/
 </style>
 
 {% contentfor extra-js no-convert %}
-    <script>
-        function sendHomeIfLogged(){
-            if(AWSGetLoggedUser()!=null){
-                window.location = "/";
-       }
-        }
-       window.onload = sendHomeIfLogged();
-    </script>
+<script>
+    // TODO unificar con la función del login
+    // function sendHomeIfLogged() {
+    //     if (AWSGetLoggedUser() != null) {
+    //         window.location = "/";
+    //     }
+    // }
+    // window.onload = sendHomeIfLogged();
+</script>
 {% endcontentfor %}

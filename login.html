@@ -10,15 +10,17 @@ permalink: /login/
 <div class="hero is-medium is-vcentered is-full">
     <div class="is-vertically-centered" style="position: relative;">
         <div class="has-text-centered">
-            <form class="has-background-white" style="padding: 1.5rem 0;margin-bottom: 1.5rem;" onsubmit="event.preventDefault();loginUser(event);">
+            <form class="has-background-white" style="padding: 1.5rem 0;margin-bottom: 1.5rem;"
+                onsubmit="event.preventDefault();loginUser(event);">
                 <h2 class="title has-text-primary has-text-weight-semibold is-1 is-size-5-mobile">
-                   Log in to your account
+                    Log in to your account
                 </h2>
-                
+
 
                 <div class="field has-addons has-addons-centered">
                     <div class="control has-icons-left contact-form__item">
-                        <input class="input contact-form__input" id="nick" type="text" placeholder="Nick/E-mail" value="" required>
+                        <input class="input contact-form__input" id="nick" type="text" placeholder="Nick/E-mail"
+                            value="" required>
                         <span class="icon is-small is-left">
                             <i class="fas fa-users"></i>
                         </span>
@@ -27,7 +29,8 @@ permalink: /login/
 
                 <div class="field has-addons has-addons-centered">
                     <div class="control has-icons-left contact-form__item">
-                        <input class="input contact-form__input" id="password" type="password" placeholder="Password" value="" name="PASSWORD" required>
+                        <input class="input contact-form__input" id="password" type="password" placeholder="Password"
+                            value="" name="PASSWORD" required>
                         <span class="icon is-small is-left">
                             <i class="fas fa-lock"></i>
                         </span>
@@ -42,7 +45,7 @@ permalink: /login/
                     </p>
                 </div>
                 <h3 class="subtitle has-text-primary has-text-weight-semibold is-5 is-size-7-mobile">
-                   <a href="/signup/">Or sign in to create a new one</a>
+                    <a href="/signup/">Or sign in to create a new one</a>
                 </h3>
             </form>
         </div>
@@ -56,12 +59,12 @@ permalink: /login/
 </style>
 
 {% contentfor extra-js no-convert %}
-    <script>
-        function sendHomeIfLogged(){
-            if(AWSGetLoggedUser()!=null){
-                window.location = "/";
-       }
-        }
-       window.onload = sendHomeIfLogged();
-    </script>
+<script>
+    // function sendHomeIfLogged() {
+    //     if (AWSGetLoggedUser() != null) {
+    //         window.location = "/";
+    //     }
+    // }
+    // window.onload = sendHomeIfLogged();
+</script>
 {% endcontentfor %}
