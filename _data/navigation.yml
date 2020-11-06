@@ -5,8 +5,8 @@
       link: /products/reventure/
     - name: Card Creator
       link: /products/card-creator/
-# - name: Blog
-#   link: /blog/
+- name: Blog
+  link: /blog/
   # dropdown: 
   #   - name: Categories
   #     link: /categories/

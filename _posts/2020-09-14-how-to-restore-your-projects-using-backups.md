@@ -4,11 +4,7 @@ title: How to restore your projects using backups
 date: 2020-09-14T10:03:51.776Z
 categories: Guides
 ---
-
-
 Learn how the backups system works and how to restore them
-
----
 
 Restoring a backup in Card Creator is a **really simple** process.
 

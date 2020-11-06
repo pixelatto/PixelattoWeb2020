@@ -30,6 +30,16 @@ a.navbar-item:hover{
     color: $primary;
 }
 
-a{
+a {
     color: $primary;
+}
+
+.pagination-link.is-current {
+    background-color: $primary;
+    border-color: $primary;
+    cursor: initial;
+}
+
+ [disabled].pagination-previous {
+    cursor: initial;
 }
