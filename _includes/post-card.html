@@ -1,0 +1,45 @@
+<div class="card">
+    {% if post.image %}
+    <div class="card-image">
+        <img src="/img/posts/{{ post.image }}" alt="{{ post.title }}">
+    </div>
+    {% else %}
+    <header class="card-header">
+        <a class="card-header-title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title}}</a>
+    </header>
+    {% endif %}
+    <div class="card-content">
+        <div class="content">
+            {% if post.image %}
+            <a class="title is-4" href="{{ site.baseurl }}{{ post.url }}">{{ post.title}}</a>
+            {% endif %}
+            {% if post.summary %}
+            {{ post.summary | markdownify }}
+            {% else %}
+            <p>{{ post.excerpt | markdownify }}</p>
+            {% endif %}
+        </div>
+        <div class="has-text-centered">
+            <a href="{{ site.baseurl }}{{ post.url }}" class="button is-primary">Read more</a>
+        </div>
+    </div>
+    <footer class="card-footer">
+        <p class="card-footer-item">Published by {{ post.author }} at {{ post.date | date: "%b %-d, %Y" }}</p>
+    </footer>
+</div>
+
+<style>
+    .card {
+        height: 100%;
+    }
+
+    .card-content {
+        padding-bottom: 5rem;
+    }
+
+    .card-footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+</style>

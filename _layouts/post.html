@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<div class="content">
+  <img class="hero" src="/img/posts/{{ page.image }}">
+  <h1 class="title is-1">{{ page.title }}</h1>
+  <p>Published: {{ page.date | date: "%b %-d, %Y" }} by {{ page.author }}</p>
+
+  {{ content }}
+</div>
+
+<div class="tags">
+  {% for tag in page.tags %}
+  <span class="tag is-primary">{{ tag }}</span>
+  {% endfor %}
+</div>
+
+{% unless site.hide_share_buttons %}
+{% include share-buttons.html %}
+{% endunless %}
+
+<!-- {% if site.disqus.shortname %}
+  {% include disqus.html %}
+{% endif %} -->
+
+<style>
+  .title:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
+</style>
