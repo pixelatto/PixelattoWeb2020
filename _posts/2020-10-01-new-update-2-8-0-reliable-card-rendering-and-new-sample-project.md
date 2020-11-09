@@ -2,7 +2,7 @@
 layout: post
 title: New Update (2.8.0) - "Reliable card rendering and new sample project"
 date: 2019-12-19T11:11:52.790Z
-categories: PatchNotes
+tags: PatchNotes
 ---
 <!--StartFragment-->
 

@@ -2,7 +2,7 @@
 layout: post
 title: Pixelatto 2.0 (New website and Logo)
 date: 2020-09-14T08:44:39.969Z
-categories: Pixelatto
+tags: Pixelatto
 image: card-creator-logo_padding.svg
 hide_hero: true
 summary: New improvements and fixes of the last Card Creator update!

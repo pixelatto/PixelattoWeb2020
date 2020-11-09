@@ -3,16 +3,36 @@ layout: default
 ---
 
 {{ content }}
+<h1 class="title is-2">What's going on at Pixelatto</h1>
 
+<div style="margin-bottom: 1rem;">
+    <p class="subtitle is-4">Tags</p>
+
+    <button onclick="window.location='/blog'" class="tag-button button is-primary">#All</button>
+    {% for tag in site.tags %}
+    <button onclick="window.location='{{ tag.url }}'" class="tag-button button is-primary">#{{ tag.tag }}</button>
+    {% endfor %}
+</div>
+
+<p class="subtitle is-4">Articles</p>
 <div class="columns is-multiline">
-    {% for post in paginator.posts %}
+    {% if page.tag %}
+    {% assign posts = site.posts | where_exp:"item","item.tags contains page.tag" %}
+    {% else %}
+    {% assign posts = paginator.posts %}
+    {% endif %}
+
+    {% for post in posts %}
     <div class="column is-4">
         {% include post-card.html %}
     </div>
     {% endfor %}
+
+    {% unless page.tag %}
     <div class="column is-12" style="margin-top: 1rem;">
         {% include pagination.html %}
     </div>
+    {% endunless %}
 </div>
 
 {% include subscribe-form.html %}
@@ -23,7 +43,7 @@ layout: default
     }
 
     .card-content {
-        padding-bottom: 10rem;
+        padding-bottom: 12rem;
     }
 
     .card-footer {
@@ -33,12 +53,11 @@ layout: default
         border: none;
         display: block;
     }
-    
+
     .read-more {
         width: 100%;
         margin: auto;
         display: block;
-        margin-bottom: 1rem;
     }
 
     .card-footer-item {

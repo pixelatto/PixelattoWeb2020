@@ -2,7 +2,7 @@
 layout: post
 title: New Update (2.14.9) - [Beta branch]
 date: 2020-07-22T06:05:38.958Z
-categories: PatchNotes
+tags: PatchNotes
 ---
 **✨ New Features**
 

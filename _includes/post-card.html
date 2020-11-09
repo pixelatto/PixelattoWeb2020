@@ -1,30 +1,36 @@
 <div class="card">
-    {% if post.image %}
-    <div class="card-image">
-        <img src="/img/posts/{{ post.image }}" alt="{{ post.title }}">
-    </div>
-    {% else %}
-    <header class="card-header">
-        <a class="card-header-title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title}}</a>
-    </header>
-    {% endif %}
-    <div class="card-content">
-        <div class="content">
-            {% if post.image %}
-            <a class="title is-4" href="{{ site.baseurl }}{{ post.url }}">{{ post.title}}</a>
-            {% endif %}
-            {% if post.summary %}
-            <p>{{ post.summary | markdownify }}</p>
-            {% else %}
-            <p>{{ post.excerpt | markdownify }}</p>
-            {% endif %}
+    <a href="{{ site.baseurl }}{{ post.url }}" style="color: initial;">
+        {% if post.image %}
+        <div class="card-image">
+            <img style="padding: 1rem 1rem 0 1rem;" src="/img/posts/{{ post.image }}" alt="{{ post.title }}">
         </div>
-    </div>
+        {% else %}
+        <header class="card-header">
+            <p class="card-header-title">{{ post.title}}</p>
+        </header>
+        {% endif %}
+        <div class="card-content">
+            <div class="content">
+                {% if post.image %}
+                <p class="title is-4">{{ post.title}}</p>
+                {% endif %}
+                {% if post.summary %}
+                <p>{{ post.summary | markdownify }}</p>
+                {% else %}
+                <p>{{ post.excerpt | markdownify }}</p>
+                {% endif %}
+            </div>
+        </div>
+    </a>
     <footer class="card-footer">
-        <div class="read-more has-text-centered">
-            <a href="{{ site.baseurl }}{{ post.url }}" class="button is-primary">Read more</a>
+        <div style="padding: 0 1.5rem;">
+            {% for tagName in post.tags %}
+            {% assign tag = site.tags | where_exp:"item","item.tag == tagName" | first %}
+            <button onclick="window.location='{{ tag.url }}'"
+                class="button is-small is-primary tag-button" style="border-radius: 30px 30px 30px 0;">#{{ tag.tag }}</button>
+            {% endfor %}
         </div>
 
-        <p class="card-footer-item">Published by {{ post.author }} at {{ post.date | date: "%b %-d, %Y" }}</p>
+        <p class="card-footer-item">Published by {{ post.author }}, {{ post.date | date: "%b %-d of %Y" }}</p>
     </footer>
 </div>

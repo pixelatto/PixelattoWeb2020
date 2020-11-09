@@ -2,7 +2,7 @@
 layout: post
 title: Collections
 date: 2020-09-14T09:49:45.950Z
-categories: Guides
+tags: Guides
 image: card-creator-logo_padding.svg
 hide_hero: true
 summary: New improvements and fixes of the last Card Creator update!

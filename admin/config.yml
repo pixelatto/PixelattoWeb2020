@@ -71,4 +71,21 @@ collections:
       - {label: "Nombre", name: "title", widget: "string"}
       - {label: "Fecha", name: "date", widget: "datetime", required: false}
       - {label: "Contenido", name: "body", widget: "markdown", required: false}
-      - {label: "Categorías", name: "categories", widget: "string"}
+      - {label: "Ocultar Hero", name: "hide_hero", widget: "hidden", default: "true"}
+      - label: "Categorías"
+        name: "tags"
+        widget: "relation"
+        collection: "tags"
+        valueField: "tag"
+        searchFields: ["tag"]
+        multiple: true
+        required: false
+        
+  - name: "tags"
+    label: "Categorías"
+    folder: "_tags"
+    create: true
+    identifier_files: tag
+    fields:
+      - {label: "Categoría", name: "tag", widget: "string"}
+      - {label: "Ocultar Hero", name: "hide_hero", widget: "hidden", default: "true"}

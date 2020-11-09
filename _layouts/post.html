@@ -11,9 +11,11 @@ layout: default
     {{ content }}
   </div>
 
-  <div class="tags">
-    {% for tag in page.tags %}
-    <span class="tag is-primary">{{ tag }}</span>
+  <div style="margin: 1rem 0;">
+    <p><strong>Tags</strong></p>
+    {% for tagName in page.tags %}
+      {% assign tag = site.tags | where_exp:"item","item.tag == tagName" | first %}
+      <button onclick="window.location='{{ tag.url }}'" class="tag-button button is-primary">#{{ tag.tag }}</button>
     {% endfor %}
   </div>
 

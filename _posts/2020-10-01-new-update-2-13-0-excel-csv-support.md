@@ -2,7 +2,7 @@
 layout: post
 title: New Update (2.13.0) - "Excel & CSV support"
 date: 2020-05-01T08:16:38.105Z
-categories: PatchNotes
+tags: PatchNotes
 ---
 Hi CardCreators !\
 \

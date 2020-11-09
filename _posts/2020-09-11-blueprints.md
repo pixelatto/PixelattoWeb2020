@@ -2,7 +2,7 @@
 layout: post
 title: Blueprints
 date: 2020-09-11T10:00:30.274Z
-categories: Guides
+tags: Guides
 image: card-creator-logo_padding.svg
 hide_hero: true
 summary: New improvements and fixes of the last Card Creator update!

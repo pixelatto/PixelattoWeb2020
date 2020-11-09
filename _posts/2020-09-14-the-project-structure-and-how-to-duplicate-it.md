@@ -2,7 +2,7 @@
 layout: post
 title: The project structure and how to duplicate it
 date: 2020-09-14T10:02:55.638Z
-categories: Guides
+tags: Guides
 image: card-creator-logo_padding.svg
 hide_hero: true
 summary: New improvements and fixes of the last Card Creator update!

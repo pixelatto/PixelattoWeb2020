@@ -2,7 +2,7 @@
 layout: post
 title: New Update (2.7.0) - "Text rendering fixes and new sample project"
 date: 2019-12-11T11:21:47.916Z
-categories: PatchNotes
+tags: PatchNotes
 ---
 <!--StartFragment-->
 

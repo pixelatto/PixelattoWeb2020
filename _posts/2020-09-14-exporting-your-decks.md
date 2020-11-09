@@ -2,7 +2,7 @@
 layout: post
 title: Exporting your decks
 date: 2020-09-14T09:59:49.783Z
-categories: Guides
+tags: Guides
 image: card-creator-logo_padding.svg
 hide_hero: true
 summary: New improvements and fixes of the last Card Creator update!

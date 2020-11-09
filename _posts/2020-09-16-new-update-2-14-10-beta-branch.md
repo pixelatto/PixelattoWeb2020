@@ -2,7 +2,7 @@
 layout: post
 title: New Update (2.14.10) - [Beta branch]
 date: 2020-07-29T11:31:21.978Z
-categories: PatchNotes
+tags: PatchNotes
 ---
 ✨ **New Features**
 

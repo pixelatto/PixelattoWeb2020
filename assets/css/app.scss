@@ -43,3 +43,7 @@ a {
  [disabled].pagination-previous {
     cursor: initial;
 }
+
+.pagination-previous:focus, .pagination-next:focus, .pagination-link:focus {
+    border-color: $primary;
+}
