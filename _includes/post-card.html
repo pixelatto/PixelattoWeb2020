@@ -14,32 +14,17 @@
             <a class="title is-4" href="{{ site.baseurl }}{{ post.url }}">{{ post.title}}</a>
             {% endif %}
             {% if post.summary %}
-            {{ post.summary | markdownify }}
+            <p>{{ post.summary | markdownify }}</p>
             {% else %}
             <p>{{ post.excerpt | markdownify }}</p>
             {% endif %}
         </div>
-        <div class="has-text-centered">
-            <a href="{{ site.baseurl }}{{ post.url }}" class="button is-primary">Read more</a>
-        </div>
     </div>
     <footer class="card-footer">
+        <div class="read-more has-text-centered">
+            <a href="{{ site.baseurl }}{{ post.url }}" class="button is-primary">Read more</a>
+        </div>
+
         <p class="card-footer-item">Published by {{ post.author }} at {{ post.date | date: "%b %-d, %Y" }}</p>
     </footer>
 </div>
-
-<style>
-    .card {
-        height: 100%;
-    }
-
-    .card-content {
-        padding-bottom: 5rem;
-    }
-
-    .card-footer {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-    }
-</style>

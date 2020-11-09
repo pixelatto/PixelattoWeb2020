@@ -6,7 +6,7 @@ layout: default
 
 <div class="columns is-multiline">
     {% for post in paginator.posts %}
-    <div class="column is-6">
+    <div class="column is-4">
         {% include post-card.html %}
     </div>
     {% endfor %}
@@ -16,3 +16,37 @@ layout: default
 </div>
 
 {% include subscribe-form.html %}
+
+<style>
+    .card {
+        height: 100%;
+    }
+
+    .card-content {
+        padding-bottom: 10rem;
+    }
+
+    .card-footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        border: none;
+        display: block;
+    }
+    
+    .read-more {
+        width: 100%;
+        margin: auto;
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    .card-footer-item {
+        border-top: 1px solid #ededed;
+        text-align: center;
+        flex-basis: none;
+        flex-grow: none;
+        flex-shrink: none;
+        display: block;
+    }
+</style>

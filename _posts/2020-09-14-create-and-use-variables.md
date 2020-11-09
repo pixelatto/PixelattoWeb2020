@@ -3,6 +3,10 @@ layout: post
 title: Create and use Variables
 date: 2020-09-14T09:53:50.573Z
 categories: Guides
+image: card-creator-logo_padding.svg
+hide_hero: true
+summary: New improvements and fixes of the last Card Creator update!
+author: Juan Delgado
 ---
 Learn how to create, edit and use variables to embed images or data in the text of your cards...
 

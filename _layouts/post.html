@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="content">
+<div class="post content">
   <img class="hero" src="/img/posts/{{ page.image }}">
   <h1 class="title is-1">{{ page.title }}</h1>
   <p>Published: {{ page.date | date: "%b %-d, %Y" }} by {{ page.author }}</p>
@@ -27,5 +27,10 @@ layout: default
 <style>
   .title:not(:last-child) {
     margin-bottom: 0.5rem;
+  }
+
+  .post {
+    max-width: 700px;
+    margin: auto;
   }
 </style>

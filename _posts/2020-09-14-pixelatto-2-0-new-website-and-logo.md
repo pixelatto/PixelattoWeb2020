@@ -3,6 +3,10 @@ layout: post
 title: Pixelatto 2.0 (New website and Logo)
 date: 2020-09-14T08:44:39.969Z
 categories: Pixelatto
+image: card-creator-logo_padding.svg
+hide_hero: true
+summary: New improvements and fixes of the last Card Creator update!
+author: Juan Delgado
 ---
 We've made some changes to our website (and our logo)!
 
