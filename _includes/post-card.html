@@ -2,7 +2,7 @@
     <a href="{{ site.baseurl }}{{ post.url }}" style="color: initial;">
         {% if post.image %}
         <div class="card-image">
-            <img style="padding: 1rem 1rem 0 1rem;" src="/img/posts/{{ post.image }}" alt="{{ post.title }}">
+            <img class="is-vertically-centered" style="padding: 1rem 1rem 0 1rem;" src="/img/upload/{{ post.image }}" alt="{{ post.title }}">
         </div>
         {% else %}
         <header class="card-header">
@@ -31,6 +31,6 @@
             {% endfor %}
         </div>
 
-        <p class="card-footer-item">Published by {{ post.author }}, {{ post.date | date: "%b %-d of %Y" }}</p>
+        <p class="card-footer-item">Published: {{ post.date | date: "%b %-d, %Y" }} by {{ post.author }}</p>
     </footer>
 </div>
