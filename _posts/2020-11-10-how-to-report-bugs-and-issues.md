@@ -5,6 +5,7 @@ summary: Learn about reporting a bug on Card Creator
 date: 2020-05-25T11:43:13.696Z
 author: Juan Delgado
 hide_hero: "true"
+image: report_bugs.jpg
 tags:
   - Guides
 ---
