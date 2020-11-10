@@ -71,7 +71,7 @@ collections:
       - {label: "Nombre", name: "title", widget: "string"}
       - {label: "Resumen", name: "summary", widget: "string"}
       - {label: "Fecha", name: "date", widget: "datetime", required: false}
-      - {label: "Autor", name: "author", widget: "datetime", required: false}
+      - {label: "Autor", name: "author", widget: "string"}
       - {label: "Contenido", name: "body", widget: "markdown", required: false}
       - {label: "Ocultar Hero", name: "hide_hero", widget: "hidden", default: "true"}
       - label: "Categorías"
