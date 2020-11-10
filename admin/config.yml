@@ -68,6 +68,7 @@ collections:
     identifier_field: name
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Miniatura", name: "image", widget: "image"}
       - {label: "Nombre", name: "title", widget: "string"}
       - {label: "Resumen", name: "summary", widget: "string"}
       - {label: "Fecha", name: "date", widget: "datetime", required: false}
