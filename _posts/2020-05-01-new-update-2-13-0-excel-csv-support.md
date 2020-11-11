@@ -3,7 +3,7 @@ layout: post
 title: New Update (2.13.0) - Excel & CSV support
 date: 2020-05-01T08:16:38.105Z
 tags: [PatchNotes, Guides]
-image: card-creator-logo_padding.svg
+image: card-creator-patch-notes-2-13-0.png
 hide_hero: true
 summary: Now you can export/import your project using excel/csv files
 author: Juan Delgado

@@ -3,7 +3,7 @@ layout: post
 title: New Update (2.8.0) - "Reliable card rendering and new sample project"
 date: 2019-12-19T11:11:52.790Z
 tags: PatchNotes
-image: card-creator-logo_padding.svg
+image: card-creator-patch-notes-2-8-0.png
 hide_hero: true
 summary: New improvements and fixes of the last Card Creator update!
 author: Juan Delgado

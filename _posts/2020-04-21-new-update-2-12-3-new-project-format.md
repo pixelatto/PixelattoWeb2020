@@ -3,7 +3,7 @@ layout: post
 title: New Update (2.12.3) - New project format
 date: 2020-04-21T08:27:22.393Z
 tags: [PatchNotes, Guides]
-image: card-creator-logo_padding.svg
+image: card-creator-patch-notes-2-12-3.png
 hide_hero: true
 summary: New Project Format
 author: Juan Delgado

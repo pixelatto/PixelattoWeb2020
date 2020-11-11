@@ -3,7 +3,7 @@ layout: post
 title: New Update (2.14.14) - [Beta branch]
 date: 2020-09-10T10:42:22.093Z
 tags: PatchNotes
-image: card-creator-logo_padding.svg
+image: card-creator-patch-notes-2-14-14.png
 hide_hero: true
 summary: New improvements and fixes of the last Card Creator update!
 author: Juan Delgado
