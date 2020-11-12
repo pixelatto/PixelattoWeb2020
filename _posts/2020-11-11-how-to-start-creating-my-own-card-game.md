@@ -1,11 +1,11 @@
 ---
 layout: post
-title: How to start creating my own card game
+image: create-card-game.jpg
+title: How to start creating my own card game - The origin of Card Creator
 summary: Discover different approaches for creating your own card game
 date: 2020-11-11
 author: Fali Ronda
 hide_hero: "true"
-image: create-card-game.jpg
 tags:
   - Guides
 ---
