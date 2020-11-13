@@ -14,8 +14,8 @@
                 {% if post.image %}
                 <p class="title is-4">{{ post.title}}</p>
                 {% endif %}
-                {% if post.summary %}
-                <p>{{ post.summary | markdownify }}</p>
+                {% if post.description %}
+                <p>{{ post.description | markdownify }}</p>
                 {% else %}
                 <p>{{ post.excerpt | markdownify }}</p>
                 {% endif %}

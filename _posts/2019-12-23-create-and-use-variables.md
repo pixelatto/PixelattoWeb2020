@@ -1,11 +1,13 @@
 ---
 layout: post
-title: Create and use Variables
+title: Card Creator - Create and use Variables
+keywords: card creator guide, card creator variables, card creator tutorial
+
 date: 2019-12-23T09:53:50.573Z
 tags: Guides
 image: variables.png
 hide_hero: true
-summary: Learn how to create, edit and use variables to embed images or data in the text of your cards...
+description: Learn how to create, edit and use variables to embed images or data in the text of your cards...
 author: Juan Delgado
 ---
 

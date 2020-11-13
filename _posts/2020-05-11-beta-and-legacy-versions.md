@@ -1,11 +1,12 @@
 ---
 layout: post
-title: Beta and legacy versions
+title: Card Creator - How to use beta and legacy versions
+keywords: card creator guide, card creator beta, card creator tutorial
 date: 2020-05-11T10:00:30.274Z
 tags: Guides
 image: beta.jpg
 hide_hero: true
-summary: Learn how to change to different versions of the application
+description: Learn how to change to different versions of the application
 author: Juan Delgado
 ---
 

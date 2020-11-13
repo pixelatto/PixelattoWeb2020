@@ -1,7 +1,8 @@
 ---
 layout: post
-title: How to report bugs and issues
-summary: Learn about reporting a bug on Card Creator
+title: Card Creator - How to report bugs and issues
+keywords: card creator guide, card creator report, card creator, support, card creator tutorial, card creator bug
+description: Learn about reporting a bug on Card Creator
 date: 2020-05-25T11:43:13.696Z
 author: Juan Delgado
 hide_hero: "true"

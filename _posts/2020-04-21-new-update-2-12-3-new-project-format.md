@@ -1,11 +1,13 @@
 ---
 layout: post
-title: New Update (2.12.3) - New project format
+title: Card Creator - New Update (2.12.3) - New project structure
+keywords: card creator guide, card creator project structure, card creator tutorial, card creator patch notes, card creator update
+
 date: 2020-04-21T08:27:22.393Z
 tags: [PatchNotes, Guides]
 image: card-creator-patch-notes-2-12-3.png
 hide_hero: true
-summary: New Project Format
+description: New Project Format
 author: Juan Delgado
 ---
 Hi CardCreators!

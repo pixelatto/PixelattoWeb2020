@@ -2,7 +2,10 @@
 code: reventure
 
 title: Reventure
-permalink: /products/reventure/
+description: The award-winning non-linear adventure with 100+ endings!
+keywords: reventure, 100 endings, 2d, pixel, platformer, adventure, videogame
+
+permalink: /store/reventure/
 layout: empty
 
 theme_text: is-secondary

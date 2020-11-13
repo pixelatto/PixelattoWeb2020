@@ -1,11 +1,12 @@
 ---
 layout: post
 title: Pixelatto 2.0, new website and logo!
+description: We've made some changes to our website and logo - store, blog and more!
+
 date: 2020-09-14T08:44:39.969Z
 tags: Pixelatto
 image: pixelatto2020logo.svg
 hide_hero: true
-summary: We've made some changes to our website (and to our logo)!
 author: Adri Nuñez
 ---
 
