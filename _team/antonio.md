@@ -9,6 +9,7 @@ twitter_override: http://aberrocal.blogspot.com/
 image: /img/avatars/Antonio.svg
 hashtags: [Drawtastic, PezTomiller, Cartooner]
 order: 6
+hidden: true
 ---
 
 Antonio is a drawing master, waiting to share with you all the art he's creating. We won't allow him though, since that info is CLASSIFIED.
