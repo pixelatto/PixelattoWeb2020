@@ -1,10 +1,10 @@
-- name: Products
-  link: /products/
+- name: Store
+  link: /store/
   dropdown: 
     - name: Reventure
-      link: /products/reventure/
+      link: /store/reventure/
     - name: Card Creator
-      link: /products/card-creator/
+      link: /store/card-creator/
 - name: Blog
   link: /blog/
   # dropdown: 

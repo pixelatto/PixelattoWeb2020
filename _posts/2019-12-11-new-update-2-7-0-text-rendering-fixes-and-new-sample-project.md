@@ -1,11 +1,11 @@
 ---
 layout: post
-title: New Update (2.7.0) - "Text rendering fixes and new sample project"
+title: Card Creator - New Update (2.7.0) - "Text rendering fixes and new sample project"
 date: 2019-12-11T11:21:47.916Z
 tags: PatchNotes
 image: card-creator-patch-notes-2-7-0.png
 hide_hero: true
-summary: New improvements and fixes of the last Card Creator update!
+description: New improvements and fixes of the last Card Creator update!
 author: Juan Delgado
 ---
 <!--StartFragment-->

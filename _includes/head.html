@@ -1,31 +1,66 @@
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ page.title }} - {{ site.title }}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/app.css">
-    <link rel="stylesheet" href="{{ site.baseurl }}/css/bulma-extensions.css">
-    <link rel="stylesheet" href="{{ site.baseurl }}/css/bulma-timeline.css">
-    <link rel="stylesheet" href="{{ site.baseurl }}/css/bulma-gallery-lightbox.css">
-    <link rel="stylesheet" href="{{ site.baseurl }}/css/bulma-carousel.min.css">
-    <link rel="stylesheet" href="{{ site.baseurl }}/css/bulma-collapsible.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+  <!-- SEO data -->
+  <!-- Page data -->
+  <title>
+    {% if page.title %}
+    {{ page.title }}
+    {% else %}
+    {{ site.title }}
+    {% endif %}
+  </title>
 
-    <link rel="shortcut icon" type="image/png"
-          {% if site.favicon %} href="{{ site.favicon | relative_url }}" {% else %} href="{{ site.baseurl }}/favicon.svg" {% endif %}
-    />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/all.min.css">
+  <meta itemprop="description" name="description" content="{% if page.description %}{{ page.description | truncate: 160 }}{% else %}{{ site.description | truncate: 160  }}{% endif %}" />
+  <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}">
 
-    {% unless site.hide_share_buttons %}
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@1/bin/bulma-social.min.css">
-    {% endunless %}
+  <!-- Open graph tags -->
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="{%if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <!-- <meta property="og:image" content="{% if page.social_media_image %}{{ site.url }}{{ page.social_media_image }}{% else %}{{ site.url }}{{ page.image }}{% endif %}" /> -->
+  <meta property="og:site_name" content="Pixelatto | Creative games and tools">
+  <meta property="article:published_time" content="{{ page.date }}" />
+  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 
-    <link rel="stylesheet" href="{{ site.baseurl }}/css/custom.css">
+  <!-- Twitter card tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{%if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="twitter:site" content="@Pixelatto" />
+  <meta name="twitter:creator" content="@Pixelatto">
+  <meta name="twitter:card" content="summary">
 
-    {% seo %}
-    {%- if site.google_analytics -%}
-      {%- include google-analytics.html -%}
-    {%- endif -%}
-    {%- include head-scripts.html -%}
+  <!-- Canonical URLS -->
+  <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}" />
+
+
+  <!-- CSS resources -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/app.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/bulma-extensions.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/bulma-timeline.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/bulma-gallery-lightbox.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/bulma-collapsible.min.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+
+  <link rel="shortcut icon" type="image/png" {% if site.favicon %} href="{{ site.favicon | relative_url }}" {% else %}
+    href="{{ site.baseurl }}/favicon.svg" {% endif %} />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/all.min.css">
+
+  {% unless site.hide_share_buttons %}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@1/bin/bulma-social.min.css">
+  {% endunless %}
+
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/custom.css">
+
+  {% seo %}
+  {%- if site.google_analytics -%}
+  {%- include google-analytics.html -%}
+  {%- endif -%}
+  {%- include head-scripts.html -%}
 </head>

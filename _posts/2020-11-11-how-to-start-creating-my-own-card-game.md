@@ -2,7 +2,9 @@
 layout: post
 image: create-card-game.jpg
 title: How to start creating my own card game - The origin of Card Creator
-summary: Discover different approaches for creating your own card game
+description: Discover different approaches for creating your own card game
+keywords: card creation tools, create card games, design card game, design tabletop game, create tabletop game
+
 date: 2020-11-11
 author: Fali Ronda
 hide_hero: "true"
@@ -12,7 +14,7 @@ tags:
 
 ### "I'm going to create my own Card Game!... but how?"
 
-There are several options when searching for "how to make a card game", "design card game" or "card creation tool" at Google, but most of them are not oriented to games and there are several tools for doing it, so we ended up testing them and creating **[Card Creator](http://www.pixelatto.com/products/card-creator/)** later.
+There are several options when searching for "how to make a card game", "design card game" or "card creation tool" at Google, but most of them are not oriented to games and there are several tools for doing it, so we ended up testing them and creating **[Card Creator](http://www.pixelatto.com/store/card-creator/)** later.
 
 Those tools have very different feature sets and goals, so depending on what your project is about you will find this or that more useful. Let's start summarizing them!
 
@@ -101,7 +103,7 @@ While it is true that after checking the options so far this one seems to be the
 
 At this point we went back in time and started thinking: "hmm, perhaps we should make our art assets using photoshop, but we should handle cards and decks with another tool similar to nanDECK...".
 
-SPOILER: we were getting closer to the point we decided to make our own Card Creation software, [**Card Creator**](https://pixelatto.com/products/card-creator/).
+SPOILER: we were getting closer to the point we decided to make our own Card Creation software, [**Card Creator**](https://pixelatto.com/store/card-creator/).
 
 - Pros
   - 100% flexibility designing graphics for our cards
@@ -133,4 +135,4 @@ If you read the spoiler above you probably know the answer. We needed a tool to 
     </iframe>
 </figure>
 
-So we have finally arrived... here is when we decided to make [**Card Creator**](http://www.pixelatto.com/products/card-creator/), the card creation tool that allows you to do all that and more! And this was its origin and the reason for its existence.
+So we have finally arrived... here is when we decided to make [**Card Creator**](http://www.pixelatto.com/store/card-creator/), the card creation tool that allows you to do all that and more! And this was its origin and the reason for its existence.

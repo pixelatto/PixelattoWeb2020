@@ -63,7 +63,7 @@ presskit: "active"
 id_name: 'reventure'
 tag: game
 hidden: false
-website: 'https://pixelatto.com/products/reventure'
+website: 'https://pixelatto.com/store/reventure'
 price: {currency: €, value: '4.99'}
 histories:
   history: [

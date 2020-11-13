@@ -1,11 +1,12 @@
 ---
 layout: post
-title: Exporting your decks
+title: Card Creator - Exporting your decks
+keywords: card creator guide, how export card creator, card creator tutorial
 date: 2017-09-13T20:09:49.783Z
 tags: Guides
 image: CardCreator_03.png
 hide_hero: true
-summary: Learn how to export your cards into different media and applications
+description: Learn how to export your cards into different media and applications
 author: Juan Delgado
 ---
 ## Basic Exporting

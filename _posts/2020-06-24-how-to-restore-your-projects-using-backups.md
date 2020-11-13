@@ -1,11 +1,12 @@
 ---
 layout: post
-title: How to restore your projects using backups
+title: Card Creator - How to restore your projects using backups
+keywords: card creator guide, card creator restore project, card creator tutorial, card creator backup
 date: 2020-06-24T10:03:51.776Z
 tags: Guides
 image: restore.png
 hide_hero: true
-summary: Learn how the backups system works and how to restore them
+dsecription: Learn how the backups system works and how to restore them
 author: Fali Ronda
 ---
 
