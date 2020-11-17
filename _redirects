@@ -1,3 +1,5 @@
-/suscribe/          /subscribe/
-/suscribe           /subscribe/
-/api/*  https://www.sendowl.com/api/v1/products/:splat  200
+/suscribe/                                                  /subscribe/
+/suscribe                                                   /subscribe/
+/products/card-creator/                                     /store/card-creator/
+/products/reventure/                                        /store/reventure/
+/api/*  https://www.sendowl.com/api/v1/products/:splat  200                
