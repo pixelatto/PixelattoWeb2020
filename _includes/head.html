@@ -12,13 +12,14 @@
     {% endif %}
   </title>
 
-  <meta itemprop="description" name="description" content="{% if page.description %}{{ page.description | truncate: 160 }}{% else %}{{ site.description | truncate: 160  }}{% endif %}" />
+  <meta name="description" content="{% if page.description %}{{ page.description | truncate: 160 }}{% else %}{{ site.description | truncate: 160  }}{% endif %}" />
   <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}">
 
   <!-- Open graph tags -->
   <meta property="og:locale" content="es_ES">
   <meta property="og:type" content="article">
   <meta property="og:title" content="{%if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:description" content="{% if page.description %}{{ page.description | truncate: 160 }}{% else %}{{ site.description | truncate: 160  }}{% endif %}" />
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
   <!-- <meta property="og:image" content="{% if page.social_media_image %}{{ site.url }}{{ page.social_media_image }}{% else %}{{ site.url }}{{ page.image }}{% endif %}" /> -->
   <meta property="og:site_name" content="Pixelatto | Creative games and tools">

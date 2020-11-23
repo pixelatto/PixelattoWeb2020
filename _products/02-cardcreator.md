@@ -1,8 +1,10 @@
 ---
 code: card-creator
 
-title: Card Creator
-description: Card creation made easy, fast and fun
+title: Card Creator | Card creation made easy, fast and fun
+subtitle: Card creation made easy, fast and fun
+description: Create and design your own card game witn an easy, fast and fun software tool
+
 keywords: card creator, card games, make card game, make tabletop game, game design, gamedev, gamedev tool, card maker, card tool, cars design
 
 permalink: /store/card-creator/
