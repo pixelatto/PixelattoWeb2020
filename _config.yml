@@ -4,7 +4,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   We made Reventure, Card Creator and other gamedev tools!
 keywords: videogames, tabletop games, gamedev tools, reventure, card creator, pixelatto, javi cepa
 baseurl: "" # the subpath of your site, e.g. /blog
-url: https://pixelatto.com/ # the base hostname & protocol for your site, e.g. http://example.com
+url: https://pixelatto.com # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: pixelatto
 github_username:  pixelatto
 google_analytics: UA-51706081-1
