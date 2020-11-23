@@ -33,24 +33,34 @@ gallery:
       imagefolder: /img/product/cardcreator/
       images:
           - name: CardCreator_01.png
+            thumbnail: CardCreator_01_thumbnail.png
             text: Card Creator image 1
           - name: CardCreator_02.png
+            thumbnail: CardCreator_02_thumbnail.png
             text: Card Creator image 2
           - name: CardCreator_03.png
+            thumbnail: CardCreator_03_thumbnail.png
             text: Card Creator image 3
           - name: CardCreator_04.png
+            thumbnail: CardCreator_04_thumbnail.png
             text: Card Creator image 4
-          - name: CardCreator_05.jpg
+          - name: CardCreator_05.png
+            thumbnail: CardCreator_05_thumbnail.png
             text: Card Creator image 5
           - name: CardCreator_06.png
+            thumbnail: CardCreator_06_thumbnail.png
             text: Card Creator image 6
-          - name: cardcreator_img01.jpg
+          - name: cardcreator_img01.png
+            thumbnail: cardcreator_img01_thumbnail.png
             text: Card Creator image 7
-          - name: cardcreator_img02.jpg
+          - name: cardcreator_img02.png
+            thumbnail: cardcreator_img02_thumbnail.png
             text: Card Creator image 8
-          - name: cardcreator_img03.jpg
+          - name: cardcreator_img03.png
+            thumbnail: cardcreator_img03_thumbnail.png
             text: Card Creator image 9
-          - name: cardcreator_img04.jpg
+          - name: cardcreator_img04.png
+            thumbnail: cardcreator_img04_thumbnail.png
             text: Card Creator image 10
 
 faq:

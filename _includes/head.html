@@ -1,6 +1,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% if page.noIndex%}<meta name="robots" content="noindex, nofollow">{% endif %}
 
   <!-- SEO data -->
   <!-- Page data -->
@@ -14,6 +15,7 @@
 
   <meta name="description" content="{% if page.description %}{{ page.description | truncate: 160 }}{% else %}{{ site.description | truncate: 160  }}{% endif %}" />
   <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}">
+
 
   <!-- Open graph tags -->
   <meta property="og:locale" content="es_ES">
