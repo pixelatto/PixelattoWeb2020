@@ -14,7 +14,7 @@
 {% if page.theme_text %}{{page.theme_text}}{% endif %}" style="background: {{main_color}};">
     <div class="container">
         <div class="navbar-brand">
-            <a href="{{ site.baseurl }}/" class="navbar-item">
+            <a name="Pixelatto home link" href="{{ site.baseurl }}/" class="navbar-item">
                 <svg id="logo" version="1.1" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 2214.9 422.8"
                     style="enable-background:new 0 0 2214.9 422.8; width: 150px;" xml:space="preserve">
@@ -55,17 +55,17 @@
                 {% for item in site.data.navigation %}
                 {% if item.dropdown %}
                 <div class="navbar-item has-dropdown is-hoverable">
-                    <a href="{{ item.link | relative_url }}"
+                    <a name="{{ item.name }} link" href="{{ item.link | relative_url }}"
                         class="navbar-link {% if item.link == page.url %}is-active{% endif %}">{{ item.name }}</a>
                     <div class="navbar-dropdown">
                         {% for subitem in item.dropdown %}
-                        <a href="{{ subitem.link | relative_url }}"
+                        <a name="{{ item.name }} link" href="{{ subitem.link | relative_url }}"
                             class="navbar-item {% if subitem.link == page.url %}is-active{% endif %}">{{ subitem.name }}</a>
                         {% endfor %}
                     </div>
                 </div>
                 {% else %}
-                <a id="{{ item.name }}" href="{{ item.link | relative_url }}"
+                <a name="{{ item.name }} link" id="{{ item.name }}" href="{{ item.link | relative_url }}"
                     class="navbar-item {% if item.link == page.url %}is-active{% endif %}">{{ item.name }}</a>
                 {% endif %}
                 {% endfor %}
