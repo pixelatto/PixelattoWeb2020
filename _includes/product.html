@@ -2,7 +2,7 @@
     <div class="container">
         <div class=" pt-3">
 
-            <img src="/img/product/{{product.code}}-logo.svg"
+            <img alt="{{product.name}} logo" src="/img/product/{{product.code}}-logo.svg"
                 style="display: block; margin: auto; height: 30vw; max-height: 200px;" />
 
             <div class="columns is-multiline is-vcentered "
@@ -16,7 +16,7 @@
                 <div class="column is-8">
                     <figure class="image is-16by9" style="border-radius: 30px 0px 30px 0px; overflow: hidden;">
                         {% if product.video %}
-                        <iframe class="has-ratio" width="640" height="360"
+                        <iframe title="{{ product.name}} trailer video" class="has-ratio" width="640" height="360"
                             src="https://www.youtube.com/embed/{{ product.video }}?rel=0" frameborder="0"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen>
@@ -51,14 +51,13 @@
                         {% endfor %}
                     </div>
                     {% endif %}
-                    <a href="#" class="button is-white is-medium"></a>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="container">
-        <a href="https://transactions.sendowl.com/products/78274278/42A4FD4D/purchase" rel="nofollow" id="buy-button" class="button is-large is-{% if product.type == 'game' %}secondary{% else %}primary{% endif %}">Get it now!</a>
+        <a alt="{{ product.name }} Pixelatto buy button" href="https://transactions.sendowl.com/products/78274278/42A4FD4D/purchase" rel="nofollow" id="buy-button" class="button is-large is-{% if product.type == 'game' %}secondary{% else %}primary{% endif %}">Get it now!</a>
         <script type="text/javascript" src="https://transactions.sendowl.com/assets/sendowl.js" ></script>
         <div id="price" style="display: inline-block;padding: 1rem;"></div>
     </div>
@@ -86,7 +85,7 @@
                     {% assign cont = 1 %}
                     {% for image in product.gallery.images %}
                     <div class="item-{{ cont }}">
-                        <img src="{{ product.gallery.imagefolder }}{{ image.name }}"
+                        <img alt="{{product.name}} screenshot {{ cont }}" src="{{ product.gallery.imagefolder }}{% if image.thumbnail %}{{ image.thumbnail }}{% else %}{{ image.name }}{% endif %}"
                             onclick="openModal('product-modal');currentSlide({{ cont }})">
                     </div>
                     {% assign cont = cont | plus:1 %}
@@ -98,10 +97,12 @@
             <!-- Start lightbox modal -->
             <div id="product-modal" class="modal" onclick="ClickOpenedModal(event)">
                 <div class="modal-content is-vcentered">
+                    {% assign cont = 1 %}
                     {% for image in product.gallery.images %}
                     <div class="item-slide product-modal-slide">
-                        <img src="{{ product.gallery.imagefolder }}{{ image.name }}">
+                        <img loading="lazy" alt="{{product.name}} lightbox image {{ cont }}" src="{{ product.gallery.imagefolder }}{{ image.name }}">
                     </div>
+                    {% assign cont = cont | plus:1 %}
                     {% endfor %}
                 </div>
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
