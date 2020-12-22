@@ -1,0 +1,77 @@
+<footer class="footer-upd">
+    <div class="container--lg">
+        <div class="columns is-gapless is-multiline">
+            <div class="column">
+                <div class="footer-social">
+                    <img class="footer-logo" src="/img/brand/Logo-white.svg" alt="Pixelatto Logo" />
+                    <div class="copyrights">
+                        <p>Copyright &copy; {{ site.time | date: "%Y" }} Pixelatto.</p>
+                        <p>All rights reserved</p>
+                    </div>
+                    <ul class="social-list">
+                        <li>
+                            <a href="#"><img class="has-text-primary" src="/img/platforms/instagram.svg" /></a>
+                        </li>
+                        <li>
+                            <a href="#"><img class="has-text-primary" src="/img/platforms/facebook-2.svg" /></a>
+                        </li>
+                        <li>
+                            <a href="#"><img class="has-text-primary" src="/img/platforms/twitter.svg" /></a>
+                        </li>
+                        <li>
+                            <a href="#"><img class="has-text-primary" src="/img/platforms/youtube.svg" /></a>
+                        </li>
+                        <li>
+                            <a href="#"><img class="has-text-primary" src="/img/platforms/discord.svg" /></a>
+                        </li>
+                        <li>
+                            <a href="#"><img class="has-text-primary" src="/img/platforms/android.svg" /></a>
+                        </li>
+                        <li>
+                            <a href="#"><img class="has-text-primary" src="/img/platforms/github.svg" /></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column">
+                <div class="footer-list">
+                    <h4>Quick links</h4>
+                    <ul>
+                        <li><a href="#">Store</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Presskit</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column">
+                <div class="footer-list">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help center</a></li>
+                        <li><a href="#">Terms of service</a></li>
+                        <li><a href="#">Legal</a></li>
+                        <li><a href="#">Privacy policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column">
+                <div class="footer-list footer-form">
+                    <h4>Subscribe to our newsletter</h4>
+                    <form id="subscribe-form" action="{{site.data.subscribe.subscribe_action}}" method="post" name="mc-embedded-subscribe-form" target="_blank">
+                        <div class="control has-icons-right contact-form__item">
+                            <label>
+                                <p style="display: none;">Newsletter email</p>
+                                <input class="input contact-form__input" type="email" placeholder="Your email address" value="" id="suscribe-email-input" name="EMAIL" required="" />
+                                <span class="icon is-small is-right" style="color: #E37827;">
+                                    <i class="fas fa-paper-plane"></i>
+                                </span>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

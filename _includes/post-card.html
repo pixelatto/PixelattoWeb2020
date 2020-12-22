@@ -1,36 +1,29 @@
-<div class="card">
-    <a href="{{ site.baseurl }}{{ post.url }}" style="color: initial;">
+<div class="post-preview card">
+    <a class="post-link" href="{{ site.baseurl }}{{ post.url }}" style="color: initial; height: 100%;">
         {% if post.image %}
         <div class="card-image">
-            <img class="is-vertically-centered" style="padding: 1rem 1rem 0 1rem;" src="/img/upload/{{ post.image }}" alt="{{ post.title }}">
+            <p class="post-tag">{{ post.tags }}</p>
+            <img src="/img/upload/{{ post.image }}" alt="{{ post.title }}" />
         </div>
         {% else %}
         <header class="card-header">
-            <p class="card-header-title">{{ post.title}}</p>
+            <p class="card-header-title">{{ post.title }}</p>
         </header>
         {% endif %}
         <div class="card-content">
             <div class="content">
                 {% if post.image %}
-                <p class="title is-4">{{ post.title}}</p>
+                <p class="title is-5">{{ post.title }}</p>
                 {% endif %}
                 {% if post.description %}
-                <p>{{ post.description | markdownify }}</p>
+                <p>{{ post.description | markdownify | remove: '<p>' | remove: '</p>' }}</p>
                 {% else %}
-                <p>{{ post.excerpt | markdownify }}</p>
+                <p>{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}</p>
                 {% endif %}
             </div>
         </div>
+        <footer class="card-footer">
+            <p class="card-footer-item">{{ post.author }} - {{ post.date | date: "%b %-d, %Y" }}</p>
+        </footer>
     </a>
-    <footer class="card-footer">
-        <div style="padding: 0 1.5rem;">
-            {% for tagName in post.tags %}
-            {% assign tag = site.tags | where_exp:"item","item.tag == tagName" | first %}
-            <button onclick="window.location='{{ tag.url }}'"
-                class="button is-small is-primary tag-button" style="border-radius: 30px 30px 30px 0;">#{{ tag.tag }}</button>
-            {% endfor %}
-        </div>
-
-        <p class="card-footer-item">Published: {{ post.date | date: "%b %-d, %Y" }} by {{ post.author }}</p>
-    </footer>
 </div>

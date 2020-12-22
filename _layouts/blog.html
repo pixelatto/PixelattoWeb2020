@@ -1,81 +1,46 @@
 ---
-layout: default
+layout: redesign
 ---
 
-{{ content }}
-<h1 class="title is-2">What's going on at Pixelatto</h1>
-
-<div style="margin-bottom: 1rem;">
-    <p class="subtitle is-4">Tags</p>
-
-    <button onclick="window.location='/blog'" class="tag-button button is-primary">#All</button>
-    {% for tag in site.tags %}
-    <button onclick="window.location='{{ tag.url }}'" class="tag-button button is-primary">#{{ tag.tag }}</button>
-    {% endfor %}
-</div>
-
-<p class="subtitle is-4">Articles</p>
-<div class="columns is-multiline">
-    {% if page.tag %}
-    {% assign posts = site.posts | where_exp:"item","item.tags contains page.tag" %}
-    {% else %}
-    {% assign posts = paginator.posts %}
-    {% endif %}
-
-    {% for post in posts %}
-    <div class="column is-4">
-        {% include post-card.html %}
+<section class="hero-section" style="min-height: 300px;">
+    <div class="bg-img">
+        <img src="/img/home/hero-background.svg" alt="Pixelatto background image" />
     </div>
-    {% endfor %}
-
-    {% unless page.tag %}
-    <div class="column is-12" style="margin-top: 1rem;">
-        {% include pagination.html %}
+    <div class="hero-inner">
+        <h1 class="hero-title">What's going on at Pixelatto</h1>
     </div>
-    {% endunless %}
-</div>
+</section>
 
-{% include subscribe-form.html %}
+<section class="blog-list">
+    <div class="container--sm">
+        <h2 class="section-title">Recent posts</h2>
+        <div class="mb-3 pb-3" style="border-bottom: 1px solid #DCDCDC;">
+            <button onclick="window.location='/blog'" class="button is-primary mr-4">All</button> <!-- active states -->
+            {% for tag in site.tags %}
+            <button onclick="window.location='{{ tag.url }}'" class="button is-primary mr-4">{{ tag.tag }}</button>
+            {% endfor %}
+        </div>
 
-<style>
-    .card {
-        height: 100%;
-        padding-top: 16px;
-    }
+        <div class="columns is-multiline">
+            {% if page.tag %}
+            {% assign posts = site.posts | where_exp:"item","item.tags contains page.tag" %}
+            {% else %}
+            {% assign posts = paginator.posts %}
+            {% endif %}
 
-    .card-image {
-        height: 200px;
-        overflow: hidden;
-    }
+            {% for post in posts %}
+            <div class="column is-4">
+                {% include post-card.html %}
+            </div>
+            {% endfor %}
 
-    .card-image img {
-        width: 100%;
-    }
+            {% unless page.tag %}
+            <div class="column is-12 mt-4 mb-6">
+                {% include pagination.html %}
+            </div>
+            {% endunless %}
+        </div>
+    </div>
+</section>
 
-    .card-content {
-        padding-bottom: 12rem;
-    }
-
-    .card-footer {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        border: none;
-        display: block;
-    }
-
-    .read-more {
-        width: 100%;
-        margin: auto;
-        display: block;
-    }
-
-    .card-footer-item {
-        border-top: 1px solid #ededed;
-        text-align: center;
-        flex-basis: none;
-        flex-grow: none;
-        flex-shrink: none;
-        display: block;
-    }
-</style>
+{% include redesign/subscribe-form.html %}
