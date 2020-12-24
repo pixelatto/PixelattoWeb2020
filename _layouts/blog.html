@@ -21,7 +21,7 @@ layout: redesign
             {% endfor %}
         </div>
 
-        <div class="columns is-multiline">
+        <div class="columns is-multiline is-centered">
             {% if page.tag %}
             {% assign posts = site.posts | where_exp:"item","item.tags contains page.tag" %}
             {% else %}
@@ -35,7 +35,7 @@ layout: redesign
             {% endfor %}
 
             {% unless page.tag %}
-            <div class="column is-12 mt-4 mb-6">
+            <div class="column is-5-desktop is-12-tablet mt-4">
                 {% include pagination.html %}
             </div>
             {% endunless %}
