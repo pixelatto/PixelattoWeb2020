@@ -8,6 +8,7 @@ type: app
 title: Card Creator
 subtitle: Card creation made easy, fast and fun
 description: Start making card games now!
+hero_image: ['/img/product/card-creator-hero.jpg','Card Creator hero image']
 
 long_description: |
   Card Creator is a software tool to create all types of cards for your own games.
@@ -18,16 +19,16 @@ video: liMw3yfeTdo
 
 features:
     - label: Create any type of card
-      icon: fa-pencil-ruler
+      icon: fa-magic
     - label: Export to Tabletop Simulator
-      icon: fa-dice-d6
+      icon: fa-upload
     - label: Print and play in 1 click
       icon: fa-print
 
 external_stores:
     - image: steam
       link: https://store.steampowered.com/app/523600/Card_Creator/
-      
+
 gallery:
       id: cc-gallery
       imagefolder: /img/product/cardcreator/
@@ -94,7 +95,7 @@ presskit:
     widget:
     player_reviews:
         - text: Does what it says. The quality of the exported cards is really good. I'm so glad to have discovered this creator cause makes everything than a card-player's fan want to do. I really recommend it.
-        - text: Love it! The new UI is incredible!! 
+        - text: Love it! The new UI is incredible!!
         - text: Card Creator is perfect for creating card games and everything related. Its comfortable and intuitive interface facilitates the process and makes it very fun. There are also guides (in English), written by the creators themselves to facilitate the creation process. Highly recommended Card Creator!
     testimonials:
         - script: <blockquote class="twitter-tweet"><p lang="es" dir="ltr">&quot;Es que no sé cómo hacer una carta&quot; queda anulada como excusa <a href="https://twitter.com/hashtag/cardcreator?src=hash&amp;ref_src=twsrc%5Etfw">#cardcreator</a> <a href="https://twitter.com/hashtag/tutorial?src=hash&amp;ref_src=twsrc%5Etfw">#tutorial</a> <a href="https://t.co/z17zWFQS5j">https://t.co/z17zWFQS5j</a></p>&mdash; Bea (@Beateaches) <a href="https://twitter.com/Beateaches/status/799009000289243136?ref_src=twsrc%5Etfw">November 16, 2016</a></blockquote>

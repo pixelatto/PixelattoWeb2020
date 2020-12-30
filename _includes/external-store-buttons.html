@@ -1,12 +1,15 @@
-<div class="columns is-mobile ">
+<div class="columns is-multiline is-mobile is-gapless is-vcentered mb-0">
+    <div class="column is-full-mobile is-one-third-tablet">
+        <h3>Get it also at:</h3>
+    </div>
     {% for store in product.external_stores %}
     <div class="column control">
         <button alt="{{ product.name}} {{store.image}} buy button" class="button store-button is-{% if product.type == 'game' %}secondary{% else %}primary{% endif %}"
                 onclick="window.open('{{ store.link }}', '_blank');">
-                <span class="icon">
-                    <img alt="{{store.image}} icon" class="has-text-secondary" src="/img/platforms/{{ store.image }}.png" style="margin: 0;">
-                </span>
-            </button>
+            <span class="icon">
+                <img alt="{{store.image}} icon" class="has-text-secondary" src="/img/platforms/{{ store.image }}.png" style="margin: 0;">
+            </span>
+        </button>
     </div>
     {% endfor %}
   </div>
@@ -14,9 +17,5 @@
 <style>
     .store-button .icon {
         min-block-size:10px;
-    }
-    .column{
-        padding:0.75rem;
-        flex-grow:0;
     }
 </style>

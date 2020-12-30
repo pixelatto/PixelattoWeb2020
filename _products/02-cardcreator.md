@@ -10,7 +10,7 @@ keywords: card creator, make game cards, custom game cards, design cards, card c
 permalink: /store/card-creator/
 layout: empty
 
-theme_text: is-primary
+#theme_text: is-primary
 type: app
 ---
 

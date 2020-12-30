@@ -15,10 +15,18 @@ layout: redesign
     <div class="container--sm">
         <h2 class="section-title">Recent posts</h2>
         <div class="mb-3 pb-3" style="border-bottom: 1px solid #DCDCDC;">
-            <button onclick="window.location='/blog'" class="button is-primary mr-4">All</button> <!-- active states -->
+            <button onclick="window.location='/blog'" class="button is-primary mr-4">All</button>
             {% for tag in site.tags %}
             <button onclick="window.location='{{ tag.url }}'" class="button is-primary mr-4">{{ tag.tag }}</button>
             {% endfor %}
+
+            {% comment %}
+            <!-- active states -->
+            {% assign tagCheck = page.tag | downcase %}
+            {% if page.url contains tagCheck %}
+                <p>active</p>
+            {% endif %}
+            {% endcomment %}
         </div>
 
         <div class="columns is-multiline is-centered">
