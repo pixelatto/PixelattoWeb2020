@@ -136,7 +136,6 @@ a {
     .hero-title {
         color: #fff;
         font-size: 48px;
-        font-weight: 700;
         line-height: 1.229em;
         padding-bottom: 40px;
     }
@@ -164,10 +163,8 @@ a {
     .show-link {
         color: #E37827;
         font-size: 18px;
-        font-weight: 600;
         line-height: 1.222em;
         letter-spacing: 0.1em;
-        text-transform: uppercase;
         transition: all .3s linear;
         span {
             margin-left: 10px;
@@ -251,11 +248,9 @@ a {
     .card-inner {
         h1, h3 {
             font-size: 18px;
-            font-weight: 700;
             line-height: 1.222em;
             letter-spacing: 0.1em;
             padding: 30px 0 20px;
-            text-transform: uppercase;
         }
         p {
             font-size: 18px;
@@ -427,32 +422,10 @@ input[type=email] {
     }
 }
 
-// Testimonials section
-// .home-testimonials {
-//     padding: 100px 0;
-//     .testimonial-item {
-//         color: #fff;
-//         border-radius: 10px;
-//         box-shadow: 0px 0px 20px rgba(74, 74, 74, 0.25);
-//         padding: 36px;
-//         // margin-right: 27px;
-//         // &:not(:last-child) {
-//         //     margin-right: 27px;
-//         // }
-//         &.item--blue {
-//             background-color: $azulatto;
-//         }
-//         &.item--dark {
-//             background-color: $darkslategray;
-//         }
-//     }
-// }
-
 // Recent Posts section
 .home-recent-posts {
     padding-top: 100px;
 }
-
 
 // new subscribe section
 .subscribe-section {
@@ -468,13 +441,10 @@ input[type=email] {
         }
         h2 {
             font-size: 30px;
-            font-weight: 700;
-            text-transform: uppercase;
         }
         p {
             font-size: 18px;
             //line-height: ;
-            font-weight: 700;
         }
     }
     .subscribe-form {
@@ -559,9 +529,7 @@ input[type=email] {
         font-size: 18px;
         h4 {
             //font-size: 18px;
-            font-weight: 700;
             margin-bottom: 24px;
-            text-transform: uppercase;
         }
         li {
             &:not(:last-child) {
@@ -592,17 +560,14 @@ input[type=email] {
     // }
 }
 
-
 // Product Page
 .product-preview {
     .product-title {
         color: $darkslategray;
         border-bottom: 1px solid #DCDCDC;
-        font-weight: 700;
         font-size: 14px;
         line-height: 1.214em;
         letter-spacing: 0.1em;
-        text-transform: uppercase;
     }
 
     .product-card {
@@ -623,10 +588,8 @@ input[type=email] {
             .price {
                 color: $naranjitto;
                 font-size: 18px;
-                font-weight: 600;
                 letter-spacing: 0.1em;
                 //padding-right: 15px;
-                text-transform: uppercase;
                 // @media screen and (max-width: 768px) {
                 //     padding-right: 0;
                 // }
@@ -638,10 +601,8 @@ input[type=email] {
                 }
                 h3 {
                     font-size: 14px;
-                    font-weight: 600;
                     line-height: 1.214em;
                     letter-spacing: 0.1em;
-                    text-transform: uppercase;
                 }
             }
         }
