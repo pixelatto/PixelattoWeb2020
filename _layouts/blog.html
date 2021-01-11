@@ -58,9 +58,9 @@ layout: redesign
     <div class="container--sm">
         <h2 class="section-title">Recent posts</h2>
         <div class="blog-tags mb-3 pb-3" style="border-bottom: 1px solid #DCDCDC;">
-            <button onclick="window.location='/blog'" class="button is-primary mr-4{% if page.url == '/blog/' or page.url contains 'page' %} active{% endif %}">All</button>
+            <button onclick="window.location='/blog'" class="button tag-btn is-primary mr-4{% if page.url == '/blog/' or page.url contains 'page' %} active{% endif %}">All</button>
             {% for tag in site.tags %}
-            <button onclick="window.location='{{ tag.url }}'" class="button is-primary mr-4{% if page.url contains tag.url %} active{% endif %}">{{ tag.tag }}</button>
+            <button onclick="window.location='{{ tag.url }}'" class="button tag-btn is-primary mr-4{% if page.url contains tag.url %} active{% endif %}">{{ tag.tag }}</button>
             {% endfor %}
         </div>
 

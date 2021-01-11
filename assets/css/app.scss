@@ -80,13 +80,15 @@ a {
         display: inline-block;
         height: 10px;
         position: relative;
+        left: 0;
         bottom: 1px;
-        transform: rotate(-45deg);
         width: 10px;
     }
     &.right:before {
-        left: 0;
         transform: rotate(45deg);
+    }
+    &.left:before {
+        transform: rotate(-135deg);
     }
 }
 
@@ -189,11 +191,14 @@ a {
         line-height: 1.222em;
         letter-spacing: 0.1em;
         transition: all .3s linear;
-        span {
-            margin-left: 10px;
-        }
         &:hover {
             color: darken(#E37827, 10%);
+        }
+        span.right {
+            margin-left: 10px;
+        }
+        span.left {
+            margin-right: 10px;
         }
     }
 }
@@ -320,6 +325,22 @@ a {
     max-width: 250px;
     width: 100%;
     text-transform: uppercase;
+}
+
+/* Blue Tag Button */
+.tag-btn {
+    font-size: 14px;
+    line-height: 1;
+    max-width: 107px;
+    width: 100%;
+    max-height: 30px;
+    &.is-primary {
+        background-color: #57C0DA;
+        transition: .3s all linear;
+        &:hover {
+            background-color: darken(#57C0DA, 10%);
+        }
+    }
 }
 
 /* Email Input Styling */
@@ -655,18 +676,7 @@ input[type=email] {
 
 .blog-list {
     .blog-tags {
-        .button {
-            font-size: 14px;
-            max-width: 107px;
-            width: 100%;
-            max-height: 30px;
-            &.is-primary {
-                background-color: #57C0DA;
-                transition: .3s all linear;
-                &:hover {
-                    background-color: darken(#57C0DA, 10%);
-                }
-            }
+        .tag-btn {
             &:not(.active) {
                 opacity: 0.5;
             }
@@ -724,6 +734,26 @@ input[type=email] {
             border-radius: 5px;
             background-color: #fff;
             box-shadow: 0px 0px 20px rgba(74, 74, 74, 0.25);
+        }
+    }
+}
+
+// Post Page
+.post {
+    .hero {
+        width: 100%;
+    }
+}
+.post-aside {
+    .tag-wrapper {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        display: flex;
+        .post-tag {
+            &:not(:last-child) {
+                margin-right: 5px;
+            }
         }
     }
 }
