@@ -11,22 +11,57 @@ layout: redesign
     </div>
 </section>
 
+<section class="blog-carousel-list">
+    <div class="container--sm" style="max-width: 1255px;">
+        <!-- infinite carousel working with > 1 post -->
+        {%- if page.tag -%}
+            {% assign posts = site.posts | where_exp:"item","item.tags contains page.tag" %}
+        {%- else -%}
+            {% assign posts = paginator.posts %} <!-- paginator.posts or site.posts-->
+        {%- endif -%}
+        <div id="blog-carousel" class="carousel">
+            {% assign cont = 1 %}
+            {%- for post in posts limit:5 -%}
+            <div class="item-{{ cont }}" style="border-radius: 10px; box-shadow: 0px 0px 20px rgba(74, 74, 74, 0.25); max-width: 1100px; margin: 20px auto;">
+                <div class="product-card pixel-box is-shadowless">
+                    <div class="columns is-gapless">
+                        <div class="column is-narrow">
+                            <div class="card-image">
+                                <!-- <img src="/img/upload/{{ post.image }}" alt="{{ post.title }}" /> -->
+                                <div class="bg-img">
+                                    <img src="/img/upload/{{ post.image }}" alt="{{ post.title }}" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column" style="position: relative;">
+                            <div class="card-inner">
+                                {%- for tagName in post.tags -%}
+                                    {% assign tag = site.tags | where_exp:"item","item.tag == tagName" | first %}
+                                    <span class="post-tag tag--lg">{{ tag.tag }}</span>
+                                {%- endfor -%}
+                                <h3 class="has-text-weight-bold">{{ post.title }}</h3>
+                                <p class="is-size-4">{{ post.description | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+                                <p class="post-author is-italic">{{ post.author }} - {{ post.date | date: "%b %-d, %Y" }}</p>
+                                <a class="button button-round is-secondary" href="{{ site.baseurl }}{{ post.url }}">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% assign cont = cont | plus:1 %}
+            {%- endfor -%}
+        </div>
+    </div>
+</section>
+
 <section class="blog-list">
     <div class="container--sm">
         <h2 class="section-title">Recent posts</h2>
-        <div class="mb-3 pb-3" style="border-bottom: 1px solid #DCDCDC;">
-            <button onclick="window.location='/blog'" class="button is-primary mr-4">All</button>
+        <div class="blog-tags mb-3 pb-3" style="border-bottom: 1px solid #DCDCDC;">
+            <button onclick="window.location='/blog'" class="button is-primary mr-4{% if page.url == '/blog/' or page.url contains 'page' %} active{% endif %}">All</button>
             {% for tag in site.tags %}
-            <button onclick="window.location='{{ tag.url }}'" class="button is-primary mr-4">{{ tag.tag }}</button>
+            <button onclick="window.location='{{ tag.url }}'" class="button is-primary mr-4{% if page.url contains tag.url %} active{% endif %}">{{ tag.tag }}</button>
             {% endfor %}
-
-            {% comment %}
-            <!-- active states -->
-            {% assign tagCheck = page.tag | downcase %}
-            {% if page.url contains tagCheck %}
-                <p>active</p>
-            {% endif %}
-            {% endcomment %}
         </div>
 
         <div class="columns is-multiline is-centered">

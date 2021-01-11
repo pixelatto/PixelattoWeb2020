@@ -16,10 +16,10 @@ bulmaCarousel.attach('#testimonials-carousel', {
     infinite: true
 });
 
-bulmaCarousel.attach('#testimonials-carousel-upd', {
-    slidesToScroll: 1, //3
-    slidesToShow: 3,
-    infinite: false
+bulmaCarousel.attach('#blog-carousel', {
+    slidesToScroll: 1,
+    slidesToShow: 1,
+    infinite: true
 });
 
 bulmaCollapsible.attach('.is-collapsible');

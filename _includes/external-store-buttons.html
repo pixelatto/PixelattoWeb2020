@@ -4,7 +4,7 @@
     </div>
     {% for store in product.external_stores %}
     <div class="column control">
-        <button alt="{{ product.name}} {{store.image}} buy button" class="button store-button is-{% if product.type == 'game' %}secondary{% else %}primary{% endif %}"
+        <button alt="{{ product.name}} {{store.image}} buy button" class="button store-button is-primary"
                 onclick="window.open('{{ store.link }}', '_blank');">
             <span class="icon">
                 <img alt="{{store.image}} icon" class="has-text-secondary" src="/img/platforms/{{ store.image }}.png" style="margin: 0;">

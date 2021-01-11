@@ -59,7 +59,7 @@ a {
 
 //!! merge text styles !!//
 
-/* Container */
+/* Container Styling */
 .container--sm {
     @extend .container;
     max-width: 1150px;
@@ -71,7 +71,7 @@ a {
     padding: 0 20px;
 }
 
-/* Chevrons */ //check
+/* Chevrons */
 .chevron {
     &:before {
         border-style: solid;
@@ -79,7 +79,6 @@ a {
         content: '';
         display: inline-block;
         height: 10px;
-        //left: 0.15em;
         position: relative;
         bottom: 1px;
         transform: rotate(-45deg);
@@ -89,11 +88,35 @@ a {
         left: 0;
         transform: rotate(45deg);
     }
-    &.left:before {
-        left: 0.25em;
-        transform: rotate(-135deg);
+}
+
+/* General Tag Styling */
+.post-tag {
+    color: #fff;
+    background: #57C0DA;
+    border-radius: 3px;
+    line-height: 1.250em;
+    width: fit-content;
+    &.tag--sm {
+        font-size: 12px;
+        padding: 3px 15px;
+    }
+    &.tag--lg {
+        font-size: 14px;
+        padding: 6px 30px;
     }
 }
+
+/* General Carousel Controls */ // Ask about this buttons
+// #blog-carousel {
+//     .slider-navigation-next,
+//     .slider-navigation-previous {
+//         background-color: #E3F8FA;
+//         box-shadow: none;
+//         width: 62px;
+//         height: 62px;
+//     }
+// }
 
 /* Background Image */
 .bg-img {
@@ -182,8 +205,19 @@ a {
         box-shadow: none;
         height: 100%;
         //transition: all .3s linear;
+        .tag-wrapper {
+            position: absolute;
+            left: 40px;
+            top: 40px;
+            display: flex;
+            .post-tag {
+                &:not(:last-child) {
+                    margin-right: 5px;
+                }
+            }
+        }
         .card-image {
-            height: 200px;
+            height: 200px; //check on mobile
             padding: 20px 20px 0;
             overflow: hidden;
             img {
@@ -191,17 +225,6 @@ a {
                 @media screen and (max-width: 768px) {
                     width: 100%;
                 }
-            }
-            .post-tag {
-                color: #fff;
-                background: #57C0DA;
-                border-radius: 3px;
-                font-size: 12px;
-                line-height: 1.250em;
-                padding: 3px 13px;
-                position: absolute;
-                left: 40px; //20
-                top: 40px;
             }
         }
         .card-content {
@@ -239,12 +262,31 @@ a {
 
 /* General Box Item */
 .pixel-box {
+    background-color: $white;
     border-radius: 10px;
     box-shadow: 0px 0px 20px rgba(74, 74, 74, 0.25);
 }
 
 /* General Product Card */
 .product-card {
+    .card-image {
+        width: 475px;
+        min-height: 396px;
+        height: 100%;
+        img {
+            border-radius: 10px 0 0 10px;
+        }
+        @media screen and (max-width: 1024px) {
+            width: 375px;
+        }
+        @media screen and (max-width: 768px) {
+            min-height: 300px;
+            width: 100%;
+            img {
+                border-radius: 10px 10px 0 0;
+            }
+        }
+    }
     .card-inner {
         h1, h3 {
             font-size: 18px;
@@ -256,10 +298,18 @@ a {
             font-size: 18px;
             line-height: 1.556em;
         }
+        .button-round {
+            border-radius: 10px 0px;
+            box-shadow: none;
+            max-width: 220px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
     }
 }
 
-/* Round Button */
+/* Orange Round Button */
 .button-round {
     border-radius: 60px;
     box-shadow: 0px 4px 20px rgba(227, 120, 39, 0.5);
@@ -271,14 +321,8 @@ a {
     width: 100%;
     text-transform: uppercase;
 }
-// .button.is-secondary {
-//     box-shadow: 0px 4px 20px rgba(227, 120, 39, 0.5);
-// }
-// .button.is-primary {
-//     box-shadow: 0px 4px 20px rgba(39, 167, 227, 0.5);
-// }
 
-/* Email Input */
+/* Email Input Styling */
 input[type=email] {
     border: none;
     border-radius: 40px;
@@ -328,38 +372,12 @@ input[type=email] {
         &:not(:last-child) {
             margin-bottom: 30px;
         }
-        .card-image {
-            width: 475px;
-            min-height: 396px;
-            height: 100%;
-            img {
-                border-radius: 10px 0 0 10px;
-            }
-            @media screen and (max-width: 1024px) {
-                width: 375px;
-            }
-            @media screen and (max-width: 768px) {
-                min-height: 300px;
-                width: 100%;
-                img {
-                    border-radius: 10px 10px 0 0;
-                }
-            }
-        }
         .card-inner {
             padding: 40px 30px 20px;
             p {
                 &:last-of-type {
                     padding-bottom: 50px;
                 }
-            }
-            .button-round {
-                border-radius: 10px 0px;
-                box-shadow: none;
-                max-width: 220px;
-                position: absolute;
-                bottom: 0;
-                right: 0;
             }
         }
     }
@@ -444,7 +462,10 @@ input[type=email] {
         }
         p {
             font-size: 18px;
-            //line-height: ;
+            max-width: 390px;
+            @media screen and (max-width: 1024px) {
+                margin: 0 auto;
+            }
         }
     }
     .subscribe-form {
@@ -560,6 +581,7 @@ input[type=email] {
     // }
 }
 
+
 // Product Page
 .product-preview {
     .product-title {
@@ -611,7 +633,46 @@ input[type=email] {
 
 
 // Blog page
+.blog-carousel-list {
+    .product-card {
+        .card-inner {
+            padding: 50px 20px 0;
+            h3 {
+                font-size: 30px;
+                letter-spacing: 0;
+                padding: 30px 0;
+            }
+            p {
+                line-height: 1.208em;
+            }
+            .post-author {
+                position: absolute;
+                bottom: 20px;
+            }
+        }
+    }
+}
+
 .blog-list {
+    .blog-tags {
+        .button {
+            font-size: 14px;
+            max-width: 107px;
+            width: 100%;
+            max-height: 30px;
+            &.is-primary {
+                background-color: #57C0DA;
+                transition: .3s all linear;
+                &:hover {
+                    background-color: darken(#57C0DA, 10%);
+                }
+            }
+            &:not(.active) {
+                opacity: 0.5;
+            }
+        }
+    }
+
     .pagination-previous,
     .pagination-next {
         border: none;

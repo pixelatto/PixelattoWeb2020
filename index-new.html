@@ -95,55 +95,6 @@ has_carousel: true
     </div>
 </section>
 
-<!-- <section class="home-testimonials">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="section-title">Testimonials</h2>
-            <a class="show-link" href="#">Show all</a>
-        </div>
-
-        <div id="testimonials-carousel-upd" class="carousel">
-            <div class="item-1">
-                <div class="testimonial-item item--blue">
-                    <div class="testimonial-text">“Reventure. Took a while to get all the endings but it was fun getting there 😁”</div>
-                    <div class="testimonial-info is-flex">
-                        <img src="/img/home/testimonial-author-icon.svg" alt="Testimonial Author icon" />
-                        <div>
-                            <p>💫LuckyStar💫</p>
-                            <p>September 22, 2020</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item-2">
-                <div class="testimonial-item item--dark">
-                    <div class="testimonial-text">“Reventure, from Pixelatto, is one of the indie surprises this summer. A very fun game with a great sense of humor. Never dying a hundred times was so rewarding.”</div>
-                    <div class="testimonial-author">IGN Spain</div>
-                </div>
-            </div>
-            <div class="item-3">
-                <div class="testimonial-item item--blue">
-                    <div class="testimonial-text">“Dying had never been so satisfying. Reventure triumphs for its originality and humor, and it does nothing more and nothing less than a hundred times.”</div>
-                    <div class="testimonial-author">Meristation</div>
-                </div>
-            </div>
-            <div class="item-4">
-                <div class="testimonial-item item--dark">
-                    <div class="testimonial-text">“Reventure. Took a while to get all the endings but it was fun getting there 😁”</div>
-                    <div class="testimonial-author">💫LuckyStar💫</div>
-                </div>
-            </div>
-            <div class="item-5">
-                <div class="testimonial-item item--blue">
-                    <div class="testimonial-text">“Dying had never been so satisfying. Reventure triumphs for its originality and humor, and it does nothing more and nothing less than a hundred times.”</div>
-                    <div class="testimonial-author">Meristation</div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section> -->
-
 <section class="home-recent-posts">
     <div class="container--sm">
         <div class="section-header">
@@ -157,7 +108,12 @@ has_carousel: true
                         <a class="post-link" href="{{ site.baseurl }}{{ post.url }}" style="color: initial; height: 100%;">
                             {%- if post.image -%}
                             <div class="card-image">
-                                <p class="post-tag">{{ post.tags }}</p>
+                                <div class="tag-wrapper">
+                                    {% for tagName in post.tags %}
+                                    {% assign tag = site.tags | where_exp:"item","item.tag == tagName" | first %}
+                                    <p class="post-tag tag--sm">{{ tag.tag }}</p>
+                                    {% endfor %}
+                                </div>
                                 <img src="/img/upload/{{ post.image }}" alt="{{ post.title }}" />
                             </div>
                             {%- else -%}

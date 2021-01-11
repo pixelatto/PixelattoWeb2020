@@ -2,7 +2,12 @@
     <a class="post-link" href="{{ site.baseurl }}{{ post.url }}" style="color: initial; height: 100%;">
         {% if post.image %}
         <div class="card-image">
-            <p class="post-tag">{{ post.tags }}</p>
+            <div class="tag-wrapper">
+                {% for tagName in post.tags %}
+                {% assign tag = site.tags | where_exp:"item","item.tag == tagName" | first %}
+                <p class="post-tag tag--sm">{{ tag.tag }}</p>
+                {% endfor %}
+            </div>
             <img src="/img/upload/{{ post.image }}" alt="{{ post.title }}" />
         </div>
         {% else %}
