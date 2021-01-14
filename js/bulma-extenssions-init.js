@@ -1,6 +1,6 @@
 bulmaCarousel.attach('#product-carousel', {
-    slidesToScroll: 4,
-    slidesToShow: 4,
+    slidesToScroll: 3,
+    slidesToShow: 3,
     infinite: true
 });
 

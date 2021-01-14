@@ -651,6 +651,34 @@ input[type=email] {
         }
     }
 }
+#product-carousel {
+    div[class^="item-"] {
+        height: 100%;
+        padding: 0 5px;
+        img {
+            max-height: 202px;
+            height: 100%;
+        }
+    }
+    //ask about card-creator page
+}
+.awards {
+    .award-item {
+        height: 100%;
+        padding: 15px;
+        .award-header {
+            align-items: center;
+            // img {
+            //     max-width: 70px;
+            //     width: 100%;
+            // }
+        }
+        .award-text {
+            font-size: 14px;
+            line-height: 1.214em;
+        }
+    }
+}
 
 
 // Blog page
@@ -743,8 +771,39 @@ input[type=email] {
     .hero {
         width: 100%;
     }
+    > ul {
+        margin-left: 3em;
+        > li {
+            list-style: none;
+            position: relative;
+            &:before {
+                content: '';
+                width: 12px;
+                height: 12px;
+                background: $azulatto;
+                //display: inline-block;
+                border-radius: 50%;
+                //position: relative;
+                //right: 20px;
+                position: absolute;
+                left: -30px;
+                top: 6px;
+            }
+        }
+    }
+    li ul li {
+        list-style-type: disc;
+    }
 }
+
 .post-aside {
+    .title {
+        margin: 15px 0;
+    }
+    .text {
+        font-size: 14px;
+        line-height: 1.214em;
+    }
     .tag-wrapper {
         position: absolute;
         left: 20px;

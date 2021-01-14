@@ -39,6 +39,14 @@ external_stores:
     - image: apple
       link: https://apps.apple.com/us/app/reventure/id1501817956
 
+awards:
+  - icon: ['/img/product/reventure/awards/mejor-award-icon.svg', 'Mejor Juego Mobile']
+    title: Mejor Juego Mobile
+    text: Gala II Premios Videojuegos Indie de Málaga
+  - icon: ['/img/product/reventure/awards/idea-award-icon.svg', 'Idea más original']
+    title: Idea más original
+    text: Premios Gamelab 2020
+
 faq:
     - question: Hola , esto es una prueba.
       answer: Hola, esto es la respuestaz.
