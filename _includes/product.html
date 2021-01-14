@@ -1,4 +1,4 @@
-<section class="hero-section">
+<section class="hero-section" style="min-height: 450px;">
     <div class="bg-img">
         <img src="{{ product.hero_image[0] }}" alt="{{ product.hero_image[1] }}" />
         <div class="hero-mask"></div>
@@ -24,7 +24,7 @@
                 </div>
                 <div class="column">
                     <div class="card-inner pl-5">
-                        <img alt="{{product.name}} logo" src="/img/product/{{product.code}}-logo.svg" style="display: block; max-width: 235px; width: 100%;" />
+                        <img class="product-logo" src="/img/product/{{product.code}}-logo.svg" alt="{{product.name}} logo" />
                         <p class="title is-3 py-4" style="display: none;">{{ product.title }}</p>
                         <h1 class="is-uppercase has-text-weight-bold" style="border-bottom: 1px solid #DCDCDC;">{{ product.subtitle }}</h1>
 

@@ -5,10 +5,17 @@ name: Card Creator
 code: card-creator
 type: app
 
+sale: true
+
 title: Card Creator
 subtitle: Card creation made easy, fast and fun
 description: Start making card games now!
 hero_image: ['/img/product/card-creator-hero.jpg','Card Creator hero image']
+product_image: /img/home/card-creator-product-img.svg
+
+short_description: |
+  Card Creator is a software tool that allows you to create all types of cards for your own games.<br />
+  Easy enough for amateurs to jump in and create their own designs to complement their games within minutes...
 
 long_description: |
   Card Creator is a software tool to create all types of cards for your own games.

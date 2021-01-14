@@ -137,7 +137,7 @@ a {
 /* General Hero section */
 .hero-section {
     background-color: $azulatto;
-    min-height: 450px;
+    min-height: 300px;
     height: 100%;
     display: flex;
     align-items: center;
@@ -293,6 +293,17 @@ a {
         }
     }
     .card-inner {
+        padding: 40px 30px 20px;
+        .product-sale {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .product-logo {
+            display: block;
+            max-width: 250px;
+            width: 100%;
+        }
         h1, h3 {
             font-size: 18px;
             line-height: 1.222em;
@@ -303,13 +314,19 @@ a {
             font-size: 18px;
             line-height: 1.556em;
         }
-        .button-round {
+        .button-special {
             border-radius: 10px 0px;
             box-shadow: none;
             max-width: 220px;
             position: absolute;
             bottom: 0;
             right: 0;
+        }
+        .more-link {
+            font-size: 18px;
+            line-height: 1.556em;
+            padding-left: 30px;
+            text-decoration: underline;
         }
     }
 }
@@ -394,7 +411,6 @@ input[type=email] {
             margin-bottom: 30px;
         }
         .card-inner {
-            padding: 40px 30px 20px;
             p {
                 &:last-of-type {
                     padding-bottom: 50px;
@@ -602,6 +618,14 @@ input[type=email] {
     // }
 }
 
+// Store Page
+.store-section {
+    .product-card {
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+}
 
 // Product Page
 .product-preview {
@@ -619,6 +643,7 @@ input[type=email] {
         //position: relative;
         //top: -250px;
         .card-inner {
+            padding: 0;
             @media screen and (max-width: 1024px) {
                 margin-top: 25px;
             }

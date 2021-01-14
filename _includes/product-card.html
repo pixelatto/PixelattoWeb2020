@@ -1,4 +1,4 @@
-{% assign product_page = site.products | where_exp:"item","item.code == product.code" | first %}
+<!-- {% assign product_page = site.products | where_exp:"item","item.code == product.code" | first %}
 <a href="{{ product_page.url }}">
     <div class="card" style="height: 100%;">
         <div class="card-image">
@@ -24,4 +24,43 @@
             </div>
         </div>
     </div>
-</a>
+</a> -->
+
+{% assign product_page = site.products | where_exp:"item","item.code == product.code" | first %}
+<div class="product-card pixel-box">
+    <div class="columns is-gapless">
+        <div class="column is-narrow">
+            <div class="card-image">
+                <div class="bg-img">
+                    <img src="{{ product.product_image }}" alt="{{ product.subtitle }}" />
+                </div>
+            </div>
+        </div>
+        <div class="column" style="position: relative;">
+            <div class="card-inner">
+                {%- if product.sale -%}
+                    <img class="product-sale" src="/img/product/sale-lable.svg" alt="Product sale label" />
+                {%- endif -%}
+                <img class="product-logo" src="/img/product/{{product.code}}-logo.svg" alt="{{product.name}} logo" />
+                <h3 class="is-uppercase has-text-weight-bold">{{ product.subtitle }}</h3>
+                <div class="content mb-4">
+                    {%- for feature in product.features -%}
+                    <p>
+                        <span class="icon has-text-primary">
+                            <i class="fas fa-circle fa-xs"></i>
+                        </span>
+                        <span>{{ feature.label }}</span>
+                    </p>
+                    {%- endfor -%}
+                </div>
+                <a class="more-link has-text-secondary" href="{{ product_page.url }}">Learn more</a>
+
+                <div class="info-price is-flex">
+                    <a alt="{{ product.name }} Pixelatto buy button" href="https://transactions.sendowl.com/products/78274278/42A4FD4D/purchase" rel="nofollow" id="buy-button" class="button button-round is-secondary">Get it now!</a>
+                    <script type="text/javascript" src="https://transactions.sendowl.com/assets/sendowl.js"></script>
+                    <div id="price" class="price is-uppercase has-text-weight-bold pr-4"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

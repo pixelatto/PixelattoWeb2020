@@ -5,20 +5,25 @@ description: Amazing games and gamedev tools, take a look!
 pixelatto: pixelatto store, buy reventure, buy card creator, pixelatto products, pixelatto discounts, buy videogames, buy tabletop games, buy gamedev tools
 
 permalink: /store/
-hide_hero: true
 ---
 
-<div class="container">
-    <div class="section">
-        <div class="columns is-multiline is-desktop"
-            style="display: flex; flex-direction: row; align-items: stretch; align-content: stretch;">
-            {% assign products = site.data.products | sort  %}
-            {% for product_hash in products %}
-            {% assign product = product_hash[1] %}
-            <div class="column is-full-mobile is-half is-half-desktop">
-                {% include product-card.html %}
-            </div>
-            {% endfor %}
-        </div>
+<section class="hero-section">
+    <div class="bg-img">
+        <img src="/img/home/hero-background.svg" alt="Pixelatto background image" />
     </div>
-</div>
+    <div class="hero-inner">
+        <h1 class="hero-title has-text-weight-bold pb-0">Games and tools</h1>
+    </div>
+</section>
+
+<section class="store-section">
+    <div class="container--sm">
+        {% assign products = site.data.products | sort  %}
+        {%- for product_hash in products reversed -%}
+        {% assign product = product_hash[1] %}
+            {% include product-card.html %}
+        {%- endfor -%}
+    </div>
+</section>
+
+{% include redesign/subscribe-form.html %}

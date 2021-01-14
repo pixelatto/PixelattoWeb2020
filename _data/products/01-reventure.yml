@@ -9,6 +9,11 @@ title: Reventure
 subtitle: The award-winning non-linear adventure with 100+ endings!
 description: Choose your adventure, for real.
 hero_image: ['/img/product/reventure-hero.jpg','Reventure hero image']
+product_image: /img/home/reventure-product-img.svg
+
+short_description: |
+  Take the role of Tim and travel through the kingdom and rescue the princess. Or not.<br />
+  In Reventure you make the choices: forget about your...
 
 long_description: |
   Take the role of Tim and travel through the kingdom and rescue the princess. Or not.

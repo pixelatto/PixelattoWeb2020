@@ -2,12 +2,12 @@
 layout: redesign
 ---
 
-<section class="hero-section" style="min-height: 300px;">
+<section class="hero-section">
     <div class="bg-img">
         <img src="/img/home/hero-background.svg" alt="Pixelatto background image" />
     </div>
     <div class="hero-inner">
-        <h1 class="hero-title has-text-weight-bold">What's going on at Pixelatto</h1>
+        <h1 class="hero-title has-text-weight-bold pb-0">What's going on at Pixelatto</h1>
     </div>
 </section>
 
@@ -42,7 +42,7 @@ layout: redesign
                                 <h3 class="has-text-weight-bold">{{ post.title }}</h3>
                                 <p class="is-size-4">{{ post.description | markdownify | remove: '<p>' | remove: '</p>' }}</p>
                                 <p class="post-author is-italic">{{ post.author }} - {{ post.date | date: "%b %-d, %Y" }}</p>
-                                <a class="button button-round is-secondary" href="{{ site.baseurl }}{{ post.url }}">Read more</a>
+                                <a class="button button-round button-special is-secondary" href="{{ site.baseurl }}{{ post.url }}">Read more</a>
                             </div>
                         </div>
                     </div>
