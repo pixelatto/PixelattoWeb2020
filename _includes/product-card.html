@@ -1,30 +1,6 @@
-<!-- {% assign product_page = site.products | where_exp:"item","item.code == product.code" | first %}
-<a href="{{ product_page.url }}">
-    <div class="card" style="height: 100%;">
-        <div class="card-image">
-            <figure class="image is-16by9">
-                <img src="/img/product/{{ product.code }}-640-360.jpg" alt="{{ product.title }}">
-            </figure>
-        </div>
-        <div class="card-content">
-            <div class="media">
-                <div class="media-content">
-                    <p class="title is-4">{{ product.name }}</p>
-                    <p class="subtitle is-6">{{ product.subtitle }}</p>
-                </div>
-            </div>
-
-            <div class="content">
-                <ul>
-                    {% for feature in product.features %}
-                    <li>{{ feature.label }}</li>
-                    {%- endfor -%}
-                </ul>
-                {{ member.content }}
-            </div>
-        </div>
-    </div>
-</a> -->
+<!-- <figure class="image is-16by9">
+    <img src="/img/product/{{ product.code }}-640-360.jpg" alt="{{ product.title }}">
+</figure> -->
 
 {% assign product_page = site.products | where_exp:"item","item.code == product.code" | first %}
 <div class="product-card pixel-box">
@@ -56,9 +32,9 @@
                 <a class="more-link has-text-secondary" href="{{ product_page.url }}">Learn more</a>
 
                 <div class="info-price is-flex">
-                    <a alt="{{ product.name }} Pixelatto buy button" href="https://transactions.sendowl.com/products/78274278/42A4FD4D/purchase" rel="nofollow" id="buy-button" class="button button-round is-secondary">Get it now!</a>
+                    <div id="price" class="price price-box is-uppercase has-text-weight-bold pr-4"></div>
+                    <a alt="{{ product.name }} Pixelatto buy button" href="https://transactions.sendowl.com/products/78274278/42A4FD4D/purchase" rel="nofollow" id="buy-button" class="button button-round is-secondary buy-button">Get it now!</a>
                     <script type="text/javascript" src="https://transactions.sendowl.com/assets/sendowl.js"></script>
-                    <div id="price" class="price is-uppercase has-text-weight-bold pr-4"></div>
                 </div>
             </div>
         </div>

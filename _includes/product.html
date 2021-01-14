@@ -162,10 +162,29 @@
     </div>
     {% endif %}
 
+    {%- if product.presskit.tweets -%} <!--.testimonials-->
     <!--Testimonials-->
     <div class="container--sm">
         <h2 class="product-title is-uppercase has-text-weight-bold pb-4 mb-4 mt-3">Testimonials</h2>
+        <!-- <div id="container" class="columns is-multiline is-centered">
+            {%- for tweet in product.presskit.testimonials -%}
+                {%- if tweet.script -%}
+                    <div class="column is-4">
+                        {{ tweet.script }}
+                    </div>
+                {%- endif -%}
+            {%- endfor -%}
+        </div> -->
+
+        <div id="container" class="columns is-multiline is-centered"> <!--check the ID-->
+            {%- for tweet in product.presskit.tweets -%}
+            <div class="column is-4">
+                <blockquote class="tweet_class" id="tweet" tweetID="{{ tweet }}"></blockquote>
+            </div>
+            {%- endfor -%}
+        </div>
     </div>
+    {%- endif -%}
 </section>
 
 {% include redesign/subscribe-form.html %}
