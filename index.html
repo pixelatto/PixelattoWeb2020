@@ -2,21 +2,23 @@
 layout: redesign
 ---
 
+{% assign home_data = site.data.home %}
+
 <section class="hero-section home-hero">
     <div class="bg-img">
-        <img src="/img/home/hero-background.svg" alt="Pixelatto background image" />
+        <img src="{{ home_data.hero_image }}" alt="Pixelatto background image" />
     </div>
     <div class="hero-inner">
-        <img class="hero-logo" src="/img/brand/Logo-white.svg" alt="Pixelatto Logo" />
-        <h1 class="hero-title has-text-weight-bold">Creative games and tools</h1>
-        <a class="button button-round is-secondary" href="#">Explore</a>
+        <img class="hero-logo" src="{{ home_data.hero_logo }}" alt="Pixelatto Logo" />
+        <h1 class="hero-title has-text-weight-bold">{{ home_data.hero_title }}</h1>
+        <a class="button button-round is-secondary" href="{{ home_data.hero_cta.cta_url }}">{{ home_data.hero_cta.cta_text }}</a>
         <img class="scroll-down" src="/img/home/arrow-down-circle.svg" alt="Scroll down arrow" />
     </div>
 </section>
 
 <section class="home-tools">
     <div class="container--sm">
-        <h2 class="section-title">games and tools</h2>
+        <h2 class="section-title">{{ home_data.tools_section_title }}</h2>
         {% assign products = site.data.products | sort  %}
         {%- for product_hash in products reversed -%}
             {% assign product = product_hash[1] %}
@@ -50,22 +52,22 @@ layout: redesign
             <div class="column">
                 <div class="about-img">
                     <div class="bg-img">
-                        <img src="/img/home/director-image.svg" alt="Javi Cepa photo" />
+                        <img src="{{ home_data.about_section.about_image[0] }}" alt="{{ home_data.about_section.about_image[1] }}" />
                     </div>
                     <div class="img-description">
-                        <h4>Javi Cepa</h4>
-                        <p>Director</p>
+                        <h4>{{ home_data.about_section.about_author }}</h4>
+                        <p>{{ home_data.about_section.about_role }}</p>
                     </div>
                 </div>
             </div>
             <div class="column">
                 <div class="about-text">
                     <div class="text-content">
-                        <h2 class="section-title">About the Pixelattos</h2>
-                        <p>Most people think that the first Pixelatto dated early 2019 or so, since they're mostly know for Reventure, but the fact is that there's fossil evidence of living specimens back at 2014.</p>
-                        <p>Contract work is not as popular as making own videogames, but for these organisms it somehow enabled their survival and adaptation to the environment.</p>
-                        <p>Most races of game developer die out of starvation in the first years, these pixele-y creatures managed to evolve and learn through the mystic arts of extremely-low-budgets and extremely-hard-work to become the creatures we know and love today.</p>
-                        <a class="button button-round is-secondary" href="#">learn more</a>
+                        <h2 class="section-title">{{ home_data.about_section.about_title }}</h2>
+                        {%- for text_node in home_data.about_section.about_text -%}
+                            {{ text_node | markdownify }}
+                        {%- endfor -%}
+                        <a class="button button-round is-secondary" href="/about">learn more</a>
                     </div>
                 </div>
             </div>
@@ -76,7 +78,7 @@ layout: redesign
 <section class="home-recent-posts">
     <div class="container--sm">
         <div class="section-header">
-            <h2 class="section-title">Recent Blog posts</h2>
+            <h2 class="section-title">{{ home_data.blog_section_title }}</h2>
             <a class="show-link is-uppercase has-text-weight-bold" href="/blog/">Show all<span class="chevron right"></span></a>
         </div>
         <div class="columns">
@@ -86,12 +88,6 @@ layout: redesign
                         <a class="post-link" href="{{ site.baseurl }}{{ post.url }}" style="color: initial; height: 100%;">
                             {%- if post.image -%}
                             <div class="card-image">
-                                <div class="tag-wrapper">
-                                    {% for tagName in post.tags %}
-                                    {% assign tag = site.tags | where_exp:"item","item.tag == tagName" | first %}
-                                    <p class="post-tag tag--sm">{{ tag.tag }}</p>
-                                    {% endfor %}
-                                </div>
                                 <img src="/img/upload/{{ post.image }}" alt="{{ post.title }}" />
                             </div>
                             {%- else -%}
