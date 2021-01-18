@@ -29,3 +29,44 @@ permalink: /store/
 {% include redesign/subscribe-form.html %}
 
 <!--add modified script from product.html-->
+{% contentfor extra-js no-convert %}
+        {% assign my_array = "" | split: "," %}
+
+        {%- for product_hash in products reversed -%}
+            {% assign product = product_hash[1] %}
+            {% assign prod_id = product.sendowl_id %}
+
+            {% assign prod_order = product.order %}
+            {% assign counter = forloop.length %}
+            {% assign counter2 = forloop.index %}
+
+            <script>
+                {%- if counter2 == 1 -%}
+                    var priceHTML = document.getElementById("price-1");
+                    var buyButtonHTML = document.getElementById("buy-button-1");
+                    getSendOwlProduct(78384823).then((data) => {
+                        priceHTML.textContent = "only for " + data.product.price + " €";
+                        buyButtonHTML.href = data.product.instant_buy_url;
+                    });
+                    {%- else -%} //try with else
+                    var priceHTML2 = document.getElementById("price-2");
+                    var buyButtonHTML2 = document.getElementById("buy-button-2");
+                    getSendOwlProduct(78274278).then((data) => {
+                        priceHTML2.textContent = "only for " + data.product.price + " €";
+                        buyButtonHTML2.href = data.product.instant_buy_url;
+                    });
+                {%- endif -%}
+            </script>
+        {%- endfor -%}
+    <!-- <script>
+        // var priceHTML = document.getElementById("price-2");
+        // getSendOwlProduct(78274278).then((data) => {
+        //     priceHTML.textContent = "only for " + data.product.price + " €";
+        //     // for (var i = 0; i < priceHTML.length; i++) {
+
+        //     // }
+        //     //priceHTML.textContent = "only for " + data.product.price + " €";
+        //     //buyButtonHTML.href = data.product.instant_buy_url;
+        // });
+    </script> -->
+{% endcontentfor %}

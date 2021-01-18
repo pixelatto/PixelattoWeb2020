@@ -32,8 +32,8 @@
                 <a class="more-link has-text-secondary" href="{{ product_page.url }}">Learn more</a>
 
                 <div class="info-price is-flex">
-                    <div id="price" class="price price-box is-uppercase has-text-weight-bold pr-4"></div>
-                    <a alt="{{ product.name }} Pixelatto buy button" href="https://transactions.sendowl.com/products/78274278/42A4FD4D/purchase" rel="nofollow" id="buy-button" class="button button-round is-secondary buy-button">Get it now!</a>
+                    <div id="price-{{product.order}}" class="price price-box is-uppercase has-text-weight-bold pr-4"></div>
+                    <a alt="{{ product.name }} Pixelatto buy button" href="https://transactions.sendowl.com/products/78274278/42A4FD4D/purchase" rel="nofollow" id="buy-button-{{product.order}}" class="button button-round is-secondary buy-button">Get it now!</a>
                     <script type="text/javascript" src="https://transactions.sendowl.com/assets/sendowl.js"></script>
                 </div>
             </div>
