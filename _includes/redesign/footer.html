@@ -1,7 +1,7 @@
 <footer class="footer-upd">
     <div class="container--lg">
-        <div class="columns is-gapless is-multiline">
-            <div class="column">
+        <div class="columns is-gapless is-multiline is-desktop">
+            <div class="column is-one-third-desktop is-full-tablet">
                 <div class="footer-social">
                     <img class="footer-logo" src="/img/brand/Logo-white.svg" alt="Pixelatto Logo" />
                     <div class="copyrights">
@@ -10,53 +10,59 @@
                     </div>
                     <ul class="social-list">
                         <li>
-                            <a href="#"><img class="has-text-primary" src="/img/platforms/instagram.svg" /></a>
+                            <a href="//www.instagram.com/pixelatto_games/" target="_blank"><img class="has-text-primary" src="/img/platforms/instagram.svg" /></a>
                         </li>
                         <li>
-                            <a href="#"><img class="has-text-primary" src="/img/platforms/facebook-2.svg" /></a>
+                            <a href="//www.facebook.com/pixelatto" target="_blank"><img class="has-text-primary" src="/img/platforms/facebook-2.svg" /></a>
                         </li>
                         <li>
-                            <a href="#"><img class="has-text-primary" src="/img/platforms/twitter.svg" /></a>
+                            <a href="//twitter.com/pixelatto" target="_blank"><img class="has-text-primary" src="/img/platforms/twitter.svg" /></a>
                         </li>
                         <li>
-                            <a href="#"><img class="has-text-primary" src="/img/platforms/youtube.svg" /></a>
+                            <a href="//www.youtube.com/c/Pixelatto" target="_blank"><img class="has-text-primary" src="/img/platforms/youtube.svg" /></a>
                         </li>
                         <li>
-                            <a href="#"><img class="has-text-primary" src="/img/platforms/discord.svg" /></a>
+                            <a href="//discord.gg/pixelatto" target="_blank"><img class="has-text-primary" src="/img/platforms/discord.svg" /></a>
                         </li>
                         <li>
-                            <a href="#"><img class="has-text-primary" src="/img/platforms/android.svg" /></a>
+                            <a href="//play.google.com/store/apps/dev?id=5196777688170375732" target="_blank"><img class="has-text-primary" src="/img/platforms/android.svg" /></a>
                         </li>
                         <li>
-                            <a href="#"><img class="has-text-primary" src="/img/platforms/github.svg" /></a>
+                            <a href="//github.com/pixelatto" target="_blank"><img class="has-text-primary" src="/img/platforms/github.svg" /></a>
                         </li>
                     </ul>
                 </div>
             </div>
+
             <div class="column">
-                <div class="footer-list">
-                    <h4 class="is-uppercase has-text-weight-bold">Quick links</h4>
-                    <ul>
-                        <li><a href="#">Store</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Contact us</a></li>
-                        <li><a href="#">Presskit</a></li>
-                    </ul>
+                <div class="columns is-gapless is-multiline is-mobile">
+                    <div class="column is-half-desktop">
+                        <div class="footer-list">
+                            <h4 class="is-uppercase has-text-weight-bold">Quick links</h4>
+                            <ul>
+                                <li><a href="/store">Store</a></li>
+                                <li><a href="/blog">Blog</a></li>
+                                <li><a href="/about">About us</a></li>
+                                <li><a href="/contact">Contact us</a></li>
+                                <li><a href="/presskit">Presskit</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="column is-half-desktop">
+                        <div class="footer-list">
+                            <h4 class="is-uppercase has-text-weight-bold">Support</h4>
+                            <ul>
+                                <li><a href="#">Help center</a></li>
+                                <li><a href="#">Terms of service</a></li>
+                                <li><a href="#">Legal</a></li>
+                                <li><a href="#">Privacy policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="column">
-                <div class="footer-list">
-                    <h4 class="is-uppercase has-text-weight-bold">Support</h4>
-                    <ul>
-                        <li><a href="#">Help center</a></li>
-                        <li><a href="#">Terms of service</a></li>
-                        <li><a href="#">Legal</a></li>
-                        <li><a href="#">Privacy policy</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="column">
+
+            <div class="column is-narrow">
                 <div class="footer-list footer-form">
                     <h4 class="is-uppercase has-text-weight-bold">Subscribe to our newsletter</h4>
                     <form id="subscribe-form" action="{{site.data.subscribe.subscribe_action}}" method="post" name="mc-embedded-subscribe-form" target="_blank">
@@ -64,7 +70,7 @@
                             <label>
                                 <p style="display: none;">Newsletter email</p>
                                 <input class="input contact-form__input" type="email" placeholder="Your email address" value="" id="suscribe-email-input" name="EMAIL" required="" />
-                                <span class="icon is-small is-right" style="color: #E37827;">
+                                <span class="icon is-small is-right has-text-secondary">
                                     <i class="fas fa-paper-plane"></i>
                                 </span>
                             </label>

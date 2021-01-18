@@ -8,7 +8,9 @@
                 <p class="post-tag tag--sm">{{ tag.tag }}</p>
                 {% endfor %}
             </div>
-            <img src="/img/upload/{{ post.image }}" alt="{{ post.title }}" />
+            <div class="image is-16by9">
+                <img src="/img/upload/{{ post.image }}" alt="{{ post.title }}" />
+            </div>
         </div>
         {% else %}
         <header class="card-header">
@@ -18,7 +20,7 @@
         <div class="card-content">
             <div class="content">
                 {% if post.image %}
-                <p class="title is-5">{{ post.title }}</p>
+                <p class="title is-5 my-3">{{ post.title }}</p>
                 {% endif %}
                 {% if post.description %}
                 <p>{{ post.description | markdownify | remove: '<p>' | remove: '</p>' }}</p>

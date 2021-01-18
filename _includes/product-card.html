@@ -1,12 +1,9 @@
-<!-- <figure class="image is-16by9">
-    <img src="/img/product/{{ product.code }}-640-360.jpg" alt="{{ product.title }}">
-</figure> -->
-
 {% assign product_page = site.products | where_exp:"item","item.code == product.code" | first %}
+
 <div class="product-card pixel-box">
     <div class="columns is-gapless">
         <div class="column is-narrow">
-            <div class="card-image">
+            <div class="card-image img-16by9">
                 <div class="bg-img">
                     <img src="{{ product.product_image }}" alt="{{ product.subtitle }}" />
                 </div>

@@ -55,7 +55,7 @@ a {
 }
 
 
-//=== UTILITIES STYLES ===// //add @mixin for section paddings
+//=== SHARED STYLES ===// //add @mixin for section paddings
 
 /* Container Styling */
 .container--sm {
@@ -115,8 +115,6 @@ a {
 //     }
 // }
 
-//=== SHARED STYLES ===//
-
 /* General Hero section */
 .hero-section {
     background-color: $azulatto;
@@ -146,6 +144,9 @@ a {
         font-size: 3em;
         line-height: 1.229em;
         padding-bottom: 40px;
+        @media screen and (max-width: 768px) {
+            font-size: 2em;
+        }
     }
 }
 
@@ -173,10 +174,13 @@ a {
     }
     .show-link {
         color: #E37827;
-        font-size: 1.125em;
+        font-size: 1em;
         line-height: 1.222em;
         letter-spacing: 0.1em;
         transition: all .3s linear;
+        @media screen and (min-width: 768px) {
+            font-size: 1.125em;
+        }
         &:hover {
             color: darken(#E37827, 10%);
         }
@@ -212,10 +216,11 @@ a {
         box-shadow: none;
         height: 100%;
         .tag-wrapper {
+            display: flex;
             position: absolute;
             left: 40px;
             top: 40px;
-            display: flex;
+            z-index: 1;
             .post-tag {
                 &:not(:last-child) {
                     margin-right: 5px;
@@ -223,7 +228,6 @@ a {
             }
         }
         .card-image {
-            height: 200px; //check on mobile
             padding: 20px 20px 0;
             overflow: hidden;
             img {
@@ -234,7 +238,7 @@ a {
             }
         }
         .card-content {
-            padding: 20px 20px 4em;
+            padding: 0 20px 4em;
         }
         .card-footer {
             position: absolute;
@@ -244,7 +248,7 @@ a {
             display: block;
             .card-footer-item {
                 color: #666666;
-                font-size: 14px;
+                font-size: 0.875em;
                 font-style: italic;
                 line-height: 1.214em;
                 padding: 20px;
@@ -253,15 +257,14 @@ a {
         }
     }
     .post-link {
+        border-radius: 10px;
         display: block;
         transition: all .3s linear;
         &:hover {
-            border-radius: 10px;
             box-shadow: 0px 0px 20px rgba(74, 74, 74, 0.25);
-            // .post-preview {
-            //     box-shadow: 0px 0px 20px rgba(74, 74, 74, 0.25) !important;
-            //     background: red;
-            // }
+        }
+        @media screen and (max-width: 768px) {
+            box-shadow: 0px 0px 20px rgba(74, 74, 74, 0.25);
         }
     }
 }
@@ -292,6 +295,18 @@ a {
                 border-radius: 10px 10px 0 0;
             }
         }
+        &.img-16by9 {
+            @media screen and (max-width: 768px) {
+                min-height: 100%;
+                .bg-img {
+                    position: relative;
+                    padding-bottom: 56.25%;
+                }
+                img {
+                    position: absolute;
+                }
+            }
+        }
     }
     .card-inner {
         padding: 40px 30px 20px;
@@ -302,6 +317,11 @@ a {
             position: absolute;
             top: 0;
             right: 0;
+            max-width: 115px;
+            width: 100%;
+            @media screen and (max-width: 768px) {
+                max-width: 75px;
+            }
         }
         .product-logo {
             display: block;
@@ -359,9 +379,11 @@ a {
         align-items: center;
     }
     .subscribe-text {
-        @media screen and (max-width: 1024px) {
-            margin-bottom: 25px;
-            text-align: center;
+        margin-bottom: 25px;
+        text-align: center;
+        @media screen and (min-width: 1024px) {
+            margin-bottom: 0;
+            text-align: left;
         }
         h2 {
             font-size: 1.875em;
@@ -427,9 +449,12 @@ a {
     }
     .copyrights {
         margin: 41px 0 49px;
+        @media screen and (max-width: 768px) {
+            margin: 25px 0;
+        }
         p {
             color: #D9DBE1;
-            font-size: 14px;
+            font-size: 0.875em;
             &:first-child {
                 margin-bottom: 15px;
             }
@@ -456,7 +481,7 @@ a {
                     background-color: rgba(255, 255, 255, 0.3);
                 }
                 img {
-                    max-width: 17px;
+                    max-width: 16px;
                     width: 100%;
                 }
             }
@@ -465,9 +490,8 @@ a {
     // lists
     .footer-list {
         padding-top: 14px;
-        font-size: 18px;
+        font-size: 1.125em;
         h4 {
-            //font-size: 18px;
             margin-bottom: 24px;
         }
         li {
@@ -483,20 +507,12 @@ a {
         }
     }
     // footer form
-    // .footer-form {
-    //     input[type=email] {
-    //         border: none;
-    //         border-radius: 40px;
-    //         box-shadow: none;
-    //         &::placeholder {
-    //             color: #DCDCDC;
-    //             font-size: 14px;
-    //         }
-    //         &:focus {
-    //             outline: none;
-    //         }
-    //     }
-    // }
+    .footer-form {
+        form {
+            max-width: 335px;
+            width: 100%;
+        }
+    }
 }
 
 /* Orange Round Button */
@@ -561,14 +577,14 @@ input[type=email] {
         }
     }
     .hero-title {
-        font-size: 36px;
+        font-size: 2.25em;
         line-height: 1.222em;
         padding: 35px 0 41px;
         @media screen and (max-width: 768px) {
-            font-size: 28px;
+            font-size: 1.75em;
         }
         @media screen and (max-width: 576px) {
-            font-size: 24px;
+            font-size: 1.5em;
         }
     }
     .scroll-down {
@@ -590,18 +606,6 @@ input[type=email] {
     .product-card {
         &:not(:last-child) {
             margin-bottom: 30px;
-        }
-        .card-image {
-            @media screen and (max-width: 768px) {
-                min-height: 100%;
-                .bg-img {
-                    position: relative;
-                    padding-bottom: 56.25%;
-                }
-                img {
-                    position: absolute;
-                }
-            }
         }
         .card-inner {
             p {
@@ -699,14 +703,6 @@ input[type=email] {
     @media screen and (max-width: 768px) {
         padding: 50px 0;
     }
-    .post-preview {
-        .post-link {
-            @media screen and (max-width: 768px) {
-                border-radius: 10px;
-                box-shadow: 0px 0px 20px rgba(74, 74, 74, 0.25);
-            }
-        }
-    }
 }
 
 //=== STORE PAGE ===//
@@ -735,33 +731,42 @@ input[type=email] {
         //top: -250px;
         .card-inner {
             padding: 0;
-            @media screen and (max-width: 1024px) {
-                margin-top: 25px;
+            margin-top: 25px;
+            @media screen and (min-width: 1024px) {
+                padding: 0 0 0 25px;
+                margin-top: 0;
             }
         }
         .product-info {
             .info-price {
                 align-items: center;
                 justify-content: space-between;
+                @media screen and (max-width: 576px) {
+                    flex-direction: column;
+                }
             }
             .price {
                 color: $naranjitto;
-                font-size: 18px;
+                font-size: 1.125em;
                 letter-spacing: 0.1em;
-                //padding-right: 15px;
-                // @media screen and (max-width: 768px) {
-                //     padding-right: 0;
-                // }
+                @media screen and (max-width: 576px) {
+                    padding-right: 0 !important;
+                    margin-top: 15px;
+                }
             }
             .info-platforms {
                 margin-top: 25px;
                 @media screen and (min-width: 1024px) {
                     margin-top: 0;
+                    padding-left: 25px;
                 }
                 h3 {
-                    font-size: 14px;
+                    font-size: 0.875em;
                     line-height: 1.214em;
                     letter-spacing: 0.1em;
+                    @media screen and (max-width: 768px) {
+                        margin-bottom: 15px;
+                    }
                 }
             }
         }
