@@ -26,11 +26,13 @@ $custom-colors: (
 .navbar-link:not(.is-arrowless)::after{
     border-color: $darkslategray;
     border-width: 2px;
+    margin-top: -0.6em;
 }
 
-// a.navbar-item, .navbar-link {
-//     text-transform: uppercase;
-// }
+a.navbar-item, .navbar-link {
+    font-weight: 600;
+    text-transform: uppercase;
+}
 
 a.navbar-item:hover{
     color: $primary;
@@ -55,7 +57,7 @@ a {
 }
 
 
-//=== SHARED STYLES ===// //add @mixin for section paddings
+//=== SHARED STYLES ===// //add @mixin for section paddings //merge .tag-wrapper
 
 /* Container Styling */
 .container--sm {
@@ -803,6 +805,9 @@ input[type=email] {
 
 //=== BLOG PAGE ===//
 .blog-carousel-list {
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
     .product-card {
         .card-inner {
             padding: 50px 20px 0;
@@ -823,10 +828,21 @@ input[type=email] {
 }
 
 .blog-list {
+    @media screen and (max-width: 768px) {
+        padding-top: 50px;
+    }
     .blog-tags {
         .tag-btn {
             &:not(.active) {
                 opacity: 0.5;
+            }
+            &:not(:last-child) {
+                margin-right: 1rem;
+            }
+            @media screen and (max-width: 544px) {
+                &:nth-child(-n+2) {
+                    margin-bottom: 1rem;
+                }
             }
         }
     }
@@ -892,7 +908,9 @@ input[type=email] {
         width: 100%;
     }
     > ul {
-        margin-left: 3em;
+        @media screen and (min-width: 1024px) {
+            margin-left: 3em;
+        }
         > li {
             list-style: none;
             position: relative;
@@ -914,6 +932,15 @@ input[type=email] {
     li ul li {
         list-style-type: disc;
     }
+    ul li p {
+        word-break: break-word;
+    }
+}
+
+.share-buttons {
+    @media screen and (max-width: 768px) {
+        margin-bottom: 20px;
+    }
 }
 
 .post-aside {
@@ -929,6 +956,7 @@ input[type=email] {
         left: 20px;
         top: 20px;
         display: flex;
+        z-index: 1;
         .post-tag {
             &:not(:last-child) {
                 margin-right: 5px;

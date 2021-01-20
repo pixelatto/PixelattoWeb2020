@@ -7,16 +7,16 @@ layout: redesign
     <div class="section-header" style="margin-bottom: 20px;">
       <a class="show-link is-uppercase has-text-weight-bold" href="/blog/"><span class="chevron left"></span>Blog</a>
     </div>
-    <div class="columns">
+    <div class="columns is-gapless" style="justify-content: space-between;">
       <div class="column is-8">
         <div class="content">
           <div class="post">
             <img class="hero pixel-box" src="/img/upload/{{ page.image }}" alt="{{ post.title }}" />
             <div class="mt-5">
-              {% for tagName in page.tags %}
+              {%- for tagName in page.tags -%}
                 {% assign tag = site.tags | where_exp:"item","item.tag == tagName" | first %}
                 <button onclick="window.location='{{ tag.url }}'" class="button tag-btn is-primary">{{ tag.tag }}</button>
-              {% endfor %}
+              {%- endfor -%}
             </div>
             <h1 class="title is-3 mb-5">{{ page.title }}</h1>
             <p class="is-size-4">{{ page.description }}</p>
@@ -38,13 +38,13 @@ layout: redesign
 
           <!-- <div class="PageNavigation">
             {% if page.next.url %}
-              <a class="next-post" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
+              <a class="next-post" href="{{page.next.url}}">Read next article &raquo;</a>
             {% endif %}
           </div> -->
         </div>
       </div>
       <div class="column is-3 is-offset-1">
-        <h2 class="title is-4 is-capitalized has-text-weight-medium has-text-secondary">You might also like</h2>
+        <h2 class="title-aside title is-4 is-capitalized has-text-weight-medium has-text-secondary">You might also like</h2>
         <div class="post-aside">
           {% assign maxRelated = 3 %}
           {% assign minCommonTags =  1 %}
@@ -73,9 +73,11 @@ layout: redesign
                     <p class="post-tag tag--sm">{{ tag.tag }}</p>
                     {% endfor %}
                   </div>
+                  <div class="image is-16by9">
                     <img class="pixel-box" src="/img/upload/{{ post.image }}" alt="{{ post.title }}" />
-                    <h3 class="title is-5">{{ post.title }}</h3>
-                    <p class="text is-italic">{{ post.author }} - {{ post.date | date: "%b %-d, %Y" }}</p>
+                  </div>
+                  <h3 class="title is-5">{{ post.title }}</h3>
+                  <p class="text is-italic">{{ post.author }} - {{ post.date | date: "%b %-d, %Y" }}</p>
                 </div>
               </a>
               {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
@@ -89,18 +91,3 @@ layout: redesign
     </div>
   </div>
 </section>
-
-<style>
-  /* .title:not(:last-child) {
-    margin-bottom: 0.5rem;
-  } */
-
-  /* .content {
-    max-width: 1200px;
-    margin: auto;
-  }
-
-  .hero {
-    width: 100%;
-  } */
-</style>

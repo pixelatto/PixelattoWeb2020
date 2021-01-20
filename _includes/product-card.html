@@ -18,17 +18,17 @@
                 <h3 class="is-uppercase has-text-weight-bold">{{ product.subtitle }}</h3>
                 <div class="content mb-4">
                     {%- for feature in product.features -%}
-                    <p>
-                        <span class="icon has-text-primary">
-                            <i class="fas fa-circle fa-xs"></i>
-                        </span>
-                        <span>{{ feature.label }}</span>
-                    </p>
+                        <p>
+                            <span class="icon has-text-primary">
+                                <i class="fas fa-circle fa-xs"></i>
+                            </span>
+                            <span>{{ feature.label }}</span>
+                        </p>
                     {%- endfor -%}
                 </div>
                 <a class="more-link has-text-secondary" href="{{ product_page.url }}">Learn more</a>
 
-                <div class="info-price is-flex">
+                <div class="info-price is-flex mt-4">
                     <div id="price-{{product.order}}" class="price price-box is-uppercase has-text-weight-bold pr-4"></div>
                     <a alt="{{ product.name }} Pixelatto buy button" href="https://transactions.sendowl.com/products/78274278/42A4FD4D/purchase" rel="nofollow" id="buy-button-{{product.order}}" class="button button-round is-secondary buy-button">Get it now!</a>
                     <script type="text/javascript" src="https://transactions.sendowl.com/assets/sendowl.js"></script>
