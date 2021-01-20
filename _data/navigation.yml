@@ -5,6 +5,8 @@
       link: /store/reventure/
     - name: Card Creator
       link: /store/card-creator/
+    - name: Tabletop Creator
+      link: /store/tabletop-creator/
 - name: Blog
   link: /blog/
   # dropdown: 

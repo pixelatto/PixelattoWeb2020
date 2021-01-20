@@ -22,7 +22,7 @@
                             allowfullscreen>
                         </iframe>
                         {% else %}
-                        <img src="/img/product/{{ product.code }}-640-360.jpg" />
+                        <img src="{{ product.gallery.imagefolder }}{{ product.gallery.images[0].name }}" />
                         {% endif %}
                     </figure>
                 </div>
@@ -56,15 +56,23 @@
         </div>
     </div>
 
+    {% if product.sendowl_id %}
     <div class="container">
         <a alt="{{ product.name }} Pixelatto buy button" href="https://transactions.sendowl.com/products/78274278/42A4FD4D/purchase" rel="nofollow" id="buy-button" class="button is-large is-{% if product.type == 'game' %}secondary{% else %}primary{% endif %}">Get it now!</a>
         <script type="text/javascript" src="https://transactions.sendowl.com/assets/sendowl.js" ></script>
         <div id="price" style="display: inline-block;padding: 1rem;"></div>
     </div>
+    {% endif %}
+    
     <br>
     <br>
     <div class="container">
+        {% if product.sendowl_id %}
         <h3 class="subtitle is-5">Get it also at</h3>
+        {% else %}
+        <h1 class="title is-3">Get it at</h1>
+        {% endif%}
+
         {% include external-store-buttons.html %}
     </div>
 
