@@ -25,7 +25,7 @@ features:
 
 external_stores:
     - image: steam
-      link: https://store.steampowered.com/app/523600/Card_Creator/
+      link: https://store.steampowered.com/app/861590/Tabletop_Creator/
       
 gallery:
       id: cc-gallery
@@ -50,24 +50,14 @@ gallery:
             thumbnail: TabletopCreator_06_tn.jpg
             text: Tabletop Creator image6
 
-faq:
-      - question: Hola , esto es una prueba.
-        answer: Hola, esto es la respuestaz.
-      - question: Hola , esto es una prueba2.
-        answer: Hola, esto es la respuestax.
-      - question: Hola , esto es una prueba3.
-        answer: Hola, esto es la respuesta.
-      - question: Hola , esto es una prueba4.
-        answer: Hola, esto es la respuesta.
-      - question: Hola , esto es una prueba5.
-        answer: Hola, esto es la respuesta.
-      - question: Hola , esto es una prueba6.
-        answer: Hola, esto es la respuesta.
+# faq:
+#       - question: Hola , esto es una prueba.
+#         answer: Hola, esto es la respuestaz.
 
 presskit:
     factsheet:
         developer: Pixelatto, Based in Málaga, Spain
-        release_date: 17/04/2017
+        release_date: 25/02/2021
     additional_info:
         stores:
     features:
