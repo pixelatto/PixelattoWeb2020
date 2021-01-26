@@ -2,9 +2,12 @@
 layout: member
 title: Fali Ronda
 subtitle: Producer
+job_description: 'Fali is always ready to tackle the chaos that permanently lives in our little studio. Accounting, programming, marketing... If it ends with "-ing", Fali can do it.'
 quote: I'm already on it!
-telephone: 
+telephone:
 twitter: FaliRonda
+instagram: '#'
+facebook: '#'
 image: /img/avatars/Fali.svg
 hashtags: [AsapMan, WildCard, NotionGuru]
 order: 5

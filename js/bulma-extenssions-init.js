@@ -10,6 +10,12 @@ bulmaCarousel.attach('#presskit-carousel', {
     infinite: true
 });
 
+bulmaCarousel.attach('#team-carousel', {
+    slidesToScroll: 3,
+    slidesToShow: 3,
+    infinite: true
+});
+
 bulmaCarousel.attach('#testimonials-carousel', {
     slidesToScroll: 4,
     slidesToShow: 4,

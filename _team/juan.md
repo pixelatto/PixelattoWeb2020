@@ -2,8 +2,9 @@
 layout: member
 title: Juan Delgado
 subtitle: Coder
+job_description: "Juan knows every programming language ever made and has root access to your computer. He won't do anything evil as long as you keep buying our stuff."
 quote: You're doing it wrong
-telephone: 
+telephone:
 twitter: JuDelCo
 image: /img/avatars/Juan.svg
 hashtags: [HackerMan, PragmaticSama, Ju]

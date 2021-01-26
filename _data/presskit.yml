@@ -1,8 +1,12 @@
 factsheet:
       - text: Based in Malaga, Spain
+        icon: fa-home
       - text: Founding in 2013
+        icon: fa-cube
       - text: Av. Jane Bowles, s/n, 29011, Málaga, Spain
+        icon: fa-map-marker-alt
       - text: +0034 618 887 993
+        icon: fa-phone-alt
 
 gallery:
       id: pixelatto-presskit-gallery
@@ -10,11 +14,16 @@ gallery:
       images:
             - name: Icon.svg
               text: Pixelatto icon
+              #description: Logo
             - name: Logo.svg
               text: Pixelatto logo
-            - name: LogoFit.svg
-              text: Pixelatto logo fit
+              #description: Icon
+            # - name: LogoFit.svg
+            #   text: Pixelatto logo fit
+            #   description: Logo
             - name: Brand.svg
               text: Pixelatto brand
+              #description: <br /> Horizontal Logo
             - name: BrandAlt.svg
               text: Pixelatto brand alt
+              #description: <br /> Vertical Logo

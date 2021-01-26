@@ -23,117 +23,156 @@ short_version: true
 </section>
 
 <section class="section presskit">
-    <div class="container">
-        <h1 class="title is-3">Pixelatto presskit</h1>
-        <div class="columns is-multiline">
-            <div class="column is-6">
-                <h2 class="subtitle is-5 has-text-weight-bold">Factsheet</h2>
-                {% for entry in presskit.factsheet %}
-                <p class="ml-5">{{ entry.text }}</p>
-                {% endfor %}
-            </div>
-            <div class="column is-6">
-                <h2 class="subtitle is-5 has-text-weight-bold">Download Press Resources</h2>
-                <div class="columns is-multiline">
-                    <div class="column is-full-mobile is-one-half is-one-third-desktop is-one-quarter-widescreen is-one-quarter-fullhd has-text-centered" >
-                        <button class="button" onclick="window.open('/download/pixelatto-presskit.zip')">
-                            <span class="icon">
-                                <i class="fas fa-cloud-download-alt"></i>
-                            </span>
-                            <span>Pixelatto</span>
-                        </button>
+    <div class="container--sm">
+        <div class="factsheet-wrapper">
+            <div class="columns is-multiline">
+                <div class="column is-5">
+                    <div class="factsheet-resources pixel-box" style="height: 100%;">
+                        <h2 class="section-title">Factsheet</h2>
+                        {% for entry in presskit.factsheet %}
+                        <p>
+                            <span class="icon has-text-secondary"><i class="fas {{ entry.icon }}"></i></span>
+                            <span>{{ entry.text }}</span>
+                        </p>
+                        {% endfor %}
                     </div>
-                    {% for product_hash in products %}
-                    {% assign product = product_hash[1] %}
-                    <div class="column is-full-mobile is-one-half is-one-third-desktop is-one-quarter-widescreen is-one-quarter-fullhd has-text-centered">
-                        <button class="button {% if product.type == 'game' %}is-secondary{% else %}is-primary{% endif %}" onclick="window.open('/download/{{ product.code }}-presskit.zip')">
-                            <span class="icon">
-                                <i class="fas fa-cloud-download-alt"></i>
-                            </span>
-                            <span>{{ product.name }}</span>
-                        </button>
-                    </div>
-                    {% endfor %}
                 </div>
-            </div>
-        </div>
-    </div>
-    <br>
-    <div class="container">
-        <h2 class="subtitle has-text-weight-bold">Products presskit</h2>
-        <div class="columns is-multiline is-desktop"
-            style="display: flex; flex-direction: row; align-items: stretch; align-content: stretch;">
-            {% for product_hash in products %}
-            {% assign product = product_hash[1] %}
-            <div class="column is-full-mobile is-half is-half-desktop">
-                <a href="{{ page.url }}{{ product.code }}">
-                    <div class="card" style="height: 100%;">
-                        <div class="card-image">
-                            <figure class="image">
-                                <img src="/img/product/{{ product.code }}-logo.svg" alt="{{ product.title }}"
-                                    style="margin: auto; padding: 1.5rem;">
-                            </figure>
+                <div class="column is-7">
+                    <div class="press-resources pixel-box" style="height: 100%;">
+                        <h2 class="section-title">Download Press Resources</h2>
+                        <div class="columns is-multiline is-gapless">
+                            <div class="column is-full" >
+                                <p>Pixelatto</p>
+                                <button class="button button-round is-secondary" onclick="window.open('/download/pixelatto-presskit.zip')">
+                                    <span class="icon">
+                                        <i class="fas fa-cloud-download-alt"></i>
+                                    </span>
+                                    <span>Download</span>
+                                </button>
+                            </div>
+                            {% for product_hash in products reversed %}
+                            {% assign product = product_hash[1] %}
+                            <div class="column is-full">
+                                <p>{{ product.name }}</p>
+                                <button class="button button-round is-secondary" onclick="window.open('/download/{{ product.code }}-presskit.zip')">
+                                    <span class="icon">
+                                        <i class="fas fa-cloud-download-alt"></i>
+                                    </span>
+                                    <span>Download</span>
+                                </button>
+                            </div>
+                            {% endfor %}
                         </div>
                     </div>
-                </a>
+                </div>
             </div>
-            {% endfor %}
         </div>
     </div>
-    <br>
-    <br>
-    <div class="container">
-        <h2 class="subtitle has-text-weight-bold">Brand Resources</h2>
-        <span>Download all brand resources <a onclick="window.open('/download/pixelatto-presskit.zip', 'Download');"
-                target="_blank">here</a></span>
-
-        <div class="columns is-multiline gallery">
-            {% assign cont = 1 %}
-            {% for image in presskit.gallery.images %}
-            <div class="column is-one-quarter-desktop is-half-tablet">
-                <div class="card">
-                    <div class="card-image">
-                        <figure class="image is-3by2">
-                            <img src="{{ presskit.gallery.imagefolder }}{{ image.name }}" alt=""
-                                onclick="openModal('pixelatto-presskit-modal');currentSlide({{ cont }})">
-                        </figure>
+    <br />
+    <br />
+    <div class="container--sm">
+        <div class="presskit-resources">
+            <h2 class="section-title">Products presskit</h2>
+            <div class="columns is-multiline is-desktop"
+                style="display: flex; flex-direction: row; align-items: stretch; align-content: stretch;">
+                {% for product_hash in products reversed %}
+                {% assign product = product_hash[1] %}
+                <div class="column is-full-mobile is-half is-half-desktop">
+                    <div class="product-card pixel-box is-relative" style="height: 100%;">
+                        <div class="card-inner">
+                            <div class="columns is-multiline is-desktop">
+                                <div class="column">
+                                    <img class="product-logo" src="/img/product/{{product.code}}-logo.svg" alt="{{ product.title }}" style="height: 75px;" />
+                                </div>
+                                <div class="column">
+                                    <a class="button button-round button-special is-secondary is-hidden-touch is-inline-flex-desktop" href="{{ page.url }}{{ product.code }}">Read presskit</a>
+                                    <a class="read-link is-uppercase has-text-weight-bold is-hidden-desktop is-inline-block-touch" href="{{ page.url }}{{ product.code }}">Read presskit</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                {% endfor %}
             </div>
-            {% assign cont = cont | plus:1 %}
-            {% endfor %}
         </div>
-
-        <div class="column is-12" style="padding: 0;">
-            <!-- Start lightbox modal -->
-            <div class="modal" id="pixelatto-presskit-modal" onclick="ClickOpenedModal(event)">
-                <div class="modal-content is-vcentered">
-                    {% for image in presskit.gallery.images %}
-                    <div class="item-slide pixelatto-presskit-modal-slide">
-                        <img src="{{ presskit.gallery.imagefolder }}{{ image.name }}">
-                    </div>
-                    {% endfor %}
-                </div>
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                <button onclick="closeModal()" class="modal-close is-large" aria-label="close"></button>
+    </div>
+    <br />
+    <br />
+    <div class="container--sm">
+        <div class="brand-resources">
+            <div class="section-header">
+                <h2 class="section-title mb-0">Brand Resources</h2>
+                <a class="show-link is-uppercase has-text-weight-bold" onclick="window.open('/download/pixelatto-presskit.zip', 'Download');"
+                    target="_blank"><span class="icon"><i class="fas fa-cloud-download-alt"></i></span>Download all brand resources</a>
             </div>
-            <!-- End lightbox modal -->
+
+            <div class="columns is-multiline is-centered gallery">
+                {% assign cont = 1 %}
+                {% for image in presskit.gallery.images %}
+                <div class="column is-one-quarter-desktop is-half-tablet">
+                    <div class="brand-item pixel-box">
+                        <div class="card-image">
+                            <figure class="image is-3by2">
+                                <img src="{{ presskit.gallery.imagefolder }}{{ image.name }}" alt="{{ image.text }}"
+                                    onclick="openModal('pixelatto-presskit-modal');currentSlide({{ cont }})" />
+                            </figure>
+                        </div>
+                        <!-- <div class="brand-cta has-text-secondary has-text-weight-bold">
+                            <span class="icon"><i class="fas fa-cloud-download-alt"></i></span>
+                            <p class="is-uppercase">Download {{ image.description }}</p>
+                        </div> -->
+                    </div>
+                </div>
+                {% assign cont = cont | plus:1 %}
+                {% endfor %}
+            </div>
+
+            <div class="column is-12" style="padding: 0;">
+                <!-- Start lightbox modal -->
+                <div class="modal" id="pixelatto-presskit-modal" onclick="ClickOpenedModal(event)">
+                    <div class="modal-content is-vcentered">
+                        {% for image in presskit.gallery.images %}
+                        <div class="item-slide pixelatto-presskit-modal-slide">
+                            <img src="{{ presskit.gallery.imagefolder }}{{ image.name }}">
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    <button onclick="closeModal()" class="modal-close is-large" aria-label="close"></button>
+                </div>
+                <!-- End lightbox modal -->
+            </div>
         </div>
     </div>
 </section>
+
 <section class="section">
     {% include history-container.html %}
 </section>
-<section class="section">
-    <div class="container">
-        <h1 class="title is-3">Team</h1>
-        {% include pixelattopedia.html %}
+
+<section class="team-section section">
+    <div class="container--sm">
+        <h2 class="section-title">Team</h2>
+        {% comment %}
+            {% include pixelattopedia.html %}
+        {% endcomment %}
+
+        {% assign members = site.team | sort:"order" %}
+        <div id="team-carousel" class="carousel">
+            {% assign cont = 1 %}
+            {%- for member in members -%}
+                {%- if member.hidden -%}
+                {%- else -%}
+                    <div class="item-{{ cont }}">
+                        {% include member-card-presskit.html %}
+                    </div>
+                    {% assign cont = cont | plus:1 %}
+                {%- endif -%}
+            {%- endfor -%}
+        </div>
     </div>
 </section>
 
-<style>
-    .presskit .card-image {
-        padding: 1.5rem;
-    }
-</style>
+
+{% include redesign/subscribe-form.html %}
