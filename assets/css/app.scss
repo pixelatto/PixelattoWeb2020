@@ -504,14 +504,24 @@ a {
     }
     // lists
     .footer-list {
-        padding-top: 14px;
         font-size: 1.125em;
+        padding-top: 14px;
+        @media screen and (max-width: 1024px) {
+            font-size: 1em;
+            padding-top: 25px;
+        }
         h4 {
             margin-bottom: 24px;
+            @media screen and (max-width: 1024px) {
+                margin-bottom: 15px;
+            }
         }
         li {
             &:not(:last-child) {
                 margin-bottom: 20px;
+                @media screen and (max-width: 1024px) {
+                    margin-bottom: 15px;
+                }
             }
             a {
                 color: #fff;
@@ -526,6 +536,9 @@ a {
         form {
             max-width: 335px;
             width: 100%;
+            @media screen and (max-width: 1024px) {
+                margin: 0 auto;
+            }
         }
     }
 }
