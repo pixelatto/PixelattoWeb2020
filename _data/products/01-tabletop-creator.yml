@@ -1,4 +1,4 @@
-order: "3"
+order: "1"
 
 # sendowl_id: 78274278
 name: Tabletop Creator
@@ -6,7 +6,7 @@ code: tabletop-creator
 type: app
 
 title: Tabletop Creator
-subtitle: Make your tabletop games come true
+subtitle: Make your tabletop games come true!
 description: Start making custom tabletop games now!
 
 long_description: |

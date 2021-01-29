@@ -67,10 +67,12 @@
     <br>
     <br>
     <div class="container">
-        {% if product.sendowl_id %}
+        {% if product.sendowl_id%}
         <h3 class="subtitle is-5">Get it also at</h3>
         {% else %}
-        <h1 class="title is-3">Get it at</h1>
+            {% if product.external_stores %}
+            <h1 class="title is-3">Get it at</h1>
+            {% endif %}
         {% endif%}
 
         {% include external-store-buttons.html %}
