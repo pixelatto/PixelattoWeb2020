@@ -165,6 +165,15 @@ a {
     }
 }
 
+/* General Inner Section Title */
+.inner-title {
+    color: $darkslategray;
+    border-bottom: 1px solid #DCDCDC;
+    font-size: 14px;
+    line-height: 1.214em;
+    letter-spacing: 0.1em;
+}
+
 /* General Section Header */
 .section-header {
     display: flex;
@@ -204,6 +213,11 @@ a {
         }
         span.left {
             margin-right: 10px;
+        }
+    }
+    &.resources-header {
+        .show-link {
+            font-size: 0.875em;
         }
     }
 }
@@ -344,6 +358,7 @@ a {
             width: 100%;
             @media screen and (max-width: 768px) {
                 max-width: 200px;
+                margin: 0 auto;
             }
         }
         h1, h3 {
@@ -744,19 +759,13 @@ input[type=email] {
 
 //=== PRODUCT PAGE ===//
 .product-preview {
-    .product-title {
-        color: $darkslategray;
-        border-bottom: 1px solid #DCDCDC;
-        font-size: 14px;
-        line-height: 1.214em;
-        letter-spacing: 0.1em;
-    }
+    position: relative;
+    top: -250px;
+
 
     .product-card {
         background-color: #fff;
         padding: 20px;
-        //position: relative;
-        //top: -250px;
         .card-inner {
             padding: 0;
             margin-top: 25px;
@@ -787,6 +796,9 @@ input[type=email] {
                 @media screen and (min-width: 1024px) {
                     margin-top: 0;
                     padding-left: 25px;
+                }
+                @media screen and (max-width: 768px) {
+                    text-align: center;
                 }
                 h3 {
                     font-size: 0.875em;
@@ -828,7 +840,15 @@ input[type=email] {
         }
     }
 }
-
+// .tweet_class{
+//     // height: 450px;
+//     // .twitter-tweet {
+//     //     height: 450px;
+//     // }
+//     iframe{
+//         height: 450px !important;
+//     }
+// }
 //=== PRESSKIT PAGE ===//
 .presskit {
     .section-title {
@@ -899,9 +919,6 @@ input[type=email] {
     }
 }
 .brand-resources {
-    .show-link {
-        font-size: 0.875em;
-    }
     .brand-item {
         display: flex;
         flex-direction: column;
@@ -1013,6 +1030,43 @@ input[type=email] {
                         font-size: 1.5em;
                     }
                 }
+            }
+        }
+    }
+}
+
+//=== PRODUCT PRESSKIT PAGE ===//
+.product-presskit {
+    position: relative;
+    top: -100px;
+    .product-card {
+        padding: 20px 30px 45px;
+        @media screen and (max-width: 768px) {
+            padding: 20px;
+            .card-inner {
+                padding: 20px 0 0;
+            }
+        }
+        .image-logo {
+            display: block;
+            max-width: 390px;
+            width: 100%;
+            margin: 0 auto 15px;
+            @media screen and (max-width: 1024px) {
+                max-width: 300px;
+            }
+            @media screen and (max-width: 768px) {
+                max-width: 250px;
+            }
+        }
+    }
+    .feature-list {
+        li {
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+            span {
+                margin-right: 10px;
             }
         }
     }

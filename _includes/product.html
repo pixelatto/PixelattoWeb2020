@@ -81,7 +81,7 @@
     <div class="container--sm">
         <div class="columns is-multiline is-vcentered has-text-justified">
             <div class="column is-12">
-                <h2 class="product-title is-uppercase has-text-weight-bold pb-4 mb-4">Description</h2>
+                <h2 class="inner-title is-uppercase has-text-weight-bold pb-4 mb-4">Description</h2>
                 <div class="content">
                     {{ product.long_description | newline_to_br }}
                 </div>
@@ -89,7 +89,7 @@
 
             <!--Screenshots-->
             <div class="column is-12">
-                <h2 class="product-title is-uppercase has-text-weight-bold pb-4 mb-4">Screenshots</h2>
+                <h2 class="inner-title is-uppercase has-text-weight-bold pb-4 mb-4">Screenshots</h2>
                 <!-- Start Carousel -->
                 <div id="product-carousel" class="carousel">
                     {% assign cont = 1 %}
@@ -122,7 +122,7 @@
 
             <!--Features-->
             <div class="column is-12">
-                <h2 class="product-title is-uppercase has-text-weight-bold pb-4 mb-4">Product Features</h2>
+                <h2 class="inner-title is-uppercase has-text-weight-bold pb-4 mb-4">Product Features</h2>
             </div>
 
             {% if site.data.reviews[product.code] %}
@@ -137,43 +137,27 @@
     </div>
 
     {%- if product.awards -%}
-    <br />
-    <br />
-    <!--Awards-->
-    <div class="container--sm">
-        <h2 class="product-title is-uppercase has-text-weight-bold pb-4 mb-4">Awards</h2>
-        <div class="awards">
+        <br />
+        <br />
+        <div class="container--sm">
+            <h2 class="inner-title is-uppercase has-text-weight-bold pb-4 mb-4">Awards</h2>
+            {% include redesign/awards-block.html %}
+        </div>
+    {%- endif -%}
+
+    {%- if product.presskit.tweets -%}
+        <br />
+        <br />
+        <div class="container--sm">
+            <h2 class="inner-title is-uppercase has-text-weight-bold pb-4 mb-4 mt-3">Testimonials</h2>
             <div class="columns is-multiline is-centered">
-                {%- for award in product.awards -%}
+                {%- for tweet in product.presskit.tweets -%}
                 <div class="column is-4">
-                    <div class="award-item pixel-box">
-                        <div class="award-header is-flex">
-                            <img src="{{ award.icon[0] }}" alt="{{ award.icon[1] }}" />
-                            <h3 class="ml-3">{{ award.title }}</h3>
-                        </div>
-                        <div class="award-text pt-4">
-                            <p>{{ award.text }}</p>
-                        </div>
-                    </div>
+                    <blockquote class="tweet_class" tweetID="{{ tweet }}"></blockquote> <!-- id="tweet"-->
                 </div>
                 {%- endfor -%}
             </div>
         </div>
-    </div>
-    {% endif %}
-
-    {%- if product.presskit.tweets -%}
-    <!--Testimonials-->
-    <div class="container--sm">
-        <h2 class="product-title is-uppercase has-text-weight-bold pb-4 mb-4 mt-3">Testimonials</h2>
-        <div class="columns is-multiline is-centered">
-            {%- for tweet in product.presskit.tweets -%}
-            <div class="column is-4">
-                <blockquote class="tweet_class" id="tweet" tweetID="{{ tweet }}"></blockquote>
-            </div>
-            {%- endfor -%}
-        </div>
-    </div>
     {%- endif -%}
 </section>
 
