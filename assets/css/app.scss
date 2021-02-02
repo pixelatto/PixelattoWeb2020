@@ -761,8 +761,6 @@ input[type=email] {
 .product-preview {
     position: relative;
     top: -250px;
-
-
     .product-card {
         background-color: #fff;
         padding: 20px;
@@ -840,15 +838,14 @@ input[type=email] {
         }
     }
 }
-// .tweet_class{
-//     // height: 450px;
-//     // .twitter-tweet {
-//     //     height: 450px;
-//     // }
-//     iframe{
-//         height: 450px !important;
-//     }
-// }
+
+//=== ABOUT PAGE ===//
+.about-section {
+    .pixel-box {
+        padding: 25px 20px;
+    }
+}
+
 //=== PRESSKIT PAGE ===//
 .presskit {
     .section-title {
@@ -937,14 +934,14 @@ input[type=email] {
 }
 
 .timeline {
-    @media screen and (max-width: 480px) {
-        display: none !important;
-    }
     .timeline-header {
         .tag {
             font-size: 24px;
             height: 1.5em;
             font-weight: 600;
+            @media screen and (max-width: 768px) {
+                font-size: 18px;
+            }
             &.is-primary {
                 background-color: #57C0DA;
             }
@@ -968,6 +965,13 @@ input[type=email] {
                 p {
                     margin-left: 20px;
                 }
+                @media screen and (max-width: 768px) {
+                    padding: 10px;
+                    p {
+                        font-size: 0.875em;
+                        margin-left: 10px;
+                    }
+                }
             }
         }
         .timeline-date {
@@ -976,10 +980,9 @@ input[type=email] {
             max-width: 128px;
             width: 100%;
             position: absolute;
-            left: -160px; // max-width + 1em
+            left: -160px;
             margin-top: 24px;
             text-align: right;
-            //top: 25%;
         }
 
         &:nth-of-type(2n) {
@@ -997,7 +1000,14 @@ input[type=email] {
         }
     }
 
-
+    &--mobile {
+        .timeline-empty {
+            display: none !important;
+        }
+        .heading {
+            margin: 8px 0;
+        }
+    }
 }
 
 .team-section {
@@ -1074,9 +1084,9 @@ input[type=email] {
 
 //=== BLOG PAGE ===//
 .blog-carousel-list {
-    @media screen and (max-width: 768px) {
-        display: none;
-    }
+    // @media screen and (max-width: 768px) {
+    //     display: none;
+    // }
     .product-card {
         .card-inner {
             padding: 50px 20px 0;

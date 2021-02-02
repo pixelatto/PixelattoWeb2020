@@ -1,18 +1,18 @@
-<div class="pixel-box" style="height: 100%; padding: 30px;display: flex;flex-flow: column;">
+<div class="pixel-box" style="height: 100%; padding: 30px; display: flex; flex-flow: column;">
 
     {% capture twitter_link %}
-    {% if member.twitter_override %}{{ member.twitter_override }}{% else %}https://twitter.com/{{ member.twitter }}{% endif %}
+        {% if member.twitter_override %}{{ member.twitter_override }}{% else %}https://twitter.com/{{ member.twitter }}{% endif %}
     {% endcapture %}
 
-    <div class="is-mobile is-vcentered" style="margin: 0;flex: 1;">
+    <div style="flex: 1; margin: 0;">
         <div class="column">
-            <figure class="image" style="margin: auto;"> <!--is-64x64-->
-                <img src="{{ member.image }}" alt="Image" />
+            <figure class="image" style="margin: auto;">
+                <img src="{{ member.image }}" alt="Team image" />
             </figure>
         </div>
     </div>
-    <div class="has-text-centered" style="flex: 1; margin:0;">
-        <p class="pb-1"><span class="title is-size-5-touch is-size-4-desktop ">{{ member.title }}</span></p>
+    <div class="has-text-centered" style="flex: 1; margin: 0;">
+        <p class="pb-1"><span class="title is-size-5-touch is-size-4-desktop">{{ member.title }}</span></p>
         <p class="subtitle is-6">{{ member.subtitle }}</p>
     </div>
     {%- if member.job_description -%}

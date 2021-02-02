@@ -17,7 +17,11 @@ bulmaCarousel.attach('#presskit-carousel', {
 bulmaCarousel.attach('#team-carousel', {
     slidesToScroll: 3,
     slidesToShow: 3,
-    infinite: true
+    infinite: true,
+    breakpoints: [
+        { changePoint: 480, slidesToShow: 1, slidesToScroll: 1 },
+        { changePoint: 768, slidesToShow: 2, slidesToScroll: 2 }
+    ]
 });
 
 bulmaCarousel.attach('#testimonials-carousel', {
@@ -29,7 +33,11 @@ bulmaCarousel.attach('#testimonials-carousel', {
 bulmaCarousel.attach('#blog-carousel', {
     slidesToScroll: 1,
     slidesToShow: 1,
-    infinite: true
+    infinite: true,
+    breakpoints: [
+        { changePoint: 480, slidesToShow: 1, slidesToScroll: 1 },
+        { changePoint: 768, slidesToShow: 1, slidesToScroll: 1 }
+    ]
 });
 
 bulmaCollapsible.attach('.is-collapsible');

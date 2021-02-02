@@ -150,23 +150,7 @@ short_version: true
 <section class="team-section section">
     <div class="container--sm">
         <h2 class="section-title">Team</h2>
-        {% comment %}
-            {% include pixelattopedia.html %}
-        {% endcomment %}
-
-        {% assign members = site.team | sort:"order" %}
-        <div id="team-carousel" class="carousel">
-            {% assign cont = 1 %}
-            {%- for member in members -%}
-                {%- if member.hidden -%}
-                {%- else -%}
-                    <div class="item-{{ cont }}">
-                        {% include member-card-presskit.html %}
-                    </div>
-                    {% assign cont = cont | plus:1 %}
-                {%- endif -%}
-            {%- endfor -%}
-        </div>
+        {% include pixelattopedia.html %}
     </div>
 </section>
 

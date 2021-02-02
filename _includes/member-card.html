@@ -1,42 +1,40 @@
-<div class="box has-rounded-corners" style="height: 100%; padding: 30px;">
+<div class="pixel-box" style="height: 100%; padding: 30px; display: flex; flex-flow: column;">
 
     {% capture twitter_link %}
         {% if member.twitter_override %}{{ member.twitter_override }}{% else %}https://twitter.com/{{ member.twitter }}{% endif %}
     {% endcapture %}
 
     <div>
-        <p><span class="title is-4">{{ member.title }}</span></p>
-        <p class="subtitle is-6">{{ member.subtitle }}</p>
+        <p class="has-text-centered has-text-weight-bold has-text-primary">"{{ member.quote }}"</p>
     </div>
-    <div class="columns is-mobile is-vcentered" style="margin: 0;">
+
+    <div style="flex: 1; margin: 0;">
         <div class="column">
-            <a href="{{ twitter_link }}">
-                <figure class="image is-128x128" style="margin: auto;">
-                    <img src="{{ member.image }}" alt="Image">
+            <a href="{{ twitter_link }}" target="_blank">
+                <figure class="image" style="margin: auto;">
+                    <img src="{{ member.image }}" alt="Team image" />
                 </figure>
-                <p class="has-text-centered has-text-info"><b>@{{member.twitter}}</b></p>
+                <p class="has-text-centered has-text-secondary"><b>@{{member.twitter}}</b></p>
             </a>
         </div>
-        <div class="column team-speech-bubble"
-            style="display: table; min-height: 100px;">
-            <div style="display: table-cell; vertical-align: middle;">
-                <blockquote style="position: relative;">"{{ member.quote }}"</blockquote>
-            </div>
-        </div>
     </div>
 
-    <div class="mb-3 mt-1" style="text-align: center;">
-        {% for hashtag in member.hashtags %}
-        <span class="tag is-dark-grey is-small">
-            #{{ hashtag }}
-        </span>
-        {% endfor %}
+    <div class="mb-3 mt-1">
+        {%- for hashtag in member.hashtags -%}
+            <span class="tag is-primary is-small">
+                #{{ hashtag }}
+            </span>
+        {%- endfor -%}
     </div>
 
-    {% if member.content.size > 5 %}
-        <div class="content has-text-justified">
+    <div style="flex: 1; margin: 0;">
+        <p><span class="title is-4">{{ member.title }}</span></p>
+        <p class="subtitle is-6 py-3">{{ member.subtitle }}</p>
+    </div>
+
+    {%- if member.content.size > 5 -%}
+        <div class="content has-text-justified" style="font-size: 0.875em;">
             {{ member.content }}
         </div>
-    {% endif %}
-
+    {%- endif -%}
 </div>
