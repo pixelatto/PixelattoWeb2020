@@ -5,7 +5,9 @@ name: Card Creator
 code: card-creator
 type: app
 
+highlighted: true
 sale: true
+old-price: '45.50'
 
 title: Card Creator
 subtitle: Card creation made easy, fast and fun

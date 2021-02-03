@@ -33,3 +33,15 @@ function registerUser(e) {
          window.location = "/";
     }
 }
+
+// function fadeIn(el) {
+//     var opacity = 0.01;
+//     document.querySelector(el).style.display = "flex";
+// 	var timer = setInterval(function() {
+// 		if(opacity >= 1) {
+// 			clearInterval(timer);
+// 		}
+// 		document.querySelector(el).style.opacity = opacity;
+// 		opacity += opacity * 0.1;
+// 	}, 10);
+// }

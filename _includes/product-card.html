@@ -28,10 +28,23 @@
                 </div>
                 <a class="more-link has-text-secondary" href="{{ product_page.url }}">Learn more</a>
 
-                <div class="info-price is-flex mt-4">
-                    <div id="price-{{product.order}}" class="price price-box is-uppercase has-text-weight-bold pr-4"></div>
-                    <a alt="{{ product.name }} Pixelatto buy button" href="https://transactions.sendowl.com/products/78274278/42A4FD4D/purchase" rel="nofollow" id="buy-button-{{product.order}}" class="button button-round is-secondary buy-button">Get it now!</a>
-                    <script type="text/javascript" src="https://transactions.sendowl.com/assets/sendowl.js"></script>
+                <div class="info-price is-flex mt-5">
+                    {%- if product.old-price -%}
+                        <div class="price price-box price-red is-relative is-uppercase has-text-weight-bold is-size-4 pr-4">
+                            <p class="old-price is-size-6"><s>{{ product.old-price }} &euro;</s></p>
+                            <div class="{{ product.name | downcase | slugify }}-price">only for </div>
+                            <!--id="price-{{product.order}}" -->
+                        </div>
+                    {%- else -%}
+                        <div class="price price-box is-relative is-uppercase has-text-secondary has-text-weight-bold is-size-4 pr-4">
+                            <div class="{{ product.name | downcase | slugify }}-price"></div>
+                        </div>
+                    {%- endif -%}
+                    <a alt="{{ product.name }} Pixelatto buy button"
+                       href="https://transactions.sendowl.com/products/78274278/42A4FD4D/purchase"
+                       rel="nofollow"
+                       class="button button-round is-secondary buy-button {{ product.name | downcase | slugify }}-buy-button">Get it now!</a>
+                       <!--id="buy-button-{{product.order}}"-->
                 </div>
             </div>
         </div>

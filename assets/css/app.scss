@@ -395,6 +395,23 @@ a {
             padding-left: 30px;
             text-decoration: underline;
         }
+        .info-price {
+            color: $naranjitto;
+            //opacity: 0;
+            .price-red {
+                color: #BF3312;
+            }
+
+            letter-spacing: 0.1em;
+            align-items: center;
+            justify-content: flex-end;
+            .old-price {
+                color: #979797;
+                position: absolute;
+                top: -20px;
+                right: 16px;
+            }
+        }
     }
 }
 
@@ -749,6 +766,15 @@ input[type=email] {
 }
 
 //=== STORE PAGE ===//
+.highlighted-section {
+    margin-bottom: 50px;
+ .product-card {
+    max-width: 1320px;
+    width: 100%;
+    margin: 0 auto;
+ }
+}
+
 .store-section {
     .product-card {
         &:not(:last-child) {
