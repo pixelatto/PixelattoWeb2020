@@ -18,19 +18,20 @@ layout: redesign
                 <button onclick="window.location='{{ tag.url }}'" class="button tag-btn is-primary">{{ tag.tag }}</button>
               {%- endfor -%}
             </div>
-            <h1 class="title is-3 mb-5">{{ page.title }}</h1>
-            <p class="is-size-4">{{ page.description }}</p>
+            <h1 class="title is-3 is-size-4-mobile mb-5">{{ page.title }}</h1>
+            <p class="is-size-4 is-size-5-mobile post-description">{{ page.description }}</p>
             <p class="is-italic">{{ page.author }} - {{ page.date | date: "%b %-d, %Y" }}</p>
             <hr />
             {{ content }}
             <hr />
           </div>
 
-          {% unless site.hide_share_buttons %}
-          <div class="share-buttons">
-            {% include share-buttons.html %}
-          </div>
-          {% endunless %}
+          {%- unless site.hide_share_buttons -%}
+            <div class="share-buttons">
+              {% include share-buttons.html %}
+            </div>
+            <hr class="is-hidden-tablet" />
+          {%- endunless -%}
 
           <!-- {% if site.disqus.shortname %}
           {% include disqus.html %}
@@ -65,8 +66,8 @@ layout: redesign
             {%- endfor -%}
 
             {%- if sameTagCount >= minCommonTags -%}
-              <a href="{{ site.baseurl }}{{ post.url }}" style="display: block; color: inherit;">
-                <div class="aside-preview is-relative mb-5">
+              <a class="post-link mb-5" href="{{ site.baseurl }}{{ post.url }}">
+                <div class="aside-preview is-relative">
                   <div class="tag-wrapper">
                     {% for tagName in post.tags %}
                     {% assign tag = site.tags | where_exp:"item","item.tag == tagName" | first %}
@@ -74,7 +75,7 @@ layout: redesign
                     {% endfor %}
                   </div>
                   <div class="image is-16by9">
-                    <img class="pixel-box" src="/img/upload/{{ post.image }}" alt="{{ post.title }}" />
+                    <img class="pixel-box is-shadowless" src="/img/upload/{{ post.image }}" alt="{{ post.title }}" />
                   </div>
                   <h3 class="title is-5">{{ post.title }}</h3>
                   <p class="text is-italic">{{ post.author }} - {{ post.date | date: "%b %-d, %Y" }}</p>

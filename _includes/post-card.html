@@ -30,7 +30,12 @@
             </div>
         </div>
         <footer class="card-footer">
-            <p class="card-footer-item">{{ post.author }} - {{ post.date | date: "%b %-d, %Y" }}</p>
+            <div class="is-flex">
+                {%- if post.author-avatar -%}
+                    <!-- <img src="{{ post.author-avatar }}" alt="post author avatar" /> -->
+                {%- endif -%}
+                <p class="card-footer-item">{{ post.author }} - {{ post.date | date: "%b %-d, %Y" }}</p>
+            </div>
         </footer>
     </a>
 </div>

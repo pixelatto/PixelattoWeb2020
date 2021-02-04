@@ -7,6 +7,7 @@ keywords: card creation tools, create card games, design card game, design table
 
 date: 2020-11-11
 author: Fali Ronda
+author-avatar: '/img/avatars/Fali.svg'
 hide_hero: "true"
 tags:
   - Guides

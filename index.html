@@ -105,6 +105,12 @@ layout: redesign
                                 </div>
                             </div>
                             <footer class="card-footer">
+                                <!-- <div class="is-flex">
+                                    {%- if post.author-avatar -%}
+                                        <img src="{{ post.author-avatar }}" alt="post author avatar" />
+                                    {%- endif -%}
+                                    <p class="card-footer-item">{{ post.author }} - {{ post.date | date: "%b %-d, %Y" }}</p>
+                                </div> -->
                                 <p class="card-footer-item">{{ post.author }} - {{ post.date | date: "%b %-d, %Y" }}</p>
                             </footer>
                         </a>
