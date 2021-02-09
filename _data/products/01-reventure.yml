@@ -44,6 +44,44 @@ external_stores:
     - image: apple
       link: https://apps.apple.com/us/app/reventure/id1501817956
 
+versions:
+  versions-list:
+    - title: Version 1
+      control-version:
+        - has-feature: true
+        - has-feature: true
+        - has-feature: true
+        - has-feature: false
+        - has-feature: false
+        - has-feature: false
+        - has-feature: false
+
+    - title: Version 2
+      control-version:
+        - has-feature: true
+        - has-feature: true
+        - has-feature: true
+        - has-feature: true
+        - has-feature: true
+        - has-feature: true
+        - has-feature: true
+
+  features-list:
+    - feature:
+        name: Feature 1
+    - feature:
+        name: Feature 2
+    - feature:
+        name: Feature 3
+    - feature:
+        name: Feature 4
+    - feature:
+        name: Feature 5
+    - feature:
+        name: Feature 6
+    - feature:
+        name: Feature 7
+
 awards:
   - icon: ['/img/product/reventure/awards/mejor-award-icon.svg', 'Mejor Juego Mobile']
     title: Mejor Juego Mobile
