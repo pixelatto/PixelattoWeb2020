@@ -1,40 +1,14 @@
-<section class="section">
+{% assign contact_data = site.data.contact %}
+
+<section class="section contact-section is-relative">
+    <div class="bg-img">
+        <img src="{{ contact_data.form_background }}" alt="Pixelatto background image" />
+    </div>
     <div class="container--sm">
-        <h3 class="title is-3">Get in touch!</h3>
-        <h5 class="subtitle is-5 mb-6">Join our Discord to stay up to date with our latest news!</h5>
-        {% include discord-link.html %}
-        <br>
-        <h5 class="subtitle is-5 mb-6">Or use this form for getting support, reporting bugs, sending CVs/portfolios... or just to say
-            hi!</h5>
-        {% include contact-form.html %}
-        <h5 class="subtitle is-5" style="margin-top: 1.5rem;">And don't forget to follow us on social media!</h5>
-        <div class="social-buttons columns is-centered">
-                {% for social in site.data.social %}
-                <div class="column is-1">
-                    <button class="button store-button is-primary"
-                        onclick="window.open('{{ social.link }}', '_blank');">
-                        <span class="icon">
-                            <img class="has-text-primary" src="/img/platforms/{{ social.image }}" style="margin: 0;">
-                        </span>
-                    </button>
-                </div>
-                {% endfor %}
+        <div class="contact-inner pixel-box">
+            <h3 class="title is-3 has-text-white has-text-centered mb-5">{{ contact_data.title }}</h3>
+            <h5 class="is-size-5 is-size-6-touch has-text-white has-text-centered mb-5">{{ contact_data.subtitle }}</h5>
+            {% include contact-form.html %}
         </div>
     </div>
 </section>
-
-<style>
-    .social-buttons .tile {
-        min-width: 100px;
-    }
-
-    .social-buttons button {
-        width: 100%;
-        height: auto;
-    }
-
-    .social-button .icon {
-        height: auto;
-        width: 100%;
-    }
-</style>
