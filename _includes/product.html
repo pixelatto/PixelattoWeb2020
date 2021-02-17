@@ -118,17 +118,6 @@
                     <button onclick="closeModal()" class="modal-close is-large" aria-label="close"></button>
                 </div>
                 <!-- End lightbox modal -->
-
-                {% comment %}
-                    {%- if site.data.reviews[product.code] -%}
-                        <div class="column is-12">
-                            <p class="title is-4">Reviews</p>
-                            {%- for review in site.data.reviews[product.code] -%}
-                                {% include review.html %}
-                            {%- endfor -%}
-                        </div>
-                    {%- endif -%}
-                {% endcomment %}
             </div>
         </div>
     </section>
@@ -138,54 +127,6 @@
             <div class="container--sm">
                 <h2 class="inner-title is-uppercase has-text-weight-bold pb-4 mb-4">Product Features</h2>
                 <div class="features-comparison">
-                    <!-- <table class="table ">
-                        <colgroup>
-                            <col>
-                            <col style="background-color:yellow">
-                            <col>
-                            <col style="background-color:yellow">
-                            <col>
-                        </colgroup>
-                        <thead>
-                            <th></th>
-                            <th class="table-cell col-title">Version 1</th>
-                            <th class="empty"></th>
-                            <th class="table-cell col-title">Version 2</th>
-                            <th class="empty"></th>
-                        </thead>
-                        <tbody class="pixel-box">
-                            <tr>
-                                <td>Feature 1</td>
-                                <td class="table-cell">yes</td>
-                                <td class="empty"></td>
-                                <td class="table-cell">no</td>
-                                <td class="empty"></td>
-                            </tr>
-                            <tr>
-                                <td>Feature 2</td>
-                                <td class="table-cell">no</td>
-                                <td class="empty"></td>
-                                <td class="table-cell">yes</td>
-                                <td class="empty"></td>
-                            </tr>
-                            <tr>
-                                <td>Feature 3</td>
-                                <td class="table-cell">yes</td>
-                                <td class="empty"></td>
-                                <td class="table-cell">yes</td>
-                                <td class="empty"></td>
-                            </tr>
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <td></td>
-                                <td class="table-cell col-footer">Get it now</td>
-                                <td class="empty"></td>
-                                <td class="table-cell col-footer">Get it now</td>
-                                <td class="empty"></td>
-                            </tr>
-                        </tfoot>
-                    </table> -->
                     <div class="pixel-box is-relative">
                         <div class="comparison-list">
                             <ul>

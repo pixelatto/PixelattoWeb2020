@@ -46,7 +46,7 @@ external_stores:
 
 versions:
   versions-list:
-    - title: Version 1
+    - title: Edition A
       control-version:
         - has-feature: true
         - has-feature: true
@@ -56,7 +56,7 @@ versions:
         - has-feature: false
         - has-feature: false
 
-    - title: Version 2
+    - title: Edition B
       control-version:
         - has-feature: true
         - has-feature: true
