@@ -9,7 +9,7 @@
     </div>
 </section>
 
-<section class="presskit product-presskit">
+<div class="presskit product-presskit-content">
     <div class="container--sm">
         <div class="product-card pixel-box">
             <div class="columns is-desktop is-gapless is-multiline is-vcentered">
@@ -40,97 +40,181 @@
         </div>
     </div>
 
-    <br />
-    <br />
-
-    <div class="container--sm">
-        <h2 class="section-title">Features</h2>
-        <ul class="feature-list">
-            {%- for feature in presskit.features -%}
-                <li>
-                    <span class="icon has-text-primary"><i class="fas fa-circle fa-xs"></i></span>
-                    {{ feature.text }}
-                </li>
-            {%- endfor -%}
-        </ul>
-    </div>
-
-    {%- if product.awards -%}
-        <br />
-        <br />
-        <div class="container--sm">
-            <h2 class="section-title">Awards</h2>
-            {% include redesign/awards-block.html %}
-        </div>
+    {%- if presskit.features -%}
+        <section class="section product-presskit-features">
+            <div class="container--sm">
+                <h2 class="section-title">Features</h2>
+                <ul class="feature-list">
+                    {%- for feature in presskit.features -%}
+                        <li>
+                            <span class="icon has-text-primary"><i class="fas fa-circle fa-xs"></i></span>
+                            {{ feature.text }}
+                        </li>
+                    {%- endfor -%}
+                </ul>
+            </div>
+        </section>
     {%- endif -%}
 
-    <br />
-    <br />
+    {%- if product.awards -%}
+        <section class="section product-presskit-awards">
+            <div class="container--sm">
+                <h2 class="section-title">Awards</h2>
+                {% include redesign/awards-block.html %}
+            </div>
+        </section>
+    {%- endif -%}
 
-    <div class="container--sm">
-        <div class="section-header resources-header">
-            <h2 class="section-title mb-0">Product Resources</h2>
-            <a class="show-link is-uppercase has-text-weight-bold" onclick="window.open('/download/{{ product.code }}-presskit.zip', 'Download');" target="_blank">
-                <span class="icon"><i class="fas fa-cloud-download-alt"></i></span>
-                Download all product resources
-            </a>
-        </div>
-        <div class="columns is-multiline is-vcentered has-text-justified">
-            <div class="column is-12">
-                <!-- Start Carousel -->
-                <div id="product-carousel" class="carousel">
-                    {% assign cont = 1 %}
-                    {% for image in product.gallery.images %}
-                    <div class="item-{{ cont }}">
-                        <img alt="{{product.name}} screenshot {{ cont }}" src="{{ product.gallery.imagefolder }}{% if image.thumbnail %}{{ image.thumbnail }}{% else %}{{ image.name }}{% endif %}"
-                            onclick="openModal('product-modal');currentSlide({{ cont }})">
+    <section class="section product-presskit-resources">
+        <div class="container--sm">
+            <div class="section-header resources-header">
+                <h2 class="section-title mb-0">Product Resources</h2>
+                <a class="show-link is-uppercase has-text-weight-bold" onclick="window.open('/download/{{ product.code }}-presskit.zip', 'Download');" target="_blank">
+                    <span class="icon"><i class="fas fa-cloud-download-alt"></i></span>
+                    Download all product resources
+                </a>
+            </div>
+            <div class="columns is-multiline is-vcentered has-text-justified">
+                <div class="column is-12">
+                    <!-- Start Carousel -->
+                    <div id="product-carousel" class="carousel">
+                        {% assign cont = 1 %}
+                        {% for image in product.gallery.images %}
+                        <div class="item-{{ cont }}">
+                            <img alt="{{product.name}} screenshot {{ cont }}" src="{{ product.gallery.imagefolder }}{% if image.thumbnail %}{{ image.thumbnail }}{% else %}{{ image.name }}{% endif %}"
+                                onclick="openModal('product-modal');currentSlide({{ cont }})">
+                        </div>
+                        {% assign cont = cont | plus:1 %}
+                        {% endfor %}
                     </div>
-                    {% assign cont = cont | plus:1 %}
-                    {% endfor %}
+                    <!-- End Carousel -->
                 </div>
-                <!-- End Carousel -->
-            </div>
-            <!-- Start lightbox modal -->
-            <div id="product-modal" class="modal" onclick="ClickOpenedModal(event)">
-                <div class="modal-content is-vcentered">
-                    {% assign cont = 1 %}
-                    {% for image in product.gallery.images %}
-                    <div class="item-slide product-modal-slide">
-                        <img loading="lazy" alt="{{product.name}} lightbox image {{ cont }}" src="{{ product.gallery.imagefolder }}{{ image.name }}">
+                <!-- Start lightbox modal -->
+                <div id="product-modal" class="modal" onclick="ClickOpenedModal(event)">
+                    <div class="modal-content is-vcentered">
+                        {% assign cont = 1 %}
+                        {% for image in product.gallery.images %}
+                        <div class="item-slide product-modal-slide">
+                            <img loading="lazy" alt="{{product.name}} lightbox image {{ cont }}" src="{{ product.gallery.imagefolder }}{{ image.name }}">
+                        </div>
+                        {% assign cont = cont | plus:1 %}
+                        {% endfor %}
                     </div>
-                    {% assign cont = cont | plus:1 %}
-                    {% endfor %}
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    <button onclick="closeModal()" class="modal-close is-large" aria-label="close"></button>
                 </div>
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                <button onclick="closeModal()" class="modal-close is-large" aria-label="close"></button>
+                <!-- End lightbox modal -->
             </div>
-            <!-- End lightbox modal -->
         </div>
-    </div>
+    </section>
 
-    <br />
-    <br />
+    {%- if presskit.testimonials -%}
+        <section class="section product-presskit-testimonials">
+            <div class="container--sm">
+                <div class="column is-full">
+                    <h2 class="section-title">Testimonials</h2>
+                    <div id="testimonials-carousel" class="carousel">
+                        {% assign cont = 1 %}
+                        {% comment %}
+                        {%- for testimonial in presskit.testimonials -%}
+                            <div class="item-{{ cont }}">
+                                {%- if testimonial.script -%}
+                                    {{ testimonial.script }}
+                                {%- else -%}
+                                    {% include review.html %}
+                                {%- endif -%}
+                            </div>
+                            {% assign cont = cont | plus:1 %}
+                        {%- endfor -%}
+                        {% endcomment %}
 
-    <div class="container--sm">
-        <div class="column is-full">
-            <h2 class="section-title">Testimonials</h2>
-            <div id="testimonials-carousel" class="carousel">
-                {% assign cont = 1 %}
-                {% for testimonial in presskit.testimonials %}
-                <div class="item-{{ cont }}">
-                    {% if testimonial.script %}
-                    {{ testimonial.script }}
-                    {% else %}
-                    {% include review.html %}
-                    {% endif%}
+                        {%- for tweet in presskit.tweets -%}
+                            <div class="item-{{ cont }}">
+                                <blockquote class="tweet_class" tweetID="{{ tweet }}"></blockquote>
+                            </div>
+                            {% assign cont = cont | plus:1 %}
+                        {%- endfor -%}
+                    </div>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    <script>
+                        window.onload = (function(){
+                            let tweets = document.getElementsByClassName("tweet_class")
+                            for (let i = 0; i < tweets.length; i++){
+                                let tweet = tweets[i];
+                                let id = tweet.getAttribute("tweetID");
+                                // Create Tweet
+                                twttr.widgets.createTweet(
+                                    id, tweet,
+                                    {
+                                        conversation : 'none',
+                                        cards        : 'visible',
+                                    }).then(function(){
+                                });
+                            }
+                        });
+                    </script>
                 </div>
-                {% assign cont = cont | plus:1 %}
-                {% endfor %}
             </div>
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </section>
+    {%- endif -%}
+    <!-- <div class="container--sm">
+        <div class="divTable">
+            <div class="colgroup">
+                <div class="col"></div>
+                <div class="col" style="background-color: yellow;"></div>
+                <div class="col"></div>
+                <div class="col" style="background-color: yellow;"></div>
+                <div class="col"></div>
+            </div>
+            <div class="divTableHeading">
+                <div class="divTableHead"></div>
+                <div class="divTableHead table-cell">Version 1</div>
+                <div class="divTableHead empty-cell"></div>
+                <div class="divTableHead table-cell">Version 2</div>
+                <div class="divTableHead empty-cell"></div>
+            </div>
+            <div class="divTableBody pixel-box">
+                <div class="divTableRow">
+                    <div class="divTableCell">Feature 1</div>
+                    <div class="divTableCell table-cell">yes</div>
+                    <div class="divTableCell empty-cell"></div>
+                    <div class="divTableCell table-cell">no</div>
+                    <div class="divTableCell empty-cell"></div>
+                </div>
+                <div class="divTableRow">
+                    <div class="divTableCell">Feature 2</div>
+                    <div class="divTableCell table-cell">no</div>
+                    <div class="divTableCell empty-cell"></div>
+                    <div class="divTableCell table-cell">yes</div>
+                    <div class="divTableCell empty-cell"></div>
+                </div>
+                <div class="divTableRow">
+                    <div class="divTableCell">Feature 3</div>
+                    <div class="divTableCell table-cell">yes</div>
+                    <div class="divTableCell empty-cell"></div>
+                    <div class="divTableCell table-cell">yes</div>
+                    <div class="divTableCell empty-cell"></div>
+                </div>
+                <div class="divTableRow">
+                    <div class="divTableCell">Feature 4</div>
+                    <div class="divTableCell table-cell">yes</div>
+                    <div class="divTableCell empty-cell"></div>
+                    <div class="divTableCell table-cell">yes</div>
+                    <div class="divTableCell empty-cell"></div>
+                </div>
+            </div>
+            <div class="divTableFoot">
+                <div class="divTableRow">
+                    <div class="divTableCell"></div>
+                    <div class="divTableCell table-cell">Get it now</div>
+                    <div class="divTableCell empty-cell"></div>
+                    <div class="divTableCell table-cell">Get it now</div>
+                    <div class="divTableCell empty-cell"></div>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
+    </div> -->
+</div>
 
-{% include redesign/subscribe-form.html %}
+{% include redesign/subscribe-form.html class="pt-0" %}

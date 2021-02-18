@@ -27,7 +27,11 @@ bulmaCarousel.attach('#team-carousel', {
 bulmaCarousel.attach('#testimonials-carousel', {
     slidesToScroll: 4,
     slidesToShow: 4,
-    infinite: true
+    infinite: true,
+    breakpoints: [
+        { changePoint: 480, slidesToShow: 1, slidesToScroll: 1 },
+        { changePoint: 768, slidesToShow: 2, slidesToScroll: 2 }
+    ]
 });
 
 bulmaCarousel.attach('#blog-carousel', {

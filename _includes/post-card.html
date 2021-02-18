@@ -8,9 +8,17 @@
                         <p class="post-tag tag--sm">{{ tag.tag }}</p>
                     {%- endfor -%}
                 </div>
-                <div class="image is-16by9">
+                <!-- <div class="image is-16by9">
                     <img src="/img/upload/{{ post.image }}" alt="{{ post.title }}" />
-                </div>
+                </div> -->
+
+                <!-- <img class="is-vertically-centered" src="/img/upload/{{ post.image }}" alt="{{ post.title }}" /> -->
+
+                <div class="post-img image is-16by9" style="background-image: url(/img/upload/{{ post.image }});"></div>
+
+                <!-- <div class="bg-img">
+                    <img src="/img/upload/{{ post.image }}" alt="{{ post.title }}" />
+                </div> -->
             </div>
         {%- else -%}
             <header class="card-header">

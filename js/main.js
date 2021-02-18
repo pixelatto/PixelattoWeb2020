@@ -45,3 +45,19 @@ function registerUser(e) {
 // 		opacity += opacity * 0.1;
 // 	}, 10);
 // }
+
+const links = document.querySelectorAll(".hero-inner .scroll-btn");
+
+for (const link of links) {
+  link.addEventListener("click", clickHandler);
+}
+
+function clickHandler(e) {
+  e.preventDefault();
+  const href = this.getAttribute("href");
+  const offsetTop = document.querySelector(href).offsetTop;
+  scroll({
+    top: offsetTop,
+    behavior: "smooth"
+  });
+}

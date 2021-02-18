@@ -11,8 +11,10 @@ layout: redesign
     <div class="hero-inner">
         <img class="hero-logo" src="{{ home_data.hero_logo }}" alt="Pixelatto Logo" />
         <h1 class="hero-title has-text-weight-bold">{{ home_data.hero_title }}</h1>
-        <a class="button button-round is-secondary" href="{{ home_data.hero_cta.cta_url }}">{{ home_data.hero_cta.cta_text }}</a>
-        <img class="scroll-down" src="/img/home/arrow-down-circle.svg" alt="Scroll down arrow" />
+        <a class="button button-round is-secondary scroll-btn" href="{{ home_data.hero_cta.cta_url }}">{{ home_data.hero_cta.cta_text }}</a>
+        <a class="scroll-down scroll-btn" href="{{ home_data.hero_cta.cta_url }}">
+            <img src="/img/home/arrow-down-circle.svg" alt="Scroll down arrow" />
+        </a>
     </div>
 </section>
 

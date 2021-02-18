@@ -77,7 +77,7 @@
 
     <section class="section description-section">
         <div class="container--sm">
-            <div class="columns is-multiline is-vcentered is-gapless has-text-justified">
+            <div class="columns is-multiline is-vcentered is-gapless has-text-justified has-text-left-touch">
                 <div class="column is-12">
                     <h2 class="inner-title is-uppercase has-text-weight-bold pb-4 mb-4">Description</h2>
                     <div class="content">
@@ -128,8 +128,8 @@
                 <h2 class="inner-title is-uppercase has-text-weight-bold pb-4 mb-4">Product Features</h2>
                 <div class="features-comparison">
                     <div class="pixel-box is-relative">
-                        <div class="comparison-list">
-                            <ul>
+                        <div class="comparison-content">
+                            <ul class="features-list">
                                 {%- for single in product.versions.features-list -%}
                                     <li>{{ single.feature.name }}</li>
                                 {%- endfor -%}
@@ -137,7 +137,7 @@
                             <div class="versions">
                                 {%- for version in product.versions.versions-list -%}
                                     <div class="version-item pixel-box">
-                                        <ul class="has-text-centered">
+                                        <ul class="versions-list has-text-centered">
                                             <li class="version-title is-size-6-mobile is-size-4 has-text-weight-bold has-text-secondary">{{ version.title }}</li>
                                             {%- for entry in version.control-version -%}
                                                 <li class="{% if entry.has-feature %}has-feature{% else %}no-feature{% endif %}"></li>
@@ -179,7 +179,7 @@
     {%- endif -%}
 </div>
 
-{% include redesign/subscribe-form.html %}
+{% include redesign/subscribe-form.html class="pt-0" %}
 
 {% contentfor extra-js no-convert %}
     <script>
