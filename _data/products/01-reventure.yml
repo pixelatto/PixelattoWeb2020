@@ -157,7 +157,7 @@ presskit:
     testimonials:
         - script: <blockquote class="twitter-tweet"><p lang="es" dir="ltr">Y el premio <a href="https://twitter.com/hashtag/gamelablive?src=hash&amp;ref_src=twsrc%5Etfw">#gamelablive</a> a la mejor idea original es para <a href="https://twitter.com/hashtag/REVENTURE?src=hash&amp;ref_src=twsrc%5Etfw">#REVENTURE</a> de <a href="https://twitter.com/Pixelatto?ref_src=twsrc%5Etfw">@Pixelatto</a><br><br>¡Enhorabuena! <a href="https://t.co/SH6Y4GgPbv">pic.twitter.com/SH6Y4GgPbv</a></p>&mdash; Gamelab Conference (@gamelab) <a href="https://twitter.com/gamelab/status/1276196714072981504?ref_src=twsrc%5Etfw">June 25, 2020</a></blockquote>
         - script: <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Reventure has a 95% positive steam rating and is on sale for $3.99. &quot;Reventure is quite possibly the funniest game that I&#39;ve played all year and there&#39;s some highly enjoyable gameplay here, too.&quot; - Video Chums <a href="https://t.co/wbxB1gKhAm">https://t.co/wbxB1gKhAm</a> <a href="https://twitter.com/hashtag/indiegame?src=hash&amp;ref_src=twsrc%5Etfw">#indiegame</a> <a href="https://twitter.com/hashtag/gamedeals?src=hash&amp;ref_src=twsrc%5Etfw">#gamedeals</a> <a href="https://t.co/WxKQzaFjyp">pic.twitter.com/WxKQzaFjyp</a></p>&mdash; Critical Games (@CriticalGames6) <a href="https://twitter.com/CriticalGames6/status/1308256790845349888?ref_src=twsrc%5Etfw">September 22, 2020</a></blockquote>
-        - script: <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Reventure. Took a while to get all the endings but it was fun getting there 😁</p>&mdash; 💫LuckyStar💫 (@CherryCrusaders) <a href="https://twitter.com/CherryCrusaders/status/1308197054053855232?ref_src=twsrc%5Etfw">September 22, 2020</a></blockquote>
+        #- script: <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Reventure. Took a while to get all the endings but it was fun getting there 😁</p>&mdash; 💫LuckyStar💫 (@CherryCrusaders) <a href="https://twitter.com/CherryCrusaders/status/1308197054053855232?ref_src=twsrc%5Etfw">September 22, 2020</a></blockquote>
         - text: Reventure, from Pixelatto, is one of the indie surprises this summer. A very fun game with a great sense of humor. Never dying a hundred times was so rewarding.
           author: IGN Spain
         - script: <blockquote class="twitter-tweet"><p lang="es" dir="ltr">Me acabo de pillar el <a href="https://twitter.com/hashtag/Reventure?src=hash&amp;ref_src=twsrc%5Etfw">#Reventure</a> y es un 11/10</p>&mdash; WARFRE (@warfredone) <a href="https://twitter.com/warfredone/status/1271233520900415488?ref_src=twsrc%5Etfw">June 12, 2020</a></blockquote>
@@ -180,11 +180,20 @@ presskit:
         - script: <blockquote class="twitter-tweet"><p lang="es" dir="ltr">Acabo de terminarme al completo <a href="https://twitter.com/hashtag/Reventure?src=hash&amp;ref_src=twsrc%5Etfw">#Reventure</a> y la verdad es que me he reído a carcajada limpia en varias ocasiones 😂 no pensaba yo que era target pero me ha encantado, grandes <a href="https://twitter.com/Pixelatto?ref_src=twsrc%5Etfw">@Pixelatto</a>! <a href="https://t.co/uHAPKA2Sy8">pic.twitter.com/uHAPKA2Sy8</a></p>&mdash; Víctor H. M. (@Rockam_) <a href="https://twitter.com/Rockam_/status/1256003299821617156?ref_src=twsrc%5Etfw">April 30, 2020</a></blockquote>
         - script: <blockquote class="twitter-tweet"><p lang="es" dir="ltr">Siete finales despues he de decir que me estoy riendo lo mas grande con cada texto xD <a href="https://twitter.com/hashtag/Reventure?src=hash&amp;ref_src=twsrc%5Etfw">#Reventure</a> <a href="https://twitter.com/hashtag/NintendoSwitch?src=hash&amp;ref_src=twsrc%5Etfw">#NintendoSwitch</a> <a href="https://t.co/rCgEwbmXTt">pic.twitter.com/rCgEwbmXTt</a></p>&mdash; Alba ヽ(ﾟｰﾟ)ﾉ (@AlbaFontaneda) <a href="https://twitter.com/AlbaFontaneda/status/1300212947373883394?ref_src=twsrc%5Etfw">August 30, 2020</a></blockquote>
     tweets:
-      ['1192895363784564744',
-      '1201047163393806341',
-      '1200276795381166080',
-      '1199445114432761859',
-      '1193169846361608193',
-      '1201990098423668736',
-      '1190407930698510336',
+      [
+      # '1276196714072981504',
+       '1308256790845349888',
+       '1301947810028249088',
+       '1297660213214851073',
+       '1271233520900415488',
+       '1309367419576573952',
+       '1309266260346183681',
+       '1305376167940284416',
+       '1215583677079605248',
+       '1199685877833850880',
+       '1288185742062161928',
+       '1248261449585065986',
+       '1294270873176649729',
+      # '1256003299821617156',
+       '1300212947373883394'
       ]

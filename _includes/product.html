@@ -142,7 +142,10 @@
                                             {%- for entry in version.control-version -%}
                                                 <li class="{% if entry.has-feature %}has-feature{% else %}no-feature{% endif %}"></li>
                                             {%- endfor -%}
-                                            <li class="version-title has-text-secondary">Get it now</li>
+                                            <li class="version-title version-footer has-text-secondary">
+                                                <!-- <p class="has-text-weight-bold py-2">33.99 &euro;</p> -->
+                                                <a alt="{{ product.name }} Pixelatto buy button" href="#" rel="nofollow" class="button button-round is-secondary">Get it now!</a>
+                                            </li>
                                         </ul>
                                     </div>
                                 {%- endfor -%}
@@ -167,11 +170,20 @@
         <section class="section testimonials-section">
             <div class="container--sm">
                 <h2 class="inner-title is-uppercase has-text-weight-bold pb-4 mb-4">Testimonials</h2>
-                <div class="columns is-multiline is-centered">
+                <!-- <div class="columns is-multiline is-centered">
                     {%- for tweet in product.presskit.tweets -%}
                     <div class="column is-4">
-                        <blockquote class="tweet_class" tweetID="{{ tweet }}"></blockquote> <!-- id="tweet"-->
+                        <blockquote class="tweet_class" tweetID="{{ tweet }}"></blockquote>
                     </div>
+                    {%- endfor -%}
+                </div> -->
+                <div id="testimonials-carousel" class="carousel">
+                    {% assign cont = 1 %}
+                    {%- for tweet in product.presskit.tweets -%}
+                        <div class="item-{{ cont }}">
+                            <blockquote class="tweet_class" tweetID="{{ tweet }}"></blockquote>
+                        </div>
+                        {% assign cont = cont | plus:1 %}
                     {%- endfor -%}
                 </div>
             </div>

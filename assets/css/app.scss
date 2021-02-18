@@ -854,7 +854,7 @@ input[type=email] {
 .description-section {
     .content {
         @media screen and (max-width: 768px) {
-            font-size: .875em;
+            font-size: .813em;
         }
     }
 }
@@ -925,6 +925,12 @@ input[type=email] {
                     }
                     &.has-feature {
                         &:before {
+                            // background-image: url("/img/resources/check-icon.svg");
+                            // background-size: 30px;
+                            // display: inline-block;
+                            // width: 30px;
+                            // height: 30px;
+                            // content: "";
                             content: url("/img/resources/check-icon.svg");
                         }
                     }
@@ -939,6 +945,14 @@ input[type=email] {
                     @media screen and (max-width: 768px) {
                         min-height: 62px;
                     }
+                }
+                .version-footer {
+                    //align-items: flex-end;
+                    flex-direction: column;
+                    padding: 0 10px 10px;
+                }
+                .button {
+                    height: 2.5em;
                 }
             }
         }
