@@ -85,6 +85,11 @@ a {
     }
 }
 
+/* Cursor pointer */
+.is-clickable {
+    cursor: pointer;
+}
+
 /* Chevrons */
 .chevron {
     &:before {
@@ -105,17 +110,6 @@ a {
         transform: rotate(-135deg);
     }
 }
-
-/* General Carousel Controls */ // Ask about this buttons
-// #blog-carousel {
-//     .slider-navigation-next,
-//     .slider-navigation-previous {
-//         background-color: #E3F8FA;
-//         box-shadow: none;
-//         width: 62px;
-//         height: 62px;
-//     }
-// }
 
 /* General Hero section */
 .hero-section {
@@ -321,8 +315,14 @@ a {
         width: 475px;
         min-height: 396px;
         height: 100%;
+        //overflow: hidden;
+        //border-radius: 10px 0 0 10px;
         img {
             border-radius: 10px 0 0 10px;
+            // transition: all .3s ease-in-out;
+            // &:hover {
+            //     transform: scale(1.1);
+            // }
         }
         @media screen and (max-width: 1024px) {
             width: 375px;
@@ -693,11 +693,12 @@ input[type=email] {
 .home-about {
     .about-img {
         position: relative;
-        min-height: 450px; //688px;
+        min-height: 450px;
         .bg-img {
             z-index: -1;
             img {
-                object-position: right;
+                object-position: top;
+                //object-position: right;
             }
         }
         @media screen and (max-width: 768px) {
