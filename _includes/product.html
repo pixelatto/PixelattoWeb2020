@@ -157,6 +157,47 @@
         </section>
     {%- endif -%}
 
+    <section>
+        <div class="container--sm">
+            <table class="table">
+                <colgroup>
+                    <col>
+                    <col style="background-color:yellow">
+                    <col>
+                    <col style="background-color:yellow">
+                    <col>
+                </colgroup>
+                <thead>
+                    <th></th>
+                    <th class="table-cell col-title">Version 1</th>
+                    <th class="empty"></th>
+                    <th class="table-cell col-title">Version 2</th>
+                    <th class="empty"></th>
+                </thead>
+                <tbody class="pixel-box">
+                    {%- for single in product.versions.features-list -%}
+                        <tr>
+                            <td>{{ single.feature.name }}</td>
+                            <td class="table-cell">yes</td>
+                            <td class="empty"></td>
+                            <td class="table-cell">no</td>
+                            <td class="empty"></td>
+                        </tr>
+                    {%- endfor -%}
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td></td>
+                        <td class="table-cell col-footer">Get it now</td>
+                        <td class="empty"></td>
+                        <td class="table-cell col-footer">Get it now</td>
+                        <td class="empty"></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </section>
+
     {%- if product.awards -%}
         <section class="section awards-section">
             <div class="container--sm">
