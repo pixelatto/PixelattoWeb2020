@@ -89,6 +89,13 @@ a {
 .is-clickable {
     cursor: pointer;
 }
+/* Image scale */
+.is-scaled {
+    transition: all .4s ease-in-out;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
 
 /* Chevrons */
 .chevron {
@@ -223,6 +230,12 @@ a {
     border-radius: 3px;
     line-height: 1.250em;
     width: fit-content;
+    &:hover {
+        color: #fff;
+    }
+    &:not(:first-child) {
+        margin-left: 10px;
+    }
     &.tag--sm {
         font-size: 0.75em;
         padding: 3px 15px;
@@ -315,14 +328,8 @@ a {
         width: 475px;
         min-height: 396px;
         height: 100%;
-        //overflow: hidden;
-        //border-radius: 10px 0 0 10px;
         img {
             border-radius: 10px 0 0 10px;
-            // transition: all .3s ease-in-out;
-            // &:hover {
-            //     transform: scale(1.1);
-            // }
         }
         @media screen and (max-width: 1024px) {
             width: 375px;
@@ -344,6 +351,13 @@ a {
                 img {
                     position: absolute;
                 }
+            }
+        }
+        .bg-img {
+            border-radius: 10px 0 0 10px;
+            overflow: hidden;
+            @media screen and (max-width: 768px) {
+                border-radius: 10px 10px 0 0;
             }
         }
     }
@@ -580,6 +594,13 @@ a {
             width: 100%;
             @media screen and (max-width: 1024px) {
                 margin: 0 auto;
+            }
+            .button {
+                border: none;
+                border-radius: 0 40px 40px 0;
+                &:hover {
+                    background-color: #fff;
+                }
             }
         }
     }

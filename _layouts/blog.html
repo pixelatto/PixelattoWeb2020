@@ -14,11 +14,15 @@ layout: redesign
 <section class="blog-carousel-list">
     <div class="container--sm" style="max-width: 1255px;">
         <!-- infinite carousel working with > 1 post -->
-        {%- if page.tag -%}
-            {% assign posts = site.posts | where_exp:"item","item.tags contains page.tag" %}
-        {%- else -%}
-            {% assign posts = paginator.posts %} <!-- paginator.posts or site.posts-->
-        {%- endif -%}
+        {% comment %}
+            {%- if page.tag -%}
+                {% assign posts = site.posts | where_exp:"item","item.tags contains page.tag" %}
+            {%- else -%}
+                {% assign posts = site.posts %} <!-- paginator.posts or site.posts-->
+            {%- endif -%}
+        {% endcomment %}
+
+        {% assign posts = site.posts %}
         <div id="blog-carousel" class="carousel">
             {% assign cont = 1 %}
             {%- for post in posts limit:5 -%}
@@ -32,7 +36,9 @@ layout: redesign
                                     <img src="/img/upload/{{ post.image }}" alt="{{ post.title }}" />
                                 </div> -->
                                 <div class="bg-img">
-                                    <img src="/img/upload/{{ post.image }}" alt="{{ post.title }}" />
+                                    <a href="{{ site.baseurl }}{{ post.url }}">
+                                        <img src="/img/upload/{{ post.image }}" alt="{{ post.title }}" />
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -40,7 +46,7 @@ layout: redesign
                             <div class="card-inner">
                                 {%- for tagName in post.tags -%}
                                     {% assign tag = site.tags | where_exp:"item","item.tag == tagName" | first %}
-                                    <span class="post-tag tag--lg">{{ tag.tag }}</span>
+                                    <a class="post-tag tag--lg" href="{{ tag.url }}">{{ tag.tag }}</a>
                                 {%- endfor -%}
                                 <h3 class="has-text-weight-bold">{{ post.title }}</h3>
                                 <p class="is-size-4">{{ post.description | markdownify | remove: '<p>' | remove: '</p>' }}</p>
