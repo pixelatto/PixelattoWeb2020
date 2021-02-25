@@ -6,7 +6,7 @@
 
     <div style="flex: 1; margin: 0;">
         <div class="column">
-            <figure class="image" style="margin: auto;">
+            <figure class="image is-128x128" style="margin: auto;">
                 <img src="{{ member.image }}" alt="Team image" />
             </figure>
         </div>
@@ -24,20 +24,20 @@
         <ul>
             <li>
                 <a href="//twitter.com/{{ member.twitter }}" target="_blank">
-                    <span class="icon has-text-secondary"><i class="fab fa-twitter"></i></span>
+                    <span class="icon has-text-secondary"><i class="fab fa-twitter fa-lg"></i></span>
                 </a>
             </li>
             {%- if member.instagram -%}
                 <li>
                     <a href="//www.instagram.com/{{ member.instagram }}" target="_blank">
-                        <span class="icon has-text-secondary"><i class="fab fa-instagram"></i></span>
+                        <span class="icon has-text-secondary"><i class="fab fa-instagram fa-lg"></i></span>
                     </a>
                 </li>
             {%- endif -%}
             {%- if member.facebook -%}
                 <li>
                     <a href="//www.facebook.com/{{ member.facebook }}" target="_blank">
-                        <span class="icon has-text-secondary"><i class="fab fa-facebook-f"></i></span>
+                        <span class="icon has-text-secondary"><i class="fab fa-facebook-f fa-lg"></i></span>
                     </a>
                 </li>
             {%- endif -%}
