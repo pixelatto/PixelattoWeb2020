@@ -6,8 +6,8 @@ job_description: 'Fali is always ready to tackle the chaos that permanently live
 quote: I'm already on it!
 telephone:
 twitter: FaliRonda
-instagram: '#'
-facebook: '#'
+#instagram: '#'
+#facebook: '#'
 image: /img/avatars/Fali.svg
 hashtags: [AsapMan, WildCard, NotionGuru]
 order: 5

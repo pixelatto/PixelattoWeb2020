@@ -2,18 +2,9 @@
     <a class="post-link" href="{{ site.baseurl }}{{ post.url }}" style="color: initial; height: 100%;">
         {%- if post.image -%}
             <div class="card-image">
-                <!-- <div class="tag-wrapper">
-                    {%- for tagName in post.tags -%}
-                        {% assign tag = site.tags | where_exp:"item","item.tag == tagName" | first %}
-                        <p class="post-tag tag--sm">{{ tag.tag }}</p>
-                    {%- endfor -%}
-                </div> -->
-
                 <!-- <div class="image is-16by9">
                     <img src="/img/upload/{{ post.image }}" alt="{{ post.title }}" />
                 </div> -->
-
-                <!-- <img class="is-vertically-centered" src="/img/upload/{{ post.image }}" alt="{{ post.title }}" /> -->
 
                 <div class="post-img image is-16by9" style="background-image: url(/img/upload/{{ post.image }});"></div>
 

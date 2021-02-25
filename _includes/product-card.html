@@ -16,7 +16,7 @@
                 {%- if product.sale -%}
                     <img class="product-sale" src="/img/product/sale-lable.svg" alt="Product sale label" />
                 {%- endif -%}
-                <img class="product-logo is-scaled" src="/img/product/{{product.code}}-logo.svg" alt="{{product.name}} logo" />
+                <img class="product-logo" src="/img/product/{{product.code}}-logo.svg" alt="{{product.name}} logo" />
                 <h3 class="is-uppercase has-text-weight-bold">{{ product.subtitle }}</h3>
                 <div class="content mb-4">
                     {%- for feature in product.features -%}

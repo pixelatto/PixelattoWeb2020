@@ -6,8 +6,8 @@ job_description: 'Javi has worked his ass since the beggining of Pixelatto to bu
 quote: Just one more pixel to the right...
 telephone: +34 618 887 993
 twitter: JaviCepa
-instagram: '#'
-facebook: '#'
+#instagram: '#'
+#facebook: '#'
 image: /img/avatars/Javi.svg
 hashtags: [Multitasker, FinalBoss, LateOwl]
 order: 1
