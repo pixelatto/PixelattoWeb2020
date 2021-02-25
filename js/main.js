@@ -1,8 +1,19 @@
 const loadingScreenHTML = document.getElementById("loading-screen");
 
 function submitAndRedirectToThanks() {
-    document.getElementById("subscribe-form").submit();
-    window.location = "/thanks/";
+    const sectionForm = document.getElementById("subscribe-form");
+    if (sectionForm.checkValidity()) {
+        sectionForm.submit();
+        window.location = "/thanks/";
+    }
+}
+
+function footerSubmitAndRedirectToThanks() {
+    const footerForm = document.getElementById("footer-subscribe-form");
+    if (footerForm.checkValidity()) {
+        footerForm.submit();
+        window.location = "/thanks/";
+    }
 }
 
 function loginUser(e) {
