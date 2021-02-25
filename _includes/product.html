@@ -7,7 +7,7 @@
 
 <div class="product-preview">
     <div class="container--sm">
-        <div class="product-card pixel-box">
+        <div class="product-card pixel-box is-relative">
             <div class="columns is-desktop is-gapless is-multiline is-vcentered">
                 <div class="column">
                     <figure class="image is-16by9" style="border-radius: 5px; overflow: hidden;">
@@ -24,32 +24,28 @@
                 </div>
                 <div class="column">
                     <div class="card-inner">
+                        {%- if product.sale -%}
+                            <img class="product-sale" src="/img/product/sale-lable.svg" alt="Product sale label" />
+                        {%- endif -%}
                         <img class="product-logo" src="/img/product/{{product.code}}-logo.svg" alt="{{product.name}} logo" />
                         <p class="title is-3 py-4" style="display: none;">{{ product.title }}</p>
                         <h1 class="is-uppercase has-text-weight-bold" style="border-bottom: 1px solid #DCDCDC;">{{ product.subtitle }}</h1>
 
-                        {% comment %} <!--ask about this part-->
-                            <p class="title is-4 has-text-primary">{{ product.price }}</p>
-                            {%- if product.product_code -%}
-                            <p class="subtitle is-5 has-text-right">{{ product.product_code }}</p>
-                            {%- endif -%}
-                        {% endcomment %}
-
                         {%- if product.features -%}
-                        <div class="content pt-4">
-                            {%- for feature in product.features -%}
-                            <p>
-                                <span class="icon has-text-primary">
-                                    {%- if feature.icon -%}
-                                    <i class="fas {{ feature.icon }}"></i>
-                                    {%- else -%}
-                                    <i class="fas fa-circle fa-xs"></i>
-                                    {%- endif -%}
-                                </span>
-                                <span>{{ feature.label }}</span>
-                            </p>
-                            {%- endfor -%}
-                        </div>
+                            <div class="content pt-4">
+                                {%- for feature in product.features -%}
+                                    <p>
+                                        <span class="icon has-text-primary">
+                                            {%- if feature.icon -%}
+                                                <i class="fas {{ feature.icon }}"></i>
+                                            {%- else -%}
+                                                <i class="fas fa-circle fa-xs"></i>
+                                            {%- endif -%}
+                                        </span>
+                                        <span>{{ feature.label }}</span>
+                                    </p>
+                                {%- endfor -%}
+                            </div>
                         {%- endif -%}
                     </div>
                 </div>
@@ -58,9 +54,19 @@
                         <div class="columns is-desktop is-gapless is-vcentered">
                             <div class="column is-two-thirds-tablet is-half-desktop">
                                 <div class="info-price is-flex">
-                                    <a alt="{{ product.name }} Pixelatto buy button" href="https://transactions.sendowl.com/products/78274278/42A4FD4D/purchase" rel="nofollow" id="buy-button" class="button button-round is-secondary">Get it now!</a>
+                                    <a alt="{{ product.name }} Pixelatto buy button" href="https://transactions.sendowl.com/products/78274278/42A4FD4D/purchase" rel="nofollow" id="buy-button" class="button button-round is-secondary">Get it now</a>
                                     <script type="text/javascript" src="https://transactions.sendowl.com/assets/sendowl.js"></script>
-                                    <div id="price" class="price is-uppercase has-text-weight-bold pr-4"></div>
+                                    <!-- <div id="price" class="price is-uppercase has-text-weight-bold pr-4"></div> -->
+                                    {%- if product.old-price -%}
+                                        <div class="price-box price-red is-relative is-uppercase has-text-weight-bold has-text-centered is-size-4">
+                                            <p class="old-price is-size-6"><s>{{ product.old-price }} &euro;</s></p>
+                                            <div id="price" class="{{ product.name | downcase | slugify }}-price"></div>
+                                        </div>
+                                    {%- else -%}
+                                        <div class="price-box is-relative is-uppercase has-text-secondary has-text-weight-bold has-text-centered is-size-4">
+                                            <div id="price" class="{{ product.name | downcase | slugify }}-price"></div>
+                                        </div>
+                                    {%- endif -%}
                                 </div>
                             </div>
                             <div class="column is-full-mobile is-two-thirds-tablet is-half-desktop">
@@ -157,7 +163,7 @@
         </section>
     {%- endif -%}
 
-    <section>
+    <!-- <section>
         <div class="container--sm">
             <table class="table">
                 <colgroup>
@@ -196,7 +202,7 @@
                 </tfoot>
             </table>
         </div>
-    </section>
+    </section> -->
 
     {%- if product.awards -%}
         <section class="section awards-section">
@@ -239,7 +245,7 @@
         var priceHTML = document.getElementById("price");
         var buyButtonHTML = document.getElementById("buy-button");
         getSendOwlProduct({{ product.sendowl_id }}).then((data) => {
-            priceHTML.textContent = "only for " + data.product.price + " €";
+            priceHTML.textContent = data.product.price + " €";
             buyButtonHTML.href = data.product.instant_buy_url;
         });
     </script>

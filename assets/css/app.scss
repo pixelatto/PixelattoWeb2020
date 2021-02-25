@@ -419,21 +419,29 @@ a {
             padding-left: 30px;
             text-decoration: underline;
         }
-        .info-price {
-            color: $naranjitto;
-            letter-spacing: 0.1em;
-            //opacity: 0;
-            align-items: center;
-            flex-wrap: wrap;
-            justify-content: flex-end;
+    }
+    .info-price {
+        letter-spacing: 0.1em;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: flex-end; //space-between
+        @media screen and (max-width: 576px) {
+            flex-direction: column;
+        }
+        .price-box {
+            margin: 0 auto;
+            @media screen and (max-width: 576px) {
+                margin-top: 15px;
+            }
+            &.price-red {
+                color: #BF3312;
+            }
             .old-price {
                 color: #979797;
-                position: absolute;
-                top: -20px;
-                right: 16px;
-            }
-            .price-red {
-                color: #BF3312;
+                line-height: 1;
+                //position: absolute;
+                //top: -20px;
+                //right: 16px;
             }
         }
     }
@@ -836,22 +844,22 @@ input[type=email] {
             }
         }
         .product-info {
-            .info-price {
-                align-items: center;
-                justify-content: space-between;
-                @media screen and (max-width: 576px) {
-                    flex-direction: column;
-                }
-            }
-            .price {
-                color: $naranjitto;
-                font-size: 1.125em;
-                letter-spacing: 0.1em;
-                @media screen and (max-width: 576px) {
-                    padding-right: 0 !important;
-                    margin-top: 15px;
-                }
-            }
+            // .info-price {
+            //     align-items: center;
+            //     justify-content: space-between;
+            //     @media screen and (max-width: 576px) {
+            //         flex-direction: column;
+            //     }
+            // }
+            // .price {
+            //     color: $naranjitto;
+            //     font-size: 1.125em;
+            //     letter-spacing: 0.1em;
+            //     @media screen and (max-width: 576px) {
+            //         padding-right: 0 !important;
+            //         margin-top: 15px;
+            //     }
+            // }
             .info-platforms {
                 margin-top: 25px;
                 @media screen and (min-width: 1024px) {

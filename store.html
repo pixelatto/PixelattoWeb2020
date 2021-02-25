@@ -49,14 +49,13 @@ permalink: /store/
         {% assign product_id = product.sendowl_id %}
         {% assign counter = forloop.index %}
         <script>
-            var priceHTML{{counter}} = document.querySelectorAll(".{{ product.name | downcase | slugify }}-price");
+            //var priceHTML{{counter}} = document.querySelectorAll(".{{ product.name | downcase | slugify }}-price");
             var buyButtonHTML{{counter}} = document.querySelectorAll(".{{ product.name | downcase | slugify }}-buy-button");
             getSendOwlProduct({{product_id}}).then((data) => {
-                for (var i = 0; i < priceHTML{{counter}}.length; i++) {
-                    priceHTML{{counter}}[i].textContent += data.product.price + " €";
+                for (var i = 0; i < buyButtonHTML{{counter}}.length; i++) {
+                    //priceHTML{{counter}}[i].textContent += data.product.price + " €";
                     buyButtonHTML{{counter}}[i].href = data.product.instant_buy_url;
                 }
-                //fadeIn('.info-price');
             });
         </script>
     {%- endfor -%}
