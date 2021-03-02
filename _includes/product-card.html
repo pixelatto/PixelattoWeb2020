@@ -13,9 +13,6 @@
         </div>
         <div class="column" style="position: relative;">
             <div class="card-inner">
-                <!-- {%- if product.sale -%}
-                    <img class="product-sale" src="/img/product/sale-lable.svg" alt="Product sale label" />
-                {%- endif -%} -->
                 <a href="{{ product_page.url }}">
                     <img class="product-logo" src="/img/product/{{product.code}}-logo.svg" alt="{{product.name}} logo" />
                 </a>
@@ -32,20 +29,6 @@
                 </div>
                 <div class="info-price is-flex mt-5">
                     <a class="button button-round is-secondary" href="{{ product_page.url }}">Learn more</a>
-                    <!-- {%- if product.old-price -%}
-                        <div class="price price-box price-red is-relative is-uppercase has-text-weight-bold is-size-4 pr-4">
-                            <p class="old-price is-size-6"><s>{{ product.old-price }} &euro;</s></p>
-                            <div class="{{ product.name | downcase | slugify }}-price">only for </div>
-                        </div>
-                    {%- else -%}
-                        <div class="price price-box is-relative is-uppercase has-text-secondary has-text-weight-bold is-size-4 pr-4">
-                            <div class="{{ product.name | downcase | slugify }}-price"></div>
-                        </div>
-                    {%- endif -%} -->
-                    <!-- <a alt="{{ product.name }} Pixelatto buy button"
-                       href="https://transactions.sendowl.com/products/78274278/42A4FD4D/purchase"
-                       rel="nofollow"
-                       class="button button-round is-secondary buy-button {{ product.name | downcase | slugify }}-buy-button">Get it now!</a> -->
                 </div>
             </div>
         </div>
