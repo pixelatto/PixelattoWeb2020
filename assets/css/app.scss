@@ -309,7 +309,7 @@ a {
         &:hover {
             box-shadow: 0px 0px 20px rgba(74, 74, 74, 0.25);
         }
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 768px) {
             box-shadow: 0px 0px 20px rgba(74, 74, 74, 0.25);
         }
     }
@@ -372,8 +372,11 @@ a {
             right: 0;
             max-width: 115px;
             width: 100%;
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 1024px) {
                 max-width: 75px;
+            }
+            @media screen and (max-width: 768px) {
+                display: none;
             }
         }
         .product-logo {
@@ -840,7 +843,7 @@ input[type=email] {
         padding: 20px;
         .card-inner {
             padding: 0;
-            margin-top: 25px;
+            margin-top: 20px;
             @media screen and (min-width: 1024px) {
                 padding: 0 0 0 25px;
                 margin-top: 0;
@@ -1245,11 +1248,12 @@ input[type=email] {
         div[class^="item-"] {
             height: 100%;
             padding: 15px;
-            //padding-right: 20px;
+            @media screen and (max-width: 768px) {
+                max-width: 600px;
+                width: 100%;
+                margin: 0 auto;
+            }
         }
-        // .slider-item {
-        //     padding: 0 10px
-        // }
         .image {
             max-width: 150px;
             width: 100%;
@@ -1487,7 +1491,7 @@ input[type=email] {
         &:hover {
             box-shadow: 0px 0px 20px rgba(74, 74, 74, 0.25);
         }
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 768px) {
             box-shadow: 0px 0px 20px rgba(74, 74, 74, 0.25);
         }
     }

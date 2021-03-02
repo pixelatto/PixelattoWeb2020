@@ -19,8 +19,7 @@ bulmaCarousel.attach('#team-carousel', {
     slidesToShow: 3,
     infinite: true,
     breakpoints: [
-        { changePoint: 480, slidesToShow: 1, slidesToScroll: 1 },
-        { changePoint: 1024, slidesToShow: 2, slidesToScroll: 2 }
+        { changePoint: 768, slidesToShow: 1, slidesToScroll: 1 }
     ]
 });
 
