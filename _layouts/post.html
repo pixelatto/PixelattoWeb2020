@@ -20,7 +20,16 @@ layout: redesign
             </div>
             <h1 class="title is-3 is-size-4-mobile mb-5">{{ page.title }}</h1>
             <p class="is-size-4 is-size-5-mobile post-description">{{ page.description }}</p>
-            <p class="is-italic">{{ page.author }} - {{ page.date | date: "%b %-d, %Y" }}</p>
+            {%- if page.author-avatar -%}
+              <div class="is-flex" style="align-items: center;">
+                  <figure class="image is-48x48" style="margin: 0;">
+                    <img src="{{ page.author-avatar }}" alt="Post author avatar" />
+                  </figure>
+                <p class="is-italic ml-3">{{ page.author }} - {{ page.date | date: "%b %-d, %Y" }}</p>
+              </div>
+              {%- else -%}
+              <p class="is-italic">{{ page.author }} - {{ page.date | date: "%b %-d, %Y" }}</p>
+            {%- endif -%}
             <hr />
             {{ content }}
             <hr />

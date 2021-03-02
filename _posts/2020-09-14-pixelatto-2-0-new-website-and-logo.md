@@ -8,6 +8,7 @@ tags: Pixelatto
 image: pixelatto2020logo.svg
 hide_hero: true
 author: Adri Nuñez
+author-avatar: '/img/avatars/Adri.svg'
 ---
 
 ## We've made some changes to our website (and our logo)!
@@ -21,8 +22,8 @@ We wanted our **logo** to look more friendly, and to show our two biggest goals 
 
 ![](/img/upload/gif-high-res.gif)
 
-On the other hand, our **website** has changed in order to be able to **contain a lot of new stuff**! 
+On the other hand, our **website** has changed in order to be able to **contain a lot of new stuff**!
 
-We will be posting here info about all our new projects, guides for the existing ones, and tons of content. 
+We will be posting here info about all our new projects, guides for the existing ones, and tons of content.
 
 Stay tuned!

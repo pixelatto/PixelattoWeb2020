@@ -7,6 +7,7 @@ image: card-creator-patch-notes-2-14-14.png
 hide_hero: true
 description: New improvements and fixes of the last Card Creator update!
 author: Juan Delgado
+author-avatar: '/img/avatars/Juan.svg'
 ---
 ✨ **New Features**
 

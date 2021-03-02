@@ -117,13 +117,14 @@ layout: redesign
                                 </div>
                             </div>
                             <footer class="card-footer">
-                                <!-- <div class="is-flex">
+                                <div class="is-flex">
                                     {%- if post.author-avatar -%}
-                                        <img src="{{ post.author-avatar }}" alt="post author avatar" />
+                                        <figure class="image is-32x32" style="margin: auto 0 auto 20px;">
+                                            <img src="{{ post.author-avatar }}" alt="Post author avatar" />
+                                        </figure>
                                     {%- endif -%}
                                     <p class="card-footer-item">{{ post.author }} - {{ post.date | date: "%b %-d, %Y" }}</p>
-                                </div> -->
-                                <p class="card-footer-item">{{ post.author }} - {{ post.date | date: "%b %-d, %Y" }}</p>
+                                </div>
                             </footer>
                         </a>
                     </div>
