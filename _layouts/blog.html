@@ -50,7 +50,7 @@ layout: redesign
                                         <a class="post-tag tag--lg" href="{{ tag.url }}">{{ tag.tag }}</a>
                                     {%- endfor -%}
                                     <h3 class="has-text-weight-bold">{{ post.title }}</h3>
-                                    <p class="description is-size-4 is-size-5-touch">{{ post.description | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+                                    <p class="description is-size-4-desktop is-size-5-tablet is-size-6-mobile">{{ post.description | markdownify | remove: '<p>' | remove: '</p>' }}</p>
                                     <div class="is-inline-flex post-author">
                                         {%- if post.author-avatar -%}
                                             <figure class="image is-32x32" style="margin: auto 0;">

@@ -1356,6 +1356,9 @@ input[type=email] {
                     font-size: 24px;
                     padding: 20px 0;
                 }
+                @media screen and (max-width: 768px) {
+                    font-size: 20px;
+                }
             }
             p {
                 line-height: 1.208em;
@@ -1367,8 +1370,7 @@ input[type=email] {
             }
             .post-author {
                 position: absolute;
-                //bottom: 20px;
-                bottom: 5px;
+                bottom: 5px; //20
                 @media screen and (max-width: 1024px) {
                     position: relative;
                     bottom: 0;
