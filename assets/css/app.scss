@@ -1367,10 +1367,11 @@ input[type=email] {
             }
             .post-author {
                 position: absolute;
-                bottom: 20px;
+                //bottom: 20px;
+                bottom: 5px;
                 @media screen and (max-width: 1024px) {
                     position: relative;
-                    bottom: 0 !important;
+                    bottom: 0;
                 }
             }
         }

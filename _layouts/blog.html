@@ -51,16 +51,16 @@ layout: redesign
                                     {%- endfor -%}
                                     <h3 class="has-text-weight-bold">{{ post.title }}</h3>
                                     <p class="description is-size-4 is-size-5-touch">{{ post.description | markdownify | remove: '<p>' | remove: '</p>' }}</p>
-                                    {%- if post.author-avatar -%}
-                                        <div class="is-inline-flex post-author" style="bottom: 5px;">
+                                    <div class="is-inline-flex post-author">
+                                        {%- if post.author-avatar -%}
                                             <figure class="image is-32x32" style="margin: auto 0;">
                                                 <img src="{{ post.author-avatar }}" alt="Post author avatar" />
                                             </figure>
                                             <p class="card-footer-item pl-1">{{ post.author }} - {{ post.date | date: "%b %-d, %Y" }}</p>
-                                        </div>
-                                    {%- else -%}
-                                        <p class="post-author is-italic">{{ post.author }} - {{ post.date | date: "%b %-d, %Y" }}</p>
-                                    {%- endif -%}
+                                        {%- else -%}
+                                            <p class="is-italic pb-3">{{ post.author }} - {{ post.date | date: "%b %-d, %Y" }}</p>
+                                        {%- endif -%}
+                                    </div>
                                     <a class="button button-round button-special is-secondary" href="{{ site.baseurl }}{{ post.url }}">Read more</a>
                                 </div>
                             </div>
