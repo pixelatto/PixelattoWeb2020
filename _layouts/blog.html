@@ -7,92 +7,103 @@ layout: redesign
         <img src="/img/home/hero-background.svg" alt="Pixelatto background image" />
     </div>
     <div class="hero-inner">
-        <h1 class="hero-title has-text-weight-bold pb-0">What's going on at Pixelatto</h1>
+        <h1 class="hero-title has-text-weight-bold">What's going on at Pixelatto</h1>
     </div>
 </section>
 
-<section class="blog-carousel-list">
-    <div class="container--sm" style="max-width: 1255px;">
-        <!-- infinite carousel working with > 1 post -->
-        {% comment %}
-            {%- if page.tag -%}
-                {% assign posts = site.posts | where_exp:"item","item.tags contains page.tag" %}
-            {%- else -%}
-                {% assign posts = site.posts %} <!-- paginator.posts or site.posts-->
-            {%- endif -%}
-        {% endcomment %}
+<div class="blog-content">
+    <section class="blog-carousel-list">
+        <div class="container--sm" style="max-width: 1255px;">
+            <!-- infinite carousel working with > 1 post -->
+            {% comment %}
+                {%- if page.tag -%}
+                    {% assign posts = site.posts | where_exp:"item","item.tags contains page.tag" %}
+                {%- else -%}
+                    {% assign posts = site.posts %}
+                {%- endif -%}
+            {% endcomment %}
 
-        {% assign posts = site.posts %}
-        <div id="blog-carousel" class="carousel">
-            {% assign cont = 1 %}
-            {%- for post in posts limit:5 -%}
-            <div class="item-{{ cont }}" style="border-radius: 10px; box-shadow: 0px 0px 20px rgba(74, 74, 74, 0.25); max-width: 1100px; margin: 20px auto;">
-                <div class="product-card pixel-box is-shadowless">
-                    <div class="columns is-gapless">
-                        <div class="column is-narrow">
-                            <div class="card-image">
-                                <!-- <img src="/img/upload/{{ post.image }}" alt="{{ post.title }}" /> -->
-                                <!-- <div class="image is-16by9">
-                                    <img src="/img/upload/{{ post.image }}" alt="{{ post.title }}" />
-                                </div> -->
-                                <div class="bg-img">
-                                    <a href="{{ site.baseurl }}{{ post.url }}">
+            {% assign posts = site.posts %}
+            <div id="blog-carousel" class="carousel">
+                {% assign cont = 1 %}
+                {%- for post in posts limit:5 -%}
+                <div class="item-{{ cont }}" style="max-width: 1100px; margin: 0 auto; padding: 15px;">
+                    <div class="product-card pixel-box">
+                        <div class="columns is-gapless is-desktop">
+                            <div class="column is-narrow">
+                                <div class="card-image">
+                                    <!-- <img src="/img/upload/{{ post.image }}" alt="{{ post.title }}" /> -->
+                                    <!-- <div class="image is-16by9">
                                         <img src="/img/upload/{{ post.image }}" alt="{{ post.title }}" />
-                                    </a>
+                                    </div> -->
+                                    <div class="bg-img">
+                                        <a href="{{ site.baseurl }}{{ post.url }}">
+                                            <img src="/img/upload/{{ post.image }}" alt="{{ post.title }}" />
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="column" style="position: relative;">
-                            <div class="card-inner">
-                                {%- for tagName in post.tags -%}
-                                    {% assign tag = site.tags | where_exp:"item","item.tag == tagName" | first %}
-                                    <a class="post-tag tag--lg" href="{{ tag.url }}">{{ tag.tag }}</a>
-                                {%- endfor -%}
-                                <h3 class="has-text-weight-bold">{{ post.title }}</h3>
-                                <p class="is-size-4">{{ post.description | markdownify | remove: '<p>' | remove: '</p>' }}</p>
-                                <p class="post-author is-italic">{{ post.author }} - {{ post.date | date: "%b %-d, %Y" }}</p>
-                                <a class="button button-round button-special is-secondary" href="{{ site.baseurl }}{{ post.url }}">Read more</a>
+                            <div class="column" style="position: relative;">
+                                <div class="card-inner">
+                                    {%- for tagName in post.tags -%}
+                                        {% assign tag = site.tags | where_exp:"item","item.tag == tagName" | first %}
+                                        <a class="post-tag tag--lg" href="{{ tag.url }}">{{ tag.tag }}</a>
+                                    {%- endfor -%}
+                                    <h3 class="has-text-weight-bold">{{ post.title }}</h3>
+                                    <p class="description is-size-4 is-size-5-touch">{{ post.description | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+                                    {%- if post.author-avatar -%}
+                                        <div class="is-inline-flex post-author" style="bottom: 5px;">
+                                            <figure class="image is-32x32" style="margin: auto 0;">
+                                                <img src="{{ post.author-avatar }}" alt="Post author avatar" />
+                                            </figure>
+                                            <p class="card-footer-item pl-1">{{ post.author }} - {{ post.date | date: "%b %-d, %Y" }}</p>
+                                        </div>
+                                    {%- else -%}
+                                        <p class="post-author is-italic">{{ post.author }} - {{ post.date | date: "%b %-d, %Y" }}</p>
+                                    {%- endif -%}
+                                    <a class="button button-round button-special is-secondary" href="{{ site.baseurl }}{{ post.url }}">Read more</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                {% assign cont = cont | plus:1 %}
+                {%- endfor -%}
             </div>
-            {% assign cont = cont | plus:1 %}
-            {%- endfor -%}
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="blog-list">
-    <div class="container--sm">
-        <h2 class="section-title">Recent posts</h2>
-        <div class="blog-tags mb-3 pb-3" style="border-bottom: 1px solid #DCDCDC;">
-            <button onclick="window.location='/blog'" class="button tag-btn is-primary{% if page.url == '/blog/' or page.url contains 'page' %} active{% endif %}">All</button>
-            {% for tag in site.tags %}
-            <button onclick="window.location='{{ tag.url }}'" class="button tag-btn is-primary{% if page.url contains tag.url %} active{% endif %}">{{ tag.tag }}</button>
-            {% endfor %}
-        </div>
-
-        <div class="columns is-multiline is-centered">
-            {% if page.tag %}
-            {% assign posts = site.posts | where_exp:"item","item.tags contains page.tag" %}
-            {% else %}
-            {% assign posts = paginator.posts %}
-            {% endif %}
-
-            {% for post in posts %}
-            <div class="column is-4">
-                {% include post-card.html %}
+    <section class="blog-list">
+        <div class="container--sm">
+            <h2 class="section-title">Recent posts</h2>
+            <div class="blog-tags mb-3 pb-3" style="border-bottom: 1px solid #DCDCDC;">
+                <button onclick="window.location='/blog'" class="button tag-btn is-primary{% if page.url == '/blog/' or page.url contains 'page' %} active{% endif %}">All</button>
+                {% for tag in site.tags %}
+                <button onclick="window.location='{{ tag.url }}'" class="button tag-btn is-primary{% if page.url contains tag.url %} active{% endif %}">{{ tag.tag }}</button>
+                {% endfor %}
             </div>
-            {% endfor %}
 
-            {% unless page.tag %}
-            <div class="column is-5-desktop is-12-tablet mt-4">
-                {% include pagination.html %}
+            <div class="columns is-multiline is-centered">
+                {% if page.tag %}
+                {% assign posts = site.posts | where_exp:"item","item.tags contains page.tag" %}
+                {% else %}
+                {% assign posts = paginator.posts %}
+                {% endif %}
+
+                {% for post in posts %}
+                <div class="column is-4">
+                    {% include post-card.html %}
+                </div>
+                {% endfor %}
+
+                {% unless page.tag %}
+                <div class="column is-5-desktop is-12-tablet mt-4">
+                    {% include pagination.html %}
+                </div>
+                {% endunless %}
             </div>
-            {% endunless %}
         </div>
-    </div>
-</section>
+    </section>
+</div>
 
-{% include redesign/subscribe-form.html %}
+{% include redesign/subscribe-form.html class="pt-0" %}
