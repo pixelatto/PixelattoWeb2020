@@ -15,9 +15,10 @@ order: 1
 
 Javi has worked his ass since the beggining of Pixelatto to build a handsome independent game studio out of sweat, big pixels and passion.
 
+{: .is-hidden-mobile}
 **Special Moves:**
 
-<div class="has-text-left">
+<div class="has-text-left is-hidden-mobile">
 
 <i class="fas fa-arrow-down"></i>
 <i class="fas fa-arrow-down" style="transform: rotateZ(-45deg);"></i>
@@ -26,7 +27,7 @@ Javi has worked his ass since the beggining of Pixelatto to build a handsome ind
 +🅰: &emsp;Send to Notion
 
 </div>
-<div class="has-text-left">
+<div class="has-text-left is-hidden-mobile">
 
 <i class="fas fa-arrow-right"></i>
 <i class="fas fa-arrow-left"></i>
