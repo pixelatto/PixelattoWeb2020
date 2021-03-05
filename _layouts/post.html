@@ -11,7 +11,7 @@ layout: redesign
       <div class="column is-8">
         <div class="content">
           <div class="post">
-            <img class="hero pixel-box" src="/img/upload/{{ page.image }}" alt="{{ post.title }}" />
+            <img class="hero pixel-box is-shadowless" src="/img/upload/{{ page.image }}" alt="{{ post.title }}" />
             <div class="mt-5">
               {%- for tagName in page.tags -%}
                 {% assign tag = site.tags | where_exp:"item","item.tag == tagName" | first %}
@@ -87,7 +87,16 @@ layout: redesign
                     {%- endfor -%}
                   </div>
                   <h3 class="title is-5">{{ post.title }}</h3>
-                  <p class="text is-italic">{{ post.author }} - {{ post.date | date: "%b %-d, %Y" }}</p>
+                  <div class="is-flex" style="align-items: center;">
+                    {%- if post.author-avatar -%}
+                      <figure class="image is-24x24" style="margin: auto 0;">
+                        <img src="{{ post.author-avatar }}" alt="Post author avatar" />
+                      </figure>
+                      <p class="text is-italic pl-1">{{ post.author }} - {{ post.date | date: "%b %-d, %Y" }}</p>
+                    {%- else -%}
+                      <p class="text is-italic">{{ post.author }} - {{ post.date | date: "%b %-d, %Y" }}</p>
+                    {%- endif -%}
+                  </div>
                 </div>
               </a>
               {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}

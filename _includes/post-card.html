@@ -41,8 +41,10 @@
                     <figure class="image is-32x32" style="margin: auto 0 auto 20px;">
                         <img src="{{ post.author-avatar }}" alt="Post author avatar" />
                     </figure>
+                    <p class="card-footer-item pl-1">{{ post.author }} - {{ post.date | date: "%b %-d, %Y" }}</p>
+                {%- else -%}
+                    <p class="card-footer-item">{{ post.author }} - {{ post.date | date: "%b %-d, %Y" }}</p>
                 {%- endif -%}
-                <p class="card-footer-item pl-1">{{ post.author }} - {{ post.date | date: "%b %-d, %Y" }}</p>
             </div>
         </footer>
     </a>

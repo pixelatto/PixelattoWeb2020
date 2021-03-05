@@ -8,6 +8,7 @@ tags: Guides
 image: duplicate_project.png
 hide_hero: true
 author: Fali Ronda
+author-avatar: '/img/avatars/Fali.svg'
 ---
 
 ## Project Structure
