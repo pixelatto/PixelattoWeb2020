@@ -10,39 +10,53 @@
 <script src="{{ site.baseurl }}/js/lambda.js" type="text/javascript"></script>
 <script src="{{ site.baseurl }}/js/bulma-extenssions-init.js" type="text/javascript"></script>
 {%- if page.twitter_widget -%}
-    <!-- <script>
+    <script>
         window.twttr = (function(d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0],
             t = window.twttr || {};
             if (d.getElementById(id)) return t;
             js = d.createElement(s);
             js.id = id;
+            js.async = true;
             js.src = "https://platform.twitter.com/widgets.js";
             fjs.parentNode.insertBefore(js, fjs);
-
             t._e = [];
             t.ready = function(f) {
             t._e.push(f);
             };
-
             return t;
         }(document, "script", "twitter-wjs"));
-    </script> -->
+    </script>
 
-    <script async src="https://platform.twitter.com/widgets.js"></script>
+    <!-- <script src="https://platform.twitter.com/widgets.js"></script> -->
     <script>
-        window.onload = (function(){
-            let tweets = document.getElementsByClassName("tweet_class")
+        // window.onload = (function(){
+            // let tweets = document.getElementsByClassName("tweet")
+            // for (let i = 0; i < tweets.length; i++){
+            //     let tweet = tweets[i];
+            //     let id = tweet.getAttribute("tweetID");
+            //     // Create Tweet
+            //     twttr.widgets.createTweet(
+            //         id, tweet,
+            //         {
+            //             conversation : 'none',
+            //             cards        : 'hidden' //visible
+            //         }).then(function(){
+            //     });
+            // }
+        // });
+
+        twttr.ready(function (twttr) {
+            let tweets = document.getElementsByClassName("tweet")
             for (let i = 0; i < tweets.length; i++){
                 let tweet = tweets[i];
                 let id = tweet.getAttribute("tweetID");
                 // Create Tweet
-                twttr.widgets.createTweet(
-                    id, tweet,
-                    {
-                        conversation : 'none',
-                        cards        : 'visible'
-                    }).then(function(){
+                twttr.widgets.createTweet(id, tweet, {
+                    //align: 'center',
+                    conversation : 'none',
+                    cards        : 'visible', //hidden
+                    //width: '250'
                 });
             }
         });

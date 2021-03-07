@@ -14,7 +14,6 @@ layout: redesign
 <div class="blog-content">
     <section class="blog-carousel-list">
         <div class="container--sm" style="max-width: 1255px;">
-            <!-- infinite carousel working with > 1 post -->
             {% comment %}
                 {%- if page.tag -%}
                     {% assign posts = site.posts | where_exp:"item","item.tags contains page.tag" %}

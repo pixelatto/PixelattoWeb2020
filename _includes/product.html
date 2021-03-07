@@ -219,17 +219,55 @@
                 <!-- <div class="columns is-multiline is-centered">
                     {%- for tweet in product.presskit.tweets -%}
                     <div class="column is-4">
-                        <blockquote class="tweet_class" tweetID="{{ tweet }}"></blockquote>
+                        <blockquote class="tweet" tweetID="{{ tweet }}"></blockquote>
                     </div>
                     {%- endfor -%}
                 </div> -->
-                <div id="testimonials-carousel" class="carousel">
+
+                <!-- <div id="testimonials-carousel" class="carousel">
                     {% assign cont = 1 %}
                     {%- for tweet in product.presskit.tweets -%}
                         <div class="item-{{ cont }}">
-                            <blockquote class="tweet_class" tweetID="{{ tweet }}"></blockquote>
+                            <blockquote class="tweet" tweetID="{{ tweet }}"></blockquote>
                         </div>
                         {% assign cont = cont | plus:1 %}
+                    {%- endfor -%}
+                </div> -->
+
+                <div class="tile is-ancestor">
+                    {%- for tweet in product.presskit.tweets limit:3 -%}
+                    <div class="tile is-parent">
+                      <article class="tile is-child box">
+                        <blockquote class="tweet" tweetID="{{ tweet }}"></blockquote>
+                      </article>
+                    </div>
+                    {%- endfor -%}
+                </div>
+                <div class="tile is-ancestor">
+                    {%- for tweet in product.presskit.tweets limit:3 offset:3 -%}
+                    <div class="tile is-parent">
+                      <article class="tile is-child box">
+                        <blockquote class="tweet" tweetID="{{ tweet }}"></blockquote>
+                      </article>
+                    </div>
+                    {%- endfor -%}
+                </div>
+                <div class="tile is-ancestor">
+                    {%- for tweet in product.presskit.tweets limit:3 offset:6 -%}
+                    <div class="tile is-parent">
+                      <article class="tile is-child box">
+                        <blockquote class="tweet" tweetID="{{ tweet }}"></blockquote>
+                      </article>
+                    </div>
+                    {%- endfor -%}
+                </div>
+                <div class="tile is-ancestor">
+                    {%- for tweet in product.presskit.tweets limit:3 offset:9 -%}
+                    <div class="tile is-parent">
+                      <article class="tile is-child box">
+                        <blockquote class="tweet" tweetID="{{ tweet }}"></blockquote>
+                      </article>
+                    </div>
                     {%- endfor -%}
                 </div>
             </div>
