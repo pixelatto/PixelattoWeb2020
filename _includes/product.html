@@ -162,27 +162,27 @@
         </section>
     {%- endif -%}
 
-    <!-- <section>
+    <section>
         <div class="container--sm">
             <table class="table">
                 <colgroup>
                     <col>
-                    <col style="background-color:yellow">
                     <col>
-                    <col style="background-color:yellow">
+                    <col>
+                    <col>
                     <col>
                 </colgroup>
                 <thead>
                     <th></th>
-                    <th class="table-cell col-title">Version 1</th>
-                    <th class="empty"></th>
-                    <th class="table-cell col-title">Version 2</th>
-                    <th class="empty"></th>
+                    {%- for version in product.versions.versions-list -%}
+                        <th class="table-cell col-title">{{ version.title }}</th>
+                        <th class="empty"></th>
+                    {%- endfor -%}
                 </thead>
                 <tbody class="pixel-box">
                     {%- for single in product.versions.features-list -%}
                         <tr>
-                            <td>{{ single.feature.name }}</td>
+                            <td class="feature-cell has-text-weight-bold">{{ single.feature.name }}</td>
                             <td class="table-cell">yes</td>
                             <td class="empty"></td>
                             <td class="table-cell">no</td>
@@ -193,15 +193,15 @@
                 <tfoot>
                     <tr>
                         <td></td>
-                        <td class="table-cell col-footer">Get it now</td>
-                        <td class="empty"></td>
-                        <td class="table-cell col-footer">Get it now</td>
-                        <td class="empty"></td>
+                        {%- for version in product.versions.versions-list -%}
+                            <td class="table-cell col-footer">Get it now</td>
+                            <td class="empty"></td>
+                        {%- endfor -%}
                     </tr>
                 </tfoot>
             </table>
         </div>
-    </section> -->
+    </section>
 
     {%- if product.awards -%}
         <section class="section awards-section">
