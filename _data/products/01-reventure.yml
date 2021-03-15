@@ -69,18 +69,39 @@ versions:
   features-list:
     - feature:
         name: Feature 1
+      has-feature:
+        - item: true
+        - item: true
     - feature:
         name: Feature 2
+      has-feature:
+        - item: true
+        - item: true
     - feature:
         name: Feature 3
+      has-feature:
+        - item: true
+        - item: true
     - feature:
         name: Feature 4
+      has-feature:
+        - item: false
+        - item: true
     - feature:
         name: Feature 5
+      has-feature:
+        - item: false
+        - item: true
     - feature:
         name: Feature 6
+      has-feature:
+        - item: false
+        - item: true
     - feature:
         name: Feature 7
+      has-feature:
+        - item: false
+        - item: true
 
 awards:
   - icon: ['/img/product/reventure/awards/mejor-award-icon.svg', 'Mejor Juego Mobile']
