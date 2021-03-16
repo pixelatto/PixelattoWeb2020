@@ -164,7 +164,7 @@
 
     <section>
         <div class="container--sm">
-            <table class="table">
+            <table class="table comparison-table">
                 <colgroup>
                     <col>
                     <col>
@@ -175,7 +175,7 @@
                 <thead>
                     <th></th>
                     {%- for version in product.versions.versions-list -%}
-                        <th class="table-cell col-title">{{ version.title }}</th>
+                        <th class="table-cell col-title is-size-7-mobile is-size-5-tablet is-size-4-desktop has-text-weight-bold has-text-secondary">{{ version.title }}</th>
                         <th class="empty"></th>
                     {%- endfor -%}
                 </thead>
@@ -183,12 +183,10 @@
                     {%- for single in product.versions.features-list -%}
                         <tr>
                             <td class="feature-cell has-text-weight-bold">{{ single.feature.name }}</td>
-                            <!-- <td class="table-cell">yes</td>
-                            <td class="empty"></td>
-                            <td class="table-cell">no</td>
-                            <td class="empty"></td> -->
                             {%- for ftr in single.has-feature -%}
-                                <td class="table-cell">{% if ftr.item %}yes{% else %}no{% endif %}</td>
+                                <td class="table-cell">
+                                    <span class="feature-check{% if ftr.item %} has-feature{% else %} no-feature{% endif %}"></span>
+                                </td>
                                 <td class="empty"></td>
                             {%- endfor -%}
                         </tr>
@@ -198,7 +196,9 @@
                     <tr>
                         <td></td>
                         {%- for version in product.versions.versions-list -%}
-                            <td class="table-cell col-footer">Get it now</td>
+                            <td class="table-cell col-footer">
+                                <a alt="{{ product.name }} Pixelatto buy button" href="#" rel="nofollow" class="button button-round is-secondary">Get it now!</a>
+                            </td>
                             <td class="empty"></td>
                         {%- endfor -%}
                     </tr>
