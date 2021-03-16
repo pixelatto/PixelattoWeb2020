@@ -71,6 +71,13 @@ a {
     padding: 0 20px;
 }
 
+/* Section Styling */
+.section {
+    @media screen and (max-width: 768px) {
+        padding: 3rem 0;
+    }
+}
+
 /* Background Image */
 .bg-img {
     position: absolute;
@@ -115,6 +122,28 @@ a {
     }
     &.left:before {
         transform: rotate(-135deg);
+    }
+}
+
+/* General Show Link */
+.show-link {
+    color: #E37827;
+    font-size: 1.125em;
+    line-height: 1.222em;
+    letter-spacing: 0.1em;
+    transition: all .3s linear;
+    @media screen and (max-width: 768px) {
+        font-size: 1em;
+        margin-top: 20px;
+    }
+    &:hover {
+        color: darken(#E37827, 10%);
+    }
+    span.right {
+        margin-left: 10px;
+    }
+    span.left {
+        margin-right: 10px;
     }
 }
 
@@ -187,34 +216,6 @@ a {
     }
     .section-title {
         margin: 0;
-    }
-    .show-link {
-        color: #E37827;
-        font-size: 1.125em;
-        line-height: 1.222em;
-        letter-spacing: 0.1em;
-        //margin-top: 20px;
-        transition: all .3s linear;
-        // @media screen and (min-width: 768px) {
-        //     font-size: 1.125em;
-        //     margin-top: 0;
-        // }
-        @media screen and (max-width: 768px) {
-            font-size: 1em;
-            margin-top: 20px;
-        }
-        // @media screen and (max-width: 576px) {
-        //     margin-top: 20px;
-        // }
-        &:hover {
-            color: darken(#E37827, 10%);
-        }
-        span.right {
-            margin-left: 10px;
-        }
-        span.left {
-            margin-right: 10px;
-        }
     }
     &.resources-header {
         .show-link {
@@ -956,6 +957,7 @@ input[type=email] {
             li {
                 padding: 13px 0 13px 85px; //check x-axis padding
                 @media screen and (max-width: 768px) {
+                    font-size: 14px;
                     padding-left: 25px;
                 }
                 @media screen and (max-width: 576px) {
@@ -979,7 +981,7 @@ input[type=email] {
                 width: 150px;
             }
             @media screen and (max-width: 576px) {
-                width: 100px;
+                width: 75px;
                 margin-right: 15px;
             }
             .versions-list {
@@ -987,8 +989,10 @@ input[type=email] {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    //padding: 12px 0;
                     min-height: 50px;
+                    @media screen and (max-width: 576px) {
+                        min-height: 47px;
+                    }
                     &:not(:first-child) {
                         border-top: 1px solid #DCDCDC;
                     }
@@ -998,12 +1002,6 @@ input[type=email] {
                     }
                     &.has-feature {
                         &:before {
-                            // background-image: url("/img/resources/check-icon.svg");
-                            // background-size: 30px;
-                            // display: inline-block;
-                            // width: 30px;
-                            // height: 30px;
-                            // content: "";
                             content: url("/img/resources/check-icon.svg");
                         }
                     }
@@ -1045,6 +1043,42 @@ input[type=email] {
         .award-text {
             font-size: 14px;
             line-height: 1.214em;
+        }
+    }
+}
+.testimonials-cards {
+    .is-child {
+        height: fit-content;
+        padding: 0 !important;
+    }
+    .hidden-cards {
+        //display: none;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .3s linear;
+        &.cards--active {
+            //display: block;
+            overflow: inherit;
+            animation: .3s delay-overflow;
+        }
+        @keyframes delay-overflow {
+            from { overflow: hidden; }
+        }
+    }
+    .toggle-wrapper {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        .toggle-button {
+            cursor: pointer;
+        }
+        .toggle-arrow {
+            max-width: 24px;
+            width: 100%;
+            transition: transform .3s linear;
+            &.arrow-up {
+                transform: rotate(180deg);
+            }
         }
     }
 }
@@ -1677,7 +1711,7 @@ input[type=email] {
             padding: 15px;
         }
         @media screen and (max-width: 576px) {
-            padding: 10px;
+            padding: 15px 0px; //10px;
         }
     }
 

@@ -72,3 +72,26 @@ function clickHandler(e) {
     behavior: "smooth"
   });
 }
+
+
+const toggleButton = document.querySelector('.toggle-button');
+const toggleContent = document.querySelector('.hidden-cards');
+const toggleArrow = document.querySelector('.toggle-arrow');
+
+toggleButton.addEventListener('click', () => {
+  if (toggleContent.classList.contains('cards--active')) {
+    toggleContent.classList.remove('cards--active');
+    toggleContent.style.maxHeight = 0;
+    //setTimeout(() => toggleButton.textContent = 'Show More', 300);
+    toggleButton.textContent='Show More';
+    toggleArrow.classList.remove('arrow-up');
+  } else {
+    toggleContent.classList.add('cards--active');
+    toggleContent.style.maxHeight = toggleContent.scrollHeight + 'px';
+    ///setTimeout(() => toggleButton.textContent = 'Show Less', 300);
+    toggleButton.textContent = 'Show Less';
+    toggleArrow.classList.add('arrow-up');
+  }
+
+  //toggleContent.classList.toggle('cards--active');
+});
