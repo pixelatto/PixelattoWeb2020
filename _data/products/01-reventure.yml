@@ -55,6 +55,25 @@ versions:
         - has-feature: false
         - has-feature: false
         - has-feature: false
+        - has-feature: true
+        - has-feature: true
+        - has-feature: true
+        - has-feature: false
+        - has-feature: true
+        - has-feature: true
+        - has-feature: true
+        - has-feature: true
+        - has-feature: false
+        - has-feature: true
+        - has-feature: false
+        - has-feature: true
+        - has-feature: true
+        - has-feature: false
+        - has-feature: true
+        - has-feature: true
+        - has-feature: true
+        - has-feature: false
+        - has-feature: true
 
     - title: Edition B
       control-version:
@@ -65,40 +84,154 @@ versions:
         - has-feature: true
         - has-feature: true
         - has-feature: true
+        - has-feature: true
+        - has-feature: true
+        - has-feature: true
+        - has-feature: false
+        - has-feature: true
+        - has-feature: true
+        - has-feature: true
+        - has-feature: true
+        - has-feature: false
+        - has-feature: true
+        - has-feature: true
+        - has-feature: true
+        - has-feature: true
+        - has-feature: false
+        - has-feature: true
+        - has-feature: true
+        - has-feature: true
+        - has-feature: false
+        - has-feature: true
 
   features-list:
     - feature:
-        name: Feature 1
+        name: 'Icons gallery'
       has-feature:
         - item: true
         - item: true
     - feature:
-        name: Feature 2
+        name: 'Translation 13 languages'
       has-feature:
         - item: true
         - item: true
     - feature:
-        name: Feature 3
+        name: 'Demo projects'
       has-feature:
         - item: true
         - item: true
     - feature:
-        name: Feature 4
-      has-feature:
-        - item: false
-        - item: true
-    - feature:
-        name: Feature 5
+        name: 'Open project'
       has-feature:
         - item: false
         - item: true
     - feature:
-        name: Feature 6
+        name: 'Save project'
       has-feature:
         - item: false
         - item: true
     - feature:
-        name: Feature 7
+        name: 'Blueprint creation'
+      has-feature:
+        - item: true
+        - item: true
+    - feature:
+        name: 'New blueprint workflow'
+      has-feature:
+        - item: false
+        - item: true
+    - feature:
+        name: 'Blueprints zoom'
+      has-feature:
+        - item: true
+        - item: true
+    - feature:
+        name: '1:1 rendering'
+      has-feature:
+        - item: false
+        - item: true
+    - feature:
+        name: 'Blueprint swap'
+      has-feature:
+        - item: true
+        - item: true
+    - feature:
+        name: 'Card collection'
+      has-feature:
+        - item: false
+        - item: true
+    - feature:
+        name: 'Variables'
+      has-feature:
+        - item: true
+        - item: true
+    - feature:
+        name: 'Data mode'
+      has-feature:
+        - item: true
+        - item: false
+    - feature:
+        name: 'Excel/csv'
+      has-feature:
+        - item: true
+        - item: true
+    - feature:
+        name: 'Export images'
+      has-feature:
+        - item: true
+        - item: false
+    - feature:
+        name: 'Export pdf'
+      has-feature:
+        - item: true
+        - item: false
+    - feature:
+        name: 'Export tabletop'
+      has-feature:
+        - item: true
+        - item: true
+    - feature:
+        name: 'Backups'
+      has-feature:
+        - item: true
+        - item: true
+    - feature:
+        name: 'Card layers'
+      has-feature:
+        - item: true
+        - item: false
+    - feature:
+        name: 'Game localization'
+      has-feature:
+        - item: false
+        - item: true
+    - feature:
+        name: 'Play testing in-app offline'
+      has-feature:
+        - item: true
+        - item: false
+    - feature:
+        name: 'Play testing in-app online'
+      has-feature:
+        - item: false
+        - item: true
+    - feature:
+        name: 'Additional components (tokens, dices, boards, boxes...)'
+      has-feature:
+        - item: false
+        - item: true
+    - feature:
+        name: '1-click prototype print'
+      has-feature:
+        - item: true
+        - item: true
+    - feature:
+        name: 'Big batch product orders'
+      has-feature:
+        - item: true
+        - item: true
+    - feature:
+        name: 'Version control support'
       has-feature:
         - item: false
         - item: true
