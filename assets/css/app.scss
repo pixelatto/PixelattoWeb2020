@@ -1399,6 +1399,16 @@ input[type=email] {
 }
 .blog-carousel-list {
     .product-card {
+        .mobile-link {
+            pointer-events: none;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: 99;
+            @media screen and (max-width: 1024px) {
+                pointer-events: all;
+            }
+        }
         .card-image {
             @media screen and (max-width: 1024px) {
                 min-height: 250px;
