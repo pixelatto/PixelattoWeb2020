@@ -1355,18 +1355,23 @@ input[type=email] {
     position: relative;
     top: -100px;
     .product-card {
-        padding: 20px 30px 45px;
-        @media screen and (max-width: 768px) {
-            padding: 20px;
-            .card-inner {
+        //padding: 20px 30px 45px;
+        padding: 20px;
+        .card-inner {
+            padding: 0 0 0 20px;
+            @media screen and (max-width: 1024px) {
                 padding: 20px 0 0;
             }
+            .section-title {
+                margin-bottom: 20px;
+            }
         }
+
         .image-logo {
             display: block;
             max-width: 390px;
             width: 100%;
-            margin: 0 auto 15px;
+            margin: 0 auto 20px;
             @media screen and (max-width: 1024px) {
                 max-width: 300px;
             }

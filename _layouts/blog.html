@@ -28,9 +28,10 @@ layout: redesign
                 {%- for post in posts limit:5 -%}
                 <div class="item-{{ cont }}" style="max-width: 1100px; margin: 0 auto; padding: 15px;">
                     <div class="product-card pixel-box">
+                        <a class="mobile-link" href="{{ site.baseurl }}{{ post.url }}"></a>
                         <div class="columns is-gapless is-desktop">
                             <div class="column is-narrow">
-                                <div class="card-image">
+                                <div class="card-image img-16by9">
                                     <!-- <img src="/img/upload/{{ post.image }}" alt="{{ post.title }}" /> -->
                                     <!-- <div class="image is-5by4">
                                         <img src="/img/upload/{{ post.image }}" alt="{{ post.title }}" />
