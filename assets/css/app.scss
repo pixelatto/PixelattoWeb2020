@@ -136,6 +136,8 @@ a {
         font-size: 1em;
         margin-top: 20px;
     }
+    &:active,
+    &:focus,
     &:hover {
         color: #FF9E54;
     }
@@ -674,6 +676,8 @@ a {
     width: 100%;
     text-transform: uppercase;
     transition: .3s all linear;
+    &:active,
+    &:focus,
     &:hover {
         background-color: #FF9E54 !important;
     }
@@ -1405,6 +1409,11 @@ input[type=email] {
 .product-presskit-content {
     position: relative;
     top: -100px;
+    .product-presskit-testimonials {
+        background-color: #E2F1F4;
+        background-image: url('/img/contact/form-background.svg');
+        background-repeat: no-repeat;
+    }
     .product-card {
         //padding: 20px 30px 45px;
         padding: 20px;
