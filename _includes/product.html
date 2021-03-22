@@ -128,38 +128,6 @@
     </section>
 
     {%- if product.versions -%}
-        <!-- <section class="section comparison-section">
-            <div class="container--sm">
-                <h2 class="inner-title is-uppercase has-text-weight-bold pb-4 mb-4">Product Features</h2>
-                <div class="features-comparison">
-                    <div class="pixel-box is-relative">
-                        <div class="comparison-content">
-                            <ul class="features-list">
-                                {%- for single in product.versions.features-list -%}
-                                    <li>{{ single.feature.name }}</li>
-                                {%- endfor -%}
-                            </ul>
-                            <div class="versions">
-                                {%- for version in product.versions.versions-list -%}
-                                    <div class="version-item pixel-box">
-                                        <ul class="versions-list has-text-centered">
-                                            <li class="version-title is-size-7-mobile is-size-5-tablet is-size-4-desktop has-text-weight-bold has-text-secondary">{{ version.title }}</li>
-                                            {%- for entry in version.control-version -%}
-                                                <li class="{% if entry.has-feature %}has-feature{% else %}no-feature{% endif %}"></li>
-                                            {%- endfor -%}
-                                            <li class="version-title version-footer has-text-secondary">
-                                                <p class="has-text-weight-bold py-2">33.99 &euro;</p>
-                                                <a alt="{{ product.name }} Pixelatto buy button" href="#" rel="nofollow" class="button button-round is-secondary">Get it!</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                {%- endfor -%}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
         <section class="section comparison-section">
             <div class="container--sm">
                 <h2 class="inner-title is-uppercase has-text-weight-bold pb-4 mb-4">Product Features</h2>
@@ -173,8 +141,8 @@
                     </colgroup>
                     <thead>
                         <th></th>
-                        {%- for version in product.versions.versions-list -%}
-                            <th class="table-cell col-title is-size-7-mobile is-size-5-tablet is-size-4-desktop has-text-weight-bold has-text-secondary">{{ version.title }}</th>
+                        {%- for item in product.versions.list -%}
+                            <th class="table-cell col-title is-size-7-mobile is-size-5-tablet is-size-4-desktop has-text-weight-bold has-text-secondary">{{ item.version_name }}</th>
                             <th class="empty"></th>
                         {%- endfor -%}
                     </thead>
@@ -194,9 +162,9 @@
                     <tfoot>
                         <tr>
                             <td></td>
-                            {%- for version in product.versions.versions-list -%}
+                            {%- for item in product.versions.list -%}
                                 <td class="table-cell col-footer">
-                                    <a alt="{{ product.name }} Pixelatto buy button" href="#" rel="nofollow" class="button button-round is-secondary">Get it!</a>
+                                    <a alt="{{ product.name }} Pixelatto buy button" href="{{ item.version_store_url }}" rel="nofollow" class="button button-round is-secondary">Get it!</a>
                                 </td>
                                 <td class="empty"></td>
                             {%- endfor -%}

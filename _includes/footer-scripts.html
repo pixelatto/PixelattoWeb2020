@@ -27,25 +27,7 @@
             return t;
         }(document, "script", "twitter-wjs"));
     </script>
-
-    <!-- <script src="https://platform.twitter.com/widgets.js"></script> -->
     <script>
-        // window.onload = (function(){
-        //     let tweets = document.getElementsByClassName("tweet")
-        //     for (let i = 0; i < tweets.length; i++){
-        //         let tweet = tweets[i];
-        //         let id = tweet.getAttribute("tweetID");
-        //         // Create Tweet
-        //         twttr.widgets.createTweet(
-        //             id, tweet,
-        //             {
-        //                 conversation : 'none',
-        //                 cards        : 'hidden' //visible
-        //             }).then(function(){
-        //         });
-        //     }
-        // });
-
         twttr.ready(function (twttr) {
             let tweets = document.getElementsByClassName("tweet")
             for (let i = 0; i < tweets.length; i++){

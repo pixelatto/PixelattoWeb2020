@@ -38,6 +38,80 @@ external_stores:
     - image: steam
       link: https://store.steampowered.com/app/523600/Card_Creator/
 
+versions:
+  list:
+    - version_name: Edition A
+      version_store_url: '#'
+    - version_name: Edition B
+      version_store_url: '#'
+
+  features-list:
+    - feature:
+        name: 'Icons gallery'
+      has-feature:
+        - item: true
+        - item: true
+    - feature:
+        name: 'Translation 13 languages'
+      has-feature:
+        - item: true
+        - item: true
+    - feature:
+        name: 'Demo projects'
+      has-feature:
+        - item: true
+        - item: true
+    - feature:
+        name: 'Open project'
+      has-feature:
+        - item: false
+        - item: true
+    - feature:
+        name: 'Save project'
+      has-feature:
+        - item: false
+        - item: true
+    - feature:
+        name: 'Blueprint creation'
+      has-feature:
+        - item: true
+        - item: true
+    - feature:
+        name: 'New blueprint workflow'
+      has-feature:
+        - item: false
+        - item: true
+    - feature:
+        name: 'Blueprints zoom'
+      has-feature:
+        - item: true
+        - item: true
+    - feature:
+        name: '1:1 rendering'
+      has-feature:
+        - item: false
+        - item: true
+    - feature:
+        name: 'Blueprint swap'
+      has-feature:
+        - item: true
+        - item: true
+    - feature:
+        name: 'Card collection'
+      has-feature:
+        - item: false
+        - item: true
+    - feature:
+        name: 'Variables'
+      has-feature:
+        - item: true
+        - item: true
+    - feature:
+        name: 'Data mode'
+      has-feature:
+        - item: true
+        - item: false
+
 gallery:
       id: cc-gallery
       imagefolder: /img/product/cardcreator/

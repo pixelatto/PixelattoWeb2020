@@ -45,64 +45,11 @@ external_stores:
       link: https://apps.apple.com/us/app/reventure/id1501817956
 
 versions:
-  versions-list:
-    - title: Edition A
-      control-version:
-        - has-feature: true
-        - has-feature: true
-        - has-feature: true
-        - has-feature: false
-        - has-feature: false
-        - has-feature: false
-        - has-feature: false
-        - has-feature: true
-        - has-feature: true
-        - has-feature: true
-        - has-feature: false
-        - has-feature: true
-        - has-feature: true
-        - has-feature: true
-        - has-feature: true
-        - has-feature: false
-        - has-feature: true
-        - has-feature: false
-        - has-feature: true
-        - has-feature: true
-        - has-feature: false
-        - has-feature: true
-        - has-feature: true
-        - has-feature: true
-        - has-feature: false
-        - has-feature: true
-
-    - title: Edition B
-      control-version:
-        - has-feature: true
-        - has-feature: true
-        - has-feature: true
-        - has-feature: true
-        - has-feature: true
-        - has-feature: true
-        - has-feature: true
-        - has-feature: true
-        - has-feature: true
-        - has-feature: true
-        - has-feature: false
-        - has-feature: true
-        - has-feature: true
-        - has-feature: true
-        - has-feature: true
-        - has-feature: false
-        - has-feature: true
-        - has-feature: true
-        - has-feature: true
-        - has-feature: true
-        - has-feature: false
-        - has-feature: true
-        - has-feature: true
-        - has-feature: true
-        - has-feature: false
-        - has-feature: true
+  list:
+    - version_name: Edition A
+      version_store_url: '#'
+    - version_name: Edition B
+      version_store_url: '#'
 
   features-list:
     - feature:
