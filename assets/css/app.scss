@@ -137,7 +137,7 @@ a {
         margin-top: 20px;
     }
     &:hover {
-        color: darken(#E37827, 10%);
+        color: #FF9E54;
     }
     span.right {
         margin-left: 10px;
@@ -649,6 +649,9 @@ a {
                 border-radius: 0 40px 40px 0;
                 &:hover {
                     background-color: #fff;
+                    span {
+                        color: #FF9E54 !important;
+                    }
                 }
                 &:focus {
                     box-shadow: none;
@@ -670,6 +673,10 @@ a {
     max-width: 250px;
     width: 100%;
     text-transform: uppercase;
+    transition: .3s all linear;
+    &:hover {
+        background-color: #FF9E54 !important;
+    }
     @media screen and (max-width: 768px) {
         font-size: 0.875em;
         max-width: 210px;
