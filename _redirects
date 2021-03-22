@@ -2,6 +2,7 @@
 /suscribe                                                   /subscribe/
 /products/card-creator/                                     /store/card-creator/
 /card-creator/                                              /store/card-creator/
+/cards/                                                     /store/card-creator/
 /products/reventure/                                        /store/reventure/
 /upload/*                                                   /
 /autotilegen/                                               /
