@@ -1,9 +1,11 @@
-<!-- <div id="testimonials-carousel" class="carousel">
-    {% assign cont = 1 %}
-    {%- for tweet in product.presskit.tweets -%}
-        <div class="item-{{ cont }}">
-            <blockquote class="tweet" tweetID="{{ tweet }}"></blockquote>
-        </div>
-        {% assign cont = cont | plus:1 %}
-    {%- endfor -%}
-</div> -->
+<div class="is-block-touch is-hidden-desktop">
+    <div id="testimonials-carousel" class="carousel">
+        {% assign cont = 1 %}
+        {%- for tweet in product.presskit.tweets -%}
+            <div class="item-{{ cont }}">
+                <blockquote class="tweet" tweetID="{{ tweet }}"></blockquote>
+            </div>
+            {% assign cont = cont | plus:1 %}
+        {%- endfor -%}
+    </div>
+</div>

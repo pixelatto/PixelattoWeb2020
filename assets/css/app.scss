@@ -56,7 +56,6 @@ a {
     border-color: $primary;
 }
 
-
 //=== SHARED STYLES ===// //add @mixin for section paddings //merge .tag-wrapper
 
 /* Container Styling */
@@ -73,7 +72,7 @@ a {
 
 /* Section Styling */
 .section {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
         padding: 3rem 0;
     }
 }
@@ -782,7 +781,6 @@ input[type=email] {
             z-index: -1;
             img {
                 object-position: top;
-                //object-position: right;
             }
         }
         @media screen and (max-width: 768px) {
@@ -899,22 +897,6 @@ input[type=email] {
             }
         }
         .product-info {
-            // .info-price {
-            //     align-items: center;
-            //     justify-content: space-between;
-            //     @media screen and (max-width: 576px) {
-            //         flex-direction: column;
-            //     }
-            // }
-            // .price {
-            //     color: $naranjitto;
-            //     font-size: 1.125em;
-            //     letter-spacing: 0.1em;
-            //     @media screen and (max-width: 576px) {
-            //         padding-right: 0 !important;
-            //         margin-top: 15px;
-            //     }
-            // }
             .info-platforms {
                 margin-top: 25px;
                 @media screen and (min-width: 1024px) {
@@ -952,7 +934,6 @@ input[type=email] {
             height: 100%;
         }
     }
-    //ask about card-creator page
 }
 // Features Comparison Table
 .comparison-table {
@@ -1185,7 +1166,7 @@ input[type=email] {
             border-radius: 50px;
             box-shadow: none;
             height: 3em;
-            padding: 10px 20px; //10px 20px 9px
+            padding: 10px 20px;
             &::placeholder {
                 color: #DCDCDC;
                 font-size: 1.125em;
@@ -1344,7 +1325,6 @@ input[type=email] {
             margin-top: 24px;
             text-align: right;
         }
-
         &:nth-of-type(2n) {
             .content-inner {
                 flex-direction: row-reverse;
@@ -1359,7 +1339,6 @@ input[type=email] {
             }
         }
     }
-
     &--mobile {
         .timeline-empty {
             display: none !important;
@@ -1415,7 +1394,6 @@ input[type=email] {
         background-repeat: no-repeat;
     }
     .product-card {
-        //padding: 20px 30px 45px;
         padding: 20px;
         .card-inner {
             padding: 0 0 0 20px;
@@ -1535,7 +1513,6 @@ input[type=email] {
         }
     }
 }
-
 .blog-list {
     padding-top: 50px;
     .blog-tags {
@@ -1562,7 +1539,6 @@ input[type=email] {
             }
         }
     }
-
     .pagination-previous,
     .pagination-next {
         border: none;
@@ -1585,7 +1561,6 @@ input[type=email] {
             width: 10px;
         }
     }
-
     .pagination-previous {
         padding-left: 20px;
         &:before {
@@ -1635,10 +1610,7 @@ input[type=email] {
                 width: 12px;
                 height: 12px;
                 background: $azulatto;
-                //display: inline-block;
                 border-radius: 50%;
-                //position: relative;
-                //right: 20px;
                 position: absolute;
                 left: -30px;
                 top: 6px;
@@ -1657,7 +1629,6 @@ input[type=email] {
         }
     }
 }
-
 .share-buttons {
     @media screen and (max-width: 768px) {
         margin-bottom: 20px;
@@ -1669,7 +1640,6 @@ input[type=email] {
         line-height: 1.125;
     }
 }
-
 .post-aside {
     .post-link {
         color: inherit;
