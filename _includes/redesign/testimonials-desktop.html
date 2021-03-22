@@ -1,0 +1,45 @@
+<!--update loop logic-->
+<div class="testimonials-cards">
+    <div class="tile is-ancestor">
+        {%- for tweet in product.presskit.tweets limit:3 -%}
+        <div class="tile is-parent">
+        <article class="tile is-child box">
+            <blockquote class="tweet" tweetID="{{ tweet }}"></blockquote>
+        </article>
+        </div>
+        {%- endfor -%}
+    </div>
+    <div class="tile is-ancestor">
+        {%- for tweet in product.presskit.tweets limit:3 offset:3 -%}
+        <div class="tile is-parent">
+        <article class="tile is-child box">
+            <blockquote class="tweet" tweetID="{{ tweet }}"></blockquote>
+        </article>
+        </div>
+        {%- endfor -%}
+    </div>
+    <div class="hidden-cards">
+        <div class="tile is-ancestor">
+            {%- for tweet in product.presskit.tweets limit:3 offset:6 -%}
+            <div class="tile is-parent">
+            <article class="tile is-child box">
+                <blockquote class="tweet" tweetID="{{ tweet }}"></blockquote>
+            </article>
+            </div>
+            {%- endfor -%}
+        </div>
+        <div class="tile is-ancestor">
+            {%- for tweet in product.presskit.tweets limit:3 offset:9 -%}
+            <div class="tile is-parent">
+            <article class="tile is-child box">
+                <blockquote class="tweet" tweetID="{{ tweet }}"></blockquote>
+            </article>
+            </div>
+            {%- endfor -%}
+        </div>
+    </div>
+    <div class="toggle-wrapper">
+        <span class="toggle-button show-link is-uppercase has-text-weight-bold has-text-centered mt-6">Show More</span>
+        <img class="toggle-arrow" src="/img/home/arrow-down.svg" alt="Arrow down icon" />
+    </div>
+</div>

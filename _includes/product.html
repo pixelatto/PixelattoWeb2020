@@ -130,47 +130,8 @@
     {%- if product.versions -%}
         <section class="section comparison-section">
             <div class="container--sm">
-                <h2 class="inner-title is-uppercase has-text-weight-bold pb-4 mb-4">Product Features</h2>
-                <table class="table comparison-table">
-                    <colgroup>
-                        <col>
-                        <col>
-                        <col>
-                        <col>
-                        <col>
-                    </colgroup>
-                    <thead>
-                        <th></th>
-                        {%- for item in product.versions.list -%}
-                            <th class="table-cell col-title is-size-7-mobile is-size-5-tablet is-size-4-desktop has-text-weight-bold has-text-secondary">{{ item.version_name }}</th>
-                            <th class="empty"></th>
-                        {%- endfor -%}
-                    </thead>
-                    <tbody class="pixel-box">
-                        {%- for single in product.versions.features-list -%}
-                            <tr>
-                                <td class="feature-cell has-text-weight-bold">{{ single.feature.name }}</td>
-                                {%- for ftr in single.has-feature -%}
-                                    <td class="table-cell">
-                                        <span class="feature-check{% if ftr.item %} has-feature{% else %} no-feature{% endif %}"></span>
-                                    </td>
-                                    <td class="empty"></td>
-                                {%- endfor -%}
-                            </tr>
-                        {%- endfor -%}
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td></td>
-                            {%- for item in product.versions.list -%}
-                                <td class="table-cell col-footer">
-                                    <a alt="{{ product.name }} Pixelatto buy button" href="{{ item.version_store_url }}" rel="nofollow" class="button button-round is-secondary">Get it!</a>
-                                </td>
-                                <td class="empty"></td>
-                            {%- endfor -%}
-                        </tr>
-                    </tfoot>
-                </table>
+                <h2 class="inner-title is-uppercase has-text-weight-bold pb-4 mb-4">{{ product.versions.title }}</h2>
+                {% include redesign/comparison-table.html %}
             </div>
         </section>
     {%- endif -%}
@@ -178,7 +139,7 @@
     {%- if product.awards -%}
         <section class="section awards-section">
             <div class="container--sm">
-                <h2 class="inner-title is-uppercase has-text-weight-bold pb-4 mb-4">Awards</h2>
+                <h2 class="inner-title is-uppercase has-text-weight-bold pb-4 mb-4">{{ product.awards.title }}</h2>
                 {% include redesign/awards-block.html %}
             </div>
         </section>
@@ -187,68 +148,9 @@
     {%- if product.presskit.tweets -%}
         <section class="section testimonials-section">
             <div class="container--sm">
-                <h2 class="inner-title is-uppercase has-text-weight-bold pb-4 mb-4">Testimonials</h2>
-                <!-- <div class="columns is-multiline is-centered">
-                    {%- for tweet in product.presskit.tweets -%}
-                    <div class="column is-4">
-                        <blockquote class="tweet" tweetID="{{ tweet }}"></blockquote>
-                    </div>
-                    {%- endfor -%}
-                </div> -->
-
-                <!-- <div id="testimonials-carousel" class="carousel">
-                    {% assign cont = 1 %}
-                    {%- for tweet in product.presskit.tweets -%}
-                        <div class="item-{{ cont }}">
-                            <blockquote class="tweet" tweetID="{{ tweet }}"></blockquote>
-                        </div>
-                        {% assign cont = cont | plus:1 %}
-                    {%- endfor -%}
-                </div> -->
-                <div class="testimonials-cards">
-                    <div class="tile is-ancestor">
-                        {%- for tweet in product.presskit.tweets limit:3 -%}
-                        <div class="tile is-parent">
-                        <article class="tile is-child box">
-                            <blockquote class="tweet" tweetID="{{ tweet }}"></blockquote>
-                        </article>
-                        </div>
-                        {%- endfor -%}
-                    </div>
-                    <div class="tile is-ancestor">
-                        {%- for tweet in product.presskit.tweets limit:3 offset:3 -%}
-                        <div class="tile is-parent">
-                        <article class="tile is-child box">
-                            <blockquote class="tweet" tweetID="{{ tweet }}"></blockquote>
-                        </article>
-                        </div>
-                        {%- endfor -%}
-                    </div>
-                    <div class="hidden-cards">
-                        <div class="tile is-ancestor">
-                            {%- for tweet in product.presskit.tweets limit:3 offset:6 -%}
-                            <div class="tile is-parent">
-                            <article class="tile is-child box">
-                                <blockquote class="tweet" tweetID="{{ tweet }}"></blockquote>
-                            </article>
-                            </div>
-                            {%- endfor -%}
-                        </div>
-                        <div class="tile is-ancestor">
-                            {%- for tweet in product.presskit.tweets limit:3 offset:9 -%}
-                            <div class="tile is-parent">
-                            <article class="tile is-child box">
-                                <blockquote class="tweet" tweetID="{{ tweet }}"></blockquote>
-                            </article>
-                            </div>
-                            {%- endfor -%}
-                        </div>
-                    </div>
-                    <div class="toggle-wrapper">
-                        <span class="toggle-button show-link is-uppercase has-text-weight-bold has-text-centered mt-6">Show More</span>
-                        <img class="toggle-arrow" src="/img/home/arrow-down.svg" alt="Arrow down icon" />
-                    </div>
-                </div>
+                <h2 class="inner-title is-uppercase has-text-weight-bold pb-4 mb-4">{{ product.presskit.testimonials.title }}</h2>
+                {% include redesign/testimonials-mobile.html %}
+                {% include redesign/testimonials-desktop.html %}
             </div>
         </section>
     {%- endif -%}
