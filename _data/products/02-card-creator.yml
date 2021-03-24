@@ -63,42 +63,22 @@ versions:
         - item: true
         - item: true
     - feature:
-        name: 'Open project'
+        name: 'Component Template'
       has-feature:
         - item: false
         - item: true
     - feature:
-        name: 'Save project'
+        name: 'New template workflow'
       has-feature:
         - item: false
         - item: true
     - feature:
-        name: 'Blueprint creation'
+        name: 'Template swap'
       has-feature:
         - item: true
         - item: true
     - feature:
-        name: 'New blueprint workflow'
-      has-feature:
-        - item: false
-        - item: true
-    - feature:
-        name: 'Blueprints zoom'
-      has-feature:
-        - item: true
-        - item: true
-    - feature:
-        name: '1:1 rendering'
-      has-feature:
-        - item: false
-        - item: true
-    - feature:
-        name: 'Blueprint swap'
-      has-feature:
-        - item: true
-        - item: true
-    - feature:
-        name: 'Card collection'
+        name: 'Template swap'
       has-feature:
         - item: false
         - item: true
@@ -110,8 +90,58 @@ versions:
     - feature:
         name: 'Data mode'
       has-feature:
-        - item: true
         - item: false
+        - item: true
+    - feature:
+        name: 'Excel/csv'
+      has-feature:
+        - item: true
+        - item: true
+    - feature:
+        name: 'Export images/pdf'
+      has-feature:
+        - item: false
+        - item: true
+    - feature:
+        name: 'Export TTS'
+      has-feature:
+        - item: true
+        - item: true
+    - feature:
+        name: 'Backups'
+      has-feature:
+        - item: false
+        - item: true
+    - feature:
+        name: 'Project localization'
+      has-feature:
+        - item: false
+        - item: true
+    - feature:
+        name: 'Play testing in-app offline'
+      has-feature:
+        - item: false
+        - item: true
+    - feature:
+        name: 'Play testing in-app online'
+      has-feature:
+        - item: false
+        - item: true
+    - feature:
+        name: '1-click prototype print'
+      has-feature:
+        - item: false
+        - item: true
+    - feature:
+        name: 'Big batch product orders'
+      has-feature:
+        - item: false
+        - item: true
+    - feature:
+        name: 'Version control support'
+      has-feature:
+        - item: false
+        - item: true
 
 gallery:
       id: cc-gallery
