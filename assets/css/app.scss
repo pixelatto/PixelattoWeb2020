@@ -269,20 +269,29 @@ a {
             padding: 20px 20px 0;
             overflow: hidden;
             //
-            //height: 200px;
-            .post-img {
-                background-position: 50% 50%;
-                background-repeat: no-repeat;
-                background-size: contain;
-                background-size: cover;
-                border-radius: 10px;
-            }
+                //height: 200px;
+                // .post-img {
+                //     background-position: 50% 50%;
+                //     background-repeat: no-repeat;
+                //     background-size: contain;
+                //     background-size: cover;
+                //     border-radius: 10px;
+                // }
+                // .post-bg {
+                //     background-repeat: no-repeat;
+                //     background-size: contain;
+                //     background-size: cover;
+                //     border-radius: 10px;
+                //     background-position: 75%;
+                //     background-position: 50% 50%;
+                // }
             //
             img {
                 border-radius: 10px;
-                @media screen and (max-width: 768px) {
-                    width: 100%;
-                }
+                object-fit: cover;
+                // @media screen and (max-width: 768px) {
+                //     width: 100%;
+                // }
             }
         }
         .card-content {
@@ -1449,13 +1458,20 @@ input[type=email] {
         }
         .card-image {
             @media screen and (max-width: 1024px) {
-                min-height: 250px;
+                min-height: unset; //200px
                 width: 100%;
             }
-            @media screen and (max-width: 768px) {
-                min-height: 200px;
-            }
+            // @media screen and (max-width: 768px) {
+            //     min-height: 200px;
+            // }
             .bg-img {
+                //
+                    // .test {
+                    //     background-position: 50% 50%;
+                    //     background-repeat: no-repeat;
+                    //     background-size: contain;
+                    // }
+                //
                 @media screen and (max-width: 1024px) {
                     border-radius: 0;
                 }

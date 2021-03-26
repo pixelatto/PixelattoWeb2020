@@ -1,6 +1,7 @@
 ---
 layout: post
 image: create-card-game.jpg
+bg_image_fit: cover
 title: How to start creating my own card game - The origin of Card Creator
 description: Discover different approaches for creating your own card game
 keywords: card creation tools, create card games, design card game, design tabletop game, create tabletop game

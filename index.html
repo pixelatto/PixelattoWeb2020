@@ -95,7 +95,9 @@ layout: redesign
                             {%- if post.image -%}
                             <div class="card-image">
                                 <div class="image is-16by9">
-                                    <img src="/img/upload/{{ post.image }}" alt="{{ post.title }}" />
+                                    <img src="/img/upload/{{ post.image }}"
+                                         alt="{{ post.title }}"
+                                         {% unless post.bg_image_fit == 'cover' %}style="object-fit: contain;"{% endunless %} />
                                 </div>
                             </div>
                             {%- else -%}

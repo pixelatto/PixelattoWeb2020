@@ -8,6 +8,7 @@ author: Juan Delgado
 author-avatar: '/img/avatars/Juan.svg'
 hide_hero: "true"
 image: report_bugs.jpg
+bg_image_fit: cover
 tags:
   - Guides
 ---

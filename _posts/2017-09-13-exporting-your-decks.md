@@ -5,6 +5,7 @@ keywords: card creator guide, how export card creator, card creator tutorial
 date: 2017-09-13T20:09:49.783Z
 tags: Guides
 image: CardCreator_03.png
+bg_image_fit: cover
 hide_hero: true
 description: Learn how to export your cards into different media and applications
 author: Juan Delgado
