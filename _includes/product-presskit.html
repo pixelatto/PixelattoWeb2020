@@ -31,6 +31,7 @@
         <!-- Start tiles gallery -->
         <div class="tile is-vertical is-ancestor" style="padding-top: 1.5rem;">
             <div class="tile is-parent">
+                {% if product.video %}
                 <div class="tile is-parent">
                     <div class="tile is-child">
                         <figure class="image is-16by9"
@@ -43,6 +44,7 @@
                         </figure>
                     </div>
                 </div>
+                {% endif %}
                 <div class="tile is-vertical is-parent">
                     <div class="tile is-parent">
                         <div class="tile is-child">
@@ -118,6 +120,7 @@
     </div>
 
     <br>
+    {% if presskit.features %}
     <div class="container content">
         <h2 class="subtitle is-8">Features</h2>
         <ul>
@@ -126,6 +129,7 @@
             {% endfor %}
         </ul>
     </div>
+    {% endif %}
     <!-- <br>
     <div class="container content">
         <h2 class="subtitle is-8">Awards</h2>
@@ -147,6 +151,7 @@
         </div>
     </div> -->
     <br>
+    {% if presskit.testimonials %}
     <div class="container content">
         <div class="column is-full">
             <h2 class="subtitle is-8">Testimonials</h2>
@@ -166,6 +171,8 @@
             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
     </div>
+    {% endif %}
+    
     <br>
     <div class="container">
         <div class="columns">
