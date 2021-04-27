@@ -1,0 +1,97 @@
+order: "4"
+
+name: |
+  Reventure: Orbtale
+code: reventure-orbtale
+type: game
+
+title: |
+  Reventure: Orbtale | Surreal humor, beautiful art and 30 minute adventures, conveniently packed into a Reventure tabletop game.
+
+subtitle: Surreal humor, beautiful art and 30 minute adventures, conveniently packed into a Reventure tabletop game.
+
+description: Explore each chapter to collect mighty artifacts and weapons, defeat the other heroes to steal their orbs and make your wish come true once you gather them all!
+
+long_description: |
+  In Reventure: Orbtale you take the role of one of the heroes seeking to collect the 4 mighty orbs, able to grant any wish. Each hero has a different skill, enabling a completely different gameplay strategy.
+
+  During your journey to find the orbs you'll also find dozens of unique artifacts and weapons: legendary items like "The Spoon", "The Dark Blade", "The Red Button" or "The Nuke" will make your quest easier (most of the time).
+  
+  Orbtale features an easy-to-learn-hard-to-master combat system based on the rock-paper-scissors mechanic. Place one of your cards facing down versus one player by your opponent, flip both and compare the symbols to see who wins. The winner applies the text on it's card.
+  
+  Up to 4 players can play (5 with Adventurer's Delight expansion set), and the synchronous turn system is designed so there's virtually zero waiting time between game phases.
+  
+  Also, the instant-respawning mechanic takes care that no one's left out of the game (e.g: by being killed on the first turn). If one of your heroes is killed, you'll lose some of your equipment, but you'll immediately respawn in the next turn as long as you have heroes in your reserve.
+
+
+# video: liMw3yfeTdo
+
+features:
+    - label: 15 unique skilled heroes to choose
+      icon: fa-mask
+    - label: Strategic rock-paper-scissors battles
+      icon: fa-hand-rock
+    - label: Instant-respawning = always playing!
+      icon: fa-infinity
+
+external_stores:
+    - image: ks
+      link: https://www.kickstarter.com/projects/javicepa/reventure-orbtale
+      
+gallery:
+      id: orbtale-gallery
+      imagefolder: /img/product/reventureorbtale/
+      images:
+          - name: main_cover.png
+            thumbnail: main_cover_thumbnail.jpg
+          - name: components.jpg
+            thumbnail: components_thumbnail.jpg
+          - name: heroes.png
+            thumbnail: heroes_thumbnail.jpg
+          - name: orbs.png
+            thumbnail: orbs_thumbnail.jpg
+
+# faq:
+#       - question: Hola , esto es una prueba.
+#         answer: Hola, esto es la respuestaz.
+#       - question: Hola , esto es una prueba2.
+#         answer: Hola, esto es la respuestax.
+#       - question: Hola , esto es una prueba3.
+#         answer: Hola, esto es la respuesta.
+#       - question: Hola , esto es una prueba4.
+#         answer: Hola, esto es la respuesta.
+#       - question: Hola , esto es una prueba5.
+#         answer: Hola, esto es la respuesta.
+#       - question: Hola , esto es una prueba6.
+#         answer: Hola, esto es la respuesta.
+
+# presskit:
+#     factsheet:
+#         developer: Pixelatto, Based in Málaga, Spain
+#         release_date: 17/04/2017
+#     additional_info:
+#         stores:
+#     features:
+#         - text: Create any card formats you can imagine using the Card Blueprint tools.
+#         - text: Drag and drop to arrange your card collections as if they were on your table.
+#         - text: Start prototyping even if you don't have the graphics with the included icon gallery.
+#         - text: Edit your cards data just by clicking over the element you want to change. Full What You See Is What You Get (WYSIWYG) interface.
+#         - text: Get your card fronts and backs as PNG/JPG images and a ready to print PDF file, with mark cuts, full edge bleeding and up to 500 dpi. See everything as you'll get it in the realtime preview of your print sheets.. Perfect for prototyping AND final printing.
+#         - text: Forget about clumsy UIs, start making cards in minutes and get your workflow to a new level with a modern and visual UI with Google's Material Design.
+#         - text: Check the official guides to learn everything you need to know or ask anything in the Steam community page (we usually answer within 12 hours).
+#     widget:
+#     player_reviews:
+#         - text: Does what it says. The quality of the exported cards is really good. I'm so glad to have discovered this creator cause makes everything than a card-player's fan want to do. I really recommend it.
+#         - text: Love it! The new UI is incredible!! 
+#         - text: Card Creator is perfect for creating card games and everything related. Its comfortable and intuitive interface facilitates the process and makes it very fun. There are also guides (in English), written by the creators themselves to facilitate the creation process. Highly recommended Card Creator!
+#     testimonials:
+#         - script: <blockquote class="twitter-tweet"><p lang="es" dir="ltr">&quot;Es que no sé cómo hacer una carta&quot; queda anulada como excusa <a href="https://twitter.com/hashtag/cardcreator?src=hash&amp;ref_src=twsrc%5Etfw">#cardcreator</a> <a href="https://twitter.com/hashtag/tutorial?src=hash&amp;ref_src=twsrc%5Etfw">#tutorial</a> <a href="https://t.co/z17zWFQS5j">https://t.co/z17zWFQS5j</a></p>&mdash; Bea (@Beateaches) <a href="https://twitter.com/Beateaches/status/799009000289243136?ref_src=twsrc%5Etfw">November 16, 2016</a></blockquote>
+#         - script: <blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/Homeworktime?src=hash&amp;ref_src=twsrc%5Etfw">#Homeworktime</a> Do you wanna build a card game? - <a href="https://twitter.com/hashtag/CardCreator?src=hash&amp;ref_src=twsrc%5Etfw">#CardCreator</a> live on <a href="https://twitter.com/hashtag/twitch?src=hash&amp;ref_src=twsrc%5Etfw">#twitch</a><a href="https://t.co/r3Y51PERBA">https://t.co/r3Y51PERBA</a> <a href="https://t.co/ugTJuIBcZl">https://t.co/ugTJuIBcZl</a></p>&mdash; Faz_BLM (@The_Faz_D) <a href="https://twitter.com/The_Faz_D/status/1224389119477866496?ref_src=twsrc%5Etfw">February 3, 2020</a></blockquote>
+#         - script: <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">CardCreatorのレビューSteamにとりあえず書いたよ。<br>「個人宅やシート単位で印刷する」のに特化してるソフトなので、ボードゲーム制作者はみんな買え！ってほどじゃないけど、カードの枚数も管理できるのは（同じカードを複数枚印刷したりしなかったりするゲームには）便利だよ。 <a href="https://t.co/qaCWt9JJZo">pic.twitter.com/qaCWt9JJZo</a></p>&mdash; yupika (@yupika) <a href="https://twitter.com/yupika/status/906534152610054146?ref_src=twsrc%5Etfw">September 9, 2017</a></blockquote>
+#         - script: <blockquote class="twitter-tweet"><p lang="es" dir="ltr">Gracias Pixelatto por la nueva actualización!!!<br>Ahora sí que es fácil trabajar con Card Creator.<br><br>Recordad, nos vemos en Yebernalia este sábado!<a href="https://twitter.com/hashtag/CardCreator?src=hash&amp;ref_src=twsrc%5Etfw">#CardCreator</a> <a href="https://twitter.com/hashtag/Yebernalia?src=hash&amp;ref_src=twsrc%5Etfw">#Yebernalia</a> <a href="https://twitter.com/hashtag/Mercenarios?src=hash&amp;ref_src=twsrc%5Etfw">#Mercenarios</a> <a href="https://twitter.com/hashtag/proto?src=hash&amp;ref_src=twsrc%5Etfw">#proto</a> <a href="https://twitter.com/hashtag/prototerminada?src=hash&amp;ref_src=twsrc%5Etfw">#prototerminada</a> en… <a href="https://t.co/BIH4Xiale7">https://t.co/BIH4Xiale7</a></p>&mdash; AELNUM (@aelnum) <a href="https://twitter.com/aelnum/status/1204683008760000512?ref_src=twsrc%5Etfw">December 11, 2019</a></blockquote>
+#         - script: <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Cutting time! <a href="https://twitter.com/hashtag/CardCreator?src=hash&amp;ref_src=twsrc%5Etfw">#CardCreator</a> <a href="https://twitter.com/hashtag/ldjam?src=hash&amp;ref_src=twsrc%5Etfw">#ldjam</a> <a href="https://twitter.com/hashtag/LDJAM38?src=hash&amp;ref_src=twsrc%5Etfw">#LDJAM38</a> <a href="https://t.co/gFYpmxZRgZ">pic.twitter.com/gFYpmxZRgZ</a></p>&mdash; Keln (@KelnStrike) <a href="https://twitter.com/KelnStrike/status/856085997393674242?ref_src=twsrc%5Etfw">April 23, 2017</a></blockquote>
+#         - script: <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">別の話になりますが、CardCreatorとTabletopSimulatorを組み合わせた例が載ってます。ちょっと便利かも。<a href="https://t.co/D3SVK5Zsuh">https://t.co/D3SVK5Zsuh</a></p>&mdash; nasika (@nasika) <a href="https://twitter.com/nasika/status/908227884958941184?ref_src=twsrc%5Etfw">September 14, 2017</a></blockquote>
+#         - script: <blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/steam?src=hash&amp;ref_src=twsrc%5Etfw">#steam</a> <a href="https://twitter.com/hashtag/CardCreator?src=hash&amp;ref_src=twsrc%5Etfw">#CardCreator</a><br>スチームの、Card Creator 使用して、カード作成。まだ途中だけど。 <a href="https://t.co/JAfM1kedIM">pic.twitter.com/JAfM1kedIM</a></p>&mdash; collonman (@collonman) <a href="https://twitter.com/collonman/status/1271742439783493633?ref_src=twsrc%5Etfw">June 13, 2020</a></blockquote>
+#         - script: <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Evil Clownfish! New fanmade Yugioh Toon Card <a href="https://twitter.com/hashtag/konami?src=hash&amp;ref_src=twsrc%5Etfw">#konami</a> <a href="https://twitter.com/hashtag/ToonJune?src=hash&amp;ref_src=twsrc%5Etfw">#ToonJune</a> <a href="https://twitter.com/hashtag/tooncard?src=hash&amp;ref_src=twsrc%5Etfw">#tooncard</a> <a href="https://twitter.com/hashtag/yugioh?src=hash&amp;ref_src=twsrc%5Etfw">#yugioh</a> <a href="https://twitter.com/hashtag/cardcreator?src=hash&amp;ref_src=twsrc%5Etfw">#cardcreator</a> <a href="https://twitter.com/hashtag/pegasus?src=hash&amp;ref_src=twsrc%5Etfw">#pegasus</a> <a href="https://twitter.com/hashtag/scary?src=hash&amp;ref_src=twsrc%5Etfw">#scary</a> <a href="https://twitter.com/hashtag/clownfish?src=hash&amp;ref_src=twsrc%5Etfw">#clownfish</a> <a href="https://twitter.com/hashtag/ArtistOnTwitter?src=hash&amp;ref_src=twsrc%5Etfw">#ArtistOnTwitter</a> <a href="https://t.co/RRNLVSvSgx">pic.twitter.com/RRNLVSvSgx</a></p>&mdash; Jazz (Lover Of The Hacker) ♥️ 🔞🎮🎨🦄🧸👑👀🦘🇦🇺 (@0blossombright0) <a href="https://twitter.com/0blossombright0/status/1276580184838168576?ref_src=twsrc%5Etfw">June 26, 2020</a></blockquote>
+#         - script: <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">何の気無しにSteamセールを巡回していたら、こんな良さげなツール見つけた！！これはボドゲ製作者マストバイアイテムなのでは？今なら半額の2000円！<br><br>【<a href="https://twitter.com/hashtag/CardCreator?src=hash&amp;ref_src=twsrc%5Etfw">#CardCreator</a>】<br>カードの表裏デザインを制作・管理するツール。<a href="https://twitter.com/hashtag/%E3%83%9C%E3%83%89%E3%82%B2?src=hash&amp;ref_src=twsrc%5Etfw">#ボドゲ</a> <a href="https://twitter.com/hashtag/TCG?src=hash&amp;ref_src=twsrc%5Etfw">#TCG</a> <a href="https://twitter.com/hashtag/%E5%90%8C%E4%BA%BA%E3%82%B2%E3%83%BC%E3%83%A0?src=hash&amp;ref_src=twsrc%5Etfw">#同人ゲーム</a> <a href="https://t.co/ijrpd0toHd">https://t.co/ijrpd0toHd</a></p>&mdash; 尾根ギア@第2波予防体勢 (@FRat_onegear) <a href="https://twitter.com/FRat_onegear/status/1279118360047808513?ref_src=twsrc%5Etfw">July 3, 2020</a></blockquote>
+#         - script: <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Things that make your day~<a href="https://twitter.com/hashtag/CardCreator?src=hash&amp;ref_src=twsrc%5Etfw">#CardCreator</a> <a href="https://t.co/RawOlpEHau">pic.twitter.com/RawOlpEHau</a></p>&mdash; Pixelatto (@Pixelatto) <a href="https://twitter.com/Pixelatto/status/1265550666728181761?ref_src=twsrc%5Etfw">May 27, 2020</a></blockquote>

@@ -7,3 +7,4 @@
 /upload/*                                                   /
 /autotilegen/                                               /
 /api/*  https://www.sendowl.com/api/v1/products/:splat  200                
+/help-us/  https://www.kickstarter.com/projects/javicepa/reventure-orbtale

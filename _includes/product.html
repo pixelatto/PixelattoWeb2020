@@ -2,8 +2,10 @@
     <div class="container">
         <div class=" pt-3">
 
+            {% unless product.code == "reventure-orbtale" %}
             <img alt="{{product.name}} logo" src="/img/product/{{product.code}}-logo.svg"
                 style="display: block; margin: auto; height: 30vw; max-height: 200px;" />
+            {% endunless %}
 
             <div class="columns is-multiline is-vcentered "
                 style="border-radius: 40px 0px 40px 0px;margin: 20px; margin-top: 0;">
@@ -14,14 +16,16 @@
                 </div>
 
                 <div class="column is-8">
+                    {% if product.video %}
                     <figure class="image is-16by9" style="border-radius: 30px 0px 30px 0px; overflow: hidden;">
-                        {% if product.video %}
                         <iframe title="{{ product.name}} trailer video" class="has-ratio" width="640" height="360"
                             src="https://www.youtube.com/embed/{{ product.video }}?rel=0" frameborder="0"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen>
                         </iframe>
-                        {% else %}
+                    </figure>
+                    {% else %}
+                    <figure class="image" style="border-radius: 30px 0px 30px 0px; overflow: hidden;">
                         <img src="{{ product.gallery.imagefolder }}{{ product.gallery.images[0].name }}" />
                         {% endif %}
                     </figure>
@@ -58,25 +62,34 @@
 
     {% if product.sendowl_id %}
     <div class="container">
-        <a alt="{{ product.name }} Pixelatto buy button" href="https://transactions.sendowl.com/products/78274278/42A4FD4D/purchase" rel="nofollow" id="buy-button" class="button is-large is-{% if product.type == 'game' %}secondary{% else %}primary{% endif %}">Get it now!</a>
-        <script type="text/javascript" src="https://transactions.sendowl.com/assets/sendowl.js" ></script>
+        <a alt="{{ product.name }} Pixelatto buy button"
+            href="https://transactions.sendowl.com/products/78274278/42A4FD4D/purchase" rel="nofollow" id="buy-button"
+            class="button is-large is-{% if product.type == 'game' %}secondary{% else %}primary{% endif %}">Get it
+            now!</a>
+        <script type="text/javascript" src="https://transactions.sendowl.com/assets/sendowl.js"></script>
         <div id="price" style="display: inline-block;padding: 1rem;"></div>
     </div>
     {% endif %}
-    
+
     <br>
     <br>
+    {% unless product.code == "reventure-orbtale" %}
     <div class="container">
         {% if product.sendowl_id%}
         <h3 class="subtitle is-5">Get it also at</h3>
         {% else %}
-            {% if product.external_stores %}
-            <h1 class="title is-3">Get it at</h1>
-            {% endif %}
+        {% if product.external_stores %}
+        <h1 class="title is-3">Get it at</h1>
+        {% endif %}
         {% endif%}
 
         {% include external-store-buttons.html %}
     </div>
+    {% else %}
+    <div class="has-text-centered">
+        <a target="_blank" href="https://www.kickstarter.com/projects/javicepa/reventure-orbtale" class="button ks-button"></a>
+    </div>
+    {% endunless%}
 
     <br>
     <br>
@@ -95,7 +108,8 @@
                     {% assign cont = 1 %}
                     {% for image in product.gallery.images %}
                     <div class="item-{{ cont }}">
-                        <img alt="{{product.name}} screenshot {{ cont }}" src="{{ product.gallery.imagefolder }}{% if image.thumbnail %}{{ image.thumbnail }}{% else %}{{ image.name }}{% endif %}"
+                        <img alt="{{product.name}} screenshot {{ cont }}"
+                            src="{{ product.gallery.imagefolder }}{% if image.thumbnail %}{{ image.thumbnail }}{% else %}{{ image.name }}{% endif %}"
                             onclick="openModal('product-modal');currentSlide({{ cont }})">
                     </div>
                     {% assign cont = cont | plus:1 %}
@@ -110,7 +124,8 @@
                     {% assign cont = 1 %}
                     {% for image in product.gallery.images %}
                     <div class="item-slide product-modal-slide">
-                        <img loading="lazy" alt="{{product.name}} lightbox image {{ cont }}" src="{{ product.gallery.imagefolder }}{{ image.name }}">
+                        <img loading="lazy" alt="{{product.name}} lightbox image {{ cont }}"
+                            src="{{ product.gallery.imagefolder }}{{ image.name }}">
                     </div>
                     {% assign cont = cont | plus:1 %}
                     {% endfor %}
@@ -142,7 +157,8 @@
                 <img style="height: 350px;" alt="Reventure award 1" src="/img/product/reventure/awards/galaindie2.png">
             </div>
             <div class="column is-6 is-centered">
-                <img style="height: 350px;border-radius: 30px 0px 30px 0px;" alt="Reventure award 1" src="/img/product/reventure/awards/gamelab2020.png">
+                <img style="height: 350px;border-radius: 30px 0px 30px 0px;" alt="Reventure award 1"
+                    src="/img/product/reventure/awards/gamelab2020.png">
             </div>
         </div>
     </div>
@@ -150,15 +166,39 @@
 
 </div>
 
+{% if product.code == "reventure-orbtale" %}
+<div class="has-text-centered">
+    <a target="_blank" href="https://www.kickstarter.com/projects/javicepa/reventure-orbtale" class="button ks-button"></a>
+</div>
+{% endif %}
+
+
 {% include subscribe-banner.html %}
 
 {% contentfor extra-js no-convert %}
-    <script>
-        var priceHTML = document.getElementById("price");
-        var buyButtonHTML = document.getElementById("buy-button");
-        getSendOwlProduct({{ product.sendowl_id }}).then((data) => {
-            priceHTML.textContent = "only for " + data.product.price + " €";
-            buyButtonHTML.href = data.product.instant_buy_url;
-        });
-    </script>
+<script>
+    var priceHTML = document.getElementById("price");
+    var buyButtonHTML = document.getElementById("buy-button");
+    getSendOwlProduct({{ product.sendowl_id }}).then((data) => {
+        priceHTML.textContent = "only for " + data.product.price + " €";
+        buyButtonHTML.href = data.product.instant_buy_url;
+    });
+</script>
 {% endcontentfor %}
+
+<style>
+    .ks-button {
+        border: none;
+        background-image: urL('/img/resources/back_this_project.png');
+        background-size: cover;
+        width: 600px;
+        height: 200px;
+        padding: 0;
+        box-shadow: none;
+    }
+
+    .ks-button:focus:not(:active) {
+        border: none;
+        box-shadow: none;
+    }
+</style>
