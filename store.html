@@ -32,7 +32,7 @@ permalink: /store/
 
     <section class="store-section">
         <div class="container--sm">
-            {%- for product_hash in products reversed -%}
+            {%- for product_hash in products -%}
             {% assign product = product_hash[1] %}
                 {% include product-card.html %}
             {%- endfor -%}

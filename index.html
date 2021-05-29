@@ -22,7 +22,8 @@ layout: redesign
     <div class="container--sm">
         <h2 class="section-title">{{ home_data.tools_section_title }}</h2>
         {% assign products = site.data.products | sort  %}
-        {%- for product_hash in products reversed -%}
+        <!-- for product_hash in products reversed -->
+        {%- for product_hash in products -%}
             {% assign product = product_hash[1] %}
             {% assign product_page = site.products | where_exp:"item","item.code == product.code" | first %}
             <div class="product-card pixel-box">

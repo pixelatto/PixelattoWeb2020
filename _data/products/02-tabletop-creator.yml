@@ -1,0 +1,80 @@
+order: "2"
+
+# sendowl_id: 78274278
+name: Tabletop Creator
+code: tabletop-creator
+type: app
+
+title: Tabletop Creator
+subtitle: Make your tabletop games come true!
+description: Start making custom tabletop games now!
+hero_image: ['/img/product/tabletop-creator-hero.jpg','Tabletop Creator hero image']
+product_image: /img/product/tabletop-creator-640-360.jpg
+
+short_description: |
+  Create and customize your own tabletop game in an easy, fun and fast way!
+  Tabletop Creator is a tabletop game maker tool that allows you...
+
+long_description: |
+  Create and customize your own tabletop game in an easy, fun and fast way!
+  Tabletop Creator is a tabletop game maker tool that allows you to design all your tabletop game components, customize and export them for printing or for play online!
+# video: liMw3yfeTdo
+
+features:
+    - label: Create any type of tabletop game
+      icon: fa-pencil-ruler
+    - label: Export to Tabletop Simulator
+      icon: fa-dice-d6
+    - label: Print and play in 1 click
+      icon: fa-print
+
+external_stores:
+    - image: steam
+      link: https://store.steampowered.com/app/861590/Tabletop_Creator/
+
+gallery:
+      id: cc-gallery
+      imagefolder: /img/product/tabletopcreator/
+      images:
+          - name: TabletopCreator_01.png
+            thumbnail: TabletopCreator_01_tn.jpg
+            text: Tabletop Creator image1
+          - name: TabletopCreator_01.png
+            thumbnail: TabletopCreator_02_tn.jpg
+            text: Tabletop Creator image2
+          - name: TabletopCreator_01.png
+            thumbnail: TabletopCreator_03_tn.jpg
+            text: Tabletop Creator image3
+          - name: TabletopCreator_04.png
+            thumbnail: TabletopCreator_04_tn.jpg
+            text: Tabletop Creator image4
+          - name: TabletopCreator_05.png
+            thumbnail: TabletopCreator_05_tn.jpg
+            text: Tabletop Creator image5
+          - name: TabletopCreator_06.png
+            thumbnail: TabletopCreator_06_tn.jpg
+            text: Tabletop Creator image6
+
+# faq:
+#       - question: Hola , esto es una prueba.
+#         answer: Hola, esto es la respuestaz.
+
+presskit:
+    factsheet:
+        developer: Pixelatto, Based in Málaga, Spain
+        release_date: 25/02/2021
+    additional_info:
+        stores:
+    features:
+        - text: "Blueprints: design different templates to apply to your components with a WYSIWYG editor: cards, boards, tokens, etc!"
+        - text: "Collections: create new components with one click, choose a blueprint as template and customize it!"
+        - text: "Version control: projects structure supports version control, enabling collaboration with others to create your game on the cloud!"
+        - text: "Icons gallery: all the icons you need for a prototype are already included"
+        - text: "13 languages: interface fully translated to 13 languages"
+        - text: "Demo projects: we have created \"original\" game projects for you to check examples of use"
+        - text: "Documentation: find several guides and tips articles of the different features for creating your game"
+        - text: "Automatic updates: receive all future updates for free"
+        - text: "Support: join our Discord server or mail us for solving your doubts and issues"
+    widget:
+    player_reviews:
+    testimonials:

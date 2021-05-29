@@ -1,0 +1,78 @@
+order: "1"
+
+name: |
+  Reventure: Orbtale
+code: reventure-orbtale
+type: game
+
+title: |
+  Reventure: Orbtale | Surreal humor, beautiful art and 30 minute adventures, conveniently packed into a Reventure tabletop game.
+subtitle: Surreal humor, beautiful art and 30 minute adventures, conveniently packed into a Reventure tabletop game.
+description: Explore each chapter to collect mighty artifacts and weapons, defeat the other heroes to steal their orbs and make your wish come true once you gather them all!
+hero_image: ['/img/product/reventure-orbtale-hero.jpg','Reventure: Orbtale hero image']
+product_image: /img/product/reventure-orbtale-640-360.jpg
+
+short_description: |
+  In Reventure: Orbtale you take the role of one of the heroes seeking to collect the 4 mighty orbs, able to grant any wish.
+  Each hero has a different skill, enabling a completely different gameplay strategy...
+
+long_description: |
+  In Reventure: Orbtale you take the role of one of the heroes seeking to collect the 4 mighty orbs, able to grant any wish. Each hero has a different skill, enabling a completely different gameplay strategy.
+  During your journey to find the orbs you'll also find dozens of unique artifacts and weapons: legendary items like "The Spoon", "The Dark Blade", "The Red Button" or "The Nuke" will make your quest easier (most of the time).
+
+  Orbtale features an easy-to-learn-hard-to-master combat system based on the rock-paper-scissors mechanic. Place one of your cards facing down versus one player by your opponent, flip both and compare the symbols to see who wins. The winner applies the text on it's card.
+
+  Up to 4 players can play (5 with Adventurer's Delight expansion set), and the synchronous turn system is designed so there's virtually zero waiting time between game phases.
+
+  Also, the instant-respawning mechanic takes care that no one's left out of the game (e.g: by being killed on the first turn). If one of your heroes is killed, you'll lose some of your equipment, but you'll immediately respawn in the next turn as long as you have heroes in your reserve.
+# video: liMw3yfeTdo
+
+features:
+    - label: 15 unique skilled heroes to choose
+      icon: fa-mask
+    - label: Strategic rock-paper-scissors battles
+      icon: fa-hand-rock
+    - label: Instant-respawning = always playing!
+      icon: fa-infinity
+
+external_stores:
+    - image: ks
+      link: https://www.kickstarter.com/projects/javicepa/reventure-orbtale
+
+gallery:
+      id: orbtale-gallery
+      imagefolder: /img/product/reventureorbtale/
+      images:
+          - name: main_cover.png
+            thumbnail: main_cover_thumbnail.jpg
+          - name: components.jpg
+            thumbnail: components_thumbnail.jpg
+          - name: heroes.png
+            thumbnail: heroes_thumbnail.jpg
+          - name: orbs.png
+            thumbnail: orbs_thumbnail.jpg
+
+# faq:
+#       - question: Hola , esto es una prueba.
+#         answer: Hola, esto es la respuestaz.
+#       - question: Hola , esto es una prueba2.
+#         answer: Hola, esto es la respuestax.
+#       - question: Hola , esto es una prueba3.
+#         answer: Hola, esto es la respuesta.
+#       - question: Hola , esto es una prueba4.
+#         answer: Hola, esto es la respuesta.
+#       - question: Hola , esto es una prueba5.
+#         answer: Hola, esto es la respuesta.
+#       - question: Hola , esto es una prueba6.
+#         answer: Hola, esto es la respuesta.
+
+presskit:
+    factsheet:
+        developer: Pixelatto, Based in Málaga, Spain
+        release_date: 17/04/2017
+    additional_info:
+        stores:
+    features:
+    widget:
+    player_reviews:
+    testimonials:

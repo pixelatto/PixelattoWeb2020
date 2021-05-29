@@ -1,0 +1,572 @@
+---
+layout: empty
+title: Help us
+hide_hero: true
+permalink: /help-us/
+---
+
+{% assign products = site.data.products %}
+
+<div class="helpus">
+    <div class="is-multiline is-vcentered">
+        <!-- JAVI -->
+        <div class="javi column is-full">
+            <div class="dialogue">
+                <div class="quote">
+                    <img class="a" src="/img/help-us/quote1.svg" class="ribbon" />
+                    <img class="b" src="/img/help-us/quote2.svg" class="ribbon" />
+                    <img class="c" src="/img/help-us/quote3.svg" class="ribbon" />
+                    <img class="d" src="/img/help-us/quote4.svg" class="ribbon" />
+
+                    <div class="text is-size-6-mobile">Thanks for your interest in helping us! This is a compilation of
+                        ways you can support Pixelatto in our quest to make awesome games and experiences. First of all:
+                        buying our stuff!
+                    </div>
+
+                    <div class="columns is-hidden-mobile" style="max-width: 600px;margin: auto;">
+                        {% for product_hash in products %}
+                        {% assign product = product_hash[1] %}
+                        <div class="column is-4">
+                            <a href="/store/{{ product.code }}">
+                                <div class="card" style="height: 100%;">
+                                    <div class="card-image">
+                                        <figure class="image">
+                                            <img src="/img/product/{{ product.code }}-logo.svg"
+                                                alt="{{ product.title }}" style="margin: auto; padding: 1.5rem;">
+                                        </figure>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <div id="helpus-products-carousel" class="carousel is-hidden-desktop">
+                        {% assign cont = 1 %}
+                        {% for product_hash in products %}
+                        {% assign product = product_hash[1] %}
+
+                        <div class="item item-{{ cont }}">
+                            <a href="/store/{{ product.code }}">
+                                <div class="card" style="height: 100%;box-shadow: none;">
+                                    <div class="card-image">
+                                        <figure class="image">
+                                            <img src="/img/product/{{ product.code }}-logo.svg"
+                                                alt="{{ product.title }}" style="margin: auto; padding: 1.5rem;">
+                                        </figure>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        {% assign cont = cont | plus:1 %}
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="member">
+                    <img class="avatar" src="/img/avatars/Javi.svg" alt="Image">
+                    <img class="line" src="/img/help-us/line.svg" alt="Image">
+                </div>
+            </div>
+        </div>
+        <!-- JUAN -->
+        <div class="juan column is-full">
+            <div class="dialogue">
+                <div class="quote">
+                    <img class="a" src="/img/help-us/quote1.svg" class="ribbon" />
+                    <img class="b" src="/img/help-us/quote2.svg" class="ribbon" />
+                    <img class="c" src="/img/help-us/quote3.svg" class="ribbon" />
+                    <img class="d" src="/img/help-us/quote4.svg" class="ribbon" />
+                    <div class="text is-size-6-mobile">Subscribe to our newsletter! I know, it doesn't sound very
+                        exciting...
+                        but it's the
+                        first place where we announce new projects and games! Also, we are very lazy writing this
+                        kind
+                        of
+                        stuff,
+                        so you'd probably get a couple of mails per year. Probably less.</div>
+                    {% include redesign/subscribe-form.html %}
+                </div>
+
+                <div class="member inverse">
+                    <img class="avatar" src="/img/avatars/Juan.svg" alt="Image">
+                    <img class="line" src="/img/help-us/line.svg" alt="Image">
+                </div>
+            </div>
+        </div>
+        <!-- ALBERTO -->
+        <div class="alberto column is-full">
+            <div class="dialogue">
+                <div class="quote">
+                    <img class="a" src="/img/help-us/quote1.svg" class="ribbon" />
+                    <img class="b" src="/img/help-us/quote2.svg" class="ribbon" />
+                    <img class="c" src="/img/help-us/quote3.svg" class="ribbon" />
+                    <img class="d" src="/img/help-us/quote4.svg" class="ribbon" />
+                    <div class="text is-size-6-mobile">You could join our warm and cozy <a
+                            href="https://discord.gg/pixelatto">Discord server</a> to meet other beautiful
+                        people,
+                        share fanarts, get exclusive content and stay up to date with our latest news.</div>
+                    <div style="max-width: 600px;margin: auto;">
+                        <iframe src="https://discord.com/widget?id=540950235791228968&theme=dark"
+                            style="width: 100%; height: 300px;" allowtransparency="true" frameborder="0"
+                            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+                    </div>
+                </div>
+
+                <div class="member">
+                    <img class="avatar" src="/img/avatars/Alberto.svg" alt="Image">
+                    <img class="line" src="/img/help-us/line.svg" alt="Image">
+                </div>
+            </div>
+        </div>
+        <!-- MIGUEL -->
+        <div class="miguel column is-full">
+            <div class="dialogue">
+                <div class="quote">
+                    <img class="a" src="/img/help-us/quote1.svg" class="ribbon" />
+                    <img class="b" src="/img/help-us/quote2.svg" class="ribbon" />
+                    <img class="c" src="/img/help-us/quote3.svg" class="ribbon" />
+                    <img class="d" src="/img/help-us/quote4.svg" class="ribbon" />
+
+                    <div class="text is-size-6-mobile">Content made by
+                        our fans totally makes our day. If you share it on Twitter using the #Reventure hashtag and
+                        tagging us @Pixelatto we'll RT it for sure. Here's some of the amazing stuff some of you folks
+                        have already come up with:
+                    </div>
+
+                    <div id="fans-carousel" class="carousel">
+                        <div class="item item-1">
+                            <blockquote class="twitter-tweet">
+                                <p lang="en" dir="ltr">This theme made by <a
+                                        href="https://twitter.com/ChaoSpiritZ?ref_src=twsrc%5Etfw">@ChaoSpiritz</a>
+                                    combines
+                                    Legend
+                                    of
+                                    Zelda and Reventure themes. Awesome job!! 🎉🎉🎉 <a
+                                        href="https://t.co/eBqJKNmDPU">pic.twitter.com/eBqJKNmDPU</a></p>&mdash;
+                                Pixelatto
+                                (@Pixelatto)
+                                <a href="https://twitter.com/Pixelatto/status/1230438842878091264?ref_src=twsrc%5Etfw">February
+                                    20,
+                                    2020</a>
+                            </blockquote>
+                        </div>
+                        <div class="item item-2">
+                            <a target="_blank" href="https://www.planetminecraft.com/texture-pack/reventure-craft/">
+                                <div class="box" style="text-align: center;">
+                                    <img src="/img/help-us/reventure-craft.png">
+                                    <div class="text">
+                                        <h2 class="title">Reventure Craft</h2>
+                                        <p>A Minecraft resource pack based of of the game Reventure created by
+                                            Kylotl
+                                            and
+                                            planetminecraft.com.</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item item-3">
+                            <blockquote class="twitter-tweet">
+                                <p lang="en" dir="ltr">The user Kylotl on Steam has created <a
+                                        href="https://twitter.com/hashtag/Reventure?src=hash&amp;ref_src=twsrc%5Etfw">#Reventure</a>
+                                    Monopoly for Tabletop Simulator from <a
+                                        href="https://twitter.com/BerserkGames?ref_src=twsrc%5Etfw">@BerserkGames</a>.
+                                    Go
+                                    play
+                                    it!<a href="https://t.co/X0b3LU4RnA">https://t.co/X0b3LU4RnA</a> <a
+                                        href="https://t.co/JZWqUk3mNN">pic.twitter.com/JZWqUk3mNN</a></p>&mdash;
+                                Pixelatto
+                                (@Pixelatto)
+                                <a href="https://twitter.com/Pixelatto/status/1166725061694410753?ref_src=twsrc%5Etfw">August
+                                    28,
+                                    2019</a>
+                            </blockquote>
+                        </div>
+                        <div class="item item-4">
+                            <a target="_blank" href="https://steamcommunity.com/app/900270/workshop/">
+                                <div class="box" style="text-align: center;">
+                                    <img src="/img/help-us/hero-factory.png">
+                                    <div class="text">
+                                        <h2 class="title">Steam workshop</h2>
+                                        <p>Reventure has (almost) more heros than Pokemons exists! Find them and
+                                            more at
+                                            our
+                                            Steam
+                                            workshop community.</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item item-5">
+                            <div class="box" style="text-align: center;">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/WWB_MUSy69U"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                                <div class="text">
+                                    <h2 class="title">I need a Hero</h2>
+                                    <p>Tim not always was a Hero... before that he had another job as a
+                                        performer in
+                                        musicals!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item item-6">
+                            <div class="box" style="text-align: center;">
+                                <iframe
+                                    src="https://clips.twitch.tv/embed?clip=PluckyPoisedChickenUWot&parent=www.pixelatto.com"
+                                    frameborder="0" allowfullscreen="true" scrolling="no" height="378"
+                                    width="620"></iframe>
+                                <div class="text">
+                                    <h2 class="title">Twitch streamings</h2>
+                                    <p>Tim shows how he likes to care of animals.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item item-7">
+                            <a target="_blank" href="https://tvtropes.org/pmwiki/pmwiki.php/VideoGame/Reventure">
+                                <div class="box" style="text-align: center;">
+                                    <img src="/img/help-us/tvtropes.png">
+                                    <div class="text">
+                                        <h2 class="title">tv tropes wiki</h2>
+                                        <p>Fans also have created a Reventure page at tctopes.org.</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item item-8">
+                            <blockquote class="twitter-tweet">
+                                <p lang="en" dir="ltr">And the (very) small peeps of Reventure<a
+                                        href="https://twitter.com/Pixelatto?ref_src=twsrc%5Etfw">@Pixelatto</a>
+                                    <a href="https://t.co/UKMRsyavrB">pic.twitter.com/UKMRsyavrB</a>
+                                </p>&mdash;
+                                Francis
+                                L&#39;Ectomorphe (@francis_ecto) <a
+                                    href="https://twitter.com/francis_ecto/status/1352225298436263938?ref_src=twsrc%5Etfw">January
+                                    21,
+                                    2021</a>
+                            </blockquote>
+                        </div>
+                        <div class="item item-9">
+                            <blockquote class="twitter-tweet">
+                                <p lang="en" dir="ltr">The user Bleam uploaded this fanart to our discord
+                                    channel
+                                    <br>Join
+                                    it to
+                                    stay
+                                    tuned with the Reventure community! 🥳<br>(oh, and Card Creator!🤞)<a
+                                        href="https://t.co/IFF5zZFvwi">https://t.co/IFF5zZFvwi</a> <a
+                                        href="https://t.co/ZkZ9UurUTJ">pic.twitter.com/ZkZ9UurUTJ</a>
+                                </p>&mdash;
+                                Pixelatto
+                                (@Pixelatto)
+                                <a href="https://twitter.com/Pixelatto/status/1339553078920556550?ref_src=twsrc%5Etfw">December
+                                    17,
+                                    2020</a>
+                            </blockquote>
+                        </div>
+                        <div class="item item-10">
+                            <blockquote class="twitter-tweet">
+                                <p lang="en" dir="ltr">Minion love, by dadeval (gotta love this community
+                                    ♥️)<br><br>Profile: <a href="https://t.co/GgNyRyzJz7">https://t.co/GgNyRyzJz7</a> <a
+                                        href="https://t.co/bozxfReRKT">pic.twitter.com/bozxfReRKT</a></p>&mdash;
+                                Pixelatto
+                                (@Pixelatto)
+                                <a href="https://twitter.com/Pixelatto/status/1272482763556491265?ref_src=twsrc%5Etfw">June
+                                    15,
+                                    2020</a>
+                            </blockquote>
+                        </div>
+                        <div class="item item-11">
+                            <blockquote class="twitter-tweet">
+                                <p lang="en" dir="ltr">Imagine a goose game with 100 finals...<a
+                                        href="https://twitter.com/house_house_?ref_src=twsrc%5Etfw">@house_house_</a>
+                                    <a href="https://twitter.com/Pixelatto?ref_src=twsrc%5Etfw">@Pixelatto</a><a
+                                        href="https://twitter.com/hashtag/UntitledGooseGame?src=hash&amp;ref_src=twsrc%5Etfw">#UntitledGooseGame</a>
+                                    <a
+                                        href="https://twitter.com/hashtag/Reventure?src=hash&amp;ref_src=twsrc%5Etfw">#Reventure</a>
+                                    <a
+                                        href="https://twitter.com/hashtag/Fanart?src=hash&amp;ref_src=twsrc%5Etfw">#Fanart</a>
+                                    <a href="https://t.co/9uxytE66gr">pic.twitter.com/9uxytE66gr</a>
+                                </p>&mdash; JuDelCo (@JuDelCo) <a
+                                    href="https://twitter.com/JuDelCo/status/1196455046654910464?ref_src=twsrc%5Etfw">November
+                                    18,
+                                    2019</a>
+                            </blockquote>
+                        </div>
+                        <div class="item item-12">
+                            <blockquote class="twitter-tweet">
+                                <p lang="es" dir="ltr">NUEVO ESCENARIO de <a
+                                        href="https://twitter.com/hashtag/Reventure?src=hash&amp;ref_src=twsrc%5Etfw">#Reventure</a>
+                                    La
+                                    habitación de la princesa ;D para hasta 8 JUGADORES.<br><br>Espero vuestro
+                                    apoyo
+                                    <a href="https://t.co/riATKQXVct">pic.twitter.com/riATKQXVct</a>
+                                </p>&mdash;
+                                Starter
+                                19
+                                (El
+                                Pepe
+                                Furro) (@19_starter) <a
+                                    href="https://twitter.com/19_starter/status/1183443432414601216?ref_src=twsrc%5Etfw">October
+                                    13,
+                                    2019</a>
+                            </blockquote>
+                        </div>
+                        <div class="item item-13">
+                            <blockquote class="twitter-tweet">
+                                <p lang="en" dir="ltr">Come play <a
+                                        href="https://twitter.com/hashtag/Reventure?src=hash&amp;ref_src=twsrc%5Etfw">#Reventure</a>
+                                    at
+                                    Gamepolis indie zone! <a
+                                        href="https://twitter.com/hashtag/Gamepolis2k19?src=hash&amp;ref_src=twsrc%5Etfw">#Gamepolis2k19</a>
+                                    <a href="https://t.co/jvZL5uI987">pic.twitter.com/jvZL5uI987</a>
+                                </p>&mdash; Pixelatto (@Pixelatto)
+                                <a href="https://twitter.com/Pixelatto/status/1152617286634807296?ref_src=twsrc%5Etfw">July
+                                    20,
+                                    2019</a>
+                            </blockquote>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="member inverse">
+                <img class="avatar" src="/img/avatars/Miguel.svg" alt="Image">
+                <img class="line" src="/img/help-us/line.svg" alt="Image">
+            </div>
+        </div>
+        <!-- DANI -->
+        <div class="dani column is-full">
+            <div class="dialogue">
+                <div class="quote">
+                    <img class="a" src="/img/help-us/quote1.svg" class="ribbon" />
+                    <img class="b" src="/img/help-us/quote2.svg" class="ribbon" />
+                    <img class="c" src="/img/help-us/quote3.svg" class="ribbon" />
+                    <img class="d" src="/img/help-us/quote4.svg" class="ribbon" />
+                    <div class="text is-size-6-mobile">Listen to the Reventure OST or even better and let me know if you
+                        make
+                        a cover playing any of
+                        the themes included in it, I would love to hear it!</div>
+                    <div style="max-width: 600px;margin: auto;">
+                        <iframe src="https://store.steampowered.com/widget/1102480/" frameborder="0"
+                            style="width: 100%; height: 190px;"></iframe>
+                    </div>
+                </div>
+
+                <div class="member">
+                    <img class="avatar" src="/img/avatars/Dani.svg" alt="Image">
+                    <img class="line" src="/img/help-us/line.svg" alt="Image">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<style>
+    @font-face {
+        font-family: 'reventurefont';
+        src: url("/fonts/FSEX300.ttf") format('truetype');
+    }
+
+    body {
+        background-color: #c4c4c4;
+    }
+
+    .helpus {
+        color: black;
+        font-family: reventurefont;
+        width: 95vw;
+        margin: auto;
+    }
+
+    .input {
+        font-family: reventurefont;
+    }
+
+    .quote {
+        margin: 20px;
+        position: relative;
+        border: 5px solid black;
+        vertical-align: middle;
+        padding: 40px;
+        font-size: 24px;
+        background: white;
+        z-index: 1;
+    }
+
+    .quote .text {
+        margin-bottom: 1rem;
+    }
+
+    .quote .a {
+        position: absolute;
+        top: -5px;
+        left: -5px;
+    }
+
+    .quote .b {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+    }
+
+    .quote .c {
+        position: absolute;
+        bottom: -5px;
+        right: -5px;
+    }
+
+    .quote .d {
+        position: absolute;
+        bottom: -5px;
+        left: -5px;
+    }
+
+    .member {
+        position: relative;
+        width: fit-content;
+    }
+
+    .avatar {
+        width: 100px;
+
+    }
+
+    .line {
+        position: absolute;
+        top: -45px;
+        right: -34px;
+        transform: rotate(45deg);
+    }
+
+    .inverse {
+        transform: scaleX(-1);
+        width: 100%;
+    }
+
+    .inverse .line {
+        left: 120px;
+        right: initial;
+    }
+
+    .carousel .item {
+        padding: 0.25rem;
+    }
+
+    .carousel .item h2 {
+        font-size: 24px;
+        margin-bottom: 0.5rem;
+    }
+
+    .carousel .item p {
+        font-size: 18px;
+    }
+
+    .box {
+        padding: 0;
+        box-shadow: none;
+    }
+
+    .box img,
+    .box iframe {
+        border-radius: 15px 15px 0 0;
+        width: 100%;
+    }
+
+    .box iframe {
+        margin-bottom: -10px;
+    }
+
+    .box .text {
+        padding: 1.25rem;
+        border: 1px solid rgb(204, 214, 221);
+        border-radius: 0 0 15px 15px;
+    }
+
+    .suscribe-form {
+        height: 30vh;
+    }
+
+    .twitter-tweet.twitter-tweet-rendered {
+        padding: 0;
+    }
+
+
+    @media screen and (max-width: 767px) {
+        .slider-navigation-next,
+        .slider-navigation-previous {
+
+            margin-top: 30px;
+        }
+
+        .miguel .slider-navigation-next,
+        .miguel .slider-navigation-previous {
+
+            margin-top: 180px;
+        }
+
+        .field {
+            font-size: 1rem;
+        }
+
+        .suscribe-form {
+            height: 40vh;
+        }
+
+        .quote {
+            margin: 10px;
+            padding: 15px;
+        }
+
+        .is-multiline {
+            display: flex;
+            flex-flow: column;
+        }
+
+        .javi.is-5 {
+            order: 1;
+        }
+
+        .javi.is-7 {
+            order: 2;
+        }
+
+        .miguel.is-5 {
+            order: 3;
+        }
+
+        .miguel.is-7 {
+            order: 4;
+        }
+
+        .alberto.is-5 {
+            order: 5;
+        }
+
+        .alberto.is-7 {
+            order: 6;
+        }
+
+        .juan.is-5 {
+            order: 7;
+        }
+
+        .juan.is-7 {
+            order: 8;
+        }
+
+        .dani.is-5 {
+            order: 9;
+        }
+
+        .dani.is-7 {
+            order: 10;
+        }
+    }
+</style>

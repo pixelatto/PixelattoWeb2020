@@ -9,6 +9,7 @@ exports.handler = function(event, context, callback)
         (event.headers["user"] == "5f1ec0b6f589af0f490e2f49" && event.headers["pass"] == "1992")       ||
         (event.headers["user"] == "5ef5d56a6a97287b8d58ce1f" && event.headers["pass"] == "coloreando") ||
         (event.headers["user"] == "5e831d956a9728038e712a3d" && event.headers["pass"] == "juengine")   ||
+        (event.headers["user"] == "60475b606c0cbc0e193c9349" && event.headers["pass"] == "3dpower")    ||
         false
         )
     {
