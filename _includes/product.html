@@ -58,7 +58,7 @@
                                     <script type="text/javascript" src="https://transactions.sendowl.com/assets/sendowl.js"></script>
                                     <div class="price-box is-relative is-uppercase has-text-success has-text-weight-bold has-text-centered is-size-4">
                                         {%- if product.old-price -%}
-                                            <p class="old-price is-size-6"><s>{{ product.old-price }} &euro;</s></p>
+                                            <p class="old-price is-size-6"><s>{{ product.old-price }}</s></p>
                                         {%- endif -%}
                                         <div id="price" class="{{ product.name | downcase | slugify }}-price"></div>
                                     </div>

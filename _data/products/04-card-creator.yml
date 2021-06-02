@@ -7,7 +7,7 @@ type: app
 
 highlighted: true
 sale: true
-old-price: '45.50'
+old-price: '45.50 &euro;'
 
 title: Card Creator
 subtitle: Card creation made easy, fast and fun
