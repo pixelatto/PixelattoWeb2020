@@ -943,6 +943,7 @@ input[type=email] {
 }
 // Features Comparison Table
 .comparison-table {
+    border-collapse: separate;
     margin-top: 40px;
     table-layout: fixed;
     width: 100%;
@@ -1458,17 +1459,7 @@ input[type=email] {
                 min-height: unset; //200px
                 width: 100%;
             }
-            // @media screen and (max-width: 768px) {
-            //     min-height: 200px;
-            // }
             .bg-img {
-                //
-                    // .test {
-                    //     background-position: 50% 50%;
-                    //     background-repeat: no-repeat;
-                    //     background-size: contain;
-                    // }
-                //
                 @media screen and (max-width: 1024px) {
                     border-radius: 0;
                 }
@@ -1654,6 +1645,9 @@ input[type=email] {
     }
 }
 .post-aside {
+    .title-aside.title  {
+        margin: 0 0 1em;
+    }
     .post-link {
         color: inherit;
         border-radius: 10px;
