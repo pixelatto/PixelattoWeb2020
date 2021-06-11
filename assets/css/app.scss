@@ -181,6 +181,15 @@ a {
             font-size: 2em;
         }
     }
+    &.product-hero {
+        min-height: 450px;
+        @media screen and (max-width: 1024px) {
+            min-height: 350px;
+        }
+        @media screen and (max-width: 576px) {
+            min-height: 300px;
+        }
+    }
 }
 
 /* General Section Title */
@@ -445,14 +454,11 @@ a {
         .price-box {
             margin: 0 auto;
             @media screen and (max-width: 576px) {
-                margin-top: 15px;
+                margin-top: 20px;
             }
             .old-price {
                 color: #BF3312;
                 line-height: 1;
-                //position: absolute;
-                //top: -20px;
-                //right: 16px;
             }
         }
     }
@@ -891,6 +897,7 @@ input[type=email] {
 .product-preview {
     position: relative;
     top: -250px;
+    margin-bottom: -250px;
     .product-card {
         background-color: #fff;
         padding: 20px;

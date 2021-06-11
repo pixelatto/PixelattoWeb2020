@@ -1,4 +1,4 @@
-<section class="hero-section" style="min-height: 450px;">
+<section class="hero-section product-hero">
     <div class="bg-img">
         <img src="{{ product.hero_image[0] }}" alt="{{ product.hero_image[1] }}" />
         <div class="hero-mask"></div>
@@ -152,7 +152,7 @@
     {%- endif -%}
 </div>
 
-{% include redesign/subscribe-form.html class="pt-0" %}
+{% include redesign/subscribe-form.html %}
 
 {% contentfor extra-js no-convert %}
     <script>
