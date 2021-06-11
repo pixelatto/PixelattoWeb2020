@@ -969,7 +969,7 @@ input[type=email] {
         width: calc(100% - (225px * 2));
     }
     td {
-        padding: 0.75em;
+        padding: 0.5em;
     }
     .feature-cell {
         padding-left: 80px;
@@ -1032,28 +1032,33 @@ input[type=email] {
     .table-cell {
         text-align: center !important;
         width: 200px;
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 1024px) {
             width: 150px;
+        }
+        @media screen and (max-width: 768px) {
+            width: 100px;
         }
         @media screen and (max-width: 576px) {
             width: 75px;
         }
         .feature-check {
-            background-size: 30px;
+            background-size: 25px;
+            background-position: center;
+            background-repeat: no-repeat;
             display: block;
             margin: 0 auto;
-            width: 30px;
-            height: 30px;
-            @media screen and (max-width: 576px) {
+            width: 25px;
+            height: 25px;
+            @media screen and (max-width: 768px) {
                 background-size: 20px;
                 width: 20px;
                 height: 20px;
             }
             &.has-feature {
-                background-image: url("/img/resources/check-icon.svg");
+                background-image: url("/img/resources/check-icon-no_border.svg");
             }
             &.no-feature {
-                background-image: url("/img/resources/close-icon.svg");
+                background-image: url("/img/resources/close-icon-no_border.svg");
             }
         }
     }
