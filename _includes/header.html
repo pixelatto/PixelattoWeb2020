@@ -55,8 +55,12 @@
                 {% for item in site.data.navigation %}
                 {% if item.dropdown %}
                 <div class="navbar-item has-dropdown is-hoverable">
-                    <a name="{{ item.name }} link" href="{{ item.link | relative_url }}"
-                        class="navbar-link {% if item.link == page.url %}is-active{% endif %}">{{ item.name }}</a>
+                    {%- if item.link -%}
+                        <a name="{{ item.name }} link" href="{{ item.link | relative_url }}"
+                            class="navbar-link {% if item.link == page.url %}is-active{% endif %}">{{ item.name }}</a>
+                    {%- else -%}
+                        <span name="{{ item.name }} span" class="navbar-link">{{ item.name }}</span>
+                    {%- endif -%}
                     <div class="navbar-dropdown">
                         {% for subitem in item.dropdown %}
                         <a name="{{ item.name }} link" href="{{ subitem.link | relative_url }}"
