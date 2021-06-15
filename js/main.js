@@ -73,7 +73,7 @@ function clickHandler(e) {
   });
 }
 
-
+// Show more/less testimonials
 const toggleButton = document.querySelector('.toggle-button');
 const toggleContent = document.querySelector('.hidden-cards');
 const toggleArrow = document.querySelector('.toggle-arrow');
@@ -91,5 +91,18 @@ if (toggleContent) {
       toggleButton.textContent = 'Show Less';
       toggleArrow.classList.add('arrow-up');
     }
+  });
+}
+
+// Hover for product card
+const toggleLinks = document.querySelectorAll('.link--abs');
+
+for (const link of toggleLinks) {
+  const targetElem = link.parentElement.querySelector(".is-scaled");
+  link.addEventListener("mouseenter", () => {
+    targetElem.classList.add("active-scale");
+  });
+  link.addEventListener("mouseleave", () => {
+    targetElem.classList.remove("active-scale");
   });
 }

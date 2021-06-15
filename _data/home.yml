@@ -5,7 +5,7 @@ hero_cta:
   cta_text: Explore
   cta_url: '#tools'
 
-tools_section_title: games and tools
+#tools_section_title: games and tools
 
 about_section:
   about_image: ['/img/home/director-image.svg', 'Javi Cepa photo']
