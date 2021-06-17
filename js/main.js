@@ -106,3 +106,22 @@ for (const link of toggleLinks) {
     targetElem.classList.remove("active-scale");
   });
 }
+
+
+// Test
+// const wrapStart = document.querySelector('.getWrapped-6');
+// const wrapEnd = document.querySelector('.toggle-wrapper');
+// const el1 = '<div class="mu">';
+// const el2 = '</div>';
+// wrapStart.insertAdjacentElement('beforebegin', el1);
+// wrapEnd.insertAdjacentElement('beforebegin', el2);
+
+// function wrap(top, selector, bottom){
+//   var matches = document.querySelectorAll(selector);
+//   for (var i = 0; i < matches.length; i++){
+//     var modified = top + matches[i].outerHTML + bottom;
+//     matches[i].outerHTML = modified;
+//   }
+// }
+
+// wrap("<div class='wrapper'>", ".getWrapped", "</div>");
