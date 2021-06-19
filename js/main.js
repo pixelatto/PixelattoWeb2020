@@ -108,20 +108,40 @@ for (const link of toggleLinks) {
 }
 
 
-// Test
-// const wrapStart = document.querySelector('.getWrapped-6');
-// const wrapEnd = document.querySelector('.toggle-wrapper');
-// const el1 = '<div class="mu">';
-// const el2 = '</div>';
-// wrapStart.insertAdjacentElement('beforebegin', el1);
-// wrapEnd.insertAdjacentElement('beforebegin', el2);
+// Custom play button
+const videoPoster = document.querySelector(".js-videoPoster");
 
-// function wrap(top, selector, bottom){
-//   var matches = document.querySelectorAll(selector);
-//   for (var i = 0; i < matches.length; i++){
-//     var modified = top + matches[i].outerHTML + bottom;
-//     matches[i].outerHTML = modified;
-//   }
+if (videoPoster) {
+  videoPoster.addEventListener("click", (event) => {
+    event.preventDefault();
+    const wrapper = document.querySelector(".js-videoWrapper");
+    videoPlay(wrapper);
+  });
+
+  const videoPlay = (wrapper) => {
+    const iframe = wrapper.querySelector(".js-videoIframe");
+    const src = iframe.dataset.src;
+    wrapper.classList.add("videoWrapperActive");
+    iframe.setAttribute("src", src);
+  };
+}
+
+// $(document).on('click','.js-videoPoster',function(e) {
+//   //отменяем стандартное действие button
+//   e.preventDefault();
+//   var poster = $(this);
+//   // ищем родителя ближайшего по классу
+//   var wrapper = poster.closest('.js-videoWrapper');
+//   videoPlay(wrapper);
+// });
+
+//вопроизводим видео, при этом скрывая постер
+// function videoPlay(wrapper) {
+//   var iframe = wrapper.find('.js-videoIframe');
+//   // Берем ссылку видео из data
+//   var src = iframe.data('src');
+//   // скрываем постер
+//   wrapper.addClass('videoWrapperActive');
+//   // подставляем в src параметр из data
+//   iframe.attr('src',src);
 // }
-
-// wrap("<div class='wrapper'>", ".getWrapped", "</div>");

@@ -1682,3 +1682,90 @@ input[type=email] {
         }
     }
 }
+
+
+//=== Custom play button & thumbnail ===//
+.video_wrapper {
+    background-color: #000;
+    .videoIframe {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+    }
+    .videoPoster {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 85%;
+        border: none;
+        text-indent: -999em;
+        overflow: hidden;
+        opacity: 1;
+        transition: opacity 800ms, height 0s;
+        transition-delay: 0s, 0s;
+        &:hover {
+            cursor: pointer;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 80px;
+            height: 80px;
+            margin: -40px 0 0 -40px;
+            border: 4px solid #E37826;
+            border-radius: 100%;
+            transition: border-color 300ms;
+            @media screen and (max-width: 768px) {
+                width: 70px;
+                height: 70px;
+                margin: -35px 0 0 -35px;
+            }
+        }
+        &:after {
+            //font-family: "Font Awesome 5 Free";
+            //content: '\f04b';
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -20px 0 0 -12px;
+            width: 0;
+            height: 40px;
+            border-style: solid;
+            border-width: 20px 0px 20px 32px;
+            border-color: transparent transparent transparent #E37826;
+            transition: border-color 300ms;
+            @media screen and (max-width: 768px) {
+                // border-left-width: ;
+                // border-top-width: ;
+                // border-bottom-width: ;
+                // margin: -30px 0 0 -30px;
+            }
+        }
+    }
+}
+
+.videoPoster:hover:before,
+.videoPoster:focus:before {
+    border-color: #FF9E54;
+}
+.videoPoster:hover:after,
+.videoPoster:focus:after {
+    border-left-color: #FF9E54;
+}
+.videoWrapperActive .videoPoster {
+    opacity: 0;
+    height: 0;
+    transition-delay: 0s, 800ms;
+}

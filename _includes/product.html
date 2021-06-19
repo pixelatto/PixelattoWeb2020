@@ -12,13 +12,24 @@
                 <div class="column">
                     <figure class="image is-16by9" style="border-radius: 5px; overflow: hidden;">
                         {%- if product.video -%}
-                        <iframe title="{{ product.name}} trailer video" class="has-ratio" width="640" height="360"
-                            src="https://www.youtube.com/embed/{{ product.video }}?rel=0&modestbranding=1" frameborder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                        </iframe>
+                            <!-- <iframe title="{{ product.name}} trailer video" class="has-ratio" width="640" height="360"
+                                src="https://www.youtube.com/embed/{{ product.video }}?rel=0&modestbranding=1" frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe> -->
+                            <div class="video_wrapper js-videoWrapper">
+                                <iframe class="videoIframe js-videoIframe" src="" frameborder="0" allowTransparency="true"
+                                        allowfullscreen
+                                        data-src="https://www.youtube.com/embed/{{ product.video }}?autoplay=1&modestbranding=1&rel=0&showinfo=0">
+                                </iframe>
+                                <button class="videoPoster js-videoPoster" style="background-image:url(/img/product/{{product.code}}-logo.svg)">
+                                    <!-- <span class="icon has-text-primary">
+                                        <i class="fas fa-play fa-2x"></i>
+                                    </span> -->
+                                </button>
+                            </div>
                         {%- else -%}
-                        <img src="/img/product/{{ product.code }}-640-360.jpg" />
+                            <img src="/img/product/{{ product.code }}-640-360.jpg" />
                         {%- endif -%}
                     </figure>
                 </div>
