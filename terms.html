@@ -6,7 +6,7 @@ permalink: /terms/
 ---
 
 <section class="section">
-  <div class="container content has-text-justified">
+  <div class="container--sm content has-text-justified-tablet">
     <h1 class="title is-3"><u>CONDICIONES GENERALES DE LA CONTRATACIÓN</u></h1>
     <p></p>
     <ol>
@@ -252,7 +252,7 @@ permalink: /terms/
           <li>El Usuario podrá optar subsidiariamente por Tribunal de Arbitraje de Consumo mas cercano al domicilio del Usuario, para el cual deberá notificarlo de forma expresa a través de la plataforma o por correo postal en la dirección Av. Jane Bowles, s/n, 29011, Málaga, oficina 10.</li>
           <li>
             Adicionalmente, en cumplimiento de nuestro deber de información, PIXELATTO le informa de lo siguiente:
-            <ol>
+            <ol style="word-break: break-word;">
               <li>En relación con la Resolución de litigios en línea en materia de consumo, conforme a lo previsto en el Art. 14.1 del Reglamento (UE) 524/2013, la Comisión Europea pone a su disposición una plataforma de resolución de litigios en línea que se encuentra disponible en el siguiente enlace: https://webgate.ec.europa.eu/odr/main/index.cfm?event=main.home.chooseLa nguage.</li>
               <li>Asimismo, de conformidad con la Ley 7/2017, relativa a la resolución alternativa de litigios en materia de consumo, se informa de que el listado de entidades acreditadas se encuentra accesible en siguiente enlace: http://www.cecmsssi.es/CEC/web/noticias/Entidades_acreditadas.htm</li>
             </ol>
@@ -266,16 +266,18 @@ permalink: /terms/
       counter-reset: item;
       margin-bottom: 1em;
     }
+    @media screen and (max-width: 576px) {
+      .content ol {
+        margin-left: 1em;
+      }
+    }
     ol li {
       display: block;
     }
     ol li:before {
       content: counters(item, ".") ". ";
       counter-increment: item;
-      /* margin-left: -20px; */
     }
-    /* ol > li ol li:before {
-      margin-left: -20px;
-    } */
+
   </style>
 </section>

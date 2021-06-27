@@ -1683,6 +1683,14 @@ input[type=email] {
     }
 }
 
+//=== Table for Privacy pages ===//
+.privacy-table {
+    @media screen and (max-width: 576px) {
+        font-size: 14px;
+        table-layout: fixed;
+        word-break: break-all;
+    }
+}
 
 //=== Custom play button & thumbnail ===//
 .video_wrapper {
