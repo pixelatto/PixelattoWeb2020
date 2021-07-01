@@ -1777,3 +1777,25 @@ input[type=email] {
     height: 0;
     transition-delay: 0s, 800ms;
 }
+
+
+//=== Cookieconsent Banner styling ===//
+.cookieconsent-com---palette-light.cookieconsent-com---nb.cookieconsent-com---nb-simple {
+    background-color: #009fc7;
+    max-width: 100%;
+    width: 100%;
+    .cc-nb-main-container {
+        padding: 2rem;
+    }
+    .cc-nb-title,
+    .cc-nb-text {
+        color: #fff;
+    }
+    .cc-nb-okagree,
+    .cc-nb-reject {
+        background-color: rgb(89, 191, 215);
+        &:hover {
+            background-color: rgb(127, 229, 253);
+        }
+    }
+}

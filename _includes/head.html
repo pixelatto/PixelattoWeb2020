@@ -50,8 +50,8 @@
   <link rel="stylesheet" href="{{ site.baseurl }}/css/bulma-gallery-lightbox.css">
   <link rel="stylesheet" href="{{ site.baseurl }}/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="{{ site.baseurl }}/css/bulma-collapsible.min.css">
-  <link rel="stylesheet" type="text/css"
-    href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+  <!-- <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" /> -->
 
   <link rel="shortcut icon" type="image/png" {% if site.favicon %} href="{{ site.favicon | relative_url }}" {% else %}
     href="{{ site.baseurl }}/favicon.svg" {% endif %} />
@@ -64,8 +64,10 @@
   <link rel="stylesheet" href="{{ site.baseurl }}/css/custom.css">
 
   {% seo %}
-  {%- if site.google_analytics -%}
-  {%- include google-analytics.html -%}
-  {%- endif -%}
+  {% comment %}
+    {%- if site.google_analytics -%}
+    {%- include google-analytics.html -%}
+    {%- endif -%}
+  {% endcomment %}
   {%- include head-scripts.html -%}
 </head>
