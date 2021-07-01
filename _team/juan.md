@@ -2,7 +2,7 @@
 layout: member
 title: Juan Delgado
 subtitle: Coder
-quote: You're doing it wrong
+quote: Programming go brrrrrrrrr
 telephone: 
 twitter: JuDelCo
 image: /img/avatars/Juan.svg
