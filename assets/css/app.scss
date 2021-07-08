@@ -1107,6 +1107,13 @@ input[type=email] {
             &:hover {
                 background-color: rgb(247, 249, 250);
             }
+            .card-link {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                left: 0;
+                top: 0;
+            }
             .card-author {
                 display: flex;
                 align-items: center;
@@ -1119,6 +1126,7 @@ input[type=email] {
             }
             .card-text {
                 margin: 15px 0;
+                z-index: 1;
                 a {
                     &:hover {
                         color: #009FC7;

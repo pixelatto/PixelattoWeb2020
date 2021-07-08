@@ -1,5 +1,5 @@
 <div class="testimonial-card">
-    <div class="card-content">
+    <div class="card-content is-relative">
         <a class="card-link" href="{{ tweet.item.url }}" rel="noopener noreferrer" target="_blank"></a>
         <div class="card-author">
             {% if tweet.item.author-avatar %}
@@ -21,7 +21,7 @@
                 {{ tweet.item.author-id }}
             </p>
         </div>
-        <div class="card-text">
+        <div class="card-text is-relative">
             {{ tweet.item.content | markdownify }}
         </div>
         {% if tweet.item.image %}
