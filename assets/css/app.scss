@@ -56,7 +56,7 @@ a {
     border-color: $primary;
 }
 
-//=== SHARED STYLES ===// //add @mixin for section paddings //merge .tag-wrapper
+//=== SHARED STYLES ===//
 
 /* Container Styling */
 .container--sm {
@@ -1092,10 +1092,45 @@ input[type=email] {
         }
     }
 }
-.testimonials-cards {
+.testimonials-list {
     .is-child {
         height: fit-content;
         padding: 0 !important;
+    }
+    .testimonial-card {
+        .card-content {
+            border-radius: 6px;
+            font-size: 14px;
+            margin: 10px;
+            padding: 10px;
+            transition: all .2s linear;
+            &:hover {
+                background-color: rgb(247, 249, 250);
+            }
+            .card-author {
+                display: flex;
+                align-items: center;
+                .fa-steam {
+                    color: #000000;
+                }
+                .fa-twitter {
+                    color: #1DA1F2;
+                }
+            }
+            .card-text {
+                margin: 15px 0;
+                a {
+                    &:hover {
+                        color: #009FC7;
+                        text-decoration: underline;
+                    }
+                }
+            }
+            .card-img {
+                border-radius: 6px;
+                margin-bottom: 15px;
+            }
+        }
     }
     .hidden-cards {
         max-height: 0;
@@ -1110,7 +1145,8 @@ input[type=email] {
         }
     }
     .toggle-wrapper {
-        display: none;
+        //display: none;
+        display: flex;
         flex-direction: column;
         align-items: center;
         .toggle-button {
@@ -1754,12 +1790,12 @@ input[type=email] {
             border-width: 20px 0px 20px 32px;
             border-color: transparent transparent transparent #E37826;
             transition: border-color 300ms;
-            @media screen and (max-width: 768px) {
-                // border-left-width: ;
-                // border-top-width: ;
-                // border-bottom-width: ;
-                // margin: -30px 0 0 -30px;
-            }
+            // @media screen and (max-width: 768px) {
+            //     // border-left-width: ;
+            //     // border-top-width: ;
+            //     // border-bottom-width: ;
+            //     // margin: -30px 0 0 -30px;
+            // }
         }
     }
 }
