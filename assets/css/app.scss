@@ -1151,6 +1151,9 @@ input[type=email] {
         @keyframes delay-overflow {
             from { overflow: hidden; }
         }
+        .is-ancestor {
+            justify-content: center;
+        }
     }
     .toggle-wrapper {
         //display: none;
