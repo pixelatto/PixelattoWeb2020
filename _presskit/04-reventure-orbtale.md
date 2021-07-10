@@ -9,9 +9,6 @@ keywords: reventure, orbtale, kickstarter, tabletop game, card game
 
 permalink: /presskit/reventure-orbtale/
 layout: empty
-
-#theme_text: is-primary
-#type: game
 ---
 
 {% capture product_data %}

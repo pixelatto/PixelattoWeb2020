@@ -134,38 +134,5 @@
 {% include redesign/subscribe-form.html class="pt-0" %}
 
 {% contentfor extra-js no-convert %}
-    <script>
-        window.twttr = (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0],
-            t = window.twttr || {};
-            if (d.getElementById(id)) return t;
-            js = d.createElement(s);
-            js.id = id;
-            js.async = true;
-            js.src = "https://platform.twitter.com/widgets.js";
-            fjs.parentNode.insertBefore(js, fjs);
-            t._e = [];
-            t.ready = function(f) {
-            t._e.push(f);
-            };
-            return t;
-        }(document, "script", "twitter-wjs"));
-    </script>
-    <script>
-        twttr.ready(function (twttr) {
-            let tweets = document.getElementsByClassName("tweet")
-            for (let i = 0; i < tweets.length; i++){
-                let tweet = tweets[i];
-                let id = tweet.getAttribute("tweetID");
-                // Create Tweet
-                twttr.widgets.createTweet(id, tweet, {
-                    conversation : 'none',
-                    cards        : 'visible',
-                }).then(function() {
-                    const toggleBlock = document.querySelector('.toggle-wrapper');
-                    toggleBlock.style.display = 'flex';
-                });
-            }
-        });
-    </script>
+    <!-- <script></script> -->
 {% endcontentfor %}

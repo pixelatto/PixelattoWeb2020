@@ -5,9 +5,6 @@ keywords: reventure presskit, reventure information, reventure press, reventure 
 
 permalink: /presskit/reventure/
 layout: empty
-
-#theme_text: is-secondary
-#type: game
 ---
 
 {% capture product_data %}

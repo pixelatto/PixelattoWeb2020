@@ -5,9 +5,6 @@ keywords: card creator presskit, card creator information, card creator press, c
 
 permalink: /presskit/card-creator/
 layout: empty
-
-#theme_text: is-primary
-#type: app
 ---
 
 {% capture product_data %}
