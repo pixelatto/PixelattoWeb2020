@@ -1,0 +1,20 @@
+hero_image: /img/home/hero-background.svg
+hero_logo: /img/brand/Logo-white.svg
+hero_title: Creative games and tools
+hero_cta:
+  cta_text: Explore
+  cta_url: '#tools'
+
+#tools_section_title: games and tools
+
+about_section:
+  about_image: ['/img/home/director-image.svg', 'Javi Cepa photo']
+  about_author: Javi Cepa
+  about_role: Director
+  about_title: About the Pixelattos
+  about_text: |
+    Most people think that the first Pixelatto dated early 2019 or so, since they're mostly know for Reventure, but the fact is that there's fossil evidence of living specimens back at 2014.
+
+    Contract work is not as popular as making own videogames, but for these organisms it somehow enabled their survival and adaptation to the environment...
+
+blog_section_title: Recent Blog posts

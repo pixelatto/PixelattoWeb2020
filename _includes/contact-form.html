@@ -1,41 +1,36 @@
 <div class="contact-form is-full">
-    <form method="post" name="contact-form" action="{{ site.data.contact.form_action }}" id="contact-form"
-        data-netlify="true">
-
-        <div class="field">
-            <label class="label">Email Address *</label>
-            <div class="control has-icons-left">
-                <input class="input" type="email" name="email" placeholder="your-email@what.ever" required>
-                <span class="icon is-small is-left">
-                    <i class="fas fa-envelope"></i>
-                </span>
+    <form method="post" name="contact-form" action="{{ contact_data.form_action }}" id="contact-form" data-netlify="true">
+        <div class="field is-horizontal mb-5">
+            <div class="field-body">
+                <div class="field">
+                    <label class="label is-size-7 is-uppercase has-text-white has-text-weight-normal">Email</label>
+                    <div class="control">
+                        <input class="input" type="email" name="email" placeholder="Your email" required />
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label is-size-7 is-uppercase has-text-white has-text-weight-normal">Name</label>
+                    <div class="control">
+                        <input class="input" type="text" name="name" placeholder="Your name" required />
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="field">
-            <label class="label">Name *</label>
-            <div class="control has-icons-left">
-                <input class="input" type="text" name="name" placeholder="Your name..." required>
-                <span class="icon is-small is-left">
-                    <i class="fas fa-user"></i>
-                  </span>
-            </div>
-        </div>
-
-        <div class="field">
-            <label class="label">Message *</label>
+        <div class="field mb-5">
+            <label class="label is-size-7 is-uppercase has-text-white has-text-weight-normal">Message</label>
             <div class="control">
-                <textarea class="input" name="message" placeholder="Your message..." required style="height: 200px;resize: none;"></textarea>
+                <textarea class="input" name="message" placeholder="Your message" required style="border-radius: 20px; height: 130px; resize: none;"></textarea>
             </div>
         </div>
 
-        <input type="hidden" name="_next" value="{{ site.data.contact.confirmation_url }}" />
-        <input type="hidden" name="_subject" value="{{ site.data.contact.email_subject }}" />
-        <input type="text" name="_gotcha" style="display: none;" val="">
-        
+        <input type="hidden" name="_next" value="{{ contact_data.confirmation_url }}" />
+        <input type="hidden" name="_subject" value="{{ contact_data.email_subject }}" />
+        <input type="text" name="_gotcha" style="display: none;" val="" />
+
         <div class="field has-text-centered">
             <div class="control">
-                <input class="input button is-primary has-text-white has-text-weight-bold" type="submit" value="{{ site.data.contact.send_button_text }}">
+                <input class="input button button-round is-secondary" type="submit" value="{{ contact_data.send_button_text }}" />
             </div>
         </div>
     </form>

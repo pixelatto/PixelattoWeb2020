@@ -10,7 +10,7 @@ keywords: tabletop creator, make tabletop game, custom tabletop game, design tab
 permalink: /store/tabletop-creator/
 layout: empty
 
-theme_text: is-primary
+#theme_text: is-primary
 type: app
 ---
 

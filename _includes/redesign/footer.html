@@ -1,0 +1,87 @@
+<footer class="footer-upd has-text-left has-text-centered-touch">
+    <div class="container--lg">
+        <div class="columns is-gapless is-multiline is-desktop">
+            <div class="column is-one-third-desktop is-full-tablet">
+                <div class="footer-social">
+                    <img class="footer-logo" src="/img/brand/Logo-white.svg" alt="Pixelatto Logo" />
+                    <div class="copyrights">
+                        <p>Copyright &copy; {{ site.time | date: "%Y" }} Pixelatto.</p>
+                        <p>All rights reserved</p>
+                    </div>
+                    <ul class="social-list">
+                        <li>
+                            <a href="//www.instagram.com/pixelatto_games/" target="_blank"><img class="has-text-primary" src="/img/platforms/instagram.svg" alt="social logo" /></a>
+                        </li>
+                        <li>
+                            <a href="//www.facebook.com/pixelatto" target="_blank"><img class="has-text-primary" src="/img/platforms/facebook-2.svg" alt="social logo" /></a>
+                        </li>
+                        <li>
+                            <a href="//twitter.com/pixelatto" target="_blank"><img class="has-text-primary" src="/img/platforms/twitter.svg" alt="social logo" /></a>
+                        </li>
+                        <li>
+                            <a href="//www.youtube.com/c/Pixelatto" target="_blank"><img class="has-text-primary" src="/img/platforms/youtube.svg" alt="social logo" /></a>
+                        </li>
+                        <li>
+                            <a href="//discord.gg/pixelatto" target="_blank"><img class="has-text-primary" src="/img/platforms/discord.svg" alt="social logo" /></a>
+                        </li>
+                        <li>
+                            <a href="//play.google.com/store/apps/dev?id=5196777688170375732" target="_blank"><img class="has-text-primary" src="/img/platforms/android.svg" alt="social logo" /></a>
+                        </li>
+                        <li>
+                            <a href="//github.com/pixelatto" target="_blank"><img class="has-text-primary" src="/img/platforms/github.svg" alt="social logo" /></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="columns is-gapless is-multiline is-mobile">
+                    <div class="column is-half-desktop">
+                        <div class="footer-list">
+                            <h4 class="is-uppercase has-text-weight-bold">Quick links</h4>
+                            <ul>
+                                <li><a href="/blog">Blog</a></li>
+                                <li><a href="/about">About us</a></li>
+                                <li><a href="/contact">Contact us</a></li>
+                                <li><a href="/presskit">Presskit</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="column is-half-desktop">
+                        <div class="footer-list">
+                            <h4 class="is-uppercase has-text-weight-bold">Support</h4>
+                            <ul>
+                                <li><a href="mailto:support@pixelatto.com" target="_blank" rel="noreferrer">Help center</a></li>
+                                <li><a href="/cookies/" target="_blank" rel="noreferrer">Cookies</a></li>
+                                <li><a href="/terms/" target="_blank" rel="noreferrer">Terms of use</a></li>
+                                <li><a href="/legal/" target="_blank" rel="noreferrer">Legal</a></li>
+                                <li><a href="/privacy/" target="_blank" rel="noreferrer">Privacy policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column is-narrow">
+                <div class="footer-list footer-form">
+                    <h4 class="is-uppercase has-text-weight-bold">Subscribe to our newsletter</h4>
+                    <form id="footer-subscribe-form" action="{{site.data.subscribe.subscribe_action}}" method="post" name="mc-embedded-subscribe-form" target="_blank">
+                        <div class="field has-addons">
+                            <div class="control" style="width: 100%;">
+                                <p style="display: none;">Newsletter email</p>
+                                <input class="input contact-form__input" type="email" placeholder="Your email address" value="" id="suscribe-email-input" name="EMAIL" required />
+                            </div>
+                            <div class="control">
+                              <button class="button is-white" type="submit" name="subscribe" value="{{ site.data.subscribe.button_subscribe_text }}" onclick="footerSubmitAndRedirectToThanks();">
+                                <span class="icon is-small is-right has-text-secondary">
+                                    <i class="fas fa-paper-plane"></i>
+                                </span>
+                              </button>
+                            </div>
+                          </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

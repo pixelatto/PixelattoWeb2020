@@ -1,0 +1,42 @@
+<table class="table comparison-table">
+    <colgroup>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+    </colgroup>
+    <thead>
+        <th></th>
+        {%- for item in product.versions.list -%}
+            <th class="table-cell col-title is-size-7-mobile is-size-5-tablet is-size-4-desktop has-text-weight-bold has-text-secondary">{{ item.version_name }}</th>
+            <th class="empty"></th>
+        {%- endfor -%}
+    </thead>
+    <tbody class="pixel-box">
+        {%- for single in product.versions.features-list -%}
+            <tr>
+                <td class="feature-cell has-text-weight-bold">{{ single.feature.name }}</td>
+                {%- for ftr in single.has-feature -%}
+                    <td class="table-cell">
+                        <span class="feature-check{% if ftr.item %} has-feature{% else %} no-feature{% endif %}"></span>
+                    </td>
+                    <td class="empty"></td>
+                {%- endfor -%}
+            </tr>
+        {%- endfor -%}
+    </tbody>
+    {%- unless page.url contains 'presskit' -%}
+        <tfoot>
+            <tr>
+                <td></td>
+                {%- for item in product.versions.list -%}
+                    <td class="table-cell col-footer">
+                        <a alt="{{ product.name }} Pixelatto buy button" href="{{ item.version_store_url }}" rel="nofollow" class="button button-round is-secondary">Get it!</a>
+                    </td>
+                    <td class="empty"></td>
+                {%- endfor -%}
+            </tr>
+        </tfoot>
+    {%- endunless -%}
+</table>

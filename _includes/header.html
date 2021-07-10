@@ -1,12 +1,12 @@
 <svg id="fader"></svg>
-{% if page.type == "game" or page.type == "app" %}
+<!-- {% if page.type == "game" or page.type == "app" %}
 <style>
     #logo-sec,
     #logo-main {
         fill: white !important;
     }
 </style>
-{% endif %}
+{% endif %} -->
 
 {% include navbar-color.html %}
 
@@ -55,8 +55,12 @@
                 {% for item in site.data.navigation %}
                 {% if item.dropdown %}
                 <div class="navbar-item has-dropdown is-hoverable">
-                    <a name="{{ item.name }} link" href="{{ item.link | relative_url }}"
-                        class="navbar-link {% if item.link == page.url %}is-active{% endif %}">{{ item.name }}</a>
+                    {%- if item.link -%}
+                        <a name="{{ item.name }} link" href="{{ item.link | relative_url }}"
+                            class="navbar-link {% if item.link == page.url %}is-active{% endif %}">{{ item.name }}</a>
+                    {%- else -%}
+                        <span name="{{ item.name }} span" class="navbar-link">{{ item.name }}</span>
+                    {%- endif -%}
                     <div class="navbar-dropdown">
                         {% for subitem in item.dropdown %}
                         <a name="{{ item.name }} link" href="{{ subitem.link | relative_url }}"
@@ -97,7 +101,7 @@
         //     var userDropdownHTML = document.createElement('div');
         //     userDropdownHTML.className = "navbar-item has-dropdown is-hoverable";
         //     userDropdownHTML.innerHTML = '<a href="" class="navbar-link ">fali</a><div class="navbar-dropdown"><a id="free-games" class="navbar-item has-text-white has-background-secondary" style="display:none;"><b>Get free games!</b></a><a onclick="AWSLogout();" class="navbar-item ">Logout</a></div>'
-            
+
         //     var loginHTML = document.getElementById('Log in');
 
         //     if(AWSGetLoggedUser() != null && loginHTML != null){

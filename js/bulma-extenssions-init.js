@@ -1,7 +1,11 @@
 bulmaCarousel.attach('#product-carousel', {
     slidesToScroll: 3,
     slidesToShow: 3,
-    infinite: true
+    infinite: true,
+    breakpoints: [
+        { changePoint: 480, slidesToShow: 1, slidesToScroll: 1 },
+        { changePoint: 768, slidesToShow: 2, slidesToScroll: 2 }
+    ]
 });
 
 bulmaCarousel.attach('#presskit-carousel', {
@@ -10,41 +14,33 @@ bulmaCarousel.attach('#presskit-carousel', {
     infinite: true
 });
 
+bulmaCarousel.attach('#team-carousel', {
+    slidesToScroll: 3,
+    slidesToShow: 3,
+    infinite: true,
+    breakpoints: [
+        { changePoint: 768, slidesToShow: 1, slidesToScroll: 1 }
+    ]
+});
+
 bulmaCarousel.attach('#testimonials-carousel', {
     slidesToScroll: 4,
     slidesToShow: 4,
-    infinite: true
+    infinite: true,
+    breakpoints: [
+        { changePoint: 768, slidesToShow: 1, slidesToScroll: 1 },
+        { changePoint: 1024, slidesToShow: 2, slidesToScroll: 2 }
+    ]
 });
 
-if (navigator.userAgent.match(/Android/i)
-    || navigator.userAgent.match(/webOS/i)
-    || navigator.userAgent.match(/iPhone/i)
-    || navigator.userAgent.match(/iPad/i)
-    || navigator.userAgent.match(/iPod/i)
-    || navigator.userAgent.match(/BlackBerry/i)
-    || navigator.userAgent.match(/Windows Phone/i)) {
-    bulmaCarousel.attach('#fans-carousel', {
-        slidesToScroll: 1,
-        slidesToShow: 1,
-        infinite: true,
-        autoplay: true,
-        autoplaySpeed: 3000
-    });
+bulmaCarousel.attach('#blog-carousel', {
+    slidesToScroll: 1,
+    slidesToShow: 1,
+    infinite: true,
+    breakpoints: [
+        { changePoint: 480, slidesToShow: 1, slidesToScroll: 1 },
+        { changePoint: 768, slidesToShow: 1, slidesToScroll: 1 }
+    ]
+});
 
-    bulmaCarousel.attach('#helpus-products-carousel', {
-        slidesToScroll: 1,
-        slidesToShow: 1,
-        infinite: true,
-        autoplay: true,
-        autoplaySpeed: 3000
-    });
-} else {
-    bulmaCarousel.attach('#fans-carousel', {
-        slidesToScroll: 4,
-        slidesToShow: 4,
-        infinite: true,
-        autoplay: true,
-        autoplaySpeed: 3000
-    });
-}
 bulmaCollapsible.attach('.is-collapsible');

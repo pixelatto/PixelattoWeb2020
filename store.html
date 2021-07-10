@@ -5,20 +5,58 @@ description: Amazing games and gamedev tools, take a look!
 pixelatto: pixelatto store, buy reventure, buy card creator, pixelatto products, pixelatto discounts, buy videogames, buy tabletop games, buy gamedev tools
 
 permalink: /store/
-hide_hero: true
 ---
 
-<div class="container">
-    <div class="section">
-        <div class="columns is-multiline is-desktop"
-            style="display: flex; flex-direction: row; align-items: stretch; align-content: stretch;">
-            {% assign products = site.data.products | sort  %}
-            {% for product_hash in products %}
-            {% assign product = product_hash[1] %}
-            <div class="column is-full-mobile is-half is-half-desktop">
-                {% include product-card.html %}
-            </div>
-            {% endfor %}
-        </div>
+{% assign products = site.data.products | sort  %}
+
+<section class="hero-section">
+    <div class="bg-img">
+        <img src="/img/home/hero-background.svg" alt="Pixelatto background image" />
     </div>
+    <div class="hero-inner">
+        <h1 class="hero-title has-text-weight-bold">Games and tools</h1>
+    </div>
+</section>
+
+<div class="store-content">
+    <section class="highlighted-section">
+        <div class="container--lg">
+            {%- for product_hash in products -%}
+                {% assign product = product_hash[1] %}
+                {%- if product.highlighted -%}
+                    {% include product-card.html %}
+                {%- endif -%}
+            {%- endfor -%}
+        </div>
+    </section>
+
+    <section class="store-section">
+        <div class="container--sm">
+            {%- for product_hash in products -%}
+            {% assign product = product_hash[1] %}
+                {% include product-card.html %}
+            {%- endfor -%}
+        </div>
+    </section>
 </div>
+
+{% include redesign/subscribe-form.html class="pt-0" %}
+
+{%- contentfor extra-js no-convert -%}
+    <script type="text/javascript" src="https://transactions.sendowl.com/assets/sendowl.js"></script>
+    {%- for product_hash in products -%}
+        {% assign product = product_hash[1] %}
+        {% assign product_id = product.sendowl_id %}
+        {% assign counter = forloop.index %}
+        <script>
+            //var priceHTML{{counter}} = document.querySelectorAll(".{{ product.name | downcase | slugify }}-price");
+            var buyButtonHTML{{counter}} = document.querySelectorAll(".{{ product.name | downcase | slugify }}-buy-button");
+            getSendOwlProduct({{product_id}}).then((data) => {
+                for (var i = 0; i < buyButtonHTML{{counter}}.length; i++) {
+                    //priceHTML{{counter}}[i].textContent += data.product.price + " €";
+                    buyButtonHTML{{counter}}[i].href = data.product.instant_buy_url;
+                }
+            });
+        </script>
+    {%- endfor -%}
+{%- endcontentfor -%}

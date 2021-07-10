@@ -1,20 +1,35 @@
-<div class="columns is-multiline is-desktop is-centered"
-    style="display: flex; flex-direction: row; align-items: stretch; align-content: stretch;">
+{% assign members = site.team | sort:"order" %}
 
-    {% assign members = site.team | sort:"order" %}
-
-    {% for member in members %}
-        {% if member.hidden %}
-        {% else %}
-            {% unless page.short_version == true %}
-                <div class="column is-full-mobile is-half is-half-desktop is-half-widescreen is-one-third-fullhd">
+<div class="columns is-multiline is-vcentered is-hidden-mobile is-flex-desktop" style="justify-content: center;">
+    {%- for member in members -%}
+        {%- if member.hidden -%}
+        {%- else -%}
+            {%- unless page.short_version == true -%}
+                <div class="column is-one-third-desktop is-half-tablet">
                     {% include member-card.html %}
                 </div>
-            {% else %}
-                <div class="column is-half-mobile is-one-third is-one-third-widescreen is-2-fullhd">
+            {%- else -%}
+                <div class="column is-6">
                     {% include member-card-presskit.html %}
                 </div>
-            {% endunless %}
-        {% endif %}
-    {% endfor %}
+            {%- endunless -%}
+        {%- endif -%}
+    {%- endfor -%}
+</div>
+
+<div id="team-carousel" class="carousel is-hidden-tablet is-block-mobile">
+    {% assign cont = 1 %}
+    {%- for member in members -%}
+        {%- if member.hidden -%}
+        {%- else -%}
+            <div class="item-{{ cont }}">
+                {%- unless page.short_version == true -%}
+                    {% include member-card.html %}
+                {%- else -%}
+                    {% include member-card-presskit.html %}
+                {%- endunless -%}
+            </div>
+            {% assign cont = cont | plus:1 %}
+        {%- endif -%}
+    {%- endfor -%}
 </div>

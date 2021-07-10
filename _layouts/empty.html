@@ -6,11 +6,11 @@
     {% include header.html %}
     {{ content }}
     {% unless page.hide_footer %}
-        {% include footer.html %}
+        {% include redesign/footer.html %}
     {% endunless %}
-    
+
     {%- include footer-scripts.html -%}
-    
+
     {% ifhascontent extra-js %}
         {% contentblock extra-js no-convert %}
     {% endifhascontent %}

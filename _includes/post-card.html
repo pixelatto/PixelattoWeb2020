@@ -1,36 +1,47 @@
-<div class="card">
-    <a href="{{ site.baseurl }}{{ post.url }}" style="color: initial;">
-        {% if post.image %}
-        <div class="card-image">
-            <img class="is-vertically-centered" style="padding: 1rem 1rem 0 1rem;" src="/img/upload/{{ post.image }}" alt="{{ post.title }}">
-        </div>
-        {% else %}
-        <header class="card-header">
-            <p class="card-header-title">{{ post.title}}</p>
-        </header>
-        {% endif %}
+<div class="post-preview card">
+    <a class="post-link" href="{{ site.baseurl }}{{ post.url }}" style="color: initial; height: 100%;">
+        {%- if post.image -%}
+            <div class="card-image">
+                <div class="image is-16by9">
+                        <img src="/img/upload/{{ post.image }}"
+                             alt="{{ post.title }}"
+                             {% unless post.bg_image_fit == 'cover' %}style="object-fit: contain;"{% endunless %} />
+                </div>
+            </div>
+        {%- else -%}
+            <header class="card-header">
+                <p class="card-header-title">{{ post.title }}</p>
+            </header>
+        {%- endif -%}
         <div class="card-content">
             <div class="content">
-                {% if post.image %}
-                <p class="title is-4">{{ post.title}}</p>
-                {% endif %}
-                {% if post.description %}
-                <p>{{ post.description | markdownify }}</p>
-                {% else %}
-                <p>{{ post.excerpt | markdownify }}</p>
-                {% endif %}
+                <div class="tags mt-4 mb-0">
+                    {%- for tagName in post.tags -%}
+                        {% assign tag = site.tags | where_exp:"item","item.tag == tagName" | first %}
+                        <span class="post-tag tag--sm">{{ tag.tag }}</span>
+                    {%- endfor -%}
+                </div>
+                {%- if post.image -%}
+                    <p class="title is-5 my-3">{{ post.title }}</p>
+                {%- endif -%}
+                {%- if post.description -%}
+                    <p>{{ post.description | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+                {%- else -%}
+                    <p>{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+                {%- endif -%}
             </div>
         </div>
+        <footer class="card-footer">
+            <div class="is-flex">
+                {%- if post.author-avatar -%}
+                    <figure class="image is-32x32" style="margin: auto 0 auto 20px;">
+                        <img src="{{ post.author-avatar }}" alt="Post author avatar" />
+                    </figure>
+                    <p class="card-footer-item pl-1">{{ post.author }} - {{ post.date | date: "%b %-d, %Y" }}</p>
+                {%- else -%}
+                    <p class="card-footer-item">{{ post.author }} - {{ post.date | date: "%b %-d, %Y" }}</p>
+                {%- endif -%}
+            </div>
+        </footer>
     </a>
-    <footer class="card-footer">
-        <div style="padding: 0 1.5rem;">
-            {% for tagName in post.tags %}
-            {% assign tag = site.tags | where_exp:"item","item.tag == tagName" | first %}
-            <button onclick="window.location='{{ tag.url }}'"
-                class="button is-small is-primary tag-button" style="border-radius: 30px 30px 30px 0;">#{{ tag.tag }}</button>
-            {% endfor %}
-        </div>
-
-        <p class="card-footer-item">Published: {{ post.date | date: "%b %-d, %Y" }} by {{ post.author }}</p>
-    </footer>
 </div>

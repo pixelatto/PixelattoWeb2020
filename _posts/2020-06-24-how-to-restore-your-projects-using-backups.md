@@ -8,6 +8,7 @@ image: restore.png
 hide_hero: true
 dsecription: Learn how the backups system works and how to restore them
 author: Fali Ronda
+author-avatar: '/img/avatars/Fali.svg'
 ---
 
 Restoring a backup in Card Creator is a **really simple** process.

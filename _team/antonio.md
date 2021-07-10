@@ -2,8 +2,9 @@
 layout: member
 title: Antonio Berrocal
 subtitle: Artist
+job_description: "Antonio is a drawing master, waiting to share with you all the art he's creating. We won't allow him though, since that info is CLASSIFIED."
 quote: Let me draw a little sketch...
-telephone: 
+telephone:
 twitter: ABerrocal
 twitter_override: http://aberrocal.blogspot.com/
 image: /img/avatars/Antonio.svg

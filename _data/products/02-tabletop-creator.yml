@@ -8,11 +8,16 @@ type: app
 title: Tabletop Creator
 subtitle: Make your tabletop games come true!
 description: Start making custom tabletop games now!
+hero_image: ['/img/product/tabletop-creator-hero.jpg','Tabletop Creator hero image']
+product_image: /img/product/tabletop-creator-640-360.jpg
+
+short_description: |
+  Create and customize your own tabletop game in an easy, fun and fast way!
+  Tabletop Creator is a tabletop game maker tool that allows you...
 
 long_description: |
   Create and customize your own tabletop game in an easy, fun and fast way!
   Tabletop Creator is a tabletop game maker tool that allows you to design all your tabletop game components, customize and export them for printing or for play online!
-
 # video: liMw3yfeTdo
 
 features:
@@ -26,7 +31,6 @@ features:
 external_stores:
     - image: steam
       link: https://store.steampowered.com/app/861590/Tabletop_Creator/
-      
 gallery:
       id: cc-gallery
       imagefolder: /img/product/tabletopcreator/

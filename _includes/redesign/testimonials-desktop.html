@@ -1,0 +1,71 @@
+<div class="testimonials-list is-hidden-touch is-block-desktop">
+    {% assign tweetsList = product.presskit.testimonials.list %}
+
+    <div class="tile is-ancestor">
+        {%- for tweet in tweetsList limit:3 -%}
+        <div class="tile is-parent is-4">
+            <article class="tile is-child box">
+                {% include testimonial-card.html %}
+            </article>
+        </div>
+        {%- endfor -%}
+    </div>
+    <div class="tile is-ancestor">
+        {%- for tweet in tweetsList limit:3 offset: continue -%}
+        <div class="tile is-parent is-4">
+            <article class="tile is-child box">
+                {% include testimonial-card.html %}
+            </article>
+        </div>
+        {%- endfor -%}
+    </div>
+    <div class="hidden-cards">
+        <div class="tile is-ancestor">
+            {%- for tweet in tweetsList limit:3 offset: continue -%}
+            <div class="tile is-parent is-4">
+                <article class="tile is-child box">
+                    {% include testimonial-card.html %}
+                </article>
+            </div>
+            {%- endfor -%}
+        </div>
+    </div>
+    <div class="toggle-wrapper">
+        <span class="toggle-button show-link is-uppercase has-text-weight-bold has-text-centered mt-6">Show More</span>
+        <img class="toggle-arrow" src="/img/home/arrow-down.svg" alt="Arrow down icon" />
+    </div>
+</div>
+
+{% comment %}
+<div class="testimonials-cards is-hidden-touch is-block-desktop">
+    {% assign tweetsList = product.presskit.testimonials-new %}
+    {% assign tweetsPerRow = 3 %}
+    {% assign totalRows = tweetsList | size | divided_by: tweetsPerRow %}
+
+    {% if tweetsList | modulo: tweetsPerRow > 0 %}
+        {% assign totalRows = totalRows | plus: 1 %}
+    {% endif %}
+
+    {% assign endIndex = totalRows | minus: 1 %}
+
+    {% for rowNum in (0..endIndex) %}
+    {% assign offset = rowNum | times: tweetsPerRow %}
+
+    <div class="tile is-ancestor{% if offset >=6 %} getWrapped-{{offset}}{% endif %}">
+        {% for tweet in tweetsList limit: tweetsPerRow offset: offset %}
+              <div class="tile is-parent">
+                  <article class="tile is-child box">
+                    {{ tweet.item | markdownify }}
+                  </article>
+              </div>
+        {% endfor %}
+    </div>
+    {% endfor %}
+
+
+    <div class="toggle-wrapper">
+        <span class="toggle-button show-link is-uppercase has-text-weight-bold has-text-centered mt-6">Show More</span>
+        <img class="toggle-arrow" src="/img/home/arrow-down.svg" alt="Arrow down icon" />
+    </div>
+</div>
+{% endcomment %}

@@ -1,5 +1,5 @@
 - name: Store
-  link: /store/
+  #link: /store/
   dropdown:
     - name: Orbtale
       link: /store/reventure-orbtale/
@@ -11,7 +11,7 @@
       link: /store/card-creator/
 - name: Blog
   link: /blog/
-  # dropdown: 
+  # dropdown:
   #   - name: Categories
   #     link: /categories/
   #   - name: Devlog

@@ -1,0 +1,32 @@
+<div class="testimonial-card">
+    <div class="card-content is-relative">
+        <a class="card-link" href="{{ tweet.item.url }}" rel="noopener noreferrer" target="_blank"></a>
+        <div class="card-author">
+            {% if tweet.item.author-avatar %}
+                <figure class="image is-48x48 mr-2">
+                    <img class="is-rounded" src="{{ tweet.item.author-avatar }}" alt="Testimonial author" />
+                </figure>
+            {% elsif tweet.item.from-steam %}
+                <span class="icon is-large mr-2">
+                    <i class="fab fa-steam fa-3x"></i>
+                </span>
+            {% else %}
+                <span class="icon is-large mr-2">
+                    <i class="fab fa-twitter fa-3x"></i>
+                </span>
+            {% endif %}
+            <p>
+                <b>{{ tweet.item.author-name }}</b>
+                <br />
+                {{ tweet.item.author-id }}
+            </p>
+        </div>
+        <div class="card-text is-relative">
+            {{ tweet.item.content | markdownify }}
+        </div>
+        {% if tweet.item.image %}
+            <img class="card-img is-block" src="{{ tweet.item.image }}" alt="Testimonial image" />
+        {% endif %}
+        <p>{{ tweet.item.date }}</p>
+    </div>
+</div>

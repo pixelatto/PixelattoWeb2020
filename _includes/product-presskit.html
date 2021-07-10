@@ -1,208 +1,171 @@
 {% assign presskit = product.presskit %}
 
-<section class="section presskit">
-    <div class="container">
-        <div class="columns">
-            <div class="column is-full is-vcentered">
-                <img src="/img/product/{{ product.code }}-logo.svg"
-                    style="display: block; margin: auto; height: 30vw; max-height: 200px;" />
-            </div>
-        </div>
-        <div class="columns">
-            <div class="column is-full">
-                <div class="content">
-                    <h2 class="subtitle is-8">Information</h2>
-                    <span class="ml-5 has-text-weight-bold">Pitch</span>
-                    <p class="ml-5">{{ product.subtitle }}</p>
-                    <span class="ml-5 has-text-weight-bold">Description</span>
-                    <p class="ml-5">{{ product.long_description | newline_to_br }}</p>
-                </div>
-            </div>
-        </div>
+<section class="hero-section">
+    <div class="bg-img">
+        <img src="/img/home/hero-background.svg" alt="Pixelatto background image" />
     </div>
-    <br>
-    <br>
-    <div class="container content">
-        <h2 class="subtitle is-8">Product Resources</h2>
-        <span>Download all products resources <a
-                onclick="window.open('/download/{{ product.code }}-presskit.zip', 'Download');" target="_blank"
-                class="has-text-{% if product.type == 'game' %}secondary{% else %}primary{% endif %}">here</a></span>
-
-        <!-- Start tiles gallery -->
-        <div class="tile is-vertical is-ancestor" style="padding-top: 1.5rem;">
-            <div class="tile is-parent">
-                {% if product.video %}
-                <div class="tile is-parent">
-                    <div class="tile is-child">
-                        <figure class="image is-16by9"
-                            style="border-radius: 30px 0px 30px 0px; overflow: hidden; height: 100%;">
-                            <iframe class="has-ratio" width="640" height="360"
-                                src="https://www.youtube.com/embed/{{ product.video }}?rel=0" frameborder="0"
-                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen>
-                            </iframe>
-                        </figure>
-                    </div>
-                </div>
-                {% endif %}
-                <div class="tile is-vertical is-parent">
-                    <div class="tile is-parent">
-                        <div class="tile is-child">
-                            <figure class="image is-16by9">
-                                <img src="{{ product.gallery.imagefolder }}{{ product.gallery.images[0].name }}" alt=""
-                                    onclick="openModal('{{ product.code }}-presskit-modal');currentSlide({{ 1 }})">
-                            </figure>
-                        </div>
-                        <div class="tile is-child">
-                            <figure class="image is-16by9">
-                                <img src="{{ product.gallery.imagefolder }}{{ product.gallery.images[1].name }}" alt=""
-                                    onclick="openModal('{{ product.code }}-presskit-modal');currentSlide({{ 2 }})">
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="tile is-parent">
-                        <div class="tile is-child">
-                            <figure class="image is-16by9">
-                                <img src="{{ product.gallery.imagefolder }}{{ product.gallery.images[2].name }}" alt=""
-                                    onclick="openModal('{{ product.code }}-presskit-modal');currentSlide({{ 3 }})">
-                            </figure>
-                        </div>
-                        <div class="tile is-child">
-                            <figure class="image is-16by9">
-                                <img src="{{ product.gallery.imagefolder }}{{ product.gallery.images[3].name }}" alt=""
-                                    onclick="openModal('{{ product.code }}-presskit-modal');currentSlide({{ 4 }})">
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="tile is-parent">
-
-                {% assign cont = 5 %}
-                {% for cont in (5..product.gallery.images.size) %}
-
-                {% if contModulo4 == 0 %}
-            </div>
-            <div class="tile is-parent">
-                {% endif %}
-
-                <div class="tile is-child is-3">
-                    <figure class="image is-16by9">
-                        {% assign index = cont | minus:1 %}
-                        <img src="{{ product.gallery.imagefolder }}{{ product.gallery.images[index].name }}" alt=""
-                            onclick="openModal('{{ product.code }}-presskit-modal');currentSlide({{ cont }})">
-                    </figure>
-                </div>
-
-                {% assign cont = cont | plus:1 %}
-                {% assign contModulo4 = cont | modulo:4 %}
-
-                {% endfor %}
-
-            </div>
-        </div>
-        <!-- End tiles gallery -->
-
-        <!-- Start lightbox modal -->
-        <div class="modal" id="{{ product.code }}-presskit-modal" onclick="ClickOpenedModal(event)">
-            <div class="modal-content is-vcentered">
-                {% for image in product.gallery.images %}
-                <div class="item-slide {{ product.code }}-presskit-modal-slide">
-                    <img src="{{ product.gallery.imagefolder }}{{ image.name }}">
-                </div>
-                {% endfor %}
-            </div>
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            <button onclick="closeModal()" class="modal-close is-large" aria-label="close"></button>
-        </div>
-        <!-- End lightbox modal -->
-    </div>
-
-    <br>
-    {% if presskit.features %}
-    <div class="container content">
-        <h2 class="subtitle is-8">Features</h2>
-        <ul>
-            {% for feature in presskit.features %}
-            <li>{{ feature.text }}</li>
-            {% endfor %}
-        </ul>
-    </div>
-    {% endif %}
-    <!-- <br>
-    <div class="container content">
-        <h2 class="subtitle is-8">Awards</h2>
-        <div class="column is-12">
-            <div id="testimonials-carousel" class="carousel">
-                {% assign cont = 1 %}
-                {% for testimonial in presskit.testimonials %}
-                <div class="item-{{ cont }}">
-                    {% if testimonial.script %}
-                    {{ testimonial.script }}
-                    {% else %}
-                    {% include review.html %}
-                    {% endif%}
-                </div>
-                {% assign cont = cont | plus:1 %}
-                {% endfor %}
-            </div>
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </div>
-    </div> -->
-    <br>
-    {% if presskit.testimonials %}
-    <div class="container content">
-        <div class="column is-full">
-            <h2 class="subtitle is-8">Testimonials</h2>
-            <div id="testimonials-carousel" class="carousel">
-                {% assign cont = 1 %}
-                {% for testimonial in presskit.testimonials %}
-                <div class="item-{{ cont }}">
-                    {% if testimonial.script %}
-                    {{ testimonial.script }}
-                    {% else %}
-                    {% include review.html %}
-                    {% endif%}
-                </div>
-                {% assign cont = cont | plus:1 %}
-                {% endfor %}
-            </div>
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </div>
-    </div>
-    {% endif %}
-    
-    <br>
-    <div class="container">
-        <div class="columns">
-            <div class="column is-half">
-                <div class="content">
-                    <h2 class="subtitle is-8">Factsheet</h2>
-                    <span class="ml-5 has-text-weight-bold">Developer</span>
-                    <p class="ml-5">{{ presskit.factsheet.developer }}</p>
-                    <span class="ml-5 has-text-weight-bold">Release date</span>
-                    <p class="ml-5">{{ presskit.factsheet.release_date }}</p>
-                </div>
-            </div>
-            <div class="column is-half">
-                <div class="content">
-                    <h2 class="subtitle is-8">Additional info</h2>
-                    {% if presskit.additional_info.languages %}
-                    <span class="ml-5 has-text-weight-bold">Languages</span>
-                    <p class="ml-5">{{ presskit.additional_info.languages }}</p>
-                    {% endif %}
-                    <span class="ml-5 has-text-weight-bold">Stores </span>
-                    <p class="ml-5">{% include external-store-buttons.html %}</p>
-                </div>
-            </div>
-        </div>
+    <div class="hero-inner">
+        <h1 class="hero-title has-text-weight-bold">{{ product.name }} presskit</h1>
     </div>
 </section>
 
-<style>
-    .presskit .content figure {
-        margin-left: 0;
-        margin-right: 0;
-    }
-</style>
+<div class="presskit product-presskit-content">
+    <div class="container--sm">
+        <div class="product-card pixel-box">
+            <div class="columns is-desktop is-gapless is-multiline is-vcentered">
+                <div class="column">
+                    <img class="image-logo" src="/img/product/{{product.code}}-logo.svg" alt="{{product.name}} logo" />
+                    <figure class="image is-16by9" style="border-radius: 30px 0px 30px 0px; overflow: hidden;">
+                        {%- if product.video -%}
+                            <iframe title="{{ product.name}} trailer video" class="has-ratio" width="640" height="360"
+                                src="https://www.youtube.com/embed/{{ product.video }}?rel=0&modestbranding=1" frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        {%- else -%}
+                            <img src="/img/product/{{ product.code }}-640-360.jpg" />
+                        {%- endif -%}
+                    </figure>
+                </div>
+                <div class="column">
+                    <div class="card-inner">
+                        <h2 class="section-title">Information</h2>
+                        <h2 class="inner-title is-uppercase has-text-weight-bold pb-3 mb-3">Pitch</h2>
+                        <p class="">{{ product.subtitle }}</p>
+                        <h2 class="inner-title is-uppercase has-text-weight-bold pb-3 mb-3 mt-5">Description</h2>
+                        <p class="">{{ product.long_description | newline_to_br }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {%- if presskit.features -%}
+        <section class="section product-presskit-features">
+            <div class="container--sm">
+                <h2 class="section-title">Features</h2>
+                <ul class="feature-list">
+                    {%- for feature in presskit.features -%}
+                        <li>
+                            <span class="icon has-text-primary"><i class="fas fa-circle fa-xs"></i></span>
+                            {{ feature.text }}
+                        </li>
+                    {%- endfor -%}
+                </ul>
+            </div>
+        </section>
+    {%- endif -%}
+
+    {%- if product.awards -%}
+        <section class="section product-presskit-awards">
+            <div class="container--sm">
+                <h2 class="section-title">Awards</h2>
+                {% include redesign/awards-block.html %}
+            </div>
+        </section>
+    {%- endif -%}
+
+    {%- if product.versions -%}
+        <section class="section comparison-section">
+            <div class="container--sm">
+                <h2 class="inner-title is-uppercase has-text-weight-bold pb-4 mb-4">{{ product.versions.title }}</h2>
+                {% include redesign/comparison-table.html %}
+            </div>
+        </section>
+    {%- endif -%}
+
+    <section class="section product-presskit-resources">
+        <div class="container--sm">
+            <div class="section-header resources-header">
+                <h2 class="section-title mb-0">Product Resources</h2>
+                <a class="show-link is-uppercase has-text-weight-bold" onclick="window.open('/download/{{ product.code }}-presskit.zip', 'Download');" target="_blank">
+                    <span class="icon"><i class="fas fa-cloud-download-alt"></i></span>
+                    Download all product resources
+                </a>
+            </div>
+            <div class="columns is-multiline is-vcentered has-text-justified">
+                <div class="column is-12">
+                    <!-- Start Carousel -->
+                    <div id="product-carousel" class="carousel">
+                        {% assign cont = 1 %}
+                        {% for image in product.gallery.images %}
+                        <div class="item-{{ cont }}">
+                            <img alt="{{product.name}} screenshot {{ cont }}" src="{{ product.gallery.imagefolder }}{% if image.thumbnail %}{{ image.thumbnail }}{% else %}{{ image.name }}{% endif %}"
+                                onclick="openModal('product-modal');currentSlide({{ cont }})">
+                        </div>
+                        {% assign cont = cont | plus:1 %}
+                        {% endfor %}
+                    </div>
+                    <!-- End Carousel -->
+                </div>
+                <!-- Start lightbox modal -->
+                <div id="product-modal" class="modal" onclick="ClickOpenedModal(event)">
+                    <div class="modal-content is-vcentered">
+                        {% assign cont = 1 %}
+                        {% for image in product.gallery.images %}
+                        <div class="item-slide product-modal-slide">
+                            <img loading="lazy" alt="{{product.name}} lightbox image {{ cont }}" src="{{ product.gallery.imagefolder }}{{ image.name }}">
+                        </div>
+                        {% assign cont = cont | plus:1 %}
+                        {% endfor %}
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    <button onclick="closeModal()" class="modal-close is-large" aria-label="close"></button>
+                </div>
+                <!-- End lightbox modal -->
+            </div>
+        </div>
+    </section>
+
+    {%- if presskit.testimonials -%}
+        <section class="section product-presskit-testimonials">
+            <div class="container--sm">
+                <div class="column is-full">
+                    <h2 class="section-title">{{ product.presskit.testimonials.title }}</h2>
+                    {% include redesign/testimonials-mobile.html %}
+                    {% include redesign/testimonials-desktop.html %}
+                </div>
+            </div>
+        </section>
+    {%- endif -%}
+</div>
+
+{% include redesign/subscribe-form.html class="pt-0" %}
+
+{% contentfor extra-js no-convert %}
+    <script>
+        window.twttr = (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0],
+            t = window.twttr || {};
+            if (d.getElementById(id)) return t;
+            js = d.createElement(s);
+            js.id = id;
+            js.async = true;
+            js.src = "https://platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js, fjs);
+            t._e = [];
+            t.ready = function(f) {
+            t._e.push(f);
+            };
+            return t;
+        }(document, "script", "twitter-wjs"));
+    </script>
+    <script>
+        twttr.ready(function (twttr) {
+            let tweets = document.getElementsByClassName("tweet")
+            for (let i = 0; i < tweets.length; i++){
+                let tweet = tweets[i];
+                let id = tweet.getAttribute("tweetID");
+                // Create Tweet
+                twttr.widgets.createTweet(id, tweet, {
+                    conversation : 'none',
+                    cards        : 'visible',
+                }).then(function() {
+                    const toggleBlock = document.querySelector('.toggle-wrapper');
+                    toggleBlock.style.display = 'flex';
+                });
+            }
+        });
+    </script>
+{% endcontentfor %}

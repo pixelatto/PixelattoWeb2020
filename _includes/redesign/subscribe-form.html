@@ -1,0 +1,38 @@
+<div class="subscribe-section{% if include.class %} {{ include.class }}{% endif %}">
+    <div class="container--sm">
+        <div class="subscribe-inner pixel-box columns is-gapless is-desktop">
+            <div class="column">
+                <div class="subscribe-text">
+                    <h2 class="has-text-primary has-text-weight-bold is-uppercase">{{site.data.subscribe.main_message}}</h2>
+                </div>
+            </div>
+            <div class="column">
+                <div class="subscribe-form">
+                    <form id="subscribe-form" action="{{site.data.subscribe.subscribe_action}}" method="post" name="mc-embedded-subscribe-form" target="_blank">
+                        <div class="is-flex">
+                            <div class="input-wrapper">
+                                <p style="display: none;">Newsletter email</p>
+                                <input class="input contact-form__input" type="email" placeholder="Your email"
+                                    value="" id="suscribe-email-input" name="EMAIL" required />
+                            </div>
+                            <input class="button button-round is-secondary" type="submit"
+                                name="subscribe" value="{{ site.data.subscribe.button_subscribe_text }}"
+                                onclick="submitAndRedirectToThanks();" />
+                        </div>
+                        <div class="field news-type-field has-text-weight-bold">
+                            <div class="news-type-title">Get news about</div>
+                            <label class="checkbox" for="mce-group[72300]-72300-0">
+                                <input type="checkbox" value="1" name="group[72300][1]" id="mce-group[72300]-72300-0" checked />
+                                Reventure
+                            </label>
+                            <label class="checkbox" for="mce-group[72300]-72300-1">
+                                <input type="checkbox" value="2" name="group[72300][2]" id="mce-group[72300]-72300-1" checked />
+                                Game Design tools
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

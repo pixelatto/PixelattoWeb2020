@@ -1,81 +1,115 @@
 ---
-layout: default
+layout: redesign
 ---
 
-{{ content }}
-<h1 class="title is-2">What's going on at Pixelatto</h1>
+<section class="hero-section">
+    <div class="bg-img">
+        <img src="/img/home/hero-background.svg" alt="Pixelatto background image" />
+    </div>
+    <div class="hero-inner">
+        <h1 class="hero-title has-text-weight-bold">What's going on at Pixelatto</h1>
+    </div>
+</section>
 
-<div style="margin-bottom: 1rem;">
-    <p class="subtitle is-4">Tags</p>
+<div class="blog-content">
+    <section class="blog-carousel-list">
+        <div class="container--sm" style="max-width: 1255px;">
+            {% comment %}
+                {%- if page.tag -%}
+                    {% assign posts = site.posts | where_exp:"item","item.tags contains page.tag" %}
+                {%- else -%}
+                    {% assign posts = site.posts %}
+                {%- endif -%}
+            {% endcomment %}
 
-    <button onclick="window.location='/blog'" class="tag-button button is-primary">#All</button>
-    {% for tag in site.tags %}
-    <button onclick="window.location='{{ tag.url }}'" class="tag-button button is-primary">#{{ tag.tag }}</button>
-    {% endfor %}
+            {% assign posts = site.posts %}
+            <div id="blog-carousel" class="carousel">
+                {% assign cont = 1 %}
+                {%- for post in posts limit:5 -%}
+                <div class="item-{{ cont }}" style="max-width: 1100px; margin: 0 auto; padding: 15px;">
+                    <div class="product-card pixel-box is-relative">
+                        <a class="mobile-link" href="{{ site.baseurl }}{{ post.url }}"></a>
+                        <div class="columns is-gapless is-desktop"> <!-- is-tablet -->
+                            <div class="column is-narrow">
+                                <div class="card-image image is-16by9">
+                                    <!-- <img src="/img/upload/{{ post.image }}" alt="{{ post.title }}" /> -->
+                                    <!-- <div class="image is-5by4">
+                                        <img src="/img/upload/{{ post.image }}" alt="{{ post.title }}" />
+                                    </div> -->
+                                    <!--5by4, 4by3-->
+                                    <div class="bg-img">
+                                        <a href="{{ site.baseurl }}{{ post.url }}">
+                                            <img src="/img/upload/{{ post.image }}"
+                                                 alt="{{ post.title }}"
+                                                 {% unless post.bg_image_fit == 'cover' %}style="object-fit: contain;"{% endunless %} />
+                                            <!-- <div class="test" style="background-image: url(/img/upload/{{ post.image }});"></div> -->
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column" style="position: relative;">
+                                <div class="card-inner">
+                                    {%- for tagName in post.tags -%}
+                                        {% assign tag = site.tags | where_exp:"item","item.tag == tagName" | first %}
+                                        <a class="post-tag tag--lg" href="{{ tag.url }}">{{ tag.tag }}</a>
+                                    {%- endfor -%}
+                                    <h3 class="has-text-weight-bold">{{ post.title }}</h3>
+                                    <p class="description is-size-4-desktop is-size-5-tablet is-size-6-mobile">{{ post.description | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+                                    <div class="is-inline-flex post-author">
+                                        {%- if post.author-avatar -%}
+                                            <figure class="image is-32x32" style="margin: auto 0;">
+                                                <img src="{{ post.author-avatar }}" alt="Post author avatar" />
+                                            </figure>
+                                            <p class="card-footer-item pl-1">{{ post.author }} - {{ post.date | date: "%b %-d, %Y" }}</p>
+                                        {%- else -%}
+                                            <p class="is-italic pb-3">{{ post.author }} - {{ post.date | date: "%b %-d, %Y" }}</p>
+                                        {%- endif -%}
+                                    </div>
+                                    <div class="has-text-right-mobile">
+                                        <a class="button button-round button-special is-secondary" href="{{ site.baseurl }}{{ post.url }}">Read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% assign cont = cont | plus:1 %}
+                {%- endfor -%}
+            </div>
+        </div>
+    </section>
+
+    <section class="blog-list">
+        <div class="container--sm">
+            <h2 class="section-title">Recent posts</h2>
+            <div class="blog-tags mb-3 pb-3" style="border-bottom: 1px solid #DCDCDC;">
+                <button onclick="window.location='/blog'" class="button tag-btn is-primary{% if page.url == '/blog/' or page.url contains 'page' %} active{% endif %}">All</button>
+                {% for tag in site.tags %}
+                <button onclick="window.location='{{ tag.url }}'" class="button tag-btn is-primary{% if page.url contains tag.url %} active{% endif %}">{{ tag.tag }}</button>
+                {% endfor %}
+            </div>
+
+            <div class="columns is-multiline is-centered">
+                {% if page.tag %}
+                {% assign posts = site.posts | where_exp:"item","item.tags contains page.tag" %}
+                {% else %}
+                {% assign posts = paginator.posts %}
+                {% endif %}
+
+                {% for post in posts %}
+                <div class="column is-4">
+                    {% include post-card.html %}
+                </div>
+                {% endfor %}
+
+                {% unless page.tag %}
+                <div class="column is-5-desktop is-12-tablet mt-4">
+                    {% include pagination.html %}
+                </div>
+                {% endunless %}
+            </div>
+        </div>
+    </section>
 </div>
 
-<p class="subtitle is-4">Articles</p>
-<div class="columns is-multiline">
-    {% if page.tag %}
-    {% assign posts = site.posts | where_exp:"item","item.tags contains page.tag" %}
-    {% else %}
-    {% assign posts = paginator.posts %}
-    {% endif %}
-
-    {% for post in posts %}
-    <div class="column is-4">
-        {% include post-card.html %}
-    </div>
-    {% endfor %}
-
-    {% unless page.tag %}
-    <div class="column is-12" style="margin-top: 1rem;">
-        {% include pagination.html %}
-    </div>
-    {% endunless %}
-</div>
-
-{% include subscribe-banner.html %}
-
-<style>
-    .card {
-        height: 100%;
-        padding-top: 16px;
-    }
-
-    .card-image {
-        height: 200px;
-        overflow: hidden;
-    }
-
-    .card-image img {
-        width: 100%;
-    }
-
-    .card-content {
-        padding-bottom: 12rem;
-    }
-
-    .card-footer {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        border: none;
-        display: block;
-    }
-
-    .read-more {
-        width: 100%;
-        margin: auto;
-        display: block;
-    }
-
-    .card-footer-item {
-        border-top: 1px solid #ededed;
-        text-align: center;
-        flex-basis: none;
-        flex-grow: none;
-        flex-shrink: none;
-        display: block;
-    }
-</style>
+{% include redesign/subscribe-form.html class="pt-0" %}

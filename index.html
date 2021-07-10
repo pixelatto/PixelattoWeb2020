@@ -1,71 +1,141 @@
 ---
-layout: empty
-subtitle: Creative games and tools
-container_type: is-fluid
-hero_height: is-small
-hide_hero: true
-featured: Reventure
-has_carousel: false
+layout: redesign
 ---
 
-<div style="position: relative;">
-    {% assign products = site.data.products | sort %}
-    {% for product_hash in products %}
-    {% assign product = product_hash[1] %}
-    {% assign product_page = site.products | where_exp:"item","item.code == product.code" | first %}
-    <a href="{{ product_page.url }}" style="color: white;">
-        <div class="hero is-medium"
-            style="background: url('/img/product/{{ product.code }}-hero.jpg') no-repeat center center; background-size: cover; background-position: 0%;">
-            <div class="hero-align-bottom">
-                <div class="index-product has-background-white has-box-shadow">
-                    <h1 class="title is-size-2-desktop is-size-5-mobile has-text-{% if product.type == 'game' %}secondary{% else %}primary{% endif %}">{{ product.name }}
-                    </h1>
-                    <h2 class="subtitle is-size-5-desktop is-size-7-mobile has-text-{% if product.type == 'game' %}secondary{% else %}primary{% endif %}">{{ product.subtitle }}
-                    </h2>
+{% assign home_data = site.data.home %}
+
+<section class="hero-section home-hero">
+    <div class="bg-img">
+        <img src="{{ home_data.hero_image }}" alt="Pixelatto background image" />
+    </div>
+    <div class="hero-inner">
+        <img class="hero-logo" src="{{ home_data.hero_logo }}" alt="Pixelatto Logo" />
+        <h1 class="hero-title has-text-weight-bold">{{ home_data.hero_title }}</h1>
+        <a class="button button-round is-secondary scroll-btn" href="{{ home_data.hero_cta.cta_url }}">{{ home_data.hero_cta.cta_text }}</a>
+        <a class="scroll-down scroll-btn" href="{{ home_data.hero_cta.cta_url }}">
+            <img src="/img/home/arrow-down-circle.svg" alt="Scroll down arrow" />
+        </a>
+    </div>
+</section>
+
+<section class="home-tools" id="tools">
+    <div class="container--sm">
+        {%- if home_data.tools_section_title -%}
+            <h2 class="section-title">{{ home_data.tools_section_title }}</h2>
+        {%- endif -%}
+        {% assign products = site.data.products | sort  %}
+        <!-- for product_hash in products reversed -->
+        {%- for product_hash in products -%}
+            {% assign product = product_hash[1] %}
+            {% assign product_page = site.products | where_exp:"item","item.code == product.code" | first %}
+            <div class="product-card pixel-box" style="position: relative;">
+                <div class="columns is-gapless">
+                    <a class="link--abs" href="{{ product_page.url }}"></a>
+                    <div class="column is-narrow">
+                        <div class="card-image img-16by9">
+                            <div class="bg-img">
+                                <img class="is-scaled" src="{{ product.product_image }}" alt="{{ product.subtitle }}" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column" >
+                        <div class="card-inner">
+                            <img class="product-logo" src="/img/product/{{product.code}}-logo.svg" alt="{{product.name}} logo" />
+                            <h3 class="is-uppercase has-text-weight-bold">{{ product.subtitle }}</h3>
+                            {{ product.short_description | markdownify }}
+                            <!-- <a class="button button-round button-special is-secondary" href="{{ product_page.url }}">Learn more</a> -->
+                        </div>
+                    </div>
                 </div>
-            </div>  
+            </div>
+        {%- endfor -%}
+    </div>
+</section>
+
+<section class="home-about">
+    <div class="about-inner">
+        <div class="columns is-gapless is-desktop">
+            <div class="column">
+                <div class="about-img">
+                    <div class="bg-img">
+                        <img src="{{ home_data.about_section.about_image[0] }}" alt="{{ home_data.about_section.about_image[1] }}" />
+                    </div>
+                    <div class="img-description">
+                        <h4>{{ home_data.about_section.about_author }}</h4>
+                        <p>{{ home_data.about_section.about_role }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="about-text">
+                    <div class="text-content">
+                        <h2 class="section-title">{{ home_data.about_section.about_title }}</h2>
+                        {%- for text_node in home_data.about_section.about_text -%}
+                            {{ text_node | markdownify }}
+                        {%- endfor -%}
+                        <a class="button button-round is-secondary" href="/about">learn more</a>
+                    </div>
+                </div>
+            </div>
         </div>
-    </a>
-    {% endfor %}
+    </div>
+</section>
 
-    {% include subscribe-banner.html %}
+<section class="home-recent-posts">
+    <div class="container--sm">
+        <div class="section-header">
+            <h2 class="section-title">{{ home_data.blog_section_title }}</h2>
+            <a class="show-link is-uppercase has-text-weight-bold" href="/blog/">Show all<span class="chevron right"></span></a>
+        </div>
+        <div class="columns">
+            {%- for post in site.posts limit:3 -%}
+                <div class="column">
+                    <div class="post-preview card">
+                        <a class="post-link" href="{{ site.baseurl }}{{ post.url }}" style="color: initial; height: 100%;">
+                            {%- if post.image -%}
+                            <div class="card-image">
+                                <div class="image is-16by9">
+                                    <img src="/img/upload/{{ post.image }}"
+                                         alt="{{ post.title }}"
+                                         {% unless post.bg_image_fit == 'cover' %}style="object-fit: contain;"{% endunless %} />
+                                </div>
+                            </div>
+                            {%- else -%}
+                            <header class="card-header">
+                                <p class="card-header-title">{{ post.title }}</p>
+                            </header>
+                            {%- endif -%}
+                            <div class="card-content">
+                                <div class="content">
+                                    <div class="tags mt-4 mb-0">
+                                        {%- for tagName in post.tags -%}
+                                            {% assign tag = site.tags | where_exp:"item","item.tag == tagName" | first %}
+                                            <span class="post-tag tag--sm">{{ tag.tag }}</span>
+                                        {%- endfor -%}
+                                    </div>
+                                    {%- if post.image -%}
+                                    <p class="title is-5 my-3">{{ post.title | truncatewords: 10 }}</p>
+                                    {%- endif -%}
+                                </div>
+                            </div>
+                            <footer class="card-footer">
+                                <div class="is-flex">
+                                    {%- if post.author-avatar -%}
+                                        <figure class="image is-32x32" style="margin: auto 0 auto 20px;">
+                                            <img src="{{ post.author-avatar }}" alt="Post author avatar" />
+                                        </figure>
+                                        <p class="card-footer-item pl-1">{{ post.author }} - {{ post.date | date: "%b %-d, %Y" }}</p>
+                                    {%- else -%}
+                                        <p class="card-footer-item">{{ post.author }} - {{ post.date | date: "%b %-d, %Y" }}</p>
+                                    {%- endif -%}
+                                </div>
+                            </footer>
+                        </a>
+                    </div>
+                </div>
+            {%- endfor -%}
+        </div>
+    </div>
+</section>
 
-    <style>
-        .hero {
-            height: 50vh;
-        }
-
-        .index-product {
-            width: 100%;
-            padding: 1.5rem;
-            border-radius: 30px 0 0 0;
-        }
-
-        .hero-align-bottom {
-            position: relative;
-            top: 30vh;
-            width: 50%;
-            left: 50vw;
-        }
-
-        /* PC SCREEN */
-        @media screen and (min-width: 768px) {}
-
-        /* MOBILE SCREEN */
-        @media screen and (max-width: 767px) {
-
-            .index-product {
-                padding: 1.1rem;
-                width: 100%;
-            }
-
-            .hero {
-                height: 40vh;
-            }
-
-            .hero-align-bottom {
-                top: 18vh;
-            }
-        }
-    </style>
-</div>
+{% include redesign/subscribe-form.html %}
