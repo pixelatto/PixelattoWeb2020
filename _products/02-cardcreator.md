@@ -10,8 +10,6 @@ keywords: card creator, make game cards, custom game cards, design cards, card c
 permalink: /store/card-creator/
 layout: empty
 
-#twitter_widget: true
-#theme_text: is-primary
 type: app
 ---
 

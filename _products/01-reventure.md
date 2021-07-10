@@ -8,8 +8,6 @@ keywords: reventure, 100 endings, 2d, pixel, platformer, adventure, videogame
 permalink: /store/reventure/
 layout: empty
 
-#twitter_widget: true
-#theme_text: is-primary
 type: game
 ---
 

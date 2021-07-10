@@ -1,16 +1,7 @@
 {% capture main_color %}
-{% if page.theme_color %}
-#{{page.theme_color}}
-
-{% comment %}
-    {% elsif page.type == "game" %}
-    #e37826
-    {% elsif page.type == "app" %}
-    #009fc7
-    {% else %}
-{% endcomment %}
-
-{% endif %}
+    {% if page.theme_color %}
+    #{{page.theme_color}}
+    {% endif %}
 {% endcapture %}
 
 {% if main_color.size > 3 %}

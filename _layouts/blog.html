@@ -14,14 +14,6 @@ layout: redesign
 <div class="blog-content">
     <section class="blog-carousel-list">
         <div class="container--sm" style="max-width: 1255px;">
-            {% comment %}
-                {%- if page.tag -%}
-                    {% assign posts = site.posts | where_exp:"item","item.tags contains page.tag" %}
-                {%- else -%}
-                    {% assign posts = site.posts %}
-                {%- endif -%}
-            {% endcomment %}
-
             {% assign posts = site.posts %}
             <div id="blog-carousel" class="carousel">
                 {% assign cont = 1 %}
@@ -32,17 +24,11 @@ layout: redesign
                         <div class="columns is-gapless is-desktop"> <!-- is-tablet -->
                             <div class="column is-narrow">
                                 <div class="card-image image is-16by9">
-                                    <!-- <img src="/img/upload/{{ post.image }}" alt="{{ post.title }}" /> -->
-                                    <!-- <div class="image is-5by4">
-                                        <img src="/img/upload/{{ post.image }}" alt="{{ post.title }}" />
-                                    </div> -->
-                                    <!--5by4, 4by3-->
                                     <div class="bg-img">
                                         <a href="{{ site.baseurl }}{{ post.url }}">
                                             <img src="/img/upload/{{ post.image }}"
                                                  alt="{{ post.title }}"
                                                  {% unless post.bg_image_fit == 'cover' %}style="object-fit: contain;"{% endunless %} />
-                                            <!-- <div class="test" style="background-image: url(/img/upload/{{ post.image }});"></div> -->
                                         </a>
                                     </div>
                                 </div>

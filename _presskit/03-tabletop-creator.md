@@ -5,9 +5,6 @@ keywords: tabletop creator presskit, tabletop creator information, tabletop crea
 
 permalink: /presskit/tabletop-creator/
 layout: empty
-
-#theme_text: is-primary
-#type: app
 ---
 
 {% capture product_data %}
