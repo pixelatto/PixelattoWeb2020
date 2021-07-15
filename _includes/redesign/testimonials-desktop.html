@@ -1,5 +1,5 @@
 <div class="testimonials-list is-hidden-touch is-block-desktop">
-    {% assign tweetsList = product.presskit.testimonials.list %}
+    {% assign tweetsList = item.testimonials.list %}
 
     <div class="tile is-ancestor">
         {%- for tweet in tweetsList limit:3 -%}
