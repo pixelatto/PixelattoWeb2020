@@ -4,7 +4,9 @@
         {% assign cont = 1 %}
         {%- for tweet in tweetsList -%}
             <div class="item-{{ cont }}">
-                {% include testimonial-card.html %}
+                <div class="box">
+                    {% include testimonial-card.html %}
+                </div>
             </div>
             {% assign cont = cont | plus:1 %}
         {%- endfor -%}

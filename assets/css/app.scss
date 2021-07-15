@@ -1172,6 +1172,11 @@ input[type=email] {
             }
         }
     }
+    #testimonials-carousel {
+        div[class^="item-"] {
+            padding: 10px;
+        }
+    }
 }
 
 //=== ABOUT PAGE ===//
