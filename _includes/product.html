@@ -152,18 +152,6 @@
         </section>
     {%- endif -%}
 
-    {% comment %}
-        {%- if product.presskit.testimonials.list -%}
-            <section class="section testimonials-section">
-                <div class="container--sm">
-                    <h2 class="inner-title is-uppercase has-text-weight-bold pb-4 mb-4">{{ product.presskit.testimonials.title }}</h2>
-                    {% include redesign/testimonials-mobile.html %}
-                    {% include redesign/testimonials-desktop.html %}
-                </div>
-            </section>
-        {%- endif -%}
-    {% endcomment %}
-
     {% assign testimonials = site.testimonials %}
     {%- for item in testimonials -%}
         {%- if page.url contains item.code -%}
