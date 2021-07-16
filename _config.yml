@@ -41,6 +41,8 @@ collections:
   tags:
     output: true
     permalink: blog/tag/:slug
+  testimonials:
+    output: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.

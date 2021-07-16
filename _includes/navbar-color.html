@@ -1,8 +1,10 @@
+{% comment %}
 {% capture main_color %}
     {% if page.theme_color %}
     #{{page.theme_color}}
     {% endif %}
 {% endcapture %}
+{% endcomment %}
 
 {% if main_color.size > 3 %}
 <style>

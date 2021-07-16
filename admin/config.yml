@@ -83,7 +83,7 @@ collections:
         searchFields: ["tag"]
         multiple: true
         required: false
-        
+
   - name: "tags"
     label: "Categorías"
     folder: "_tags"
@@ -92,3 +92,28 @@ collections:
     fields:
       - {label: "Categoría", name: "tag", widget: "string"}
       - {label: "Ocultar Hero", name: "hide_hero", widget: "hidden", default: "true"}
+
+  - name: "testimonials"
+    label: "Testimonios"
+    folder: "_testimonials"
+    create: true
+    #identifier_files: name
+    fields:
+      - {label: "Product Code", name: "code", widget: "string"}
+      - label: "List of Tesimonials"
+        name: "testimonials"
+        widget: "string" # string or list?
+        fields:
+          - {label: "Section Title", name: "title", widget: "string", default: "Testimonials"}
+          - label: "List"
+            name: list
+            widget: list
+            fields:
+              - {label: "Item Link", name: "url", widget: "string"}
+              - {label: "Item Content", name: "content", widget: "string"}
+              - {label: "Item Image", name: "image", widget: "image"} # image or string? required: false
+              - {label: "Author Name", name: "author-name", widget: "markdown"} # markdown or string?
+              - {label: "Author ID", name: "author-id", widget: "string"} # required: false
+              - {label: "Author Avatar", name: "author-avatar", widget: "image"} # image or string? required: false
+              - {label: "Is from Steam?", name: "from-steam", widget: "boolean", default: false}
+              - {label: "Date", name: "date", widget: "datetime"} # datetime or string?

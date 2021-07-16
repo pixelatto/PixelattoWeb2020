@@ -118,17 +118,34 @@
         </div>
     </section>
 
-    {%- if presskit.testimonials -%}
-        <section class="section product-presskit-testimonials">
-            <div class="container--sm">
-                <div class="column is-full">
-                    <h2 class="section-title">{{ product.presskit.testimonials.title }}</h2>
-                    {% include redesign/testimonials-mobile.html %}
-                    {% include redesign/testimonials-desktop.html %}
+    {% comment %}
+        {%- if product.presskit.testimonials.list -%}
+            <section class="section product-presskit-testimonials">
+                <div class="container--sm">
+                    <div class="column is-full">
+                        <h2 class="section-title">{{ product.presskit.testimonials.title }}</h2>
+                        {% include redesign/testimonials-mobile.html %}
+                        {% include redesign/testimonials-desktop.html %}
+                    </div>
                 </div>
-            </div>
-        </section>
-    {%- endif -%}
+            </section>
+        {%- endif -%}
+    {% endcomment %}
+
+    {% assign testimonials = site.testimonials %}
+    {%- for item in testimonials -%}
+        {%- if page.url contains item.code -%}
+            <section class="section product-presskit-testimonials">
+                <div class="container--sm">
+                    <div class="column is-full">
+                        <h2 class="section-title">{{ item.testimonials.title }}</h2>
+                        {% include redesign/testimonials-mobile.html %}
+                        {% include redesign/testimonials-desktop.html %}
+                    </div>
+                </div>
+            </section>
+        {%- endif -%}
+    {%- endfor -%}
 </div>
 
 {% include redesign/subscribe-form.html class="pt-0" %}

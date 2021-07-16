@@ -1126,13 +1126,6 @@ input[type=email] {
             }
             .card-text {
                 margin: 15px 0;
-                z-index: 1;
-                a {
-                    &:hover {
-                        color: #009FC7;
-                        text-decoration: underline;
-                    }
-                }
             }
             .card-img {
                 border-radius: 6px;
@@ -1170,6 +1163,15 @@ input[type=email] {
             &.arrow-up {
                 transform: rotate(180deg);
             }
+        }
+    }
+    #testimonials-carousel {
+        .slider-item {
+            display: flex;
+            align-items: center;
+        }
+        div[class^="item-"] {
+            padding: 10px;
         }
     }
 }
