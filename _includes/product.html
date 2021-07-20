@@ -12,21 +12,17 @@
                 <div class="column">
                     <figure class="image is-16by9" style="border-radius: 5px; overflow: hidden;">
                         {%- if product.video -%}
-                            <!-- <iframe title="{{ product.name}} trailer video" class="has-ratio" width="640" height="360"
+                            <iframe title="{{ product.name}} trailer video" class="has-ratio is-hidden-mobile" width="640" height="360"
                                 src="https://www.youtube.com/embed/{{ product.video }}?rel=0&modestbranding=1" frameborder="0"
                                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen>
-                            </iframe> -->
-                            <div class="video_wrapper js-videoWrapper">
+                            </iframe>
+                            <div class="video_wrapper js-videoWrapper is-hidden-tablet">
                                 <iframe class="videoIframe js-videoIframe" src="" frameborder="0" allowTransparency="true"
                                         allowfullscreen
                                         data-src="https://www.youtube.com/embed/{{ product.video }}?autoplay=1&modestbranding=1&rel=0&showinfo=0">
                                 </iframe>
-                                <button class="videoPoster js-videoPoster" style="background-image:url(/img/product/{{product.code}}-logo.svg)">
-                                    <!-- <span class="icon has-text-primary">
-                                        <i class="fas fa-play fa-2x"></i>
-                                    </span> -->
-                                </button>
+                                <button class="videoPoster js-videoPoster" style="background-image:url(/img/product/{{product.code}}-logo.svg)"></button>
                             </div>
                         {%- else -%}
                             <img src="/img/product/{{ product.code }}-640-360.jpg" />
@@ -38,7 +34,7 @@
                         {%- if product.sale -%}
                             <img class="product-sale" src="/img/product/sale-lable.svg" alt="Product sale label" />
                         {%- endif -%}
-                        <img class="product-logo" src="/img/product/{{product.code}}-logo.svg" alt="{{product.name}} logo" />
+                        <img class="product-logo is-hidden-mobile" src="/img/product/{{product.code}}-logo.svg" alt="{{product.name}} logo" />
                         <p class="title is-3 py-4" style="display: none;">{{ product.title }}</p>
                         <h1 class="is-uppercase has-text-weight-bold" style="border-bottom: 1px solid #DCDCDC;">{{ product.subtitle }}</h1>
 
