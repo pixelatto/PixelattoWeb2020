@@ -1093,6 +1093,9 @@ input[type=email] {
     }
 }
 .testimonials-list {
+    .is-ancestor {
+        justify-content: center;
+    }
     .is-child {
         height: fit-content;
         padding: 0 !important;
@@ -1143,9 +1146,6 @@ input[type=email] {
         }
         @keyframes delay-overflow {
             from { overflow: hidden; }
-        }
-        .is-ancestor {
-            justify-content: center;
         }
     }
     .toggle-wrapper {
