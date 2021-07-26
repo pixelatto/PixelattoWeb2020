@@ -24,7 +24,6 @@ layout: redesign
             <h2 class="section-title">{{ home_data.tools_section_title }}</h2>
         {%- endif -%}
         {% assign products = site.data.products | sort  %}
-        <!-- for product_hash in products reversed -->
         {%- for product_hash in products -%}
             {% assign product = product_hash[1] %}
             {% assign product_page = site.products | where_exp:"item","item.code == product.code" | first %}
@@ -43,7 +42,6 @@ layout: redesign
                             <img class="product-logo" src="/img/product/{{product.code}}-logo.svg" alt="{{product.name}} logo" />
                             <h3 class="is-uppercase has-text-weight-bold">{{ product.subtitle }}</h3>
                             {{ product.short_description | markdownify }}
-                            <!-- <a class="button button-round button-special is-secondary" href="{{ product_page.url }}">Learn more</a> -->
                         </div>
                     </div>
                 </div>

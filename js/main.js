@@ -73,12 +73,34 @@ function clickHandler(e) {
   });
 }
 
+// Wrapper for hidden testimonials [https://jsbin.com/fabenotino/edit?html,js,output]
+const wrapAll = (nodes, wrapper) => {
+  // Cache the current parent and previous sibling of the first node.
+  const parent = nodes[0].parentNode;
+  const previousSibling = nodes[0].previousSibling;
+  // Place each node in wrapper.
+  for (let i = 0; nodes.length - i; wrapper.firstChild === nodes[0] && i++) {
+    wrapper.appendChild(nodes[i]);
+  }
+  // Place the wrapper just after the cached previousSibling
+  parent.insertBefore(wrapper, previousSibling.nextSibling);
+  return wrapper;
+};
+
+const isPresentOnPage = document.querySelector('.tile-hidden');
+if (isPresentOnPage) {
+  const feedbacks = document.querySelectorAll('.tile-hidden');
+  const feedWrapper = document.createElement('div');
+  feedWrapper.classList.add('hidden-cards');
+  wrapAll(feedbacks, feedWrapper);
+}
+
 // Show more/less testimonials
 const toggleButton = document.querySelector('.toggle-button');
 const toggleContent = document.querySelector('.hidden-cards');
 const toggleArrow = document.querySelector('.toggle-arrow');
 
-if (toggleContent) {
+if (toggleButton && toggleContent) {
   toggleButton.addEventListener('click', () => {
     if (toggleContent.classList.contains('cards--active')) {
       toggleContent.classList.remove('cards--active');
