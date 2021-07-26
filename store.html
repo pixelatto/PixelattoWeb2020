@@ -49,7 +49,6 @@ permalink: /store/
         {% assign product_id = product.sendowl_id %}
         {% assign counter = forloop.index %}
         <script>
-            //var priceHTML{{counter}} = document.querySelectorAll(".{{ product.name | downcase | slugify }}-price");
             var buyButtonHTML{{counter}} = document.querySelectorAll(".{{ product.name | downcase | slugify }}-buy-button");
             getSendOwlProduct({{product_id}}).then((data) => {
                 for (var i = 0; i < buyButtonHTML{{counter}}.length; i++) {
