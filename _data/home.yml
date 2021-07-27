@@ -8,9 +8,9 @@ hero_cta:
 #tools_section_title: games and tools
 
 about_section:
-  about_image: ['/img/home/director-image.svg', 'Javi Cepa photo']
-  about_author: Javi Cepa
-  about_role: Director
+  about_image: ['/img/home/team-image.png', 'Pixelatto team photo']
+  about_author: Pixelatto
+  about_role: Team
   about_title: About the Pixelattos
   about_text: |
     Most people think that the first Pixelatto dated early 2019 or so, since they're mostly know for Reventure, but the fact is that there's fossil evidence of living specimens back at 2014.
