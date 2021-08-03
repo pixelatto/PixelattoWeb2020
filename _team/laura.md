@@ -9,6 +9,7 @@ twitter: LauraFemenía
 image: /img/avatars/Laura.svg
 hashtags: [3DLover, Perfector, Lauringan]
 order: 7
+hidden: true
 ---
 
 Laura uses her dark powers to generate virtual materia. Then, she  brings them to life by giving them a Spine column.
