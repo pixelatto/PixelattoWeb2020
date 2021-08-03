@@ -28,6 +28,111 @@ features:
     - label: Print and play in 1 click
       icon: fa-print
 
+# versions:
+#   title: 'Product Features'
+#   list:
+#     - version_name: Edition A
+#       version_store_url: '#'
+#     - version_name: Edition B
+#       version_store_url: '#'
+
+#   features-list:
+#     - feature:
+#         name: 'Icons gallery'
+#       has-feature:
+#         - item: true
+#         - item: true
+#     - feature:
+#         name: 'Translation 13 languages'
+#       has-feature:
+#         - item: true
+#         - item: true
+#     - feature:
+#         name: 'Demo projects'
+#       has-feature:
+#         - item: true
+#         - item: true
+#     - feature:
+#         name: 'Component Template'
+#       has-feature:
+#         - item: false
+#         - item: true
+#     - feature:
+#         name: 'New template workflow'
+#       has-feature:
+#         - item: false
+#         - item: true
+#     - feature:
+#         name: 'Template swap'
+#       has-feature:
+#         - item: true
+#         - item: true
+#     - feature:
+#         name: 'Template swap'
+#       has-feature:
+#         - item: false
+#         - item: true
+#     - feature:
+#         name: 'Variables'
+#       has-feature:
+#         - item: true
+#         - item: true
+#     - feature:
+#         name: 'Data mode'
+#       has-feature:
+#         - item: false
+#         - item: true
+#     - feature:
+#         name: 'Excel/csv'
+#       has-feature:
+#         - item: true
+#         - item: true
+#     - feature:
+#         name: 'Export images/pdf'
+#       has-feature:
+#         - item: false
+#         - item: true
+#     - feature:
+#         name: 'Export TTS'
+#       has-feature:
+#         - item: true
+#         - item: true
+#     - feature:
+#         name: 'Backups'
+#       has-feature:
+#         - item: false
+#         - item: true
+#     - feature:
+#         name: 'Project localization'
+#       has-feature:
+#         - item: false
+#         - item: true
+#     - feature:
+#         name: 'Play testing in-app offline'
+#       has-feature:
+#         - item: false
+#         - item: true
+#     - feature:
+#         name: 'Play testing in-app online'
+#       has-feature:
+#         - item: false
+#         - item: true
+#     - feature:
+#         name: '1-click prototype print'
+#       has-feature:
+#         - item: false
+#         - item: true
+#     - feature:
+#         name: 'Big batch product orders'
+#       has-feature:
+#         - item: false
+#         - item: true
+#     - feature:
+#         name: 'Version control support'
+#       has-feature:
+#         - item: false
+#         - item: true
+
 external_stores:
     - image: steam
       link: https://store.steampowered.com/app/861590/Tabletop_Creator/
