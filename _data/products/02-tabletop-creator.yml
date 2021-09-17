@@ -12,7 +12,7 @@ hero_image: ['/img/product/tabletop-creator-hero.jpg','Tabletop Creator hero ima
 product_image: /img/product/tabletop-creator-640-360.jpg
 
 short_description: |
-  Create and customize your own tabletop game in an easy, fun and fast way!
+  Create and customize your own tabletop game in an profesisonal, easy and fast way!
   Tabletop Creator is a tabletop game maker tool that allows you...
 
 long_description: |
@@ -21,11 +21,12 @@ long_description: |
 # video: liMw3yfeTdo
 
 features:
-    - label: Create any type of tabletop game
+    - label: Professional workflow to create any tabletop game
       icon: fa-pencil-ruler
-    - label: Export to Tabletop Simulator
+    - label: |
+        Multiple export: PNG/JPG, PDF, TTS
       icon: fa-dice-d6
-    - label: Print and play in 1 click
+    - label: Order a prototype 1 click
       icon: fa-print
 
 # versions:
