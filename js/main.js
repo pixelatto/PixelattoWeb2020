@@ -4,7 +4,7 @@ function submitAndRedirectToThanks() {
     const sectionForm = document.getElementById("subscribe-form");
     if (sectionForm.checkValidity()) {
         sectionForm.submit();
-        window.location = "/thanks/";
+        window.location = "/thank-you/";
     }
 }
 
@@ -12,7 +12,7 @@ function footerSubmitAndRedirectToThanks() {
     const footerForm = document.getElementById("footer-subscribe-form");
     if (footerForm.checkValidity()) {
         footerForm.submit();
-        window.location = "/thanks/";
+        window.location = "/thank-you/";
     }
 }
 
