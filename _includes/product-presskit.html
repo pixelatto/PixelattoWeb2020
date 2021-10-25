@@ -35,8 +35,27 @@
                         <h2 class="inner-title is-uppercase has-text-weight-bold pb-3 mb-3 mt-5">Description</h2>
                         <p class="">{{ product.long_description | newline_to_br }}</p>
                     </div>
+                </div>   
+            </div>
+            {% if product.code == "tabletop-creator" %}
+            <div class="columns is-multiline is-mobile is-gapless is-vcentered mb-0">
+                <div class="column is-full-mobile is-one-quarter-tablet">
+                    <h3 class="is-uppercase has-text-weight-bold">Demo available at:</h3>
+                </div>
+                <div class="column is-full-mobile is-two-thirds-tablet is-half-desktop">
+                    <div class="info-platforms">
+                        <div class="column control">
+                            <button alt="{{ product.name}} {{product.external_stores[0].image}} buy button" class="button store-button is-primary"
+                                    onclick="window.open('{{ product.external_stores[0].link }}', '_blank');">
+                                <span class="icon">
+                                    <img alt="{{product.external_stores[0].image}} icon" class="has-text-secondary" src="/img/platforms/{{ product.external_stores[0].image }}.png" style="margin: 0;">
+                                </span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
+            {% endif %}  
         </div>
     </div>
 

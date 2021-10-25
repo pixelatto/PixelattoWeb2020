@@ -2,6 +2,6 @@ title: 'Get in touch!'
 subtitle: 'Or use this form for getting support, reporting bugs, sending CVs/portfolios... or just to say hi!'
 form_background: /img/contact/form-background.svg
 form_action: ''
-confirmation_url: '/thanks/'
+confirmation_url: '/thank-you/'
 email_subject: 'Contact form submission'
 send_button_text: 'Send'

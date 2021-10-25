@@ -170,16 +170,16 @@ presskit:
         release_date: 25/02/2021
     additional_info:
         stores:
-    features:
-        - text: "Blueprints: design different templates to apply to your components with a WYSIWYG editor: cards, boards, tokens, etc!"
-        - text: "Collections: create new components with one click, choose a blueprint as template and customize it!"
-        - text: "Version control: projects structure supports version control, enabling collaboration with others to create your game on the cloud!"
-        - text: "Icons gallery: all the icons you need for a prototype are already included"
-        - text: "13 languages: interface fully translated to 13 languages"
-        - text: "Demo projects: we have created \"original\" game projects for you to check examples of use"
-        - text: "Documentation: find several guides and tips articles of the different features for creating your game"
-        - text: "Automatic updates: receive all future updates for free"
-        - text: "Support: join our Discord server or mail us for solving your doubts and issues"
+    # features:
+    #     - text: "Blueprints: design different templates to apply to your components with a WYSIWYG editor: cards, boards, tokens, etc!"
+    #     - text: "Collections: create new components with one click, choose a blueprint as template and customize it!"
+    #     - text: "Version control: projects structure supports version control, enabling collaboration with others to create your game on the cloud!"
+    #     - text: "Icons gallery: all the icons you need for a prototype are already included"
+    #     - text: "13 languages: interface fully translated to 13 languages"
+    #     - text: "Demo projects: we have created \"original\" game projects for you to check examples of use"
+    #     - text: "Documentation: find several guides and tips articles of the different features for creating your game"
+    #     - text: "Automatic updates: receive all future updates for free"
+    #     - text: "Support: join our Discord server or mail us for solving your doubts and issues"
     widget:
     player_reviews:
     testimonials:
