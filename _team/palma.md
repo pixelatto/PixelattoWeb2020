@@ -9,6 +9,7 @@ twitter: Kokishi_
 image: /img/avatars/Palma.svg
 hashtags: [PaintSensei, Otaku, Colorful]
 order: 3
+hidden: true
 ---
 
 Palma is a walking repository of board games, videogames and anime references. She can also paint colours outside of the visible spectrum.
