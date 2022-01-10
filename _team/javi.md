@@ -13,7 +13,7 @@ hashtags: [Multitasker, FinalBoss, LateOwl]
 order: 1
 ---
 
-Javi has worked his ass since the beggining of Pixelatto to build a handsome independent game studio out of sweat, big pixels and passion.
+Javi has worked his ass since the beginning of Pixelatto to build a handsome independent game studio out of sweat, big pixels and passion.
 
 {: .is-hidden-mobile}
 **Special Moves:**
