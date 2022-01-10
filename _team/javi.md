@@ -2,7 +2,7 @@
 layout: member
 title: Javi Cepa
 subtitle: Director
-job_description: 'Javi has worked his ass since the beggining of Pixelatto to build a handsome independent game studio out of sweat, big pixels and passion.'
+job_description: 'Javi has worked his ass since the beginning of Pixelatto to build a handsome independent game studio out of sweat, big pixels and passion.'
 quote: Just one more pixel to the right...
 telephone: +34 618 887 993
 twitter: JaviCepa
