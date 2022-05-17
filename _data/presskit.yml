@@ -5,8 +5,6 @@ factsheet:
         icon: fa-cube
       - text: Av. Jane Bowles, s/n, 29011, Málaga, Spain
         icon: fa-map-marker-alt
-      - text: +0034 618 887 993
-        icon: fa-phone-alt
 
 gallery:
       id: pixelatto-presskit-gallery
