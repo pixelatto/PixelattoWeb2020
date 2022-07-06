@@ -9,7 +9,7 @@ var lambda = new AWS.Lambda({ region: AWS.config.region, apiVersion: '2015-03-31
 
 function getSendOwlProduct(id) {
     if(id != null) {
-        var eventData = '{"data": {"productId": "' + id + '"}';
+        var eventData = '{"data": {"productId": "' + id + '"}}';
 
         var lambdaParams = {
             FunctionName: 'sendOwlHttpRequest',
