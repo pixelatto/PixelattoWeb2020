@@ -1,5 +1,5 @@
 form_action: ''
-subscribe_action: 'https://pixelatto.us4.list-manage.com/subscribe/post?u=fbef2685c895759c5406b0378&amp;id=c51cb108de'
+subscribe_action: 'https://pixelatto.us4.list-manage.com/subscribe/post'
 confirmation_url: '/thank-you/'
 email_subject: 'Pixelatto newsletter subscription'
 send_button_text: 'Send message'

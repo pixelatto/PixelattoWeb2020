@@ -8,27 +8,27 @@ AWS.config.credentials = new AWS.CognitoIdentityCredentials({
 var lambda = new AWS.Lambda({ region: AWS.config.region, apiVersion: '2015-03-31' });
 
 function getSendOwlProduct(id) {
-    var eventData = '{"url": "https://www.sendowl.com/api/v1/products","options": {"headers": {"Authorization": "Basic ZTY3M2ZlN2U4YmYyMDFmOmM0OGYxNjJlZWViNTExMjY0OTRh","Accept": "application/json"},"method": "GET"},"data": {}}';
+    if(id != null) {
+        var eventData = '{"data": {"productId": "' + id + '"}';
 
-    var lambdaParams = {
-        FunctionName: 'sendOwlHttpRequest',
-        Payload: eventData
-    };
+        var lambdaParams = {
+            FunctionName: 'sendOwlHttpRequest',
+            Payload: eventData
+        };
 
-    if (id != null) lambdaParams.Payload = eventData.replace("products", "products/"+id);
-
-    return callLambdaFunction(lambdaParams);
+        return callLambdaFunction(lambdaParams);
+    }
 }
 
 function checkUserSuscribed(email) {
-    var eventData = '{"url": "https://us4.api.mailchimp.com/3.0/search-members?query=","options": {"user": "`anystring`:fa5b26f2cb4e4d0b2012c43439338b0c-us4","headers": {"Authorization": "Basic QW55c3RyaW5nOmZhNWIyNmYyY2I0ZTRkMGIyMDEyYzQzNDM5MzM4YjBjLXVzNA=="}},"data": {}}';
+    if(email != null) {
+        var eventData = '{"data": {"email": "' + email + '"}';
 
-    var lambdaParams = {
-        FunctionName: 'mailchimpHttpRequest',
-        Payload: eventData
-    };
-
-    if(email != null) lambdaParams.Payload = eventData.replace("query=", "query=" + email);
+        var lambdaParams = {
+            FunctionName: 'mailchimpHttpRequest',
+            Payload: eventData
+        };
+    }
 
     return callLambdaFunction(lambdaParams);
 }
