@@ -21,6 +21,8 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "product"}
       - {label: "Título (H1)", name: "title", widget: "string"}
       - {label: "Subtítulo (H2)", name: "subtitle", widget: "string"}
+      - {label: "Descripción", name: "description", widget: "string"}
+      - {label: "Features", name: "features", widget: "string"}
       - label: "Imagen"
         name: "image"
         widget: "image"
@@ -39,7 +41,7 @@ collections:
         name: "tags"
         widget: "select"
         options: ["Games", "Software"]
-      - {label: "Descripción", name: "body", widget: "markdown"}
+      - {label: "Contenido", name: "body", widget: "markdown"}
   - name: "team"
     label: "Equipo"
     folder: "_team"
