@@ -6,6 +6,7 @@ description: You love board games and you are thinking about to create your own.
   will explain you about Tabletop Creator
 date: 2022-10-05T07:25:59.221Z
 author: Esther de Paz
+author-avatar: '/img/avatars/Esther.svg'
 hide_hero: "true"
 tags:
   - Guides
