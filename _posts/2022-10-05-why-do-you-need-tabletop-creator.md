@@ -2,7 +2,7 @@
 layout: post
 image: /img/upload/tabletop-creator_why-do-you-need-it.png
 title: Why do you need Tabletop Creator?
-summary: You love board games and you are thinking about to create your own. We
+description: You love board games and you are thinking about to create your own. We
   will explain you about Tabletop Creator
 date: 2022-10-05T07:25:59.221Z
 author: Esther de Paz
