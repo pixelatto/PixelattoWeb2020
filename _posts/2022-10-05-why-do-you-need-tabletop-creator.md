@@ -31,9 +31,15 @@ L﻿et's see it!
 
 D﻿o you want to know more? Just see our trailer and keep reading!
 
+<figure class="image is-16by9" style="border-radius: 30px 0px 30px 0px; overflow: hidden;">
+    <iframe class="has-ratio" width="640" height="360"
+        src="https://www.youtube.com/embed/CK0ZA9Cp0xA" title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+    </iframe>
+</figure>
 
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/CK0ZA9Cp0xA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <hr>
 
