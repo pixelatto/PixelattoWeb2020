@@ -1,6 +1,6 @@
 ---
 layout: post
-image: create-card-game.jpg
+image: /img/upload/create-card-game.jpg
 bg_image_fit: cover
 title: How to create my own card game
 description: Discover different approaches for creating your own card game

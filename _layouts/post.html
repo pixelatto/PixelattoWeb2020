@@ -11,7 +11,7 @@ layout: redesign
       <div class="column is-8">
         <div class="content">
           <div class="post">
-            <img class="hero pixel-box is-shadowless" src="/img/upload/{{ page.image }}" alt="{{ post.title }}" />
+            <img class="hero pixel-box is-shadowless" src="{{ page.image }}" alt="{{ post.title }}" />
             <div class="mt-5">
               {%- for tagName in page.tags -%}
                 {% assign tag = site.tags | where_exp:"item","item.tag == tagName" | first %}
@@ -81,7 +81,7 @@ layout: redesign
               <a class="post-link mb-5" href="{{ site.baseurl }}{{ post.url }}">
                 <div class="aside-preview is-relative">
                   <div class="image is-16by9">
-                    <img class="pixel-box is-shadowless" src="/img/upload/{{ post.image }}" alt="{{ post.title }}" />
+                    <img class="pixel-box is-shadowless" src="{{ post.image }}" alt="{{ post.title }}" />
                   </div>
                   <div class="tags mt-4 mb-0">
                     {%- for tagName in post.tags -%}

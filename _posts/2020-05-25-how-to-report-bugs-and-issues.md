@@ -7,7 +7,7 @@ date: 2020-05-25T11:43:13.696Z
 author: Juan Delgado
 author-avatar: '/img/avatars/Juan.svg'
 hide_hero: "true"
-image: report_bugs.jpg
+image: /img/upload/report_bugs.jpg
 bg_image_fit: cover
 tags:
   - Guides

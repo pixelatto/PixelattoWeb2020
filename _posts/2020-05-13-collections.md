@@ -4,7 +4,7 @@ title: Card Creator - Handling card collections
 keywords: card creator guide, card creator collection, card creator tutorial
 date: 2020-05-13T08:52:45.950Z
 tags: Guides
-image: CardCreator_05.jpg
+image: /img/upload/CardCreator_05.jpg
 bg_image_fit: cover
 hide_hero: true
 description: Learn how to manage your card sets, edit your card collection and more.

@@ -4,7 +4,7 @@ title: Card Creator - Creating and editing Blueprints
 keywords: card creator guide, card creator blueprint, card creator tutorial
 date: 2020-05-13T13:38:30.274Z
 tags: Guides
-image: blueprint.png
+image: /img/upload/blueprint.png
 bg_image_fit: cover
 hide_hero: true
 description: Learn how to create card formats for your cards using the Blueprint tools.

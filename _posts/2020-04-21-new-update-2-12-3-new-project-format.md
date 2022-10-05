@@ -5,7 +5,7 @@ keywords: card creator guide, card creator project structure, card creator tutor
 
 date: 2020-04-21T08:27:22.393Z
 tags: [PatchNotes, Guides]
-image: card-creator-patch-notes-2-12-3.png
+image: /img/upload/card-creator-patch-notes-2-12-3.png
 hide_hero: true
 description: New Project Format
 author: Juan Delgado

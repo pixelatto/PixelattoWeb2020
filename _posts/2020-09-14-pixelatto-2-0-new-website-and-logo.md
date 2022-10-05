@@ -5,7 +5,7 @@ description: We've made some changes to our website and logo - store, blog and m
 
 date: 2020-09-14T08:44:39.969Z
 tags: Pixelatto
-image: pixelatto2020logo.svg
+image: /img/upload/pixelatto2020logo.svg
 hide_hero: true
 author: Adri Nuñez
 author-avatar: '/img/avatars/Adri.svg'

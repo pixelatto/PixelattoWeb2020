@@ -5,7 +5,7 @@ description: Learn about the different elements of a project structure and how t
 keywords: card creator guide, card creator duplicate project, card creator tutorial, card creator project files
 date: 2020-06-24T10:02:55.638Z
 tags: Guides
-image: duplicate_project.png
+image: /img/upload/duplicate_project.png
 bg_image_fit: cover
 hide_hero: true
 author: Fali Ronda
