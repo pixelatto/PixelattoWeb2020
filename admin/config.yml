@@ -78,6 +78,7 @@ collections:
       - {label: "Miniatura", name: "image", widget: "image"}
       - {label: "Nombre", name: "title", widget: "string"}
       - {label: "Resumen", name: "description", widget: "string"}
+      - {label: "Keywords", name: "keywords", widget: "string"}
       - {label: "Fecha", name: "date", widget: "datetime", required: false}
       - {label: "Autor", name: "author", widget: "string"}
       - {label: "Contenido", name: "body", widget: "markdown", required: false}
