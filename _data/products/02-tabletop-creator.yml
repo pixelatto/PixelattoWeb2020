@@ -31,7 +31,7 @@ features:
     - label: |
         Print&Play export in 1 click: PNG/JPG, PDF, TTS
       icon: fa-print
-    - label: Free trial version
+    - label: <a target='_blank' href='https://store.steampowered.com/app/861590/Tabletop_Creator/'>Free trial version</a>
       icon: fa-laugh-wink
 
 # versions:
