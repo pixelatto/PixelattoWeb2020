@@ -17,13 +17,13 @@ author-avatar: /img/avatars/Esther.svg
 
 We want to talk to you about Tabletop Creator.
 
-First of all, let's put ourselves in context: all we are passionate about board games, we have fun playing them and we are people creative and full of ideas.
+First of all, let’s put ourselves in context: we are all passionate about board games, we have fun playing them and we are creative and full of ideas.
 
-At some point, while playing your favorite game, we find a reflection inside ourselfes: "I really would love to **create my own board game**. I have such a good idea but… How should I startit? How can I **create that board game**?"
+At some point, while playing your favorite game, we find a reflection inside ourselves: “I really would love to **create my own board game**. I have such a good idea but… How should I start? How can I **create that board game**?"
 
-That is a g﻿reat question! And that is why we ended creating Orbtale at the same time we developed an application for making our life easier: **[Tabletop Creator](https://pixelatto.com/store/tabletop-creator/)**.
+That is a great question! And that is why we ended creating Orbtale at the same time we developed an application for making our life easier: **[Tabletop Creator](https://pixelatto.com/store/tabletop-creator/)**.
 
-L﻿et's have a look to it!
+Let's have a look at it!
 
 <hr>
 
