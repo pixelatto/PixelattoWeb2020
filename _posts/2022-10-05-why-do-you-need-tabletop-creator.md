@@ -1,8 +1,8 @@
 ---
 layout: post
 image: /img/upload/tabletop-creator_why-do-you-need-it.png
-title: Why do you need Tabletop Creator?
-description: You love board games and you are thinking about to create your own.
+meta_title: Why do you need Tabletop Creator?
+meta_description: You love board games and you are thinking about to create your own.
   We will explain you about Tabletop Creator
 keywords: card creation tools, create card games, design card game, design
   tabletop game, create tabletop game

@@ -1,7 +1,7 @@
 ---
 code: reventure
 
-title: Reventure FAQ
+meta_title: Reventure FAQ
 permalink: /faq/reventure/
 layout: empty
 

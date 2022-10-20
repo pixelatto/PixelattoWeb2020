@@ -1,11 +1,11 @@
 ---
 code: reventure-orbtale
 
-title: |
+meta_title: |
     Reventure: Orbtale | The official Reventure tabletop game
 
 subtitle: The official Reventure tabletop game about nudist chickens, unbalanced dragons and random nuclear explosions.
-description: The fantasy tabletop game about nudist chickens, unbalanced dragons and random nuclear explosions.
+meta_description: The fantasy tabletop game about nudist chickens, unbalanced dragons and random nuclear explosions.
 
 keywords: reventure, orbtale, kickstarter, tabletop game, card game
 

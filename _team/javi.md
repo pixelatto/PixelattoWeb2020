@@ -1,6 +1,6 @@
 ---
 layout: member
-title: Javi Cepa
+meta_title: Javi Cepa
 subtitle: Director
 job_description: 'Javi has worked his ass since the beginning of Pixelatto to build a handsome independent game studio out of sweat, big pixels and passion.'
 quote: Just one more pixel to the right...

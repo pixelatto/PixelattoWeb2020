@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Card Creator - The project structure and how to duplicate it
-description: Learn about the different elements of a project structure and how to duplicate projects properly
+meta_title: Card Creator - The project structure and how to duplicate it
+meta_description: Learn about the different elements of a project structure and how to duplicate projects properly
 keywords: card creator guide, card creator duplicate project, card creator tutorial, card creator project files
 date: 2020-06-24T10:02:55.638Z
 tags: Guides

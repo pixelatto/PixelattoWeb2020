@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Card Creator - New Update (2.14.9) - [Beta branch]
+meta_title: Card Creator - New Update (2.14.9) - [Beta branch]
 date: 2020-07-22T06:05:38.958Z
 tags: PatchNotes
 image: /img/upload/card-creator-patch-notes-2-14-9.png
 hide_hero: true
-description: New improvements and fixes of the last Card Creator update!
+meta_description: New improvements and fixes of the last Card Creator update!
 author: Juan Delgado
 ---
 **✨ New Features**

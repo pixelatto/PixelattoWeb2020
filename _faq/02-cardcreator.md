@@ -1,7 +1,7 @@
 ---
 code: card-creator
 
-title: Card Creator
+meta_title: Card Creator
 permalink: /faq/card-creator/
 layout: empty
 

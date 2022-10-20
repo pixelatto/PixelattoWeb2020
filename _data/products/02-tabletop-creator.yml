@@ -12,22 +12,27 @@ hero_image: ['/img/product/tabletop-creator-hero.jpg','Tabletop Creator hero ima
 product_image: /img/product/tabletop-creator-640-360.jpg
 
 short_description: |
-  Create and customize your own tabletop game in an profesisonal, easy and fast way!
-  Tabletop Creator is a tabletop game maker tool that allows you...
+  Tabletop Creator is a board game maker tool that allows you to design and customize all your game components in an professional, easy and fast way.
 
 long_description: |
-  Create and customize your own tabletop game in an easy, fun and fast way!
-  Tabletop Creator is a tabletop game maker tool that allows you to design all your tabletop game components, customize and export them for printing or for play online!
-# video: liMw3yfeTdo
+  Tabletop Creator is the all-in-app for start designing, prototyping and playtesting your game idea. Create your different game components, customize them and export your game for getting a physical copy or for playing it online!
+
+  ⚬ Flexible Panels: Build your templates with panels of any shape and type: Images, text, QR codes, rounded corners, icons, mirrored values...
+  ⚬ Blueprint Editor: Design your templates once and quickly build components with them. Update them anytime and see your changes instantly.
+  ⚬ Collection Manager: Mass edit all your game components, organize them in sets in a global centralized view.
+  ⚬ Print and Play...: Get a printable PDF with proper bleeding, cut marks, foldable PnP, in any color format or paper size you want with just a click.
+  ⚬ ... or Render and Play: Get your assets ready to import in a digital playtest environment like Tabletop Simulator or Tabletopia in seconds.
+
+video: CK0ZA9Cp0xA
 
 features:
-    - label: Professional workflow to create any tabletop game
+    - label: Professional workflow to create any board game
       icon: fa-pencil-ruler
     - label: |
-        Multiple export: PNG/JPG, PDF, TTS
-      icon: fa-dice-d6
-    - label: Print&Play in 1 click
+        Print&Play export in 1 click: PNG/JPG, PDF, TTS
       icon: fa-print
+    - label: Free trial version
+      icon: fa-laugh-wink
 
 # versions:
 #   title: 'Product Features'
@@ -141,24 +146,18 @@ gallery:
       id: cc-gallery
       imagefolder: /img/product/tabletopcreator/
       images:
-          - name: TabletopCreator_01.png
+          - name: TabletopCreator_01.jpg
             thumbnail: TabletopCreator_01_tn.jpg
-            text: Tabletop Creator image1
-          - name: TabletopCreator_01.png
+            text: Tabletop Creator blueprint editor
+          - name: TabletopCreator_02.jpg
             thumbnail: TabletopCreator_02_tn.jpg
-            text: Tabletop Creator image2
-          - name: TabletopCreator_01.png
+            text: Tabletop Creator components view
+          - name: TabletopCreator_03.jpg
             thumbnail: TabletopCreator_03_tn.jpg
-            text: Tabletop Creator image3
-          - name: TabletopCreator_04.png
+            text: Tabletop Creator export view
+          - name: TabletopCreator_04.jpg
             thumbnail: TabletopCreator_04_tn.jpg
-            text: Tabletop Creator image4
-          - name: TabletopCreator_05.png
-            thumbnail: TabletopCreator_05_tn.jpg
-            text: Tabletop Creator image5
-          - name: TabletopCreator_06.png
-            thumbnail: TabletopCreator_06_tn.jpg
-            text: Tabletop Creator image6
+            text: Tabletop Creator main menu
 
 # faq:
 #       - question: Hola , esto es una prueba.

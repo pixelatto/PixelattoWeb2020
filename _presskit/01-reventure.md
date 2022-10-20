@@ -1,6 +1,6 @@
 ---
-title: Reventure presskit | Information and media resources
-description: Press and media information and resources about Reventure
+meta_title: Reventure presskit | Information and media resources
+meta_description: Press and media information and resources about Reventure
 keywords: reventure presskit, reventure information, reventure press, reventure media, reventure resources
 
 permalink: /presskit/reventure/

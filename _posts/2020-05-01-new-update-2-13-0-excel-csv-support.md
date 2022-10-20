@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Card Creator - New Update (2.13.0) - Excel & CSV support
+meta_title: Card Creator - New Update (2.13.0) - Excel & CSV support
 keywords: card creator guide, card creator excel, card creator csv, card creator tutorial
 
 date: 2020-05-01T08:16:38.105Z
 tags: [PatchNotes, Guides]
 image: /img/upload/card-creator-patch-notes-2-13-0.png
 hide_hero: true
-description: Now you can export/import your project using excel/csv files
+meta_description: Now you can export/import your project using excel/csv files
 author: Juan Delgado
 ---
 Hi CardCreators !

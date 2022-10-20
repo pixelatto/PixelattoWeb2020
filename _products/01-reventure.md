@@ -1,8 +1,8 @@
 ---
 code: reventure
 
-title: Reventure
-description: The award-winning non-linear adventure with 100+ endings!
+meta_title: Reventure
+meta_description: The award-winning non-linear adventure with 100+ endings!
 keywords: reventure, 100 endings, 2d, pixel, platformer, adventure, videogame
 
 permalink: /store/reventure/

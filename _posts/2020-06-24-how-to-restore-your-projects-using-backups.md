@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Card Creator - How to restore your projects using backups
+meta_title: Card Creator - How to restore your projects using backups
 keywords: card creator guide, card creator restore project, card creator tutorial, card creator backup
 date: 2020-06-24T10:03:51.776Z
 tags: Guides

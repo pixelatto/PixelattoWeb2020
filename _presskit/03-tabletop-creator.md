@@ -1,6 +1,6 @@
 ---
-title: Tabletop Creator presskit | Information and media resources
-description: Press and media information and resources about Tabletop Creator
+meta_title: Tabletop Creator presskit | Information and media resources
+meta_description: Press and media information and resources about Tabletop Creator
 keywords: tabletop creator presskit, tabletop creator information, tabletop creator press, tabletop creator media, tabletop creator resources
 
 permalink: /presskit/tabletop-creator/

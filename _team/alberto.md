@@ -1,6 +1,6 @@
 ---
 layout: member
-title: Alberto Martín
+meta_title: Alberto Martín
 subtitle: Coder
 job_description: "Alberto is always ready for testing, patching and deploying. If you see a bug in our games it means he's on leave that day. He's also a native GIF speaker."
 quote: Needs more tweens

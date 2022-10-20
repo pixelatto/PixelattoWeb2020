@@ -1,6 +1,6 @@
 ---
 layout: member
-title: Laura Femenía
+meta_title: Laura Femenía
 subtitle: Artist
 job_description: "Laura uses her dark powers to generate virtual materia. Then, she  brings them to life by giving them a Spine column."
 quote: Is there a shortcut for that?
