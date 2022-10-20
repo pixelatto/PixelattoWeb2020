@@ -1,36 +1,35 @@
 ---
 layout: post
 image: /img/upload/tabletop-creator_why-do-you-need-it.png
-meta_title: Why do you need Tabletop Creator?
-meta_description: You love board games and you are thinking about to create your own.
-  We will explain you about Tabletop Creator
+meta_title: Why should I get Tabletop Creator?
+meta_description: Becasue you love board games and you are thinking about to create your own!
+description: Becasue you love board games and you are thinking about to create your own!
 keywords: card creation tools, create card games, design card game, design
   tabletop game, create tabletop game
 date: 2022-10-05T07:25:59.221Z
 author: Esther de Paz
 hide_hero: "true"
 tags:
+  - Tabletop Creator
   - Guides
-  - Pixelatto
 author-avatar: /img/avatars/Esther.svg
 ---
-# W﻿e want you to know about Tabletop Creator
 
-## In this article, we will explain you how to create your own board game easily with: **Tabletop Creator**
+We want to talk to you about Tabletop Creator.
 
-First of all, let's put ourselves in context: you are passionate about board games, you have fun playing them and you are a person so creative and full of ideas too.
+First of all, let's put ourselves in context: all we are passionate about board games, we have fun playing them and we are people creative and full of ideas.
 
-At some point, you were playing your favorite game and you thought: I really would love to **create my own board game**. It is such a good idea but… where can I start it? How can **I create that board game**?
+At some point, while playing your favorite game, we find a reflection inside ourselfes: "I really would love to **create my own board game**. I have such a good idea but… How should I startit? How can I **create that board game**?"
 
-G﻿reat question! We will tell you about about an application that will become our life easier. Well, not all you life, but we can give you the solucion about your board games ideas: **[Tabletop Creator](https://pixelatto.com/store/tabletop-creator/)**.
+That is a g﻿reat question! And that is why we ended creating Orbtale at the same time we developed an application for making our life easier: **[Tabletop Creator](https://pixelatto.com/store/tabletop-creator/)**.
 
-L﻿et's see it!
+L﻿et's have a look to it!
 
 <hr>
 
 ## W﻿hat is Tabletop Creator?
 
-**[T﻿abletop Creator](https://pixelatto.com/store/tabletop-creator/)** is an application that allows you to start designing, prototyping and playtesting a game idea. You can create all te items you need, completely customize them and export the game in every format you need to get it physically or to playing it online.
+**[T﻿abletop Creator](https://pixelatto.com/store/tabletop-creator/)** is a board game maker tool that allows you to design, customize and export your game in a professional, easy and fast way. In the same way Adobe provides tools for image edition or Unity for video game development, Tabletop Creator counts with a tool set for making it easy to create whatever game component you want, customize them and export your project in different formats to get it physically or to play it online.
 
 D﻿o you want to know more? Just see our trailer and keep reading!
 
@@ -50,9 +49,13 @@ D﻿o you want to know more? Just see our trailer and keep reading!
 
 ## Some interesting features
 
-When you are interested in creating your own board games, you can find many tutorials about it on the Internet. **Creating a board game** seems to be a very difficult task. You would need to know lots of things to do it right. You need to know how to create the game, how to edit graphics, how to create text and many other things. And if you want to do it on your own, you may think it is crazy.
+When you are interested in creating your own board games, you can find many tutorials about it on the Internet. **Creating a board game** may become a very difficult task.
 
-Many people used to do it by hand, years ago: drawing it, cutting all items and doing modifications themselves. Later, graphic design tools like Photoshop was useful for that but it was not good enough. It takes too much time to do changes to your cards. However, that will not be a problem anymore with **[Tabletop creator](https://pixelatto.com/store/tabletop-creator/)**.
+You would need to know lots of things to do it properly: you need to know how about game designgame, graphics edition, narrative and many other things. And if you want to do it on your own, you may think it is crazy.
+
+Many people used to do it by hand: drawing it, cutting all items and doing modifications themselves. Later, graphic design tools like Photoshop are really useful for working on your graphics, but it is not flexible and powerful enough for support fast iterations - it takes too much time to do changes to your cards.
+
+Fortunately, that will not be a problem anymore with **[Tabletop creator](https://pixelatto.com/store/tabletop-creator/)**!
 
 ![Tabletop Creator homepage](/img/upload/tabletopcreator_hompage1.png "Tabletop Creator homepage")
 

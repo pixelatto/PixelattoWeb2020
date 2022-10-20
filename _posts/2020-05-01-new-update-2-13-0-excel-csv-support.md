@@ -8,6 +8,7 @@ tags: [PatchNotes, Guides]
 image: /img/upload/card-creator-patch-notes-2-13-0.png
 hide_hero: true
 meta_description: Now you can export/import your project using excel/csv files
+description: Now you can export/import your project using excel/csv files
 author: Juan Delgado
 ---
 Hi CardCreators !

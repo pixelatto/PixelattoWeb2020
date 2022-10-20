@@ -2,8 +2,9 @@
 layout: post
 image: /img/upload/create-card-game.jpg
 bg_image_fit: cover
-meta_meta_title: How to create my own card game
-meta_meta_description: Discover different approaches for creating your own card game
+meta_title: How to create my own card game
+meta_description: Discover different approaches for creating your own card game
+description: Discover different approaches for creating your own card game
 keywords: card creation tools, create card games, design card game, design tabletop game, create tabletop game
 
 date: 2020-11-11
@@ -11,6 +12,7 @@ author: Fali Ronda
 author-avatar: '/img/avatars/Fali.svg'
 hide_hero: "true"
 tags:
+  - Card Creator
   - Guides
 ---
 

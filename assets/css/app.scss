@@ -691,8 +691,8 @@ a {
 .tag-btn {
     font-size: 0.875em;
     line-height: 1;
-    max-width: 107px;
-    width: 100%;
+    max-width: 150px;
+    width: fit-content;
     max-height: 30px;
     &.is-primary {
         background-color: #57C0DA;
