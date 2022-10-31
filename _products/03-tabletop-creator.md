@@ -15,3 +15,5 @@ type: app
 
 {% assign product = site.data.products | where_exp:"item","item.code == 'tabletop-creator'" | first %}
 {% include product.html content=product_info %}
+{% include tabletop-creator-pricing.html content=product_info %}
+{% include redesign/subscribe-form.html %}

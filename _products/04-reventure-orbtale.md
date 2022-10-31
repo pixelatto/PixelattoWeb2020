@@ -17,3 +17,4 @@ type: game
 
 {% assign product = site.data.products | where_exp:"item","item.code == 'reventure-orbtale'" | first %}
 {% include product.html content=product_info %}
+{% include redesign/subscribe-form.html %}

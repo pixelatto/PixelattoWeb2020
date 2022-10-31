@@ -1,0 +1,195 @@
+<div class="product-preview" style="top: 0; margin-bottom: 0;">
+	<div class="container--sm">
+		<div class="product-card pixel-box is-relative">
+
+		<!-- ICONS -->
+			<div class="columns is-desktop is-multiline is-vcentered" style="margin-bottom: 0;">
+
+				<!--FREE VERSION-->
+				<div class="column" style="border-right: 1px solid #DCDCDC;">
+					<div class="card-inner">
+						{%- if product.sale -%}
+							<img class="product-sale" src="/img/product/sale-lable.svg" alt="Product sale label" />
+						{%- endif -%}
+						<img class="product-logo is-hidden-mobile" src="/img/product/tabletopcreator/tabletop-creator-free-banner.svg" alt="{{product.name}} logo"/>
+					</div>
+				</div>
+
+				<!--STANDARD VERSION-->
+				<div class="column" style="border-right: 1px solid #DCDCDC;">
+					<div class="card-inner" style="position: relative;">
+						{%- if product.sale -%}
+							<img class="product-sale" src="/img/product/sale-lable.svg" alt="Product sale label" />
+						{%- endif -%}
+						<img class="product-logo is-hidden-mobile" src="/img/product/tabletopcreator/tabletop-creator-standard-banner.svg" alt="{{product.name}} logo"/>
+						<img class="product-sale" src="/img/product/sale-lable.svg" alt="Product sale label" style="position: absolute;top: -20px;right: -12px;max-width: 80px;"/>
+					</div>
+				</div>
+
+				<!--TEAMS VERSION-->
+				<div class="column" style="border-right: 1px solid #DCDCDC;">
+					<div class="card-inner">
+						{%- if product.sale -%}
+							<img class="product-sale" src="/img/product/sale-lable.svg" alt="Product sale label" />
+						{%- endif -%}
+						<img class="product-logo is-hidden-mobile" src="/img/product/tabletopcreator/tabletop-creator-teams-banner.svg" alt="{{product.name}} logo"/>
+					</div>
+				</div>
+
+				<!--EDUCATION & ENTERPRISE VERSION-->
+				<div class="column">
+					<div class="card-inner">
+						{%- if product.sale -%}
+							<img class="product-sale" src="/img/product/sale-lable.svg" alt="Product sale label" />
+						{%- endif -%}
+						<img class="product-logo is-hidden-mobile" src="/img/product/tabletopcreator/tabletop-creator-education-enterprise-banner.svg" alt="{{product.name}} logo"/>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- FEATURES -->
+			<div class="columns is-desktop is-multiline is-vcentered" style="margin-bottom: 0;">
+
+				<!--FREE VERSION-->
+				<div class="column" style="border-right: 1px solid #DCDCDC;">
+					<div class="card-inner">
+						<div class="content pt-4">
+							<p>
+								<span class="icon has-text-primary"><i class="fas fa-check-circle"></i></span>
+								<span>Start testing your game with the demo version</span>
+							</p>
+							<p>
+								<span class="icon has-text-primary"><i class="fas fa-check-circle"></i></span>
+								<span>All the Tabletop Creator features with a few limitations</span>
+							</p>
+							<p>
+								<span class="icon has-text-primary"><i class="fas fa-laugh-wink"></i></span>
+								<span>It's free!</span>
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!--STANDARD VERSION-->
+				<div class="column" style="border-right: 1px solid #DCDCDC;">
+					<div class="card-inner">
+						<div class="content pt-4">
+							<p>
+								<span class="icon has-text-primary"><i class="fas fa-pencil-ruler"></i></span>
+								<span>Professional workflow to create any board game</span>
+							</p>
+							<p>
+								<span class="icon has-text-primary"><i class="fas fa-print"></i></span>
+								<span>Print&amp;Play export in 1 click: PNG/JPG, PDF, TTS</span>
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!--TEAMS VERSION-->
+				<div class="column" style="border-right: 1px solid #DCDCDC;">
+					<div class="card-inner">
+						<div class="content pt-4">
+							<p>
+								<span class="icon has-text-primary"><i class="fas fa-users"></i></span>
+								<span>Realtime collaboration with version control systems</span>
+							</p>
+							<p>
+								<span class="icon has-text-primary"><i class="fas fa-globe"></i></span>
+								<span>Export to Tabletop Simulator and test together</span>
+							</p>
+							<p>
+								<span class="icon has-text-primary"><i class="fas fa-percent"></i></span>
+								<span>The more the cheaper!</span>
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!--EDUCATION & ENTERPRISE VERSION-->
+				<div class="column">
+					<div class="card-inner">
+						<div class="content pt-4">
+							<p>
+								<span class="icon has-text-primary"><i class="fas fa-graduation-cap"></i></span>
+								<span>Special prices and gifts for game schools</span>
+							</p>
+							<p>
+								<span class="icon has-text-primary"><i class="fas fa-flask"></i></span>
+								<span>Limited access to proffesional beta features</span>
+							</p>
+							<p>
+								<span class="icon has-text-primary"><i class="fas fa-puzzle-piece"></i></span>
+								<span>Let's do awesome events!</span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- BUY BUTTONS -->
+			<div class="columns is-desktop is-multiline" style="align-items: flex-end;">
+				<!--FREE VERSION-->
+				<div class="column" style="border-right: 1px solid #DCDCDC;">
+					<div class="info-price is-flex" style="width: min-content; margin: auto;">
+						<div class="price-box is-relative is-uppercase has-text-success has-text-weight-bold has-text-centered is-size-4">
+							<div id="price" class="{{ product.name | downcase | slugify }}-price">0$</div>
+						</div>
+						<a alt="{{ product.name }} Pixelatto buy button" href="https://transactions.sendowl.com/products/78274278/42A4FD4D/purchase" rel="nofollow" id="buy-button" class="button button-round is-secondary">Start creating!</a>
+						<script type="text/javascript" src="https://transactions.sendowl.com/assets/sendowl.js"></script>
+					</div>
+				</div>
+
+				<!--STANDARD VERSION-->
+				<div class="column" style="border-right: 1px solid #DCDCDC;">
+					<div class="info-price is-flex" style="width: min-content; margin: auto;">
+						<div class="price-box is-relative is-uppercase has-text-success has-text-weight-bold has-text-centered is-size-4">
+							<!-- Discount? -->
+							<p class="old-price is-size-6"><s>{{ product.old-price }}</s>100$</p>
+							<div id="price" class="{{ product.name | downcase | slugify }}-price">90$</div>
+						</div>
+
+						<a alt="{{ product.name }} Pixelatto buy button" href="https://transactions.sendowl.com/products/78274278/42A4FD4D/purchase" rel="nofollow" id="buy-button" class="button button-round is-secondary">Get it now</a>
+						<script type="text/javascript" src="https://transactions.sendowl.com/assets/sendowl.js"></script>
+					</div>
+				</div>
+
+				<!--TEAMS VERSION-->
+				<div class="column" style="border-right: 1px solid #DCDCDC;">
+					<div class="info-price is-flex" style="width: min-content; margin: auto;">
+						<div class="price-box is-relative is-uppercase has-text-success has-text-weight-bold has-text-centered is-size-4">
+							<div id="price" class="{{ product.name | downcase | slugify }}-price">-20%</div>
+						</div>
+
+						<a alt="{{ product.name }} Pixelatto buy button" href="https://transactions.sendowl.com/products/78274278/42A4FD4D/purchase" rel="nofollow" id="buy-button" class="button button-round is-secondary">Get it now</a>
+						<script type="text/javascript" src="https://transactions.sendowl.com/assets/sendowl.js"></script>
+					</div>
+				</div>
+
+				<!--EDUCATION & ENTERPRISE VERSION-->
+				<div class="column">
+					<div class="info-price is-flex" style="width: min-content; margin: auto;">
+						<a alt="{{ product.name }} Pixelatto buy button" href="https://transactions.sendowl.com/products/78274278/42A4FD4D/purchase" rel="nofollow" id="buy-button" class="button button-round is-secondary">contact us</a>
+						<script type="text/javascript" src="https://transactions.sendowl.com/assets/sendowl.js"></script>
+						<div class="price-box is-relative is-uppercase has-text-success has-text-weight-bold has-text-centered is-size-4">
+							{%- if product.old-price -%}
+								<p class="old-price is-size-6"><s>{{ product.old-price }}</s></p>
+							{%- endif -%}
+							<div id="price" class="{{ product.name | downcase | slugify }}-price"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+</div>
+
+<style>
+.old-price {
+	text-decoration:line-through;
+}
+</style>
