@@ -26,13 +26,14 @@ long_description: |
 video: CK0ZA9Cp0xA
 
 features:
-    - label: Professional workflow to create any board game
+    - label: Design with in-app icons and add your own resources
       icon: fa-pencil-ruler
     - label: |
-        Print&Play export in 1 click: PNG/JPG, PDF, TTS
+        Print&Play export in 1 click: PNG/JPG, PDF
       icon: fa-print
-    - label: <a target='_blank' href='https://store.steampowered.com/app/861590/Tabletop_Creator/'>Free trial version</a>
-      icon: fa-laugh-wink
+    - label: |
+        Online testing: TTS integration
+      icon: fa-globe
 
 # versions:
 #   title: 'Product Features'
