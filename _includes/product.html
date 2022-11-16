@@ -179,7 +179,7 @@
         var priceHTML = document.getElementById("price");
         var buyButtonHTML = document.getElementById("buy-button");
         getSendOwlProduct({{ product.sendowl_id }}).then((data) => {
-            priceHTML.textContent = data.product.price + " €";
+            priceHTML.textContent = data.product.price + " $";
             buyButtonHTML.href = data.product.instant_buy_url;
         });
     </script>
