@@ -73,13 +73,14 @@
                                             }
                                         </style>
                                     {% endif %}
-                                    <a alt="{{ product.name }} Pixelatto buy button" href="https://transactions.sendowl.com/products/78274278/42A4FD4D/purchase" rel="nofollow" id="buy-button" class="button button-round is-secondary">Get it now</a>
+                                    <a alt="{{ product.name }} Pixelatto buy button" href="https://transactions.sendowl.com/products/78274278/42A4FD4D/purchase" rel="nofollow" id="buy-button" class="button button-round is-secondary">
+                                        <img style="width: 40px;" class="is-vertically-centered" src="/img/resources/loading-response.gif">
+                                    </a>
                                     <script type="text/javascript" src="https://transactions.sendowl.com/assets/sendowl.js"></script>
                                     <div class="price-box is-relative is-uppercase has-text-success has-text-weight-bold has-text-centered is-size-4">
                                         {%- if product.old-price -%}
                                             <p class="old-price is-size-6"><s>{{ product.old-price }}</s></p>
                                         {%- endif -%}
-                                        <div id="price" class="{{ product.name | downcase | slugify }}-price"></div>
                                     </div>
                                 </div>
                             </div>
@@ -176,10 +177,9 @@
 
 {% contentfor extra-js no-convert %}
     <script>
-        var priceHTML = document.getElementById("price");
         var buyButtonHTML = document.getElementById("buy-button");
         getSendOwlProduct({{ product.sendowl_id }}).then((data) => {
-            priceHTML.textContent = data.product.price + " $";
+            buyButtonHTML.textContent = data.product.price + " $";
             buyButtonHTML.href = data.product.instant_buy_url;
         });
     </script>
