@@ -5,6 +5,9 @@ name: Tabletop Creator
 code: tabletop-creator
 type: app
 
+old-price: '84.99 $'
+
+
 title: Tabletop Creator
 subtitle: Make your tabletop games come true!
 description: Start making custom tabletop games now!

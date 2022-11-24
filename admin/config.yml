@@ -13,11 +13,12 @@ locale: 'es'
 collections:
   - name: "products"
     label: "Productos"
-    folder: "_products"
+    folder: "_data/products"
     preview_path: /{{slug}}
     create: true
     slug: "{{slug}}"
     fields:
+      - {label: "Precio anterior", name: "old-prize", widget: "string", default: ""}
       - {label: "Layout", name: "layout", widget: "hidden", default: "product"}
       - {label: "Título (H1)", name: "title", widget: "string"}
       - {label: "Subtítulo (H2)", name: "subtitle", widget: "string"}
