@@ -1,0 +1,139 @@
+---
+layout: redesign
+
+meta_title: Reventure | Landing page
+meta_description: The award-winning non-linear adventure with 100+ endings!
+keywords: reventure, landing, 100 endings, 2d, pixel, platformer, adventure, videogame
+
+permalink: /reventure/remaster
+
+code: reventure-remaster
+theme: dark
+button_color: "#b487b7"
+---
+
+{% assign product = site.data.landings.reventure-remaster %}
+
+<section class="hero-section home-hero" style="background-color: white;">
+    <div class="bg-img" style="width: 66%; height: auto;position: initial;">
+        <img src="{{ product.logo }}" alt="Reventure remaster logo" />
+    </div>
+</section>
+
+<section class="home-tools" id="tools">
+    <div class="container--sm">
+        {%- if product.tools_section_title -%}
+            <h2 class="section-title">{{ product.tools_section_title }}</h2>
+        {%- endif -%}
+        {% assign products = site.data.products | sort  %}
+        {%- for product_hash in products -%}
+            {% assign product = product_hash[1] %}
+            {% assign product_page = site.products | where_exp:"item","item.code == product.code" | first %}
+            <div class="product-card pixel-box" style="position: relative;">
+                <div class="columns is-gapless">
+                    <a class="link--abs" href="{{ product_page.url }}"></a>
+                    <div class="column is-narrow">
+                        <div class="card-image img-16by9">
+                            <div class="bg-img">
+                                <img class="is-scaled" src="{{ product.product_image }}" alt="{{ product.subtitle }}" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column" >
+                        <div class="card-inner">
+                            <img class="product-logo" src="/img/product/{{product.code}}-logo.svg" alt="{{product.name}} logo" />
+                            <h3 class="is-uppercase has-text-weight-bold">{{ product.subtitle }}</h3>
+                            {{ product.short_description | markdownify }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {%- endfor -%}
+    </div>
+</section>
+
+<section class="home-about">
+    <div class="about-inner">
+        <div class="columns is-gapless is-desktop">
+            <div class="column">
+                <div class="about-img">
+                    <div class="bg-img">
+                        <img src="{{ product.about_section.about_image[0] }}" alt="{{ product.about_section.about_image[1] }}" />
+                    </div>
+                    <div class="img-description">
+                        <h4>{{ product.about_section.about_author }}</h4>
+                        <p>{{ product.about_section.about_role }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="about-text">
+                    <div class="text-content">
+                        <h2 class="section-title">{{ product.about_section.about_title }}</h2>
+                        {%- for text_node in product.about_section.about_text -%}
+                            {{ text_node | markdownify }}
+                        {%- endfor -%}
+                        <a class="button button-round is-secondary" href="/about">learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="home-recent-posts">
+    <div class="container--sm">
+        <div class="section-header">
+            <h2 class="section-title">{{ product.blog_section_title }}</h2>
+            <a class="show-link is-uppercase has-text-weight-bold" href="/blog/">Show all<span class="chevron right"></span></a>
+        </div>
+        <div class="columns">
+            {%- for post in site.posts limit:3 -%}
+                <div class="column">
+                    <div class="post-preview card">
+                        <a class="post-link" href="{{ site.baseurl }}{{ post.url }}" style="color: initial; height: 100%;">
+                            {%- if post.image -%}
+                            <div class="card-image">
+                                <div class="image is-16by9">
+                                    <img src="{{ post.image }}"
+                                         alt="{{ post.title }}"
+                                         {% unless post.bg_image_fit == 'cover' %}style="object-fit: contain;"{% endunless %} />
+                                </div>
+                            </div>
+                            {%- else -%}
+                            <header class="card-header">
+                                <p class="card-header-title">{{ post.title }}</p>
+                            </header>
+                            {%- endif -%}
+                            <div class="card-content">
+                                <div class="content">
+                                    <div class="tags mt-4 mb-0">
+                                        {%- for tagName in post.tags -%}
+                                            {% assign tag = site.tags | where_exp:"item","item.tag == tagName" | first %}
+                                            <span class="post-tag tag--sm">{{ tag.tag }}</span>
+                                        {%- endfor -%}
+                                    </div>
+                                    {%- if post.image -%}
+                                    <p class="title is-5 my-3">{{ post.title | truncatewords: 10 }}</p>
+                                    {%- endif -%}
+                                </div>
+                            </div>
+                            <footer class="card-footer">
+                                <div class="is-flex">
+                                    {%- if post.author-avatar -%}
+                                        <figure class="image is-32x32" style="margin: auto 0 auto 20px;">
+                                            <img src="{{ post.author-avatar }}" alt="Post author avatar" />
+                                        </figure>
+                                        <p class="card-footer-item pl-1">{{ post.author }} - {{ post.date | date: "%b %-d, %Y" }}</p>
+                                    {%- else -%}
+                                        <p class="card-footer-item">{{ post.author }} - {{ post.date | date: "%b %-d, %Y" }}</p>
+                                    {%- endif -%}
+                                </div>
+                            </footer>
+                        </a>
+                    </div>
+                </div>
+            {%- endfor -%}
+        </div>
+    </div>
+</section>
