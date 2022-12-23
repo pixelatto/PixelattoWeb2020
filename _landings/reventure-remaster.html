@@ -14,10 +14,12 @@ button_color: "#b487b7"
 
 {% assign product = site.data.landings.reventure-remaster %}
 
-<section class="hero-section home-hero" style="background-color: white;">
-    <div class="bg-img" style="width: 66%; height: auto;position: initial;">
-        <img src="{{ product.logo }}" alt="Reventure remaster logo" />
-    </div>
+<section class="hero-section home-hero" style="background-image: url('/img/product/reventure/cover-landscape.jpg');min-height: 800px;filter: blur(4px);-webkit-filter: blur(4px);background-position: center;background-repeat: no-repeat;background-size: cover;"></section>
+<section style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);">
+<div class="bg-img" style="height: auto;position: initial;text-align: center;">
+    <img src="{{ product.logo }}" alt="Reventure remaster logo" />
+    <h1 class="hero-title has-text-weight-bold" style="color:white;margin-top: 20px;font-family: OrbtaleFont;font-size: 50px">The one and only non-linear adventure with<br>100 different endings... now in pixel HD!</h1>
+</div>
 </section>
 
 <section class="home-tools" id="tools">

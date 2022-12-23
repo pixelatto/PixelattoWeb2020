@@ -1,6 +1,11 @@
 /* Pretty blockquotes */
 blockquote:before {}
 
+@font-face {
+        font-family: 'OrbtaleFont';
+        src: url("/fonts/Grinched 2.0.ttf") format('truetype');
+    }
+
 
 /* Center vertically */
 .is-vertically-centered {
