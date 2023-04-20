@@ -31,10 +31,10 @@ features:
       icon: fa-grin-tears
 
 external_stores:
-    - image: gog
-      link: https://www.gog.com/game/reventure/
     - image: steam
       link: https://store.steampowered.com/app/900270/Reventure/
+    - image: gog
+      link: https://www.gog.com/game/reventure/
     - image: humble
       link: https://www.humblebundle.com/store/reventure
     - image: switch
