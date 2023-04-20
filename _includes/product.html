@@ -76,18 +76,15 @@
                                     {%- if product.old-price -%}
                                         <p class="old-price is-size-6" style="margin: 0 20px; color: #BF3312;font-weight: bold;"><s>{{ product.old-price }}</s></p>
                                     {%- endif -%}
-                                    <a alt="{{ product.name }} Pixelatto buy button" href="https://transactions.sendowl.com/products/78274278/42A4FD4D/purchase" rel="nofollow" id="buy-button" class="button button-round is-secondary">
-                                        <img style="width: 40px;" class="is-vertically-centered" src="/img/resources/loading-response.gif">
+                                    <a target="_blank" alt="{{ product.name }} Pixelatto buy button" href="{{ product.external_stores[0].link }}purchase" rel="nofollow" id="buy-button" class="button button-round is-secondary">
+                                        Get it at <img alt="{{product.external_stores[0].image}} icon" class="has-text-secondary" src="/img/platforms/{{ product.external_stores[0].image }}.png" style="margin: 0 0 0 5px; width: 40px;">
                                     </a>
-                                    <script type="text/javascript" src="https://transactions.sendowl.com/assets/sendowl.js"></script>
                                     <div class="price-box is-relative is-uppercase has-text-success has-text-weight-bold has-text-centered is-size-1">
                                     </div>
                                 </div>
                             </div>
                             <div class="column is-full-mobile is-two-thirds-tablet is-half-desktop">
-                                <div class="info-platforms">
-                                    {% include external-store-buttons.html %}
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -174,13 +171,3 @@
         {%- endif -%}
     {%- endfor -%}
 </div>
-
-{% contentfor extra-js no-convert %}
-    <script>
-        var buyButtonHTML = document.getElementById("buy-button");
-        getSendOwlProduct({{ product.sendowl_id }}).then((data) => {
-            buyButtonHTML.textContent = data.product.price + " $";
-            buyButtonHTML.href = data.product.instant_buy_url;
-        });
-    </script>
-{% endcontentfor %}
