@@ -7,7 +7,7 @@ meta_description: Create and customize your own tabletop game in an easy, fun an
 
 keywords: tabletop creator, make tabletop game, custom tabletop game, design tabletop game, tabletop game creation tool
 
-permalink: /store/tabletop-creator/
+permalink: https://www.tabletop-creator.com
 layout: empty
 
 type: app

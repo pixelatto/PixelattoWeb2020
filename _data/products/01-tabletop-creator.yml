@@ -5,9 +5,6 @@ name: Tabletop Creator
 code: tabletop-creator
 type: app
 
-# old-price: '84.99 $'
-
-
 title: Tabletop Creator
 subtitle: Make your tabletop games come true!
 description: Start making custom tabletop games now!
@@ -38,114 +35,9 @@ features:
         Online testing: TTS integration
       icon: fa-globe
 
-# versions:
-#   title: 'Product Features'
-#   list:
-#     - version_name: Edition A
-#       version_store_url: '#'
-#     - version_name: Edition B
-#       version_store_url: '#'
-
-#   features-list:
-#     - feature:
-#         name: 'Icons gallery'
-#       has-feature:
-#         - item: true
-#         - item: true
-#     - feature:
-#         name: 'Translation 13 languages'
-#       has-feature:
-#         - item: true
-#         - item: true
-#     - feature:
-#         name: 'Demo projects'
-#       has-feature:
-#         - item: true
-#         - item: true
-#     - feature:
-#         name: 'Component Template'
-#       has-feature:
-#         - item: false
-#         - item: true
-#     - feature:
-#         name: 'New template workflow'
-#       has-feature:
-#         - item: false
-#         - item: true
-#     - feature:
-#         name: 'Template swap'
-#       has-feature:
-#         - item: true
-#         - item: true
-#     - feature:
-#         name: 'Template swap'
-#       has-feature:
-#         - item: false
-#         - item: true
-#     - feature:
-#         name: 'Variables'
-#       has-feature:
-#         - item: true
-#         - item: true
-#     - feature:
-#         name: 'Data mode'
-#       has-feature:
-#         - item: false
-#         - item: true
-#     - feature:
-#         name: 'Excel/csv'
-#       has-feature:
-#         - item: true
-#         - item: true
-#     - feature:
-#         name: 'Export images/pdf'
-#       has-feature:
-#         - item: false
-#         - item: true
-#     - feature:
-#         name: 'Export TTS'
-#       has-feature:
-#         - item: true
-#         - item: true
-#     - feature:
-#         name: 'Backups'
-#       has-feature:
-#         - item: false
-#         - item: true
-#     - feature:
-#         name: 'Project localization'
-#       has-feature:
-#         - item: false
-#         - item: true
-#     - feature:
-#         name: 'Play testing in-app offline'
-#       has-feature:
-#         - item: false
-#         - item: true
-#     - feature:
-#         name: 'Play testing in-app online'
-#       has-feature:
-#         - item: false
-#         - item: true
-#     - feature:
-#         name: '1-click prototype print'
-#       has-feature:
-#         - item: false
-#         - item: true
-#     - feature:
-#         name: 'Big batch product orders'
-#       has-feature:
-#         - item: false
-#         - item: true
-#     - feature:
-#         name: 'Version control support'
-#       has-feature:
-#         - item: false
-#         - item: true
-
 external_stores:
     - image: steam
-      link: https://store.steampowered.com/app/861590/Tabletop_Creator/
+      link: https://www.tabletop-creator.com
 gallery:
       id: cc-gallery
       imagefolder: /img/product/tabletopcreator/
@@ -163,26 +55,12 @@ gallery:
             thumbnail: TabletopCreator_04_tn.jpg
             text: Tabletop Creator main menu
 
-# faq:
-#       - question: Hola , esto es una prueba.
-#         answer: Hola, esto es la respuestaz.
-
 presskit:
     factsheet:
         developer: Pixelatto, Based in Málaga, Spain
         release_date: 25/02/2021
     additional_info:
         stores:
-    # features:
-    #     - text: "Blueprints: design different templates to apply to your components with a WYSIWYG editor: cards, boards, tokens, etc!"
-    #     - text: "Collections: create new components with one click, choose a blueprint as template and customize it!"
-    #     - text: "Version control: projects structure supports version control, enabling collaboration with others to create your game on the cloud!"
-    #     - text: "Icons gallery: all the icons you need for a prototype are already included"
-    #     - text: "13 languages: interface fully translated to 13 languages"
-    #     - text: "Demo projects: we have created \"original\" game projects for you to check examples of use"
-    #     - text: "Documentation: find several guides and tips articles of the different features for creating your game"
-    #     - text: "Automatic updates: receive all future updates for free"
-    #     - text: "Support: join our Discord server or mail us for solving your doubts and issues"
     widget:
     player_reviews:
     testimonials:
