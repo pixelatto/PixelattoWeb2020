@@ -1,21 +1,9 @@
-- image: facebook.svg
-  link: 'https://www.facebook.com/pixelatto'
-  name: facebook
-- image: twitter.svg
-  link: 'https://twitter.com/pixelatto'
-  name: twitter
-- image: instagram.svg
-  link: 'https://www.instagram.com/pixelatto_games/'
-  name: instagram
 - image: youtube.svg
   link: 'https://www.youtube.com/c/Pixelatto'
   name: youtube
 - image: android.png
   link: 'https://play.google.com/store/apps/dev?id=5196777688170375732'
   name: android
-- image: github.svg
-  link: 'https://github.com/pixelatto'
-  name: github
 - image: discord.png
   link: 'http://discord.gg/pixelatto'
   name: discord

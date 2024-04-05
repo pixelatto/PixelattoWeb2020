@@ -32,7 +32,7 @@ Help us find and fix any bug you encounter!
 
    * **The compressed project folder** (**/data/** and **/temp/** folders are specially useful).
    * **Screenshots**, gifs or video capture of the problem.
-4. **Send us the info via** [Discord](https://steamcommunity.com/linkfilter/?url=https://discord.com/invite/pixelatto) or [Email](mailto:support@pixelatto.com).
+4. **Send us the info via** [Discord](https://steamcommunity.com/linkfilter/?url=https://discord.com/invite/pixelatto).
 
 Since the project file could be a sensitive document, you may not want to send it, that's why we recommend to create a **minimal project where the issue happens**.
 
