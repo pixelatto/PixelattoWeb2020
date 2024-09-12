@@ -1,3 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive and Centered Text</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
 
-<p>Go back to the game and press "Q", then "R", to advance to the next level.</p>
+        .responsive-text {
+            font-size: 2rem; /* Ajusta según lo que te parezca mejor */
+            text-align: center;
+        }
 
+        @media (max-width: 768px) {
+            .responsive-text {
+                font-size: 1.5rem; /* Ajusta el tamaño para pantallas más pequeñas */
+            }
+        }
+    </style>
+</head>
+<body>
+    <p class="responsive-text">Go back to the game and press "Q", then "R", to advance to the next level.</p>
+</body>
+</html>
