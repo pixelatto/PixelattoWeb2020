@@ -1,22 +1,11 @@
-- name: Store
-  #link: /store/
-  dropdown:
-    - name: Tabletop Creator
-      link: /store/tabletop-creator/
-    - name: Orbtale
-      link: /store/reventure-orbtale/
-    - name: Reventure
-      link: /store/reventure/
-    - name: Card Creator
-      link: /store/card-creator/
-- name: Blog
-  link: /blog/
-  # dropdown:
-  #   - name: Categories
-  #     link: /categories/
-  #   - name: Devlog
-  #     link: /devlog/
-- name: About
-  link: /about/
-# - name: Log in
-#   link: /login/
+# - name: Store
+#   link: /store/
+#   dropdown:
+#     - name: Orbtale
+#       link: /store/reventure-orbtale/
+#     - name: Reventure
+#       link: /store/reventure/
+# - name: Blog
+#   link: /blog/
+# - name: About
+#   link: /about/
